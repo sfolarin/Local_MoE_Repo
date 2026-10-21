@@ -5,8 +5,11 @@ checked against the final output of the script named in the last column before s
 
 | quantity | value | script |
 |---|---|---|
-| Structures per split (train / val / test) | 369 / 38 / 105 | `data_splits/make_oishi_holdout_split.py` |
+| Structures per split (train / val / test) | 369 / 38 / 105 (by source: Oishi_all179 112/15/52, Oishi_relaxed52 20/1/31, Own_augmented 196/22/22, Siddharth 41/0/0) | `data_splits/prepare_expanded_moe_splits_holdout.py`, `data_splits/export_split_tables.py` |
 | Pairs or geometry hashes spanning splits | 0 / 0 | `tests/check_gate_split.py` |
+| Dense gate (teacher): best epoch / best validation structure-balanced force RMSE | 70 / 0.4194 eV/A (run record `run_info.json`) | `training/train_local_gate_from_expert_forces_holdout40.py` |
+| Router distillation: best epoch / best validation KL | 93 / 0.03336 (run record `training_info.json`) | `training/train_local_torchsoap_gate_distillation_expanded.py` |
+| Residual (C1b, energy weight 10000): best epoch / best validation loss | 3 / 17.81 (run record `training_info.json`) | `training/train_c1b_holdout40.py` |
 | Energy RMSE, full model (train / val / test) | 2.02 / 5.28 / 4.55 meV/atom (verify) | `evaluation/plot_energy_force_parity.py` |
 | Energy MAE, full model, test | 2.275 meV/atom (verify) | same |
 | Force structure-balanced RMSE (train / val / test) | 0.060 / 0.132 / 0.073 eV/A (verify) | same |

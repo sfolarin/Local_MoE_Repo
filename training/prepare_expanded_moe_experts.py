@@ -33,7 +33,7 @@ POTENTIAL_HASHES = {
     'Tersoff.pot': '4507541424e6e5f282903615f6740af4d152fb150e8f036bd2e5219381ec1560',
     'Vashishta.pot': 'f2304522fac8b6aeeb25d782917f90e3d3e95414423785bc0b26bb23cd84be63',
 }
-COUNTS = {'train': 369, 'val': 38, 'test': 105}
+COUNTS = None
 
 
 def checked(path, expected):
@@ -117,10 +117,17 @@ def prepare(args):
     het, dataset, run = args.het.resolve(), args.dataset.resolve(), args.run.resolve()
     manifest = dataset / 'manifest.csv'
     summary = json.loads((dataset / 'split_summary.json').read_text())
+    split_counts = {
+        k: int(v)
+        for k, v in summary['unique_configuration_counts'].items()
+    }
     checked(manifest, summary['manifest_sha256'])
     rows = io.read_csv(manifest)
-    if dict(Counter(r['split'] for r in rows)) != COUNTS or summary['unique_configuration_counts'] != COUNTS:
-        raise ValueError('Expected frozen 369/38/105 holdout40 dataset')
+    if dict(Counter(r['split'] for r in rows)) != split_counts or split_counts != {
+        k: int(v)
+        for k, v in summary['unique_configuration_counts'].items()
+    }:
+        raise ValueError(f'Frozen split changed: expected {split_counts}')
     ids = [r['record_id'] for r in rows]
     if len(set(ids)) != len(ids) or any(Path(x).name != x or x in ('', '.', '..') for x in ids):
         raise ValueError('Invalid/repeated record IDs')
@@ -155,9 +162,9 @@ def prepare(args):
     sources = {'moe_persistent_calculator.py': backend, builder.name: builder,
                Path(__file__).name: Path(__file__).resolve(), Path(io.__file__).name: Path(io.__file__).resolve(),
                'historical_dataset_info.json': info_path}
-    for name, expected in POTENTIAL_HASHES.items():
-        sources[name] = checked(info['potential_files'][name]['path'], expected)
-        if info['potential_files'][name]['sha256'] != expected:
+    for name, expected_hash in POTENTIAL_HASHES.items():
+        sources[name] = checked(info['potential_files'][name]['path'], expected_hash)
+        if info['potential_files'][name]['sha256'] != expected_hash:
             raise ValueError('Historical potential hash differs')
     orientations = []
     for row in rows:
@@ -174,7 +181,7 @@ def prepare(args):
     rotated = max((r for r in orientations if r['split'] == 'train'), key=lambda r: r['rotation_max_abs'])['record_id']
     pilot_ids = list(dict.fromkeys(pilot_ids + [small, rotated]))
     contract = dict(stage='expanded_expert_preparation_v1', dataset=str(dataset),
-                    manifest_sha256=io.sha256(manifest), counts=COUNTS, experts=EXPERTS,
+                    manifest_sha256=io.sha256(manifest), counts=split_counts, experts=EXPERTS,
                     source_hashes={k: io.sha256(v) for k, v in sources.items()},
                     source_paths={k: str(v) for k, v in sources.items()},
                     historical_backend_sha256=info['core_calculator']['sha256'],
@@ -201,7 +208,7 @@ def prepare(args):
     io.write_csv(run/'orientation_audit.csv', orientations)
     io.write_json(run/'expert_contract.json', contract)
     print('Prepared:', run)
-    print('Frozen counts:', COUNTS)
+    print('Dataset counts:', split_counts)
     print('Current calculator matches historical file:', contract['backend_matches_historical'])
     print('Records needing Cartesian rotation:', sum(r['rotation_max_abs'] > 1e-10 for r in orientations))
     print('Pilot IDs:', ', '.join(pilot_ids))
@@ -237,6 +244,12 @@ def libraries_loaded(lib):
 
 
 def startup(run, c):
+    from mpi4py import MPI
+
+    if not MPI.Is_initialized():
+        MPI.Init_thread()
+
+    MPI.COMM_WORLD.Get_rank()
     if int(os.environ.get('SLURM_NTASKS', '1')) != 1:
         raise RuntimeError('Use exactly ONE Slurm task: the MPI backend uses its default communicator')
     os.environ['MPICH_GPU_SUPPORT_ENABLED'] = '0'

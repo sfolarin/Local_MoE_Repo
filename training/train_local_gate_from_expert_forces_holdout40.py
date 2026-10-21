@@ -282,7 +282,7 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help=(
             "Use the split column in dataset_manifest.csv exactly. "
-            "Required for the expanded 410/44/58 dataset."
+            "Required for the holdout-40 dataset (369/38/105)."
         ),
     )
 

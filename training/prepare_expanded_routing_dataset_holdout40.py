@@ -54,9 +54,9 @@ def sha256(path: Path) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", type=Path, required=True,
-                        help="expanded_grouped_4608_v1 dataset root")
+                        help="dataset root, e.g. data/expanded_holdout40_v1")
     parser.add_argument("--expert-run", type=Path, required=True,
-                        help="expanded_grouped_4608_v1_experts_v3")
+                        help="completed expert run, e.g. data/expanded_holdout40_v1_experts_v2")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
 

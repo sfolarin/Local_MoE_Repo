@@ -84,7 +84,7 @@ def parse_args() -> argparse.Namespace:
         "--expected_split_sizes",
         type=int,
         nargs=3,
-        default=[410, 44, 58],
+        default=[369, 38, 105],
         metavar=("TRAIN", "VAL", "TEST"),
         help="Expected frozen train/val/test structure counts.",
     )

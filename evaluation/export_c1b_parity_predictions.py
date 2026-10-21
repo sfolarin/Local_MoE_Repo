@@ -24,13 +24,13 @@ plot_relaxed37_c1b_publication.py can read it with zero changes.
 Usage:
     python3 export_c1b_parity_predictions.py \
         --c1b-script training/train_c1b_holdout40.py \
-        --stage_b1_root <Own_Oishi_252_C1b_Stage_Root_v1> \
-        --common_checkpoint <Own_Oishi_252_C1a_v1/best_checkpoint.pt> \
-        --routing_checkpoint <Own_Oishi_252_TorchSOAP_Gate_v1/best_torchsoap_routing_gate.pt> \
-        --c1b_checkpoint <Own_Oishi_252_C1b_v1/best_c1b_residual_model.pt> \
+        --stage_b1_root <C1b_Stage_Root_v1> \
+        --common_checkpoint <C1a_v1/best_checkpoint.pt> \
+        --routing_checkpoint <TorchSOAP_Gate_v1/best_torchsoap_routing_gate.pt> \
+        --c1b_checkpoint <C1b_v1/best_c1b_residual_model.pt> \
         --torchsoap_module <path/to/torchsoap_autograd_module_periodic_regnorm.py> \
         --residual-hidden-dims 256 128 \
-        --out <Own_Oishi_252_C1b_Parity_Export_v1>
+        --out <C1b_Parity_Export_v1>
 """
 import argparse
 import csv

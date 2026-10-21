@@ -15,7 +15,7 @@ Cached raw features are used only for train-only normalization and a startup
 consistency check. The old common checkpoint supplies ONLY the constant
 e_ref; all common-network parameters start fresh.
 
-Selection: 44 validation configurations; no test evaluation during training.
+Selection: the validation configurations; no test evaluation during training.
 Loss: 10*(delta_E/N)^2 + 1000*mean_components(delta_F^2), with one complete
 configuration per AdamW step. Defaults match the supplied trainer arguments.
 This adapter explicitly uses ReduceLROnPlateau(factor=0.5, patience=10).
