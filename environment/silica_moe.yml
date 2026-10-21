@@ -1,0 +1,3 @@
+name: silica_moe
+channels:
+  - conda-forge

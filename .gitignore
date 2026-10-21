@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# outputs, data and checkpoints never go in the repository
+*.log
+*.out
+*.err
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.h5
+*.hdf5
+*.extxyz
+*.xyz
+*.cif
+*.traj
+runs/
+data/
+checkpoints/
+eval_*/
+md_*/
+raw_predictions/
+figures_paper/
+# backups: git history replaces them
+*bakup*
+*.bak
+*.OLD.*
+*.ORIG.*
