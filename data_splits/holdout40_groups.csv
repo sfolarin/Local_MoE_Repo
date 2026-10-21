@@ -1,0 +1,262 @@
+group_id,phase_pairs,split,reason,source_record_count,unique_geometries,counts_by_source,record_ids
+AEI__CHA,AEI__CHA,train,fixed_seed_new_group_assignment,13,13,"{""Oishi_all179"": 1, ""Siddharth"": 12}",external_0000;external_0231;external_0232;external_0233;external_0234;external_0235;external_0236;external_0237;external_0238;external_0239;external_0240;external_0241;external_0242
+AEL__AFI,AEL__AFI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0001
+AEL__DON,AEL__DON,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0002
+AFG__CAN,AFG__CAN,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0003
+AFG__FAR,AFG__FAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0004
+AFG__FRA,AFG__FRA,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0005
+AFG__LIO,AFG__LIO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0006
+AFG__LOS,AFG__LOS,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0007
+AFG__MAR,AFG__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0008
+AFI__AST,AFI__AST,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0091;own_0092
+AFI__BEA,AFI__BEA,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0083;own_0084
+AFI__CFI,AFI__CFI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0079;own_0080
+AFI__CHA,AFI__CHA,train,preserve_existing_assignment,6,6,"{""Own_augmented"": 2, ""Siddharth"": 4}",own_0093;own_0094;external_0243;external_0244;external_0245;external_0246
+AFI__CRISTOBALITE,AFI__CRISTOBALITE,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0010;own_0011
+AFI__EMT,AFI__EMT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0089;own_0090
+AFI__FER,AFI__FER,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0052;own_0053
+AFI__ITE,AFI__ITE,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0085;own_0086
+AFI__MFI,AFI__MFI,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0064;own_0065
+AFI__MOGANITE,AFI__MOGANITE,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0036;own_0037
+AFI__MWW,AFI__MWW,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0087;own_0088;own_0219;own_0220;own_0221;own_0222;own_0223;own_0224;own_0225
+AFI__SAF,AFI__SAF,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0009
+AFI__STT,AFI__STT,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0081;own_0082;own_0156;own_0157;own_0158;own_0159;own_0160;own_0161;own_0162
+AFR__SFO,AFR__SFO,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0010
+AFS__BPH,AFS__BPH,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0011;external_0179
+AFT__AFV,AFT__AFV,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0012;external_0180
+AFT__AFX,AFT__AFX,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0013;external_0181
+AFT__CHA,AFT__CHA,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0014
+AFT__EAB,AFT__EAB,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0015;external_0182
+AFT__ERI,AFT__ERI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0016
+AFT__GME,AFT__GME,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0017
+AFT__LEV,AFT__LEV,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0018
+AFT__OFF,AFT__OFF,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0019;external_0183
+AFT__SFW,AFT__SFW,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0020;external_0184
+AFT__SWY,AFT__SWY,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0021;external_0185
+AFV__AFX,AFV__AFX,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0022
+AFV__AVL,AFV__AVL,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0023;external_0186
+AFV__EAB,AFV__EAB,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0024;external_0187
+AFV__ERI,AFV__ERI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0025
+AFV__GME,AFV__GME,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0026
+AFV__OFF,AFV__OFF,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0027
+AFV__SFW,AFV__SFW,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0028;external_0188
+AFV__SWY,AFV__SWY,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0029
+AFX__CHA,AFX__CHA,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0030
+AFX__EAB,AFX__EAB,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0031
+AFX__ERI,AFX__ERI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0032
+AFX__GME,AFX__GME,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0033;external_0189
+AFX__LEV,AFX__LEV,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0034
+AFX__OFF,AFX__OFF,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0035;external_0190
+AFX__SFW,AFX__SFW,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0036
+AFX__SWY,AFX__SWY,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0037
+AHT__VFI,AHT__VFI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0038
+ANO__AVE,ANO__AVE,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0039
+ANO__EAB,ANO__EAB,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0040
+ANO__ERI,ANO__ERI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0041
+ANO__LEV,ANO__LEV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0042;external_0191
+ANO__OFF,ANO__OFF,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0043
+ANO__PTT,ANO__PTT,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0044;external_0192
+ANO__SAT,ANO__SAT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0045
+ANO__SWY,ANO__SWY,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0046
+APC__ATT,APC__ATT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0047
+APC__AWO,APC__AWO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0048
+APC__GIS,APC__GIS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0049
+AST__MEI,AST__MEI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0150;own_0151
+AST__MFI,AST__MFI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0071;own_0072
+AST__STT,AST__STT,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0130
+ATS__CAN,ATS__CAN,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0050
+ATT__GIS,ATT__GIS,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0051
+ATT__MRT,ATT__MRT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0052
+AVE__EAB,AVE__EAB,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0053
+AVE__ERI,AVE__ERI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0054;external_0193
+AVE__LEV,AVE__LEV,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0055
+AVE__OFF,AVE__OFF,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0056;external_0194
+AVE__PTT,AVE__PTT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0057
+AVE__SAT,AVE__SAT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0058
+AVE__SWY,AVE__SWY,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0059
+AVL__OFF,AVL__OFF,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0060
+AWO__DFT,AWO__DFT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0063
+AWO__GIS,AWO__GIS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0061
+AWO__UEI,AWO__UEI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0062;external_0195
+BEA__CFI,BEA__CFI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0120;own_0121
+BEA__FAU,BEA__FAU,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0132;own_0133
+BEA__FER,BEA__FER,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0059;own_0060
+BEA__ISV,BEA__ISV,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0136;own_0137
+BEA__MEI,BEA__MEI,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0134;own_0135
+BEA__MFI,BEA__MFI,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0070
+BEA__MTW,BEA__MTW,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0104;own_0105;own_0163;own_0164;own_0165;own_0166;own_0167;own_0168;own_0169
+BEA__TRIDYMITE,BEA__TRIDYMITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0027;own_0028
+BEC__ISV,BEC__ISV,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0065
+BEC__IWR,BEC__IWR,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0064
+BETAA__BETAB,BETAA__BETAB,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0067
+BETAA__BETACH,BETAA__BETACH,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0068
+BETAB__BETACH,BETAB__BETACH,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0069
+BOZ__OBW,BOZ__OBW,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0066
+CAN__FRA,CAN__FRA,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0070
+CAN__GIU,CAN__GIU,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0071
+CAN__LIO,CAN__LIO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0072
+CAN__LOS,CAN__LOS,val,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0073;external_0196
+CAN__MAR,CAN__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0074
+CFI__CHA,CFI__CHA,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0124;own_0125
+CFI__CRISTOBALITE,CFI__CRISTOBALITE,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0014;own_0015;own_0198;own_0199;own_0200;own_0201;own_0202;own_0203;own_0204
+CFI__FER,CFI__FER,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0056
+CFI__ISV,CFI__ISV,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0126;own_0127
+CFI__MFI,CFI__MFI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0066;own_0067
+CFI__MOGANITE,CFI__MOGANITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0042;own_0043
+CFI__MTW,CFI__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0100;own_0101
+CFI__MWW,CFI__MWW,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0122;own_0123
+CFI__QUARTZ,CFI__QUARTZ,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0004;own_0005
+CFI__TRIDYMITE,CFI__TRIDYMITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0025;own_0026
+CHA__CRISTOBALITE,CHA__CRISTOBALITE,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0018
+CHA__EMT,CHA__EMT,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0146;own_0147
+CHA__ERI,CHA__ERI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0075;external_0197
+CHA__GME,CHA__GME,train,fixed_seed_new_group_assignment,8,8,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1, ""Siddharth"": 6}",external_0076;external_0198;external_0247;external_0248;external_0249;external_0250;external_0251;external_0252
+CHA__IFR,CHA__IFR,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0138;own_0139;own_0191;own_0192;own_0193;own_0194;own_0195;own_0196;own_0197
+CHA__MEI,CHA__MEI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0152;own_0153
+CHA__MEL,CHA__MEL,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0096;own_0097
+CHA__MFI,CHA__MFI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0073;own_0074
+CHA__MOGANITE,CHA__MOGANITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0048;own_0049
+CHA__MTW,CHA__MTW,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0112;own_0113
+CHA__SFW,CHA__SFW,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0077;external_0199
+CHA__STT,CHA__STT,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0131
+CON__IWR,CON__IWR,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0078;external_0200
+CON__SSZ33A,CON__SSZ33A,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0079
+CRISTOBALITE__MOGANITE,CRISTOBALITE__MOGANITE,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0008;own_0009
+CRISTOBALITE__MTW,CRISTOBALITE__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0012;own_0013
+CRISTOBALITE__MWW,CRISTOBALITE__MWW,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0016;own_0017
+CRISTOBALITE__TRIDYMITE,CRISTOBALITE__TRIDYMITE,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0006;own_0007;own_0184;own_0185;own_0186;own_0187;own_0188;own_0189;own_0190
+DAC__EPI,DAC__EPI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0080;external_0201
+DFT__MON,DFT__MON,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0081
+DFT__UEI,DFT__UEI,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0082
+EAB__ERI,EAB__ERI,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0083;external_0202
+EAB__LEV,EAB__LEV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0084;external_0203
+EAB__OFF,EAB__OFF,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0085;external_0204
+EAB__PTT,EAB__PTT,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0086;external_0205
+EAB__SAT,EAB__SAT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0087
+EAB__SFW,EAB__SFW,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0088
+EAB__SWY,EAB__SWY,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0089;external_0206
+EDI__THO,EDI__THO,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0090;external_0207
+EMM17A__EMM17B,EMM17A__EMM17B,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0091
+EMT__FAU,EMT__FAU,train,fixed_seed_new_group_assignment,4,4,"{""Oishi_all179"": 1, ""Siddharth"": 3}",external_0092;external_0269;external_0270;external_0271
+EMT__FER,EMT__FER,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0062;own_0063
+EMT__MEI,EMT__MEI,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0148;own_0149
+EMT__MTW,EMT__MTW,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0110;own_0111
+EMT__MWW,EMT__MWW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0140;own_0141
+EMT__SBS,EMT__SBS,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0093;external_0208
+EMT__SBT,EMT__SBT,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0094;external_0209
+EOS__UOS,EOS__UOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0095
+ERI__LEV,ERI__LEV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0096;external_0210
+ERI__OFF,ERI__OFF,train,fixed_seed_new_group_assignment,17,17,"{""Oishi_all179"": 1, ""Siddharth"": 16}",external_0097;external_0253;external_0254;external_0255;external_0256;external_0257;external_0258;external_0259;external_0260;external_0261;external_0262;external_0263;external_0264;external_0265;external_0266;external_0267;external_0268
+ERI__PTT,ERI__PTT,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0098;external_0211
+ERI__SAT,ERI__SAT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0099
+ERI__SFW,ERI__SFW,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0100;external_0212
+ERI__SWY,ERI__SWY,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0101;external_0213
+EUO__NES,EUO__NES,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0102
+EUO__NON,EUO__NON,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0103
+FAR__FRA,FAR__FRA,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0104
+FAR__GIU,FAR__GIU,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0105
+FAR__LIO,FAR__LIO,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0106
+FAR__LOS,FAR__LOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0107
+FAR__MAR,FAR__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0108
+FAU__MTW,FAU__MTW,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0114;own_0115
+FAU__MWW,FAU__MWW,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0142;own_0143
+FAU__SBS,FAU__SBS,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0109
+FAU__SBT,FAU__SBT,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0110
+FAU__TRIDYMITE,FAU__TRIDYMITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0030;own_0031
+FER__MTW,FER__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0054;own_0055
+FER__MWW,FER__MWW,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0061
+FER__STT,FER__STT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0057;own_0058
+FER__TRIDYMITE,FER__TRIDYMITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0020;own_0021
+FRA__GIU,FRA__GIU,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0111
+FRA__LIO,FRA__LIO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0112
+FRA__LOS,FRA__LOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0113
+FRA__MAR,FRA__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0114
+FRA__TOL,FRA__TOL,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0115
+GIS__PHI,GIS__PHI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0116;external_0214
+GIS__SIV,GIS__SIV,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0117
+GIU__LIO,GIU__LIO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0118
+GIU__LOS,GIU__LOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0119
+GIU__MAR,GIU__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0120
+GIU__TOL,GIU__TOL,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0121
+GME__OFF,GME__OFF,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0122
+GME__SFW,GME__SFW,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0123;external_0215
+GME__SWY,GME__SWY,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0124
+HPM14A__HPM14B,HPM14A__HPM14B,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0125
+IFR__MOGANITE,IFR__MOGANITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0046;own_0047
+IFR__TRIDYMITE,IFR__TRIDYMITE,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0029
+ISV__MEI,ISV__MEI,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0154;own_0155;own_0212;own_0213;own_0214;own_0215;own_0216;own_0217;own_0218
+ISV__MEL,ISV__MEL,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0098;own_0099
+ISV__MFI,ISV__MFI,val,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0077;own_0078
+ISV__MTW,ISV__MTW,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0118;own_0119;own_0177;own_0178;own_0179;own_0180;own_0181;own_0182;own_0183
+ISV__MWW,ISV__MWW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0144;own_0145
+ISV__TRIDYMITE,ISV__TRIDYMITE,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0032;own_0033;own_0170;own_0171;own_0172;own_0173;own_0174;own_0175;own_0176
+ITE__MTW,ITE__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0106;own_0107
+ITE__RTH,ITE__RTH,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0126
+ITE__STT,ITE__STT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0128;own_0129
+ITG__IWW,ITG__IWW,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0127
+ITH__ITR,ITH__ITR,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0128
+JSN__ZON,JSN__ZON,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0129
+LAU__SVV,LAU__SVV,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0130
+LEV__OFF,LEV__OFF,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0131;external_0216
+LEV__PTT,LEV__PTT,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0132
+LEV__SAT,LEV__SAT,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0133;external_0217
+LEV__SFW,LEV__SFW,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0134;external_0218
+LEV__SWY,LEV__SWY,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0135
+LIO__LOS,LIO__LOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0136
+LIO__MAR,LIO__MAR,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0137
+LOS__MAR,LOS__MAR,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0138
+LOS__TOL,LOS__TOL,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0139
+LOV__RSN,LOV__RSN,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0140
+LOV__VSV,LOV__VSV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0141;external_0219
+MAR__TOL,MAR__TOL,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0142;external_0220
+MEI__MFI,MEI__MFI,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0075;own_0076;own_0226;own_0227;own_0228;own_0229;own_0230;own_0231;own_0232
+MEI__MOGANITE,MEI__MOGANITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0050;own_0051
+MEI__MTW,MEI__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0116;own_0117
+MEL__MFI,MEL__MFI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0143;external_0221
+MEL__MOGANITE,MEL__MOGANITE,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0038;own_0039;own_0205;own_0206;own_0207;own_0208;own_0209;own_0210;own_0211
+MEL__STT,MEL__STT,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0095
+MEL__TRIDYMITE,MEL__TRIDYMITE,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0024
+MER__PHI,MER__PHI,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0144;external_0222
+MER__SIV,MER__SIV,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0145
+MFI__MOGANITE,MFI__MOGANITE,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0034;own_0035
+MFI__STT,MFI__STT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0068;own_0069
+MFI__TRIDYMITE,MFI__TRIDYMITE,test,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0022;own_0023
+MOGANITE__MTW,MOGANITE__MTW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0040;own_0041
+MOGANITE__STT,MOGANITE__STT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0044;own_0045
+MOGANITE__TRIDYMITE,MOGANITE__TRIDYMITE,train,preserve_existing_assignment,1,1,"{""Own_augmented"": 1}",own_0019
+MRT__OWE,MRT__OWE,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0146
+MRT__PHI,MRT__PHI,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0147
+MTT__TON,MTT__TON,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0148
+MTW__MWW,MTW__MWW,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0108;own_0109
+MTW__QUARTZ,MTW__QUARTZ,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0002;own_0003
+MTW__STT,MTW__STT,train,preserve_existing_assignment,2,2,"{""Own_augmented"": 2}",own_0102;own_0103
+NAT__THO,NAT__THO,test,fixed_seed_new_group_assignment,3,3,"{""Oishi_all179"": 2, ""Oishi_relaxed52"": 1}",external_0149;external_0150;external_0223
+NES__NON,NES__NON,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0151
+OFF__SAT,OFF__SAT,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0152
+OFF__SFW,OFF__SFW,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0153;external_0224
+OFF__SWY,OFF__SWY,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0154;external_0225
+PHI__SIV,PHI__SIV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0155;external_0226
+PST24A__PST24B,PST24A__PST24B,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0156
+PST24A__PST24C,PST24A__PST24C,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0157
+PST24B__PST24C,PST24B__PST24C,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0158
+PTT__SAT,PTT__SAT,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0159;external_0227
+PTT__SWY,PTT__SWY,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0160;external_0228
+PTY__PWO,PTY__PWO,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0162
+PTY__UOS,PTY__UOS,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0161
+QUARTZ__TRIDYMITE,QUARTZ__TRIDYMITE,train,preserve_existing_assignment,9,9,"{""Own_augmented"": 9}",own_0000;own_0001;own_0233;own_0234;own_0235;own_0236;own_0237;own_0238;own_0239
+RFE__ZSM48B,RFE__ZSM48B,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0163
+RSN__VSV,RSN__VSV,test,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0178;external_0230
+RTE__STF,RTE__STF,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0164
+RUT__SOD,RUT__SOD,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0165
+SAT__SWY,SAT__SWY,train,fixed_seed_new_group_assignment,2,2,"{""Oishi_all179"": 1, ""Oishi_relaxed52"": 1}",external_0166;external_0229
+SBS__SBT,SBS__SBT,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0167
+SFE__SSY,SFE__SSY,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0168
+SFF__STF,SFF__STF,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0169
+SFW__SWY,SFW__SWY,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0170
+SSZ31E__SSZ31F,SSZ31E__SSZ31F,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0171
+SSZ31E__SSZ31G,SSZ31E__SSZ31G,test,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0172
+SSZ31E__SSZ31H,SSZ31E__SSZ31H,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0173
+SSZ31F__SSZ31G,SSZ31F__SSZ31G,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0174
+SSZ31F__SSZ31H,SSZ31F__SSZ31H,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0175
+SSZ31G__SSZ31H,SSZ31G__SSZ31H,val,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0176
+UZM55DLSCELL__UZM55FMDLSCELL,UZM55DLSCELL__UZM55FMDLSCELL,train,fixed_seed_new_group_assignment,1,1,"{""Oishi_all179"": 1}",external_0177

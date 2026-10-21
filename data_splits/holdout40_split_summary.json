@@ -1,0 +1,91 @@
+{
+  "created": "2026-10-10T04:41:39.341780+00:00",
+  "duplicate_aliases": 0,
+  "empty_source_split_cells": [
+    "Siddharth:val",
+    "Siddharth:test"
+  ],
+  "features_generated": false,
+  "group_counts": {
+    "test": 62,
+    "train": 173,
+    "val": 26
+  },
+  "input_hashes": {
+    "anchors/manifest.csv": "6b3ea3d024bf40367c72c563fb339a0ddd4f59650b61f8fd8754f42499b1cde8",
+    "external_records.csv": "9cb76c6576df51645f404ac07b6ba45d650a90684ba7bcc06a3c815f90b4620f",
+    "holdout_split_table.csv": "0591f8fdfbb9a046c3859c6f23e59000703d9432d24b360424cedda0404da004",
+    "label_queue.csv": "40d324ea745d2d0d4e6114c51b2be0b839730c8e199f82bb0b252264dc1125ff",
+    "own_records.csv": "335409d0f296e52f8b72167277fdcd65eea719c6fe05743938c26bbbc4fb5fbb",
+    "preparation.json": "4d63d6a56055019ebec8cf86909fa84f3ea632d299ea114004d21402c43fc9ff",
+    "provenance/own_augmented_manifest.csv": "dd6980f652710adc3a10c5fde3cdd670a25a230e43954d818708facc0a500e53",
+    "provenance/size_deferred.csv": "391f31e3610372e5f07a3099ba95702f9f5f0df20a7c5aeb60fe0d6bd844e96a",
+    "provenance/snapshot_provenance.csv": "19ff599361449a4bda35f6ac056367683070676fac3e602b962d50525ddae79c",
+    "teacher_contract.json": "4ebdc8b359299ccbc0e5193910c8696a0b757e0bcdad0d747623e5778f879c4d"
+  },
+  "label_run": "$MOE_HET/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/matpes_labels_4608_20260918_v1",
+  "manifest_sha256": "2c27f1dec5ab9dc4e51dd6d1d6d012b2bab1b2d10df9763f8e92dd57dc6c6960",
+  "new_group_counts": {
+    "test": 51,
+    "train": 112,
+    "val": 15
+  },
+  "new_group_fraction_targets": {
+    "test": 0.1,
+    "train": 0.8,
+    "val": 0.1
+  },
+  "normalization_fitted": false,
+  "notes": [
+    "Counts are configuration records, not independent interfaces or phase pairs.",
+    "Old assignments are preserved; all other groups follow the supplied split table (holdout_split_table.csv in provenance).",
+    "No errors, energies, forces, or gamma values were used to choose the split.",
+    "Future data should inherit these saved group assignments; do not reshuffle existing groups.",
+    "Exact ordered hashes do not certify symmetry/permutation equivalence.",
+    "Legacy targets were checked for finite E/F; their exact model-state hash is unavailable.",
+    "The labeling stage checked the teacher against two old training anchors, not every old target.",
+    "SOAP normalization and any learned routing targets must be fitted on training data only.",
+    "External region arrays are absent; they were not inferred or fabricated.",
+    "These AB labels do not create new interface-energy gamma targets.",
+    "Original training scripts need a loader/count update before using this dataset."
+  ],
+  "original_counts": {
+    "test": 22,
+    "train": 196,
+    "val": 22
+  },
+  "output": "$MOE_HET/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1",
+  "phase_pair_or_lineage_or_exact_geometry_cross_split_conflicts": 0,
+  "seed": 20260918,
+  "source_record_counts": {
+    "Oishi_all179": {
+      "test": 52,
+      "train": 112,
+      "val": 15
+    },
+    "Oishi_relaxed52": {
+      "test": 31,
+      "train": 20,
+      "val": 1
+    },
+    "Own_augmented": {
+      "test": 22,
+      "train": 196,
+      "val": 22
+    },
+    "Siddharth": {
+      "test": 0,
+      "train": 41,
+      "val": 0
+    }
+  },
+  "split_source": "table",
+  "total_source_records": 512,
+  "training_started": false,
+  "unique_configuration_counts": {
+    "test": 105,
+    "train": 369,
+    "val": 38
+  },
+  "unique_geometries": 512
+}
