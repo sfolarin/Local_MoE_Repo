@@ -35,8 +35,9 @@ interfacial energies comparable to MACE-MatPES-r2SCAN on held-out interface fami
   `training/submit_common_holdout40.sh` requests 80 GB cards).
 - **LAMMPS** (only for the classical-expert forces, stage 3 below): unmodified LAMMPS, commit
   `36f7c81ced8dd456430b13647e48f0c7d7bd8faa` (28 Oct 2025), built with CMake in `Release` mode as an MPI shared
-  library with the Python module. The build provides the pair styles `tersoff`, `vashishta` and `buck/coul/long`,
-  `table`, and the `ewald` and `pppm` solvers. `environment/env_perlmutter.sh` shows the modules and library path used
+  library with the Python module. Packages enabled: MANYBODY, KSPACE, MOLECULE, RIGID and EXTRA-COMPUTE (all others
+  off). The build provides the pair styles `tersoff`, `vashishta` and `buck/coul/long`, `table`, and the `ewald` and
+  `pppm` solvers. `environment/env_perlmutter.sh` shows the modules and library path used
   on NERSC Perlmutter; edit the `/path/to/...` placeholders for your machine.
 - **Potential files:** `potentials/Tersoff.pot` (Munetoh et al., Comput. Mater. Sci. 39, 334 (2007)) and
   `potentials/Vashishta.pot` (Broughton, Meli, Vashishta and Kalia, Phys. Rev. B 56, 611 (1997)) are the files
