@@ -1,0 +1,181 @@
+=== P1. prep: where rows come from, and the worker loop header ===
+43:def inputs(args):
+50:    rows = io.read_csv(manifest)
+76:    return dataset, rows, paths, original_features, contract
+149:    for row in rows[args.rank::args.world]:
+271:    for row in rows:
+326:def main():
+--- the rows construction ---
+def inputs(args):
+    dataset = args.dataset.expanduser().resolve()
+    snapshot = args.snapshot.expanduser().resolve()
+    manifest = dataset / "manifest.csv"
+    split_summary = json.loads((dataset / "split_summary.json").read_text())
+    if io.sha256(manifest) != split_summary["manifest_sha256"]:
+        raise ValueError("Dataset manifest changed after its split was frozen")
+    rows = io.read_csv(manifest)
+    counts = dict(Counter(r["split"] for r in rows))
+    if counts != split_summary["unique_configuration_counts"]:
+        raise ValueError("Dataset split counts disagree with its summary")
+    source_index = {str(Path(r["snapshot_path"]).resolve()): r
+                    for r in io.read_csv(snapshot / "snapshot_provenance.csv")}
+    paths = {name: snapshot / "src_snapshot" / name for name in (TRAINER, COMMON, SOAP)}
+    hashes = {}
+    for name, path in paths.items():
+        entry = source_index.get(str(path))
+        if entry is None or io.sha256(path) != entry["sha256"]:
+            raise ValueError("Source snapshot did not verify: " + str(path))
+        hashes[name] = entry["sha256"]
+    alias_file = dataset / "all_source_records.csv"
+    aliases = io.read_csv(alias_file)
+    original_features = {r["representative_id"]: Path(r["feature_file"])
+                         for r in aliases if r["source"] == "Own_augmented"
+                         and r["record_id"] == r["representative_id"]}
+    contract = dict(dataset=str(dataset), dataset_manifest_sha256=io.sha256(manifest),
+                    source_snapshot=str(snapshot), source_sha256=hashes,
+                    alias_manifest_sha256=io.sha256(alias_file),
+                    feature_dim=392, soap_dim=390, species_order=["Si", "O"],
+                    geometry_dtype="float64", feature_dtype="float32",
+                    r_cut_A=5.0, n_max=6, l_max=4,
+                    baseline_feature_check_atol=1e-5, baseline_feature_check_rtol=1e-5,
+                    counts=counts, feature_preparation_script_sha256=io.sha256(Path(__file__)))
+    return dataset, rows, paths, original_features, contract
+--- the worker loop header, with context ---
+    for row in rows[args.rank::args.world]:
+        good, _ = valid_cache(out, row, contract_hash)
+        if good:
+            skipped += 1
+            continue
+        target, marker = cache_paths(out, row)
+        status = dict(record_id=row["record_id"], split=row["split"], n_atoms=int(row["n_atoms"]),
+                      rank=args.rank, contract_sha256=contract_hash, started=io.now())
+        start = time.perf_counter()
+        positions = cell = x_tensor = None
+        try:
+            source = dataset / row["data_file"]
+            if io.sha256(source) != row["data_sha256"]:
+    for row in rows:
+        good, state = valid_cache(out, row, contract_hash)
+        path, marker = cache_paths(out, row)
+        statuses.append(dict(record_id=row["record_id"], source=row["source"], split=row["split"], status=state))
+        if good:
+            manifest.append(dict(row, feature_file=str(path), feature_sha256=io.sha256(path)))
+    io.write_csv(out / "feature_status.csv", statuses)
+    counts = Counter(r["status"] for r in statuses)
+    print("Feature status: " + json.dumps(dict(counts), sort_keys=True))
+    if any(r["status"] != "PASS" for r in statuses):
+        io.write_json(out / "feature_summary.json",
+                      dict(created=io.now(), finalization_status="INCOMPLETE",
+                           feature_status_counts=dict(counts), training_moments_ready=False))
+
+=== P2. prep: does finalize recount, and how? ===
+51:    counts = dict(Counter(r["split"] for r in rows))
+52:    if counts != split_summary["unique_configuration_counts"]:
+53:        raise ValueError("Dataset split counts disagree with its summary")
+75:                    counts=counts, feature_preparation_script_sha256=io.sha256(Path(__file__)))
+278:    counts = Counter(r["status"] for r in statuses)
+279:    print("Feature status: " + json.dumps(dict(counts), sort_keys=True))
+282:                      dict(created=io.now(), finalization_status="INCOMPLETE",
+283:                           feature_status_counts=dict(counts), training_moments_ready=False))
+303:                             n_training_structures=len(train_ids), train_record_ids=np.array(train_ids),
+307:    summary = dict(created=io.now(), finalization_status="PASS", training_moments_ready=True,
+309:                   contract_sha256=contract_hash, feature_counts=dict(Counter(r["split"] for r in manifest)),
+314:                   training_moments_sha256=io.sha256(stats),
+317:    print("Features by split: " + json.dumps(summary["feature_counts"], sort_keys=True))
+
+=== C1. common trainer: the counts check ===
+def verify_inputs(feature_root):
+    """Verify manifests and grouping without using held-out labels."""
+    feature_root = feature_root.expanduser().resolve()
+    fc_path = feature_root / "feature_contract.json"
+    fc = json.loads(fc_path.read_text())
+    summary = json.loads((feature_root / "feature_summary.json").read_text())
+    if summary["finalization_status"] != "PASS" or not summary["training_moments_ready"]:
+        raise ValueError("Features have not passed finalization")
+    checked_hash(fc_path, summary["contract_sha256"])
+    fm = feature_root / "manifest.csv"
+    checked_hash(fm, summary["manifest_sha256"])
+    rows = io.read_csv(fm)
+    by_id = checked_index(rows, "feature manifest")
+    counts = dict(Counter(r["split"] for r in rows))
+    if set(counts) != set(SPLITS) or counts != fc["counts"] or counts != summary["feature_counts"]:
+        raise ValueError("Feature split counts disagree")
+    if (fc["feature_dim"], fc["soap_dim"], fc["species_order"]) != (392, 390, ["Si", "O"]):
+        raise ValueError("Unexpected descriptor dimensions/species order")
+    dataset = Path(fc["dataset"]).resolve()
+    dm = dataset / "manifest.csv"
+    ds = json.loads((dataset / "split_summary.json").read_text())
+    checked_hash(dm, fc["dataset_manifest_sha256"])
+    checked_hash(dm, ds["manifest_sha256"])
+    original = checked_index(io.read_csv(dm), "dataset manifest")
+    if set(by_id) != set(original) or counts != ds["unique_configuration_counts"]:
+        raise ValueError("Feature/dataset record membership differs")
+    for rid, row in by_id.items():
+        if any(row.get(k) != v for k, v in original[rid].items()):
+            raise ValueError("Feature manifest changed dataset metadata: " + rid)
+    for key in ("split_group", "phase_pair_group", "geometry_sha256"):
+        groups = defaultdict(set)
+        for row in rows:
+            if row.get(key):
+                groups[row[key]].add(row["split"])
+        if any(len(s) != 1 for s in groups.values()):
+            raise ValueError("Cross-split conflict: " + key)
+    sources = {}
+    for name in (COMMON, C1B, SOAP):
+
+=== C2. common trainer: record loading loop ===
+
+
+def load_records(inputs, trainer, splits):
+    records = {s: [] for s in splits}
+    for row in inputs["rows"]:
+        if row["split"] not in records:
+            continue
+        rid, n = row["record_id"], int(row["n_atoms"])
+        path = (inputs["dataset"] / row["data_file"]).resolve()
+        checked_hash(path, row["data_sha256"])
+        with np.load(path, allow_pickle=False) as d:
+            g = io.geometry(d)
+            io.basic_qc(g, n, 4608)
+            if io.geometry_hash(g) != row["geometry_sha256"]:
+                raise ValueError("Geometry mismatch: " + rid)
+            if (d["record_id"].item(), d["split"].item(), d["teacher"].item()) != (
+                    rid, row["split"], io.TEACHER):
+                raise ValueError("Label identity/teacher mismatch: " + rid)
+            energy = float(d["mace_energy_total_eV"])
+            forces = np.asarray(d["mace_forces"], dtype=np.float64)
+            io.check_labels(energy, forces, n)
+            phase = np.asarray(d["phase"]).copy() if "phase" in d else None
+            center = np.asarray(d["interface_center"]).copy() if "interface_center" in d else None
+        # No region metrics or invented bulk/interface labels in this adapter.
+        feature = Path(row["feature_file"])
+        checked_hash(feature, row["feature_sha256"])
+        with np.load(feature, allow_pickle=False) as d:
+            x = d["X_local_torchsoap"]
+            if x.shape != (n, 392) or x.dtype != np.float32 or not np.isfinite(x).all():
+                raise ValueError("Invalid features: " + rid)
+            if (d["record_id"].item(), d["split"].item(), d["geometry_sha256"].item()) != (
+                    rid, row["split"], row["geometry_sha256"]):
+                raise ValueError("Feature identity mismatch: " + rid)
+        symbols, masses = trainer.build_symbols_masses(g["atomic_numbers"])
+        record = trainer.StructureRecord(
+            source_file=rid, phase_pair=row["phase_pair_group"], split=row["split"],
+            n_atoms=n, feature_file=feature, source_shard=path,
+            atomic_numbers=g["atomic_numbers"], positions_np=g["positions"],
+            cell_np=g["cell"], phase=phase, interface_center=center,
+            target_energy_total_eV=energy, target_forces_np=forces, symbols=symbols, masses=masses)
+        records[row["split"]].append(record)
+
+=== C3. common trainer: SPLITS and the --splits flag ===
+57:SPLITS = ("train", "val", "test")
+102:    if set(counts) != set(SPLITS) or counts != fc["counts"] or counts != summary["feature_counts"]:
+712:    p.add_argument("--splits", choices=SPLITS, nargs="+", default=["val", "test"],
+    p.add_argument("--threads", type=int, default=16)
+    p.add_argument("--max-hours", type=float, default=0.0,
+                   help="Budget for this invocation; checked at epoch boundaries. Zero means unlimited.")
+    p.add_argument("--log-every", type=int, default=50)
+    p.add_argument("--splits", choices=SPLITS, nargs="+", default=["val", "test"],
+                   help="Only used by evaluate, after checkpoint selection has finished.")
+    args = p.parse_args()
+    positive = ("energy_weight", "force_weight", "lr", "grad_clip",
+                "max_epochs", "patience", "threads", "log_every")

@@ -1,0 +1,22 @@
+source snapshot   : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z
+  its torchsoap_autograd_module_periodic_regnorm.py
+    sha256        : 186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c
+corrected module  : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+    sha256        : 0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21
+    bytes         : 36289
+new snapshot      : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1
+
+copied, __pycache__ excluded
+installed torchsoap_autograd_module_periodic_regnorm.py  sha256 0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  36289 bytes
+provenance: 18 of 18 rows repointed, 1 row's sha256/bytes updated
+
+verifying as prepare_expanded_moe_features.py does:
+  torchsoap_autograd_module_periodic_regnorm.py                  verified
+  run_c1b_matpes_r2scan_fourcase_fullmoe_float64.py              verified
+  train_c1b_frozen_routing_conservative_residual_v3_196train.py  verified
+  train_conservative_common_energy_baseline_augmented.py         verified
+
+source snapshot unchanged: torchsoap_autograd_module_periodic_regnorm.py sha256 186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c
+RESULT: snapshot ready
+Pass this directory as --snapshot to prepare_expanded_moe_features.py:
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1
