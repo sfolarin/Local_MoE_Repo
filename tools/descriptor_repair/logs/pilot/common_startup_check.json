@@ -1,0 +1,41 @@
+{
+  "C1b_common_loader": "PASS",
+  "finished": "2026-10-26T21:29:21.928499+00:00",
+  "n_atoms": 4608,
+  "peak_allocated_GiB": 1.1460790634155273,
+  "peak_reserved_GiB": 1.279296875,
+  "record_id": "external_0271",
+  "split": "train",
+  "status": "PASS",
+  "steps": [
+    {
+      "E_predicted_eV": -44552.189235676764,
+      "E_reference_eV": -45366.8998190805,
+      "dE_eV_per_atom": 0.17680351202338013,
+      "elapsed_s": 1.3640733700012788,
+      "force_MAE_eV_A": 0.13573194265190405,
+      "force_MSE_eV2_A2": 0.03247226174552206,
+      "gradient_norm_before_clip": 14997.939453125,
+      "loss": 345.0670803835373,
+      "n_atoms": 4608,
+      "record_id": "external_0271",
+      "split": "train"
+    },
+    {
+      "E_predicted_eV": -44701.7903251543,
+      "E_reference_eV": -45366.8998190805,
+      "dE_eV_per_atom": 0.14433799781384474,
+      "elapsed_s": 0.03277011995669454,
+      "force_MAE_eV_A": 0.12132007524602739,
+      "force_MSE_eV2_A2": 0.024777697364136306,
+      "gradient_norm_before_clip": 12193.0224609375,
+      "loss": 233.1122734932308,
+      "n_atoms": 4608,
+      "record_id": "external_0271",
+      "split": "train"
+    }
+  ],
+  "targets": "actual_MATPes_labels",
+  "training_contract_sha256": "48fe44825761cb8d96fbfd675b3bb19d8f8a2b5053f88db2fb23e7e9393e05c0",
+  "weights_discarded": true
+}

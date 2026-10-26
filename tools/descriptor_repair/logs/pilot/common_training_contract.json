@@ -1,0 +1,59 @@
+{
+  "adapter_sha256": "dba8920e80bff68731ddfad9fbf804a208066ab070877d0a8bb395974e59294a",
+  "cuda_version": "12.8",
+  "e_ref_eV_per_atom": -9.668443844547909,
+  "energy_reference_policy": "preserve_baseline_constant",
+  "force_metric": "structure_balanced",
+  "geometry_dtype": "float64",
+  "initialization": "fresh_common_network",
+  "inputs": {
+    "counts": {
+      "test": 105,
+      "train": 369,
+      "val": 38
+    },
+    "dataset": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1",
+    "dataset_manifest_sha256": "2c27f1dec5ab9dc4e51dd6d1d6d012b2bab1b2d10df9763f8e92dd57dc6c6960",
+    "feature_contract_sha256": "4016d20e4bcc803ecf9039c58b61d6b0be8053117768c07cd4aaefbe2e5fe384",
+    "feature_manifest_sha256": "26b306cc9d37807201eb2b395b47acb582eb414fb0f1722f10122f37f92c9edf",
+    "features": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1",
+    "reference_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1/baseline/common.pt",
+    "reference_checkpoint_sha256": "a03a4f2b488ccfd92cbc1bb7282c575fcac3f5ae8f74907f65663fd3db636875",
+    "source_sha256": {
+      "torchsoap_autograd_module_periodic_regnorm.py": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21",
+      "train_c1b_frozen_routing_conservative_residual_v3_196train.py": "89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680",
+      "train_conservative_common_energy_baseline_augmented.py": "25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551"
+    },
+    "training_atoms": 515322,
+    "training_moments_sha256": "1aab3b9a60b2ed26ffa8135b607f796b85fe72dc52cea60ee588f6e9e38cdd8f",
+    "training_structures": 369
+  },
+  "io_helper_sha256": "23e970d164d649fb133542b7e2b8860fa6915e12cc06e4a3fce633ec7ff596c4",
+  "network_dtype": "float32",
+  "normalization_policy": "original_compute_feature_normalization_on_train_only",
+  "normalization_sha256": "c11d1b645f32dbf06b7f05354b798a404ea320638d670fdd5ccd879561b69036",
+  "numpy_version": "1.26.4",
+  "optimizer": "AdamW",
+  "python_version": "3.9.19",
+  "scheduler": "ReduceLROnPlateau",
+  "scheduler_factor": 0.5,
+  "schema_version": 1,
+  "selection_split": "val",
+  "settings": {
+    "energy_weight": 10000.0,
+    "force_weight": 1000.0,
+    "grad_clip": 1.0,
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "lr": 0.001,
+    "min_delta": 1e-05,
+    "patience": 30,
+    "scheduler_patience": 10,
+    "seed": 20260811,
+    "threads": 16,
+    "weight_decay": 1e-07
+  },
+  "torch_version": "2.8.0+cu128"
+}

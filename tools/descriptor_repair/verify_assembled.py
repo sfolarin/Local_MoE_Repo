@@ -192,7 +192,12 @@ for rec in chosen:
 
     # 4. cutoff-aware finite difference of the ASSEMBLED energy vs its forces
     gap = gap_all_images(pos0, cell0, RCUT, rec.symbols)
-    h1 = 1e-3 if gap is None else min(1e-3, 0.4 * gap)
+    # Roundoff dominates here (error ~ 1/h), so the step should be as LARGE as
+    # validity allows rather than capped at an arbitrary 1e-3.  The binding
+    # constraint is the cutoff gap; 5e-3 A is a loose ceiling that keeps
+    # truncation small.  The best-of-three probe below also samples h/3 and
+    # h/10, which covers the truncation-dominated side.
+    h1 = 5e-3 if gap is None else min(5e-3, 0.4 * gap)
     R["cutoff_gap_A"], R["fd_step"] = gap, h1
     print("  nearest pair to r_cut: %s A   FD step %.3e"
           % (("%.3e" % gap) if gap is not None else "n/a", h1))

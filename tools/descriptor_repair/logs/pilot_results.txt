@@ -1,0 +1,68 @@
+=== COMMON: convergence and best ===
+epoch=136 val: E_RMSE=4.6478 meV/atom F_RMSE=0.113947 eV/A loss=13.1998 best=116
+epoch=137 val: E_RMSE=5.2718 meV/atom F_RMSE=0.114032 eV/A loss=13.2812 best=116
+epoch=138 val: E_RMSE=4.8009 meV/atom F_RMSE=0.114082 eV/A loss=13.2451 best=116
+epoch=139 val: E_RMSE=4.7173 meV/atom F_RMSE=0.114113 eV/A loss=13.2443 best=116
+epoch=140 val: E_RMSE=4.6634 meV/atom F_RMSE=0.113965 eV/A loss=13.2055 best=116
+epoch=141 val: E_RMSE=4.6957 meV/atom F_RMSE=0.114016 eV/A loss=13.22 best=116
+epoch=142 val: E_RMSE=4.8988 meV/atom F_RMSE=0.114234 eV/A loss=13.2893 best=116
+epoch=143 val: E_RMSE=4.6784 meV/atom F_RMSE=0.114294 eV/A loss=13.2821 best=116
+epoch=144 val: E_RMSE=4.4852 meV/atom F_RMSE=0.114301 eV/A loss=13.266 best=116
+epoch=145 val: E_RMSE=4.5825 meV/atom F_RMSE=0.114251 eV/A loss=13.2632 best=116
+epoch=146 val: E_RMSE=4.9432 meV/atom F_RMSE=0.114260 eV/A loss=13.2997 best=116
+{"best_epoch": 116, "best_val_loss": 13.11727775245964, "finished": "2026-10-26T21:54:18.477773+00:00", "last_completed_epoch": 146, "reason": "early_stopping", "status": "COMPLETE", "test_evaluated": false}
+
+=== ROUTER: distillation results table ===
+ROUTING DISTILLATION RESULTS
+======================================================================================================================
+split   region               SB_KL        MAE_w       top1     cosine
+----------------------------------------------------------------------
+train   all              0.0075710    0.0078722     0.9734    0.99684
+train   interface        0.0209435    0.0159846     0.9286    0.99098
+train   phase1_bulk      0.0022738    0.0054965     0.9803    0.99895
+train   phase2_bulk      0.0037248    0.0061439     0.9822    0.99892
+val     all              0.0264679    0.0147753     0.9445    0.98769
+val     interface        0.0528276    0.0262355     0.8918    0.97422
+val     phase1_bulk      0.0047854    0.0074047     0.9660    0.99835
+val     phase2_bulk      0.0049784    0.0077385     0.9941    0.99814
+
+Epoch 130 train_KL=0.00918042 val_KL=0.02722539 lr=1.250e-04 
+Epoch 135 train_KL=0.00896767 val_KL=0.02730030 lr=6.250e-05 
+Epoch 140 train_KL=0.00893526 val_KL=0.02724143 lr=6.250e-05 
+Epoch 145 train_KL=0.00884086 val_KL=0.02708730 lr=3.125e-05 
+
+=== C1b: final split metrics ===
+FINAL EVALUATION USING BEST C1b CHECKPOINT
+==========================================================================================================================
+best epoch: 13, best val loss: 13.02433082
+
+split     E_RMSE(meV/atom)   E_MAE(meV/atom)    F_SB_RMSE(eV/A)   MoE_E_RMS(meV/a)    mean |Fnet|     max |Fnet|
+------------------------------------------------------------------------------------------------------------------------------
+train             1.831247          1.042587           0.056298           0.948778      4.046e-14      4.067e-13
+val               4.503537          2.517596           0.113232           0.908932      4.156e-14      1.612e-13
+
+TEST REGION FORCE METRICS
+Epoch 040 | train E=   1.746 meV/atom F= 0.05361 eV/A dE_MoE=  0.856 meV/atom | val E=   4.620 meV/atom F= 0.11418 eV/A dE_MoE=  0.689 meV/atom | valL=  13.25095 lr=6.25e-05 mem=1.25 GiB 
+Epoch 041 | train E=   1.758 meV/atom F= 0.05355 eV/A dE_MoE=  0.769 meV/atom | val E=   4.488 meV/atom F= 0.11415 eV/A dE_MoE=  0.696 meV/atom | valL=  13.23175 lr=6.25e-05 mem=1.25 GiB 
+Epoch 042 | train E=   1.740 meV/atom F= 0.05349 eV/A dE_MoE=  0.838 meV/atom | val E=   4.444 meV/atom F= 0.11403 eV/A dE_MoE=  0.775 meV/atom | valL=  13.20016 lr=6.25e-05 mem=1.25 GiB 
+Epoch 043 | train E=   1.779 meV/atom F= 0.05342 eV/A dE_MoE=  0.807 meV/atom | val E=   4.333 meV/atom F= 0.11419 eV/A dE_MoE=  1.128 meV/atom | valL=  13.22703 lr=6.25e-05 mem=1.25 GiB 
+
+=== test-partition tables must be EMPTY ===
+TEST FORCE-MIXTURE REPRODUCTION
+======================================================================================================================
+predictor  region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+--------------------------------------------------------------------------
+
+TEST REGION FORCE METRICS
+region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+------------------------------------------------------------------
+
+Saved:
+
+=== production baselines, for the comparison ===
+  common prod  {'best_epoch': 128, 'best_val_loss': 17.884299530524544}
+  router prod  {'best_epoch': 93, 'best_val_structure_balanced_KL': 0.03335634206795428}
+  c1b prod     {'best_epoch': 3, 'best_val_loss': 17.80891151905897}
+  common pilot {'best_epoch': 116, 'best_val_loss': 13.11727775245964}
+  router pilot {'best_epoch': 110, 'best_val_structure_balanced_KL': 0.026467936925320446}
+  c1b pilot    {'best_epoch': 13, 'best_val_loss': 13.024330822914758}

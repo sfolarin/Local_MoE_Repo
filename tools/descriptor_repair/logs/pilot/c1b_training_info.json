@@ -1,0 +1,21 @@
+{
+  "best_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt",
+  "best_epoch": 13,
+  "best_val_loss": 13.024330822914758,
+  "common_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt",
+  "e_ref_eV_per_atom": -9.668443844547909,
+  "energy_weight": 10000.0,
+  "force_weight": 1000.0,
+  "model_role": "frozen-routing conservative Local-MoE residual",
+  "residual_architecture": [
+    392,
+    256,
+    128,
+    7
+  ],
+  "residual_centering": "per atom across expert channels",
+  "routing_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt",
+  "routing_coordinate_gradient_enabled": true,
+  "routing_parameters_frozen": true,
+  "stage": "C1b"
+}

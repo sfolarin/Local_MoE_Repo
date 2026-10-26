@@ -22,6 +22,7 @@ import argparse
 import builtins
 import importlib.util
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -125,6 +126,25 @@ def main():
 
     np.load = guarded_load
     builtins.open = guarded_open
+
+    # An adapter is a copy of a script that imports its SIBLINGS, e.g.
+    #     import prepare_expanded_moe_labels as io
+    # Those siblings live beside the ORIGINAL, not beside the adapter, and
+    # importlib does not put a loaded file's directory on sys.path.  The adapter
+    # header records where it was adapted from, so the original's directory can
+    # be added automatically rather than hard-coded here.
+    orig = None
+    for ln in Path(args.adapter).read_text(errors="replace").splitlines()[:8]:
+        m = re.match(r"#\s*adapted from:\s*(\S+)", ln)
+        if m:
+            orig = Path(m.group(1))
+            break
+    for d in ([orig.parent] if orig else []) + [Path(args.adapter).resolve().parent]:
+        if d.is_dir() and str(d) not in sys.path:
+            sys.path.insert(0, str(d))
+            print("sys.path += %s" % d)
+    if orig is None:
+        print("note: adapter has no 'adapted from' header; sibling imports may fail")
 
     spec = importlib.util.spec_from_file_location("_adapted_stage", args.adapter)
     mod = importlib.util.module_from_spec(spec)

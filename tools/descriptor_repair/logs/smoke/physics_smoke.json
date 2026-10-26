@@ -1,0 +1,63 @@
+{
+  "trainer_sha256": "3705bf0a3aa4bf2dbe7d74091e9da79754867db7c8d728d6f63c2ecd0e8710fa",
+  "corrected_sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21",
+  "variant": "rotinv_v1",
+  "common_sha256": "20124e2533950b107a7020237152446874a0c2c2641121caf7cd2c781c922651",
+  "router_sha256": "ff3803dad0b182678e07f4a29b63e1200d99a0c3601aa3d3ca5d28bd9e025e5a",
+  "residual_sha256": "6f457ac7abd4c5ba902205cf0f153c48871ad3286881e771b9f1ac718af678b4",
+  "e_ref": -9.668443844547909,
+  "r_cut": 5.0,
+  "device": "cuda",
+  "torch": "2.8.0+cu128",
+  "numpy": "1.26.4",
+  "python": "3.9.19",
+  "tol_energy": 1e-07,
+  "tol_force": 1e-06,
+  "residual_normalization": "common (train_c1b_holdout40.py line 1277)",
+  "records": [
+    {
+      "record": "external_0081",
+      "split": "train",
+      "n_atoms": 72,
+      "E_eV": -710.8505178092271,
+      "E_per_atom": -9.872923858461487,
+      "nonfinite": [],
+      "rot_dE_eV": 0.0,
+      "rot_dF_eV_A": 8.354428260304303e-14,
+      "cutoff_gap_A": 0.00845311955542094,
+      "fd_step": 0.001,
+      "fd_threshold": 0.035101320747799036,
+      "fd_roundoff_floor": 0.0017550660373899518,
+      "fd_force_max": 0.4152662694173884,
+      "fd_residual_scale_eV": 14.722561001777649,
+      "fd": "EXEMPT_resolution",
+      "gradient_consistency_verified": false
+    },
+    {
+      "record": "external_0165",
+      "split": "val",
+      "n_atoms": 180,
+      "E_eV": -1776.7648397381977,
+      "E_per_atom": -9.87091577632332,
+      "nonfinite": [],
+      "rot_dE_eV": 0.0,
+      "rot_dF_eV_A": 7.76601005725297e-14,
+      "cutoff_gap_A": 7.38592246936065e-05,
+      "fd_step": 2.9543689877442605e-05,
+      "fd_threshold": 2.941119639008246,
+      "fd_roundoff_floor": 0.1470559819504123,
+      "fd_force_max": 0.36955063775647856,
+      "fd_residual_scale_eV": 36.444947719573975,
+      "fd": "EXEMPT_resolution",
+      "gradient_consistency_verified": false
+    }
+  ],
+  "exempt_centres": 2,
+  "failures": [],
+  "gradient_consistency_verified_records": [],
+  "gradient_consistency_unverified_records": [
+    "external_0081",
+    "external_0165"
+  ],
+  "verdict": "PASS_WITH_UNVERIFIED_GRADIENTS"
+}

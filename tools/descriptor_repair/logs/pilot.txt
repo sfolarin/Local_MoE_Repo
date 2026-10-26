@@ -1,0 +1,1780 @@
+
+################ common_train ################
+Common-model startup check: external_0271 N=4608 (two disposable training steps)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=4608 | edges(search)=114076
+Startup PASS: 1.146 GiB allocated, 1.279 GiB reserved; C1b loader PASS
+Common training: 369 train / 38 val; 105 test reserved
+e_ref=-9.66844384454791 eV/atom; train atoms=515322; one structure/step
+epoch=1 step=1/369 record=own_0176 N=2592 loss=1064.17
+epoch=1 step=50/369 record=external_0125 N=480 loss=66.4474
+epoch=1 step=100/369 record=external_0255 N=1296 loss=17.1085
+epoch=1 step=150/369 record=external_0118 N=792 loss=7.11708
+epoch=1 step=200/369 record=own_0153 N=954 loss=382.771
+epoch=1 step=250/369 record=own_0073 N=1728 loss=130.674
+epoch=1 step=300/369 record=external_0253 N=2268 loss=12.9744
+epoch=1 step=350/369 record=external_0157 N=528 loss=20.6668
+epoch=1 step=369/369 record=own_0236 N=540 loss=287.222
+epoch=1 val: E_RMSE=43.0064 meV/atom F_RMSE=0.311751 eV/A loss=115.684 best=1
+epoch=2 step=1/369 record=own_0216 N=2172 loss=141.804
+epoch=2 step=50/369 record=external_0265 N=1296 loss=33.0018
+epoch=2 step=100/369 record=own_0117 N=978 loss=210.026
+epoch=2 step=150/369 record=own_0090 N=1728 loss=205.806
+epoch=2 step=200/369 record=own_0169 N=1608 loss=406.233
+epoch=2 step=250/369 record=external_0000 N=648 loss=72.4462
+epoch=2 step=300/369 record=own_0047 N=1032 loss=102.757
+epoch=2 step=350/369 record=external_0080 N=288 loss=30.5028
+epoch=2 step=369/369 record=own_0092 N=2352 loss=89.8662
+epoch=2 val: E_RMSE=20.9127 meV/atom F_RMSE=0.224056 eV/A loss=54.5746 best=2
+epoch=3 step=1/369 record=own_0224 N=864 loss=51.3386
+epoch=3 step=50/369 record=external_0240 N=1728 loss=36.4814
+epoch=3 step=100/369 record=own_0120 N=1728 loss=74.6116
+epoch=3 step=150/369 record=external_0004 N=792 loss=1.4302
+epoch=3 step=200/369 record=external_0112 N=864 loss=1.60941
+epoch=3 step=250/369 record=own_0066 N=672 loss=75.2542
+epoch=3 step=300/369 record=own_0000 N=540 loss=44.5676
+epoch=3 step=350/369 record=external_0095 N=108 loss=2.90114
+epoch=3 step=369/369 record=own_0186 N=816 loss=54.6157
+epoch=3 val: E_RMSE=32.3262 meV/atom F_RMSE=0.198957 eV/A loss=50.0338 best=3
+epoch=4 step=1/369 record=external_0257 N=864 loss=30.6285
+epoch=4 step=50/369 record=external_0094 N=2160 loss=2.39031
+epoch=4 step=100/369 record=external_0052 N=432 loss=10.1709
+epoch=4 step=150/369 record=own_0173 N=2592 loss=34.7616
+epoch=4 step=200/369 record=external_0255 N=1296 loss=8.307
+epoch=4 step=250/369 record=own_0231 N=2172 loss=70.7801
+epoch=4 step=300/369 record=external_0104 N=864 loss=9.68494
+epoch=4 step=350/369 record=external_0264 N=1296 loss=14.5456
+epoch=4 step=369/369 record=external_0248 N=2520 loss=1.54122
+epoch=4 val: E_RMSE=14.7088 meV/atom F_RMSE=0.180873 eV/A loss=34.8784 best=4
+epoch=5 step=1/369 record=own_0173 N=2592 loss=33.6149
+epoch=5 step=50/369 record=own_0216 N=2172 loss=37.8213
+epoch=5 step=100/369 record=external_0232 N=1728 loss=18.2439
+epoch=5 step=150/369 record=external_0194 N=1458 loss=3.0553
+epoch=5 step=200/369 record=own_0083 N=1632 loss=62.1288
+epoch=5 step=250/369 record=external_0233 N=1728 loss=21.187
+epoch=5 step=300/369 record=external_0024 N=594 loss=4.28013
+epoch=5 step=350/369 record=own_0205 N=1440 loss=53.5
+epoch=5 step=369/369 record=external_0258 N=864 loss=12.2882
+epoch=5 val: E_RMSE=12.6523 meV/atom F_RMSE=0.175074 eV/A loss=32.2516 best=5
+epoch=6 step=1/369 record=external_0058 N=1944 loss=1.79295
+epoch=6 step=50/369 record=external_0047 N=132 loss=5.46865
+epoch=6 step=100/369 record=external_0171 N=504 loss=6.1911
+epoch=6 step=150/369 record=own_0066 N=672 loss=37.8272
+epoch=6 step=200/369 record=own_0031 N=1296 loss=47.1548
+epoch=6 step=250/369 record=own_0069 N=2304 loss=34.7699
+epoch=6 step=300/369 record=own_0055 N=2376 loss=42.2381
+epoch=6 step=350/369 record=external_0238 N=2160 loss=27.2397
+epoch=6 step=369/369 record=own_0210 N=1440 loss=56.9897
+epoch=6 val: E_RMSE=11.8770 meV/atom F_RMSE=0.174723 eV/A loss=31.9386 best=6
+epoch=7 step=1/369 record=own_0211 N=1440 loss=52.5182
+epoch=7 step=50/369 record=own_0179 N=1608 loss=17.4566
+epoch=7 step=100/369 record=external_0231 N=1728 loss=4.96487
+epoch=7 step=150/369 record=own_0216 N=2172 loss=22.586
+epoch=7 step=200/369 record=own_0083 N=1632 loss=55.6994
+epoch=7 step=250/369 record=own_0026 N=1152 loss=34.7611
+epoch=7 step=300/369 record=external_0181 N=1080 loss=1.46063
+epoch=7 step=350/369 record=own_0180 N=1608 loss=19.7813
+epoch=7 step=369/369 record=external_0222 N=192 loss=3.15945
+epoch=7 val: E_RMSE=10.5566 meV/atom F_RMSE=0.159151 eV/A loss=26.4435 best=7
+epoch=8 step=1/369 record=external_0017 N=864 loss=1.13476
+epoch=8 step=50/369 record=external_0151 N=672 loss=4.69696
+epoch=8 step=100/369 record=external_0264 N=1296 loss=11.2347
+epoch=8 step=150/369 record=own_0045 N=1632 loss=27.191
+epoch=8 step=200/369 record=external_0057 N=1008 loss=1.0534
+epoch=8 step=250/369 record=own_0176 N=2592 loss=31.2453
+epoch=8 step=300/369 record=external_0071 N=720 loss=1.37839
+epoch=8 step=350/369 record=own_0052 N=1620 loss=18.4233
+epoch=8 step=369/369 record=own_0001 N=540 loss=29.2021
+epoch=8 val: E_RMSE=14.9230 meV/atom F_RMSE=0.158632 eV/A loss=27.391 best=7
+epoch=9 step=1/369 record=external_0232 N=1728 loss=14.052
+epoch=9 step=50/369 record=own_0026 N=1152 loss=31.7662
+epoch=9 step=100/369 record=external_0052 N=432 loss=0.987385
+epoch=9 step=150/369 record=own_0183 N=1608 loss=24.4733
+epoch=9 step=200/369 record=own_0149 N=1680 loss=24.9406
+epoch=9 step=250/369 record=own_0223 N=864 loss=18.7647
+epoch=9 step=300/369 record=external_0239 N=1728 loss=11.5973
+epoch=9 step=350/369 record=own_0233 N=540 loss=19.3871
+epoch=9 step=369/369 record=external_0016 N=972 loss=1.69017
+epoch=9 val: E_RMSE=9.2938 meV/atom F_RMSE=0.154432 eV/A loss=24.713 best=9
+epoch=10 step=1/369 record=own_0168 N=1608 loss=20.4554
+epoch=10 step=50/369 record=external_0047 N=132 loss=4.4563
+epoch=10 step=100/369 record=external_0061 N=240 loss=2.42529
+epoch=10 step=150/369 record=own_0205 N=1440 loss=35.7253
+epoch=10 step=200/369 record=external_0063 N=240 loss=2.4572
+epoch=10 step=250/369 record=external_0234 N=2880 loss=27.0072
+epoch=10 step=300/369 record=own_0089 N=1728 loss=24.5327
+epoch=10 step=350/369 record=external_0270 N=4608 loss=11.437
+epoch=10 step=369/369 record=own_0049 N=1080 loss=41.1176
+epoch=10 val: E_RMSE=8.0736 meV/atom F_RMSE=0.156113 eV/A loss=25.0232 best=9
+epoch=11 step=1/369 record=own_0234 N=540 loss=17.2804
+epoch=11 step=50/369 record=own_0012 N=672 loss=39.9211
+epoch=11 step=100/369 record=external_0215 N=1188 loss=1.07516
+epoch=11 step=150/369 record=external_0067 N=1152 loss=2.79458
+epoch=11 step=200/369 record=own_0043 N=816 loss=34.8645
+epoch=11 step=250/369 record=own_0027 N=2592 loss=23.1971
+epoch=11 step=300/369 record=own_0145 N=2280 loss=21.2992
+epoch=11 step=350/369 record=external_0246 N=2592 loss=21.4889
+epoch=11 step=369/369 record=external_0099 N=648 loss=4.74598
+epoch=11 val: E_RMSE=12.4111 meV/atom F_RMSE=0.159244 eV/A loss=26.899 best=9
+epoch=12 step=1/369 record=own_0211 N=1440 loss=26.2695
+epoch=12 step=50/369 record=own_0171 N=2592 loss=20.1485
+epoch=12 step=100/369 record=own_0000 N=540 loss=13.489
+epoch=12 step=150/369 record=external_0251 N=3456 loss=21.0056
+epoch=12 step=200/369 record=own_0005 N=372 loss=44.0359
+epoch=12 step=250/369 record=own_0041 N=1008 loss=65.2981
+epoch=12 step=300/369 record=own_0038 N=1440 loss=21.2417
+epoch=12 step=350/369 record=own_0175 N=2592 loss=29.809
+epoch=12 step=369/369 record=own_0081 N=2304 loss=17.4051
+epoch=12 val: E_RMSE=8.1636 meV/atom F_RMSE=0.146859 eV/A loss=22.2339 best=12
+epoch=13 step=1/369 record=external_0071 N=720 loss=0.932592
+epoch=13 step=50/369 record=external_0229 N=1296 loss=1.16195
+epoch=13 step=100/369 record=external_0063 N=240 loss=1.5929
+epoch=13 step=150/369 record=external_0117 N=1152 loss=1.7532
+epoch=13 step=200/369 record=own_0175 N=2592 loss=16.8277
+epoch=13 step=250/369 record=external_0244 N=3456 loss=14.3497
+epoch=13 step=300/369 record=external_0187 N=594 loss=0.84264
+epoch=13 step=350/369 record=own_0156 N=2304 loss=15.5118
+epoch=13 step=369/369 record=external_0045 N=1512 loss=0.906485
+epoch=13 val: E_RMSE=8.8040 meV/atom F_RMSE=0.143254 eV/A loss=21.2968 best=13
+epoch=14 step=1/369 record=external_0162 N=120 loss=3.07699
+epoch=14 step=50/369 record=own_0153 N=954 loss=29.8677
+epoch=14 step=100/369 record=own_0223 N=864 loss=15.1684
+epoch=14 step=150/369 record=external_0032 N=504 loss=1.23672
+epoch=14 step=200/369 record=own_0000 N=540 loss=14.1651
+epoch=14 step=250/369 record=own_0213 N=2172 loss=17.6522
+epoch=14 step=300/369 record=own_0129 N=2496 loss=43.4869
+epoch=14 step=350/369 record=external_0091 N=720 loss=4.75139
+epoch=14 step=369/369 record=own_0203 N=576 loss=53.5708
+epoch=14 val: E_RMSE=12.3370 meV/atom F_RMSE=0.140673 eV/A loss=21.3109 best=13
+epoch=15 step=1/369 record=external_0119 N=720 loss=0.857482
+epoch=15 step=50/369 record=external_0111 N=936 loss=0.325126
+epoch=15 step=100/369 record=own_0066 N=672 loss=26.0921
+epoch=15 step=150/369 record=own_0182 N=1608 loss=13.0418
+epoch=15 step=200/369 record=own_0126 N=1728 loss=23.3378
+epoch=15 step=250/369 record=own_0202 N=576 loss=16.5648
+epoch=15 step=300/369 record=own_0167 N=1608 loss=14.2944
+epoch=15 step=350/369 record=own_0205 N=1440 loss=26.2184
+epoch=15 step=369/369 record=own_0081 N=2304 loss=18.1492
+epoch=15 val: E_RMSE=8.4602 meV/atom F_RMSE=0.147583 eV/A loss=22.4966 best=13
+epoch=16 step=1/369 record=own_0047 N=1032 loss=26.2803
+epoch=16 step=50/369 record=own_0024 N=2880 loss=20.8229
+epoch=16 step=100/369 record=external_0164 N=168 loss=1.54825
+epoch=16 step=150/369 record=own_0163 N=1608 loss=11.2929
+epoch=16 step=200/369 record=external_0194 N=1458 loss=2.32681
+epoch=16 step=250/369 record=own_0053 N=1620 loss=14.8833
+epoch=16 step=300/369 record=own_0164 N=1608 loss=10.9156
+epoch=16 step=350/369 record=own_0040 N=1008 loss=50.3753
+epoch=16 step=369/369 record=external_0263 N=1296 loss=5.3187
+epoch=16 val: E_RMSE=8.0187 meV/atom F_RMSE=0.136861 eV/A loss=19.3739 best=16
+epoch=17 step=1/369 record=own_0121 N=1728 loss=20.3537
+epoch=17 step=50/369 record=external_0065 N=288 loss=3.8955
+epoch=17 step=100/369 record=external_0114 N=1188 loss=1.04137
+epoch=17 step=150/369 record=own_0092 N=2352 loss=34.1835
+epoch=17 step=200/369 record=own_0068 N=2304 loss=17.0107
+epoch=17 step=250/369 record=own_0183 N=1608 loss=23.7286
+epoch=17 step=300/369 record=external_0120 N=1512 loss=0.453358
+epoch=17 step=350/369 record=own_0070 N=2688 loss=30.4773
+epoch=17 step=369/369 record=external_0212 N=1296 loss=0.953149
+epoch=17 val: E_RMSE=7.1838 meV/atom F_RMSE=0.140792 eV/A loss=20.3384 best=16
+epoch=18 step=1/369 record=external_0254 N=2268 loss=0.686431
+epoch=18 step=50/369 record=external_0038 N=252 loss=8.90389
+epoch=18 step=100/369 record=external_0125 N=480 loss=3.19409
+epoch=18 step=150/369 record=external_0242 N=1728 loss=4.91038
+epoch=18 step=200/369 record=external_0224 N=756 loss=1.54792
+epoch=18 step=250/369 record=own_0216 N=2172 loss=18.2306
+epoch=18 step=300/369 record=own_0117 N=978 loss=62.1609
+epoch=18 step=350/369 record=own_0179 N=1608 loss=10.8623
+epoch=18 step=369/369 record=own_0211 N=1440 loss=22.004
+epoch=18 val: E_RMSE=11.2147 meV/atom F_RMSE=0.140048 eV/A loss=20.871 best=16
+epoch=19 step=1/369 record=own_0069 N=2304 loss=19.4885
+epoch=19 step=50/369 record=external_0139 N=576 loss=0.91312
+epoch=19 step=100/369 record=own_0160 N=2304 loss=12.8847
+epoch=19 step=150/369 record=own_0164 N=1608 loss=12.9008
+epoch=19 step=200/369 record=external_0025 N=396 loss=0.974842
+epoch=19 step=250/369 record=external_0256 N=1296 loss=4.91453
+epoch=19 step=300/369 record=own_0108 N=2640 loss=13.6965
+epoch=19 step=350/369 record=own_0177 N=1608 loss=10.1792
+epoch=19 step=369/369 record=external_0229 N=1296 loss=1.39833
+epoch=19 val: E_RMSE=8.5926 meV/atom F_RMSE=0.135897 eV/A loss=19.2062 best=19
+epoch=20 step=1/369 record=own_0040 N=1008 loss=37.5149
+epoch=20 step=50/369 record=external_0038 N=252 loss=5.53673
+epoch=20 step=100/369 record=own_0233 N=540 loss=13.7905
+epoch=20 step=150/369 record=own_0213 N=2172 loss=11.9766
+epoch=20 step=200/369 record=own_0173 N=2592 loss=10.986
+epoch=20 step=250/369 record=external_0000 N=648 loss=2.40739
+epoch=20 step=300/369 record=external_0006 N=504 loss=0.402039
+epoch=20 step=350/369 record=external_0070 N=756 loss=1.25339
+epoch=20 step=369/369 record=external_0039 N=1440 loss=0.618188
+epoch=20 val: E_RMSE=7.8404 meV/atom F_RMSE=0.132369 eV/A loss=18.1362 best=20
+epoch=21 step=1/369 record=own_0183 N=1608 loss=9.78364
+epoch=21 step=50/369 record=own_0021 N=1728 loss=20.1778
+epoch=21 step=100/369 record=external_0047 N=132 loss=1.77858
+epoch=21 step=150/369 record=own_0149 N=1680 loss=15.6459
+epoch=21 step=200/369 record=external_0209 N=2160 loss=1.51884
+epoch=21 step=250/369 record=external_0048 N=336 loss=1.85122
+epoch=21 step=300/369 record=external_0054 N=1620 loss=1.68136
+epoch=21 step=350/369 record=external_0120 N=1512 loss=1.02043
+epoch=21 step=369/369 record=own_0128 N=2496 loss=37.2645
+epoch=21 val: E_RMSE=7.7972 meV/atom F_RMSE=0.138295 eV/A loss=19.7334 best=20
+epoch=22 step=1/369 record=own_0057 N=708 loss=20.0573
+epoch=22 step=50/369 record=own_0216 N=2172 loss=13.908
+epoch=22 step=100/369 record=own_0021 N=1728 loss=21.7376
+epoch=22 step=150/369 record=own_0054 N=2376 loss=21.5287
+epoch=22 step=200/369 record=external_0000 N=648 loss=0.418804
+epoch=22 step=250/369 record=own_0205 N=1440 loss=15.986
+epoch=22 step=300/369 record=own_0046 N=1032 loss=23.325
+epoch=22 step=350/369 record=own_0032 N=2592 loss=10.2792
+epoch=22 step=369/369 record=external_0038 N=252 loss=6.7609
+epoch=22 val: E_RMSE=11.8302 meV/atom F_RMSE=0.137563 eV/A loss=20.3233 best=20
+epoch=23 step=1/369 record=own_0140 N=2592 loss=28.6947
+epoch=23 step=50/369 record=external_0256 N=1296 loss=4.71677
+epoch=23 step=100/369 record=own_0061 N=2592 loss=25.2529
+epoch=23 step=150/369 record=own_0104 N=1608 loss=9.63858
+epoch=23 step=200/369 record=own_0002 N=348 loss=32.0971
+epoch=23 step=250/369 record=own_0210 N=1440 loss=14.3242
+epoch=23 step=300/369 record=own_0072 N=2592 loss=16.885
+epoch=23 step=350/369 record=external_0049 N=144 loss=0.795035
+epoch=23 step=369/369 record=external_0164 N=168 loss=1.98777
+epoch=23 val: E_RMSE=6.9537 meV/atom F_RMSE=0.137949 eV/A loss=19.5135 best=20
+epoch=24 step=1/369 record=external_0092 N=3456 loss=0.781023
+epoch=24 step=50/369 record=own_0040 N=1008 loss=39.0098
+epoch=24 step=100/369 record=external_0265 N=1296 loss=2.39642
+epoch=24 step=150/369 record=external_0180 N=918 loss=0.711629
+epoch=24 step=200/369 record=external_0264 N=1296 loss=5.71395
+epoch=24 step=250/369 record=own_0232 N=2172 loss=15.2464
+epoch=24 step=300/369 record=own_0048 N=1080 loss=34.1219
+epoch=24 step=350/369 record=external_0243 N=2592 loss=12.694
+epoch=24 step=369/369 record=external_0081 N=72 loss=2.3998
+epoch=24 val: E_RMSE=8.3693 meV/atom F_RMSE=0.136419 eV/A loss=19.3106 best=20
+epoch=25 step=1/369 record=external_0104 N=864 loss=0.211756
+epoch=25 step=50/369 record=own_0106 N=2304 loss=24.0833
+epoch=25 step=100/369 record=own_0105 N=1608 loss=9.98155
+epoch=25 step=150/369 record=own_0181 N=1608 loss=10.9315
+epoch=25 step=200/369 record=own_0119 N=1608 loss=9.5282
+epoch=25 step=250/369 record=own_0169 N=1608 loss=20.6107
+epoch=25 step=300/369 record=external_0097 N=324 loss=1.00343
+epoch=25 step=350/369 record=own_0212 N=2172 loss=11.7895
+epoch=25 step=369/369 record=external_0119 N=720 loss=0.213745
+epoch=25 val: E_RMSE=10.7821 meV/atom F_RMSE=0.131259 eV/A loss=18.3916 best=20
+epoch=26 step=1/369 record=external_0049 N=144 loss=0.993258
+epoch=26 step=50/369 record=external_0258 N=864 loss=4.89609
+epoch=26 step=100/369 record=external_0224 N=756 loss=0.391189
+epoch=26 step=150/369 record=external_0201 N=288 loss=3.59595
+epoch=26 step=200/369 record=own_0035 N=1440 loss=17.02
+epoch=26 step=250/369 record=own_0218 N=2172 loss=15.9315
+epoch=26 step=300/369 record=own_0163 N=1608 loss=9.44468
+epoch=26 step=350/369 record=external_0004 N=792 loss=0.263831
+epoch=26 step=369/369 record=own_0158 N=2304 loss=14.1957
+epoch=26 val: E_RMSE=7.4477 meV/atom F_RMSE=0.137170 eV/A loss=19.3703 best=20
+epoch=27 step=1/369 record=external_0114 N=1188 loss=0.511629
+epoch=27 step=50/369 record=own_0041 N=1008 loss=28.6624
+epoch=27 step=100/369 record=external_0031 N=756 loss=1.75028
+epoch=27 step=150/369 record=external_0063 N=240 loss=2.25069
+epoch=27 step=200/369 record=own_0204 N=576 loss=36.4721
+epoch=27 step=250/369 record=own_0068 N=2304 loss=16.2259
+epoch=27 step=300/369 record=external_0180 N=918 loss=1.13621
+epoch=27 step=350/369 record=external_0132 N=468 loss=1.49105
+epoch=27 step=369/369 record=own_0236 N=540 loss=16.5219
+epoch=27 val: E_RMSE=11.9554 meV/atom F_RMSE=0.133022 eV/A loss=19.1242 best=20
+epoch=28 step=1/369 record=external_0031 N=756 loss=0.863653
+epoch=28 step=50/369 record=own_0042 N=816 loss=29.9029
+epoch=28 step=100/369 record=own_0054 N=2376 loss=19.0852
+epoch=28 step=150/369 record=external_0232 N=1728 loss=6.32007
+epoch=28 step=200/369 record=external_0100 N=1296 loss=0.401496
+epoch=28 step=250/369 record=external_0097 N=324 loss=1.03166
+epoch=28 step=300/369 record=external_0146 N=120 loss=1.67878
+epoch=28 step=350/369 record=own_0073 N=1728 loss=11.6068
+epoch=28 step=369/369 record=own_0104 N=1608 loss=8.5396
+epoch=28 val: E_RMSE=7.7212 meV/atom F_RMSE=0.128465 eV/A loss=17.0995 best=28
+epoch=29 step=1/369 record=own_0038 N=1440 loss=15.0939
+epoch=29 step=50/369 record=own_0176 N=2592 loss=6.65197
+epoch=29 step=100/369 record=external_0104 N=864 loss=0.320455
+epoch=29 step=150/369 record=own_0082 N=2304 loss=13.1149
+epoch=29 step=200/369 record=own_0218 N=2172 loss=40.519
+epoch=29 step=250/369 record=own_0056 N=504 loss=24.8482
+epoch=29 step=300/369 record=own_0208 N=1440 loss=19.3404
+epoch=29 step=350/369 record=external_0018 N=1134 loss=1.37428
+epoch=29 step=369/369 record=own_0223 N=864 loss=9.4152
+epoch=29 val: E_RMSE=7.6641 meV/atom F_RMSE=0.130787 eV/A loss=17.6926 best=28
+epoch=30 step=1/369 record=own_0116 N=978 loss=41.3308
+epoch=30 step=50/369 record=own_0067 N=672 loss=19.6571
+epoch=30 step=100/369 record=own_0182 N=1608 loss=7.69864
+epoch=30 step=150/369 record=external_0031 N=756 loss=1.79974
+epoch=30 step=200/369 record=external_0190 N=594 loss=0.517682
+epoch=30 step=250/369 record=external_0013 N=1080 loss=0.19153
+epoch=30 step=300/369 record=external_0266 N=1296 loss=5.39802
+epoch=30 step=350/369 record=own_0042 N=816 loss=36.3297
+epoch=30 step=369/369 record=own_0227 N=2172 loss=11.7612
+epoch=30 val: E_RMSE=6.2245 meV/atom F_RMSE=0.127590 eV/A loss=16.6666 best=30
+epoch=31 step=1/369 record=own_0092 N=2352 loss=19.1435
+epoch=31 step=50/369 record=external_0129 N=144 loss=1.46981
+epoch=31 step=100/369 record=own_0035 N=1440 loss=16.007
+epoch=31 step=150/369 record=own_0120 N=1728 loss=18.4293
+epoch=31 step=200/369 record=own_0126 N=1728 loss=20.198
+epoch=31 step=250/369 record=external_0137 N=648 loss=0.248123
+epoch=31 step=300/369 record=own_0028 N=2592 loss=8.26523
+epoch=31 step=350/369 record=own_0053 N=1620 loss=9.65588
+epoch=31 step=369/369 record=external_0233 N=1728 loss=4.61084
+epoch=31 val: E_RMSE=12.9055 meV/atom F_RMSE=0.129703 eV/A loss=18.4885 best=30
+epoch=32 step=1/369 record=own_0057 N=708 loss=16.3023
+epoch=32 step=50/369 record=external_0003 N=432 loss=0.425675
+epoch=32 step=100/369 record=external_0114 N=1188 loss=0.440513
+epoch=32 step=150/369 record=external_0072 N=540 loss=2.79777
+epoch=32 step=200/369 record=own_0176 N=2592 loss=16.4538
+epoch=32 step=250/369 record=own_0144 N=2280 loss=13.8688
+epoch=32 step=300/369 record=own_0165 N=1608 loss=9.75901
+epoch=32 step=350/369 record=external_0260 N=2592 loss=1.13408
+epoch=32 step=369/369 record=external_0247 N=2520 loss=0.355944
+epoch=32 val: E_RMSE=5.8697 meV/atom F_RMSE=0.125958 eV/A loss=16.2099 best=32
+epoch=33 step=1/369 record=own_0095 N=2304 loss=16.2877
+epoch=33 step=50/369 record=own_0209 N=1440 loss=16.853
+epoch=33 step=100/369 record=own_0007 N=816 loss=7.18021
+epoch=33 step=150/369 record=external_0105 N=1080 loss=2.70525
+epoch=33 step=200/369 record=external_0120 N=1512 loss=0.514743
+epoch=33 step=250/369 record=own_0187 N=816 loss=13.9186
+epoch=33 step=300/369 record=own_0090 N=1728 loss=10.9609
+epoch=33 step=350/369 record=external_0056 N=1458 loss=0.658287
+epoch=33 step=369/369 record=external_0047 N=132 loss=1.61815
+epoch=33 val: E_RMSE=14.7358 meV/atom F_RMSE=0.136393 eV/A loss=20.7745 best=32
+epoch=34 step=1/369 record=external_0209 N=2160 loss=1.52584
+epoch=34 step=50/369 record=own_0200 N=576 loss=11.5862
+epoch=34 step=100/369 record=external_0075 N=648 loss=0.718762
+epoch=34 step=150/369 record=external_0001 N=576 loss=0.582508
+epoch=34 step=200/369 record=own_0218 N=2172 loss=13.91
+epoch=34 step=250/369 record=external_0241 N=1728 loss=0.247695
+epoch=34 step=300/369 record=external_0095 N=108 loss=1.2764
+epoch=34 step=350/369 record=own_0051 N=2112 loss=9.64452
+epoch=34 step=369/369 record=own_0070 N=2688 loss=22.772
+epoch=34 val: E_RMSE=7.5181 meV/atom F_RMSE=0.129991 eV/A loss=17.4629 best=32
+epoch=35 step=1/369 record=external_0130 N=312 loss=1.34606
+epoch=35 step=50/369 record=own_0191 N=2232 loss=10.7823
+epoch=35 step=100/369 record=external_0267 N=1296 loss=1.00227
+epoch=35 step=150/369 record=own_0202 N=576 loss=8.66415
+epoch=35 step=200/369 record=external_0068 N=1152 loss=1.68444
+epoch=35 step=250/369 record=own_0164 N=1608 loss=7.31487
+epoch=35 step=300/369 record=own_0152 N=954 loss=19.3604
+epoch=35 step=350/369 record=external_0087 N=972 loss=1.71919
+epoch=35 step=369/369 record=own_0184 N=816 loss=7.83073
+epoch=35 val: E_RMSE=6.5513 meV/atom F_RMSE=0.127338 eV/A loss=16.6442 best=32
+epoch=36 step=1/369 record=external_0233 N=1728 loss=4.6276
+epoch=36 step=50/369 record=own_0226 N=2172 loss=10.0876
+epoch=36 step=100/369 record=own_0073 N=1728 loss=10.9027
+epoch=36 step=150/369 record=own_0071 N=2592 loss=12.2543
+epoch=36 step=200/369 record=external_0214 N=768 loss=0.380708
+epoch=36 step=250/369 record=external_0092 N=3456 loss=0.326047
+epoch=36 step=300/369 record=own_0131 N=2832 loss=22.1997
+epoch=36 step=350/369 record=external_0067 N=1152 loss=1.25065
+epoch=36 step=369/369 record=external_0251 N=3456 loss=8.55548
+epoch=36 val: E_RMSE=7.8693 meV/atom F_RMSE=0.129105 eV/A loss=17.2873 best=32
+epoch=37 step=1/369 record=own_0018 N=504 loss=17.2121
+epoch=37 step=50/369 record=own_0234 N=540 loss=6.97911
+epoch=37 step=100/369 record=external_0120 N=1512 loss=0.176813
+epoch=37 step=150/369 record=external_0072 N=540 loss=0.901203
+epoch=37 step=200/369 record=own_0141 N=2592 loss=19.8722
+epoch=37 step=250/369 record=own_0170 N=2592 loss=6.44796
+epoch=37 step=300/369 record=own_0181 N=1608 loss=4.59532
+epoch=37 step=350/369 record=own_0152 N=954 loss=14.8223
+epoch=37 step=369/369 record=own_0187 N=816 loss=13.7318
+epoch=37 val: E_RMSE=8.6515 meV/atom F_RMSE=0.128447 eV/A loss=17.2471 best=32
+epoch=38 step=1/369 record=external_0050 N=432 loss=1.45692
+epoch=38 step=50/369 record=external_0080 N=288 loss=1.39937
+epoch=38 step=100/369 record=own_0054 N=2376 loss=15.6038
+epoch=38 step=150/369 record=external_0256 N=1296 loss=5.02932
+epoch=38 step=200/369 record=own_0228 N=2172 loss=10.6497
+epoch=38 step=250/369 record=own_0149 N=1680 loss=12.9985
+epoch=38 step=300/369 record=own_0079 N=1440 loss=17.6492
+epoch=38 step=350/369 record=external_0238 N=2160 loss=8.62513
+epoch=38 step=369/369 record=external_0215 N=1188 loss=0.674304
+epoch=38 val: E_RMSE=6.4777 meV/atom F_RMSE=0.131325 eV/A loss=17.6659 best=32
+epoch=39 step=1/369 record=external_0075 N=648 loss=0.81507
+epoch=39 step=50/369 record=own_0212 N=2172 loss=9.40556
+epoch=39 step=100/369 record=own_0031 N=1296 loss=23.2026
+epoch=39 step=150/369 record=own_0003 N=348 loss=26.3453
+epoch=39 step=200/369 record=own_0196 N=2232 loss=16.3015
+epoch=39 step=250/369 record=own_0191 N=2232 loss=11.0067
+epoch=39 step=300/369 record=own_0130 N=2352 loss=18.3281
+epoch=39 step=350/369 record=own_0054 N=2376 loss=13.7255
+epoch=39 step=369/369 record=external_0092 N=3456 loss=0.552614
+epoch=39 val: E_RMSE=6.1797 meV/atom F_RMSE=0.124044 eV/A loss=15.7687 best=39
+epoch=40 step=1/369 record=own_0218 N=2172 loss=13.5826
+epoch=40 step=50/369 record=external_0229 N=1296 loss=0.536902
+epoch=40 step=100/369 record=own_0176 N=2592 loss=10.1347
+epoch=40 step=150/369 record=own_0194 N=2232 loss=13.7173
+epoch=40 step=200/369 record=external_0147 N=168 loss=1.07084
+epoch=40 step=250/369 record=external_0071 N=720 loss=0.344185
+epoch=40 step=300/369 record=external_0187 N=594 loss=0.499029
+epoch=40 step=350/369 record=external_0158 N=528 loss=1.76405
+epoch=40 step=369/369 record=external_0008 N=1080 loss=0.355957
+epoch=40 val: E_RMSE=8.2660 meV/atom F_RMSE=0.125296 eV/A loss=16.3824 best=39
+epoch=41 step=1/369 record=external_0129 N=144 loss=1.32766
+epoch=41 step=50/369 record=own_0186 N=816 loss=9.77895
+epoch=41 step=100/369 record=own_0018 N=504 loss=15.3862
+epoch=41 step=150/369 record=own_0166 N=1608 loss=9.11539
+epoch=41 step=200/369 record=external_0195 N=1152 loss=0.524294
+epoch=41 step=250/369 record=external_0107 N=648 loss=0.172091
+epoch=41 step=300/369 record=own_0082 N=2304 loss=8.6583
+epoch=41 step=350/369 record=external_0018 N=1134 loss=0.653595
+epoch=41 step=369/369 record=external_0231 N=1728 loss=1.66217
+epoch=41 val: E_RMSE=5.5553 meV/atom F_RMSE=0.122786 eV/A loss=15.3849 best=41
+epoch=42 step=1/369 record=own_0100 N=1800 loss=10.792
+epoch=42 step=50/369 record=own_0138 N=2232 loss=15.9053
+epoch=42 step=100/369 record=external_0234 N=2880 loss=15.9411
+epoch=42 step=150/369 record=external_0105 N=1080 loss=0.128546
+epoch=42 step=200/369 record=external_0132 N=468 loss=0.645892
+epoch=42 step=250/369 record=external_0158 N=528 loss=1.61616
+epoch=42 step=300/369 record=own_0041 N=1008 loss=24.317
+epoch=42 step=350/369 record=own_0046 N=1032 loss=22.0729
+epoch=42 step=369/369 record=own_0055 N=2376 loss=18.2777
+epoch=42 val: E_RMSE=8.0694 meV/atom F_RMSE=0.125465 eV/A loss=16.3926 best=41
+epoch=43 step=1/369 record=own_0154 N=2172 loss=10.2112
+epoch=43 step=50/369 record=own_0152 N=954 loss=19.11
+epoch=43 step=100/369 record=own_0199 N=576 loss=7.04113
+epoch=43 step=150/369 record=own_0165 N=1608 loss=8.52149
+epoch=43 step=200/369 record=external_0030 N=504 loss=0.443093
+epoch=43 step=250/369 record=external_0016 N=972 loss=0.276363
+epoch=43 step=300/369 record=own_0238 N=540 loss=7.54035
+epoch=43 step=350/369 record=external_0080 N=288 loss=1.18666
+epoch=43 step=369/369 record=external_0171 N=504 loss=0.764422
+epoch=43 val: E_RMSE=7.5443 meV/atom F_RMSE=0.123809 eV/A loss=15.898 best=41
+epoch=44 step=1/369 record=own_0020 N=1728 loss=11.9337
+epoch=44 step=50/369 record=external_0195 N=1152 loss=0.798736
+epoch=44 step=100/369 record=own_0229 N=2172 loss=10.8633
+epoch=44 step=150/369 record=external_0136 N=540 loss=0.162467
+epoch=44 step=200/369 record=own_0209 N=1440 loss=10.4455
+epoch=44 step=250/369 record=external_0260 N=2592 loss=1.93118
+epoch=44 step=300/369 record=own_0140 N=2592 loss=20.3993
+epoch=44 step=350/369 record=own_0105 N=1608 loss=7.73832
+epoch=44 step=369/369 record=own_0050 N=2112 loss=9.24935
+epoch=44 val: E_RMSE=6.0365 meV/atom F_RMSE=0.123565 eV/A loss=15.6328 best=41
+epoch=45 step=1/369 record=own_0026 N=1152 loss=10.9292
+epoch=45 step=50/369 record=external_0232 N=1728 loss=4.76359
+epoch=45 step=100/369 record=own_0164 N=1608 loss=9.20399
+epoch=45 step=150/369 record=own_0032 N=2592 loss=7.47988
+epoch=45 step=200/369 record=own_0128 N=2496 loss=25.5078
+epoch=45 step=250/369 record=own_0179 N=1608 loss=8.41636
+epoch=45 step=300/369 record=own_0211 N=1440 loss=22.2683
+epoch=45 step=350/369 record=external_0143 N=1728 loss=1.64146
+epoch=45 step=369/369 record=external_0061 N=240 loss=1.40928
+epoch=45 val: E_RMSE=7.1779 meV/atom F_RMSE=0.121917 eV/A loss=15.379 best=45
+epoch=46 step=1/369 record=external_0252 N=3456 loss=9.6284
+epoch=46 step=50/369 record=own_0056 N=504 loss=22.1434
+epoch=46 step=100/369 record=own_0232 N=2172 loss=10.3255
+epoch=46 step=150/369 record=external_0241 N=1728 loss=0.431634
+epoch=46 step=200/369 record=own_0235 N=540 loss=7.90029
+epoch=46 step=250/369 record=own_0145 N=2280 loss=14.4097
+epoch=46 step=300/369 record=own_0129 N=2496 loss=23.0178
+epoch=46 step=350/369 record=external_0194 N=1458 loss=0.721387
+epoch=46 step=369/369 record=own_0238 N=540 loss=9.70132
+epoch=46 val: E_RMSE=5.9449 meV/atom F_RMSE=0.124320 eV/A loss=15.8089 best=45
+epoch=47 step=1/369 record=external_0261 N=1296 loss=0.75114
+epoch=47 step=50/369 record=external_0181 N=1080 loss=0.744895
+epoch=47 step=100/369 record=own_0101 N=1800 loss=9.07595
+epoch=47 step=150/369 record=external_0266 N=1296 loss=4.28122
+epoch=47 step=200/369 record=own_0186 N=816 loss=8.65014
+epoch=47 step=250/369 record=own_0164 N=1608 loss=6.25137
+epoch=47 step=300/369 record=external_0091 N=720 loss=1.25487
+epoch=47 step=350/369 record=own_0225 N=864 loss=14.1072
+epoch=47 step=369/369 record=own_0151 N=2460 loss=14.3131
+epoch=47 val: E_RMSE=6.8323 meV/atom F_RMSE=0.124109 eV/A loss=15.8698 best=45
+epoch=48 step=1/369 record=external_0183 N=540 loss=0.697841
+epoch=48 step=50/369 record=external_0224 N=756 loss=0.576635
+epoch=48 step=100/369 record=external_0013 N=1080 loss=0.462086
+epoch=48 step=150/369 record=own_0002 N=348 loss=23.4152
+epoch=48 step=200/369 record=external_0212 N=1296 loss=0.696251
+epoch=48 step=250/369 record=external_0057 N=1008 loss=0.501134
+epoch=48 step=300/369 record=external_0262 N=1296 loss=2.0567
+epoch=48 step=350/369 record=own_0075 N=2172 loss=12.1968
+epoch=48 step=369/369 record=external_0139 N=576 loss=0.354965
+epoch=48 val: E_RMSE=7.0484 meV/atom F_RMSE=0.120407 eV/A loss=14.9946 best=48
+epoch=49 step=1/369 record=own_0221 N=864 loss=8.55065
+epoch=49 step=50/369 record=own_0191 N=2232 loss=8.42041
+epoch=49 step=100/369 record=own_0159 N=2304 loss=10.3784
+epoch=49 step=150/369 record=own_0004 N=372 loss=26.6163
+epoch=49 step=200/369 record=external_0268 N=1296 loss=5.23858
+epoch=49 step=250/369 record=external_0097 N=324 loss=0.192402
+epoch=49 step=300/369 record=own_0205 N=1440 loss=12.0357
+epoch=49 step=350/369 record=external_0169 N=288 loss=2.17758
+epoch=49 step=369/369 record=external_0126 N=288 loss=0.469586
+epoch=49 val: E_RMSE=5.5928 meV/atom F_RMSE=0.121527 eV/A loss=15.0816 best=48
+epoch=50 step=1/369 record=own_0012 N=672 loss=21.2862
+epoch=50 step=50/369 record=own_0216 N=2172 loss=8.32884
+epoch=50 step=100/369 record=external_0119 N=720 loss=0.482249
+epoch=50 step=150/369 record=own_0150 N=2460 loss=16.5823
+epoch=50 step=200/369 record=own_0223 N=864 loss=7.97864
+epoch=50 step=250/369 record=external_0087 N=972 loss=1.91437
+epoch=50 step=300/369 record=own_0013 N=672 loss=23.89
+epoch=50 step=350/369 record=own_0139 N=2232 loss=7.73096
+epoch=50 step=369/369 record=own_0050 N=2112 loss=7.46847
+epoch=50 val: E_RMSE=5.4576 meV/atom F_RMSE=0.119213 eV/A loss=14.5097 best=50
+epoch=51 step=1/369 record=own_0180 N=1608 loss=5.82328
+epoch=51 step=50/369 record=own_0148 N=1680 loss=12.6031
+epoch=51 step=100/369 record=own_0068 N=2304 loss=10.7654
+epoch=51 step=150/369 record=external_0031 N=756 loss=0.786785
+epoch=51 step=200/369 record=own_0080 N=1440 loss=15.3483
+epoch=51 step=250/369 record=own_0047 N=1032 loss=13.0249
+epoch=51 step=300/369 record=own_0103 N=2496 loss=12.1371
+epoch=51 step=350/369 record=own_0229 N=2172 loss=8.46746
+epoch=51 step=369/369 record=own_0144 N=2280 loss=9.78747
+epoch=51 val: E_RMSE=7.4297 meV/atom F_RMSE=0.121921 eV/A loss=15.4167 best=50
+epoch=52 step=1/369 record=own_0161 N=2304 loss=8.88166
+epoch=52 step=50/369 record=external_0017 N=864 loss=0.410133
+epoch=52 step=100/369 record=own_0170 N=2592 loss=4.95554
+epoch=52 step=150/369 record=own_0024 N=2880 loss=20.203
+epoch=52 step=200/369 record=external_0271 N=4608 loss=4.91243
+epoch=52 step=250/369 record=external_0151 N=672 loss=1.60914
+epoch=52 step=300/369 record=own_0181 N=1608 loss=5.17268
+epoch=52 step=350/369 record=external_0117 N=1152 loss=0.475279
+epoch=52 step=369/369 record=external_0143 N=1728 loss=2.85405
+epoch=52 val: E_RMSE=5.9717 meV/atom F_RMSE=0.124849 eV/A loss=15.9438 best=50
+epoch=53 step=1/369 record=own_0222 N=864 loss=16.554
+epoch=53 step=50/369 record=own_0172 N=2592 loss=9.04368
+epoch=53 step=100/369 record=own_0162 N=2304 loss=9.32799
+epoch=53 step=150/369 record=external_0019 N=540 loss=0.171467
+epoch=53 step=200/369 record=external_0092 N=3456 loss=0.45111
+epoch=53 step=250/369 record=external_0048 N=336 loss=0.984438
+epoch=53 step=300/369 record=own_0026 N=1152 loss=11.2095
+epoch=53 step=350/369 record=external_0111 N=936 loss=0.583787
+epoch=53 step=369/369 record=external_0013 N=1080 loss=0.692864
+epoch=53 val: E_RMSE=5.5816 meV/atom F_RMSE=0.122463 eV/A loss=15.3088 best=50
+epoch=54 step=1/369 record=own_0139 N=2232 loss=7.31832
+epoch=54 step=50/369 record=external_0173 N=504 loss=1.69017
+epoch=54 step=100/369 record=own_0026 N=1152 loss=12.8633
+epoch=54 step=150/369 record=external_0251 N=3456 loss=7.44188
+epoch=54 step=200/369 record=own_0168 N=1608 loss=5.66029
+epoch=54 step=250/369 record=external_0091 N=720 loss=1.19487
+epoch=54 step=300/369 record=external_0025 N=396 loss=0.436081
+epoch=54 step=350/369 record=own_0237 N=540 loss=6.03596
+epoch=54 step=369/369 record=own_0029 N=2016 loss=8.76247
+epoch=54 val: E_RMSE=6.3340 meV/atom F_RMSE=0.125428 eV/A loss=16.1333 best=50
+epoch=55 step=1/369 record=external_0039 N=1440 loss=0.452326
+epoch=55 step=50/369 record=own_0051 N=2112 loss=8.41489
+epoch=55 step=100/369 record=external_0009 N=264 loss=0.988133
+epoch=55 step=150/369 record=external_0081 N=72 loss=0.699124
+epoch=55 step=200/369 record=external_0031 N=756 loss=0.295662
+epoch=55 step=250/369 record=external_0253 N=2268 loss=0.139934
+epoch=55 step=300/369 record=own_0176 N=2592 loss=8.53995
+epoch=55 step=350/369 record=external_0108 N=1404 loss=0.310603
+epoch=55 step=369/369 record=own_0104 N=1608 loss=5.33811
+epoch=55 val: E_RMSE=4.7971 meV/atom F_RMSE=0.119908 eV/A loss=14.6081 best=50
+epoch=56 step=1/369 record=external_0102 N=2232 loss=1.13784
+epoch=56 step=50/369 record=own_0066 N=672 loss=12.942
+epoch=56 step=100/369 record=own_0166 N=1608 loss=9.16685
+epoch=56 step=150/369 record=own_0165 N=1608 loss=10.5499
+epoch=56 step=200/369 record=external_0181 N=1080 loss=1.03543
+epoch=56 step=250/369 record=own_0095 N=2304 loss=15.1335
+epoch=56 step=300/369 record=external_0198 N=180 loss=0.52257
+epoch=56 step=350/369 record=own_0118 N=1608 loss=7.33947
+epoch=56 step=369/369 record=external_0162 N=120 loss=2.23504
+epoch=56 val: E_RMSE=7.7925 meV/atom F_RMSE=0.121362 eV/A loss=15.336 best=50
+epoch=57 step=1/369 record=external_0038 N=252 loss=2.83226
+epoch=57 step=50/369 record=external_0224 N=756 loss=0.253782
+epoch=57 step=100/369 record=external_0146 N=120 loss=1.76804
+epoch=57 step=150/369 record=own_0024 N=2880 loss=14.0992
+epoch=57 step=200/369 record=own_0092 N=2352 loss=17.4058
+epoch=57 step=250/369 record=own_0026 N=1152 loss=10.6178
+epoch=57 step=300/369 record=external_0199 N=1296 loss=0.544332
+epoch=57 step=350/369 record=external_0071 N=720 loss=0.267151
+epoch=57 step=369/369 record=external_0091 N=720 loss=1.20981
+epoch=57 val: E_RMSE=5.9726 meV/atom F_RMSE=0.118806 eV/A loss=14.4716 best=57
+epoch=58 step=1/369 record=own_0095 N=2304 loss=14.8151
+epoch=58 step=50/369 record=own_0177 N=1608 loss=3.50045
+epoch=58 step=100/369 record=external_0118 N=792 loss=0.800337
+epoch=58 step=150/369 record=own_0189 N=816 loss=6.24512
+epoch=58 step=200/369 record=own_0129 N=2496 loss=21.4926
+epoch=58 step=250/369 record=external_0244 N=3456 loss=7.11515
+epoch=58 step=300/369 record=external_0248 N=2520 loss=1.1688
+epoch=58 step=350/369 record=external_0199 N=1296 loss=0.113326
+epoch=58 step=369/369 record=external_0099 N=648 loss=0.290231
+epoch=58 val: E_RMSE=5.6615 meV/atom F_RMSE=0.121518 eV/A loss=15.0871 best=57
+epoch=59 step=1/369 record=external_0035 N=594 loss=0.250865
+epoch=59 step=50/369 record=own_0043 N=816 loss=20.4673
+epoch=59 step=100/369 record=own_0203 N=576 loss=8.69136
+epoch=59 step=150/369 record=own_0070 N=2688 loss=18.816
+epoch=59 step=200/369 record=external_0198 N=180 loss=0.807345
+epoch=59 step=250/369 record=own_0227 N=2172 loss=9.29066
+epoch=59 step=300/369 record=own_0026 N=1152 loss=10.4836
+epoch=59 step=350/369 record=own_0092 N=2352 loss=12.7682
+epoch=59 step=369/369 record=external_0241 N=1728 loss=1.05436
+epoch=59 val: E_RMSE=8.5146 meV/atom F_RMSE=0.125089 eV/A loss=16.3723 best=57
+epoch=60 step=1/369 record=external_0195 N=1152 loss=1.01159
+epoch=60 step=50/369 record=own_0026 N=1152 loss=9.73517
+epoch=60 step=100/369 record=external_0252 N=3456 loss=6.54559
+epoch=60 step=150/369 record=external_0012 N=918 loss=0.291706
+epoch=60 step=200/369 record=external_0267 N=1296 loss=1.33668
+epoch=60 step=250/369 record=own_0138 N=2232 loss=13.7448
+epoch=60 step=300/369 record=own_0191 N=2232 loss=10.6916
+epoch=60 step=350/369 record=external_0072 N=540 loss=0.150268
+epoch=60 step=369/369 record=own_0153 N=954 loss=14.3056
+epoch=60 val: E_RMSE=7.7579 meV/atom F_RMSE=0.121974 eV/A loss=15.4795 best=57
+epoch=61 step=1/369 record=external_0183 N=540 loss=0.872277
+epoch=61 step=50/369 record=own_0034 N=1440 loss=14.6485
+epoch=61 step=100/369 record=own_0106 N=2304 loss=12.7685
+epoch=61 step=150/369 record=external_0066 N=1512 loss=0.52368
+epoch=61 step=200/369 record=external_0177 N=468 loss=2.41724
+epoch=61 step=250/369 record=external_0143 N=1728 loss=1.01674
+epoch=61 step=300/369 record=own_0231 N=2172 loss=7.58289
+epoch=61 step=350/369 record=own_0074 N=1728 loss=9.22063
+epoch=61 step=369/369 record=own_0234 N=540 loss=5.08246
+epoch=61 val: E_RMSE=5.3239 meV/atom F_RMSE=0.120502 eV/A loss=14.8041 best=57
+epoch=62 step=1/369 record=external_0262 N=1296 loss=3.23063
+epoch=62 step=50/369 record=external_0123 N=1188 loss=0.325357
+epoch=62 step=100/369 record=external_0012 N=918 loss=0.289629
+epoch=62 step=150/369 record=own_0145 N=2280 loss=9.57531
+epoch=62 step=200/369 record=own_0053 N=1620 loss=8.2047
+epoch=62 step=250/369 record=own_0203 N=576 loss=12.6217
+epoch=62 step=300/369 record=external_0009 N=264 loss=1.58086
+epoch=62 step=350/369 record=external_0256 N=1296 loss=1.96419
+epoch=62 step=369/369 record=external_0120 N=1512 loss=0.130378
+epoch=62 val: E_RMSE=9.7004 meV/atom F_RMSE=0.120543 eV/A loss=15.4716 best=57
+epoch=63 step=1/369 record=external_0050 N=432 loss=0.500156
+epoch=63 step=50/369 record=external_0169 N=288 loss=0.898755
+epoch=63 step=100/369 record=external_0237 N=2160 loss=1.17437
+epoch=63 step=150/369 record=own_0227 N=2172 loss=6.78882
+epoch=63 step=200/369 record=external_0005 N=648 loss=0.535726
+epoch=63 step=250/369 record=own_0162 N=2304 loss=21.4058
+epoch=63 step=300/369 record=external_0070 N=756 loss=0.88002
+epoch=63 step=350/369 record=external_0243 N=2592 loss=7.53776
+epoch=63 step=369/369 record=external_0039 N=1440 loss=0.301712
+epoch=63 val: E_RMSE=5.8821 meV/atom F_RMSE=0.121451 eV/A loss=15.0964 best=57
+epoch=64 step=1/369 record=external_0158 N=528 loss=1.21897
+epoch=64 step=50/369 record=external_0012 N=918 loss=0.17417
+epoch=64 step=100/369 record=external_0055 N=1782 loss=0.316484
+epoch=64 step=150/369 record=own_0158 N=2304 loss=8.47327
+epoch=64 step=200/369 record=external_0031 N=756 loss=0.350049
+epoch=64 step=250/369 record=external_0238 N=2160 loss=5.13503
+epoch=64 step=300/369 record=external_0009 N=264 loss=1.07103
+epoch=64 step=350/369 record=own_0155 N=2172 loss=8.41664
+epoch=64 step=369/369 record=external_0114 N=1188 loss=0.121155
+epoch=64 val: E_RMSE=5.5430 meV/atom F_RMSE=0.123220 eV/A loss=15.4905 best=57
+epoch=65 step=1/369 record=own_0182 N=1608 loss=7.08024
+epoch=65 step=50/369 record=external_0050 N=432 loss=0.548636
+epoch=65 step=100/369 record=external_0014 N=972 loss=0.507526
+epoch=65 step=150/369 record=own_0225 N=864 loss=7.47043
+epoch=65 step=200/369 record=own_0139 N=2232 loss=6.75207
+epoch=65 step=250/369 record=own_0052 N=1620 loss=7.43298
+epoch=65 step=300/369 record=external_0070 N=756 loss=0.381054
+epoch=65 step=350/369 record=own_0100 N=1800 loss=8.07869
+epoch=65 step=369/369 record=own_0044 N=1632 loss=10.7052
+epoch=65 val: E_RMSE=5.5243 meV/atom F_RMSE=0.118618 eV/A loss=14.3754 best=65
+epoch=66 step=1/369 record=own_0140 N=2592 loss=15.8286
+epoch=66 step=50/369 record=external_0169 N=288 loss=0.997773
+epoch=66 step=100/369 record=external_0108 N=1404 loss=0.316649
+epoch=66 step=150/369 record=external_0056 N=1458 loss=0.242046
+epoch=66 step=200/369 record=own_0154 N=2172 loss=7.48348
+epoch=66 step=250/369 record=external_0164 N=168 loss=0.924047
+epoch=66 step=300/369 record=external_0199 N=1296 loss=0.269689
+epoch=66 step=350/369 record=own_0082 N=2304 loss=7.17041
+epoch=66 step=369/369 record=own_0237 N=540 loss=4.54822
+epoch=66 val: E_RMSE=6.5058 meV/atom F_RMSE=0.117169 eV/A loss=14.1519 best=66
+epoch=67 step=1/369 record=external_0242 N=1728 loss=1.1397
+epoch=67 step=50/369 record=external_0099 N=648 loss=0.379735
+epoch=67 step=100/369 record=own_0154 N=2172 loss=7.38931
+epoch=67 step=150/369 record=external_0049 N=144 loss=1.11769
+epoch=67 step=200/369 record=external_0240 N=1728 loss=6.03742
+epoch=67 step=250/369 record=own_0189 N=816 loss=17.47
+epoch=67 step=300/369 record=own_0076 N=2172 loss=8.26554
+epoch=67 step=350/369 record=own_0039 N=1440 loss=7.72054
+epoch=67 step=369/369 record=own_0152 N=954 loss=13.3432
+epoch=67 val: E_RMSE=7.2470 meV/atom F_RMSE=0.118985 eV/A loss=14.6827 best=66
+epoch=68 step=1/369 record=own_0019 N=1008 loss=16.0701
+epoch=68 step=50/369 record=own_0118 N=1608 loss=10.7313
+epoch=68 step=100/369 record=external_0072 N=540 loss=0.100017
+epoch=68 step=150/369 record=own_0088 N=864 loss=6.07714
+epoch=68 step=200/369 record=external_0260 N=2592 loss=0.842976
+epoch=68 step=250/369 record=external_0259 N=2592 loss=0.930334
+epoch=68 step=300/369 record=external_0137 N=648 loss=0.561054
+epoch=68 step=350/369 record=own_0149 N=1680 loss=8.45378
+epoch=68 step=369/369 record=own_0101 N=1800 loss=6.72175
+epoch=68 val: E_RMSE=7.2232 meV/atom F_RMSE=0.120443 eV/A loss=15.0283 best=66
+epoch=69 step=1/369 record=external_0190 N=594 loss=0.431352
+epoch=69 step=50/369 record=external_0163 N=288 loss=0.996489
+epoch=69 step=100/369 record=external_0270 N=4608 loss=3.70283
+epoch=69 step=150/369 record=own_0204 N=576 loss=26.5169
+epoch=69 step=200/369 record=external_0183 N=540 loss=0.299369
+epoch=69 step=250/369 record=external_0087 N=972 loss=0.277729
+epoch=69 step=300/369 record=external_0261 N=1296 loss=1.0497
+epoch=69 step=350/369 record=external_0238 N=2160 loss=5.14542
+epoch=69 step=369/369 record=own_0006 N=816 loss=6.92374
+epoch=69 val: E_RMSE=7.0843 meV/atom F_RMSE=0.118950 eV/A loss=14.6509 best=66
+epoch=70 step=1/369 record=own_0213 N=2172 loss=8.35154
+epoch=70 step=50/369 record=external_0126 N=288 loss=0.759816
+epoch=70 step=100/369 record=own_0127 N=1728 loss=7.6116
+epoch=70 step=150/369 record=own_0054 N=2376 loss=11.4751
+epoch=70 step=200/369 record=external_0250 N=2592 loss=6.95009
+epoch=70 step=250/369 record=external_0047 N=132 loss=0.811427
+epoch=70 step=300/369 record=own_0204 N=576 loss=12.8629
+epoch=70 step=350/369 record=own_0076 N=2172 loss=8.30805
+epoch=70 step=369/369 record=own_0237 N=540 loss=8.52251
+epoch=70 val: E_RMSE=6.2071 meV/atom F_RMSE=0.119020 eV/A loss=14.5509 best=66
+epoch=71 step=1/369 record=own_0052 N=1620 loss=7.34396
+epoch=71 step=50/369 record=external_0261 N=1296 loss=0.958635
+epoch=71 step=100/369 record=own_0088 N=864 loss=6.43905
+epoch=71 step=150/369 record=own_0050 N=2112 loss=9.52544
+epoch=71 step=200/369 record=external_0045 N=1512 loss=0.252931
+epoch=71 step=250/369 record=external_0104 N=864 loss=0.126096
+epoch=71 step=300/369 record=own_0004 N=372 loss=20.9484
+epoch=71 step=350/369 record=own_0080 N=1440 loss=13.7026
+epoch=71 step=369/369 record=external_0235 N=2880 loss=10.2068
+epoch=71 val: E_RMSE=5.8016 meV/atom F_RMSE=0.118951 eV/A loss=14.486 best=66
+epoch=72 step=1/369 record=external_0075 N=648 loss=0.385297
+epoch=72 step=50/369 record=own_0129 N=2496 loss=17.9734
+epoch=72 step=100/369 record=external_0080 N=288 loss=1.52998
+epoch=72 step=150/369 record=own_0048 N=1080 loss=11.5246
+epoch=72 step=200/369 record=own_0186 N=816 loss=8.98498
+epoch=72 step=250/369 record=own_0151 N=2460 loss=10.9307
+epoch=72 step=300/369 record=own_0214 N=2172 loss=7.85624
+epoch=72 step=350/369 record=own_0013 N=672 loss=17.4907
+epoch=72 step=369/369 record=external_0120 N=1512 loss=0.434223
+epoch=72 val: E_RMSE=7.0165 meV/atom F_RMSE=0.120677 eV/A loss=15.0553 best=66
+epoch=73 step=1/369 record=external_0067 N=1152 loss=0.74153
+epoch=73 step=50/369 record=external_0256 N=1296 loss=1.68668
+epoch=73 step=100/369 record=external_0251 N=3456 loss=5.96703
+epoch=73 step=150/369 record=own_0156 N=2304 loss=7.36627
+epoch=73 step=200/369 record=external_0009 N=264 loss=1.42589
+epoch=73 step=250/369 record=own_0209 N=1440 loss=8.24091
+epoch=73 step=300/369 record=own_0106 N=2304 loss=11.4147
+epoch=73 step=350/369 record=external_0254 N=2268 loss=1.47098
+epoch=73 step=369/369 record=external_0052 N=432 loss=0.34297
+epoch=73 val: E_RMSE=5.4521 meV/atom F_RMSE=0.121202 eV/A loss=14.9872 best=66
+epoch=74 step=1/369 record=own_0092 N=2352 loss=12.8557
+epoch=74 step=50/369 record=own_0051 N=2112 loss=9.35138
+epoch=74 step=100/369 record=external_0067 N=1152 loss=0.545322
+epoch=74 step=150/369 record=external_0249 N=2592 loss=6.74348
+epoch=74 step=200/369 record=external_0125 N=480 loss=1.00365
+epoch=74 step=250/369 record=external_0074 N=576 loss=1.00339
+epoch=74 step=300/369 record=external_0137 N=648 loss=0.350099
+epoch=74 step=350/369 record=own_0040 N=1008 loss=20.1983
+epoch=74 step=369/369 record=external_0229 N=1296 loss=0.81825
+epoch=74 val: E_RMSE=7.1216 meV/atom F_RMSE=0.120038 eV/A loss=14.9164 best=66
+epoch=75 step=1/369 record=own_0001 N=540 loss=8.1273
+epoch=75 step=50/369 record=external_0166 N=1296 loss=0.270881
+epoch=75 step=100/369 record=external_0063 N=240 loss=0.850847
+epoch=75 step=150/369 record=own_0160 N=2304 loss=7.31499
+epoch=75 step=200/369 record=external_0187 N=594 loss=0.292103
+epoch=75 step=250/369 record=external_0137 N=648 loss=0.661628
+epoch=75 step=300/369 record=own_0056 N=504 loss=14.5629
+epoch=75 step=350/369 record=own_0026 N=1152 loss=8.54392
+epoch=75 step=369/369 record=external_0144 N=192 loss=0.232032
+epoch=75 val: E_RMSE=4.9803 meV/atom F_RMSE=0.116416 eV/A loss=13.8006 best=75
+epoch=76 step=1/369 record=external_0143 N=1728 loss=0.857393
+epoch=76 step=50/369 record=external_0097 N=324 loss=0.0597731
+epoch=76 step=100/369 record=own_0235 N=540 loss=5.55838
+epoch=76 step=150/369 record=own_0239 N=540 loss=5.10708
+epoch=76 step=200/369 record=own_0090 N=1728 loss=6.94896
+epoch=76 step=250/369 record=external_0017 N=864 loss=0.168329
+epoch=76 step=300/369 record=own_0029 N=2016 loss=7.15545
+epoch=76 step=350/369 record=own_0094 N=1440 loss=9.15824
+epoch=76 step=369/369 record=external_0173 N=504 loss=0.531836
+epoch=76 val: E_RMSE=5.9306 meV/atom F_RMSE=0.119363 eV/A loss=14.5993 best=75
+epoch=77 step=1/369 record=external_0173 N=504 loss=0.430905
+epoch=77 step=50/369 record=own_0089 N=1728 loss=6.11628
+epoch=77 step=100/369 record=external_0094 N=2160 loss=1.66442
+epoch=77 step=150/369 record=own_0156 N=2304 loss=6.83673
+epoch=77 step=200/369 record=own_0190 N=816 loss=14.3517
+epoch=77 step=250/369 record=external_0260 N=2592 loss=1.6852
+epoch=77 step=300/369 record=own_0082 N=2304 loss=7.01342
+epoch=77 step=350/369 record=external_0105 N=1080 loss=0.372763
+epoch=77 step=369/369 record=external_0117 N=1152 loss=0.0896121
+epoch=77 val: E_RMSE=5.3201 meV/atom F_RMSE=0.119498 eV/A loss=14.5628 best=75
+epoch=78 step=1/369 record=external_0261 N=1296 loss=0.935496
+epoch=78 step=50/369 record=own_0080 N=1440 loss=13.9866
+epoch=78 step=100/369 record=own_0027 N=2592 loss=6.41808
+epoch=78 step=150/369 record=external_0076 N=180 loss=0.37948
+epoch=78 step=200/369 record=external_0158 N=528 loss=0.879774
+epoch=78 step=250/369 record=external_0171 N=504 loss=0.505457
+epoch=78 step=300/369 record=external_0266 N=1296 loss=2.80248
+epoch=78 step=350/369 record=own_0041 N=1008 loss=20.0501
+epoch=78 step=369/369 record=own_0208 N=1440 loss=11.1537
+epoch=78 val: E_RMSE=6.2369 meV/atom F_RMSE=0.117034 eV/A loss=14.0859 best=75
+epoch=79 step=1/369 record=external_0270 N=4608 loss=4.3094
+epoch=79 step=50/369 record=external_0076 N=180 loss=0.528255
+epoch=79 step=100/369 record=external_0198 N=180 loss=0.203118
+epoch=79 step=150/369 record=own_0221 N=864 loss=8.23199
+epoch=79 step=200/369 record=own_0183 N=1608 loss=5.0464
+epoch=79 step=250/369 record=own_0151 N=2460 loss=11.1601
+epoch=79 step=300/369 record=own_0073 N=1728 loss=10.1231
+epoch=79 step=350/369 record=own_0153 N=954 loss=13.0023
+epoch=79 step=369/369 record=external_0237 N=2160 loss=2.80472
+epoch=79 val: E_RMSE=5.7361 meV/atom F_RMSE=0.117164 eV/A loss=14.0564 best=75
+epoch=80 step=1/369 record=own_0127 N=1728 loss=8.57454
+epoch=80 step=50/369 record=own_0208 N=1440 loss=14.3771
+epoch=80 step=100/369 record=own_0042 N=816 loss=16.6575
+epoch=80 step=150/369 record=external_0129 N=144 loss=0.578023
+epoch=80 step=200/369 record=own_0056 N=504 loss=14.7514
+epoch=80 step=250/369 record=own_0160 N=2304 loss=6.7382
+epoch=80 step=300/369 record=external_0030 N=504 loss=0.141341
+epoch=80 step=350/369 record=external_0041 N=792 loss=0.560543
+epoch=80 step=369/369 record=external_0137 N=648 loss=0.503606
+epoch=80 val: E_RMSE=7.2023 meV/atom F_RMSE=0.118462 eV/A loss=14.5519 best=75
+epoch=81 step=1/369 record=own_0209 N=1440 loss=9.30322
+epoch=81 step=50/369 record=own_0202 N=576 loss=7.99891
+epoch=81 step=100/369 record=external_0119 N=720 loss=0.164984
+epoch=81 step=150/369 record=external_0045 N=1512 loss=1.51565
+epoch=81 step=200/369 record=external_0111 N=936 loss=0.33631
+epoch=81 step=250/369 record=own_0088 N=864 loss=5.2057
+epoch=81 step=300/369 record=external_0214 N=768 loss=0.121231
+epoch=81 step=350/369 record=own_0044 N=1632 loss=8.92197
+epoch=81 step=369/369 record=external_0054 N=1620 loss=0.328642
+epoch=81 val: E_RMSE=5.8078 meV/atom F_RMSE=0.119852 eV/A loss=14.7019 best=75
+epoch=82 step=1/369 record=own_0219 N=864 loss=4.91546
+epoch=82 step=50/369 record=external_0238 N=2160 loss=5.02586
+epoch=82 step=100/369 record=external_0158 N=528 loss=0.911982
+epoch=82 step=150/369 record=own_0069 N=2304 loss=9.09144
+epoch=82 step=200/369 record=own_0066 N=672 loss=13.2671
+epoch=82 step=250/369 record=external_0254 N=2268 loss=0.830391
+epoch=82 step=300/369 record=external_0104 N=864 loss=0.626515
+epoch=82 step=350/369 record=external_0260 N=2592 loss=1.09057
+epoch=82 step=369/369 record=own_0210 N=1440 loss=8.93192
+epoch=82 val: E_RMSE=5.2159 meV/atom F_RMSE=0.117267 eV/A loss=14.0235 best=75
+epoch=83 step=1/369 record=external_0157 N=528 loss=0.960225
+epoch=83 step=50/369 record=own_0139 N=2232 loss=6.84908
+epoch=83 step=100/369 record=own_0129 N=2496 loss=17.98
+epoch=83 step=150/369 record=own_0183 N=1608 loss=4.29864
+epoch=83 step=200/369 record=own_0131 N=2832 loss=15.574
+epoch=83 step=250/369 record=own_0145 N=2280 loss=9.6337
+epoch=83 step=300/369 record=external_0268 N=1296 loss=3.88646
+epoch=83 step=350/369 record=own_0185 N=816 loss=4.32502
+epoch=83 step=369/369 record=own_0190 N=816 loss=19.0704
+epoch=83 val: E_RMSE=7.6240 meV/atom F_RMSE=0.119270 eV/A loss=14.8066 best=75
+epoch=84 step=1/369 record=external_0103 N=600 loss=1.24534
+epoch=84 step=50/369 record=own_0200 N=576 loss=7.11546
+epoch=84 step=100/369 record=external_0080 N=288 loss=1.02909
+epoch=84 step=150/369 record=external_0260 N=2592 loss=0.626999
+epoch=84 step=200/369 record=external_0253 N=2268 loss=0.213048
+epoch=84 step=250/369 record=own_0156 N=2304 loss=6.09901
+epoch=84 step=300/369 record=external_0153 N=756 loss=0.219463
+epoch=84 step=350/369 record=own_0069 N=2304 loss=10.4861
+epoch=84 step=369/369 record=external_0113 N=756 loss=0.264196
+epoch=84 val: E_RMSE=6.2829 meV/atom F_RMSE=0.116931 eV/A loss=14.0677 best=75
+epoch=85 step=1/369 record=own_0182 N=1608 loss=4.05586
+epoch=85 step=50/369 record=own_0117 N=978 loss=39.8308
+epoch=85 step=100/369 record=own_0183 N=1608 loss=6.23305
+epoch=85 step=150/369 record=own_0168 N=1608 loss=5.82483
+epoch=85 step=200/369 record=own_0215 N=2172 loss=7.7515
+epoch=85 step=250/369 record=own_0201 N=576 loss=8.66395
+epoch=85 step=300/369 record=external_0052 N=432 loss=0.304538
+epoch=85 step=350/369 record=external_0246 N=2592 loss=6.07274
+epoch=85 step=369/369 record=external_0236 N=2160 loss=0.631755
+epoch=85 val: E_RMSE=9.0712 meV/atom F_RMSE=0.118587 eV/A loss=14.8856 best=75
+epoch=86 step=1/369 record=external_0264 N=1296 loss=2.17282
+epoch=86 step=50/369 record=external_0111 N=936 loss=0.337853
+epoch=86 step=100/369 record=own_0222 N=864 loss=12.1019
+epoch=86 step=150/369 record=external_0057 N=1008 loss=0.137151
+epoch=86 step=200/369 record=external_0043 N=1026 loss=0.309726
+epoch=86 step=250/369 record=external_0080 N=288 loss=1.95852
+epoch=86 step=300/369 record=external_0118 N=792 loss=0.116243
+epoch=86 step=350/369 record=external_0170 N=540 loss=0.117049
+epoch=86 step=369/369 record=own_0047 N=1032 loss=11.7154
+epoch=86 val: E_RMSE=5.4809 meV/atom F_RMSE=0.116888 eV/A loss=13.9631 best=75
+epoch=87 step=1/369 record=own_0174 N=2592 loss=4.26947
+epoch=87 step=50/369 record=own_0047 N=1032 loss=8.99189
+epoch=87 step=100/369 record=external_0248 N=2520 loss=0.206807
+epoch=87 step=150/369 record=own_0154 N=2172 loss=5.90443
+epoch=87 step=200/369 record=external_0061 N=240 loss=0.325944
+epoch=87 step=250/369 record=external_0242 N=1728 loss=0.721076
+epoch=87 step=300/369 record=external_0000 N=648 loss=0.0338036
+epoch=87 step=350/369 record=external_0169 N=288 loss=0.912381
+epoch=87 step=369/369 record=external_0180 N=918 loss=0.117573
+epoch=87 val: E_RMSE=5.9631 meV/atom F_RMSE=0.116449 eV/A loss=13.9159 best=75
+epoch=88 step=1/369 record=own_0074 N=1728 loss=9.33361
+epoch=88 step=50/369 record=external_0174 N=504 loss=0.404637
+epoch=88 step=100/369 record=own_0108 N=2640 loss=5.89698
+epoch=88 step=150/369 record=own_0160 N=2304 loss=5.6165
+epoch=88 step=200/369 record=external_0235 N=2880 loss=9.09188
+epoch=88 step=250/369 record=external_0251 N=3456 loss=4.23183
+epoch=88 step=300/369 record=own_0196 N=2232 loss=5.51559
+epoch=88 step=350/369 record=external_0111 N=936 loss=0.120731
+epoch=88 step=369/369 record=external_0248 N=2520 loss=0.0545798
+epoch=88 val: E_RMSE=4.7737 meV/atom F_RMSE=0.114330 eV/A loss=13.2991 best=88
+epoch=89 step=1/369 record=own_0153 N=954 loss=7.65947
+epoch=89 step=50/369 record=own_0157 N=2304 loss=5.90636
+epoch=89 step=100/369 record=own_0141 N=2592 loss=12.7373
+epoch=89 step=150/369 record=external_0114 N=1188 loss=0.0808833
+epoch=89 step=200/369 record=own_0018 N=504 loss=10.7485
+epoch=89 step=250/369 record=own_0176 N=2592 loss=4.24122
+epoch=89 step=300/369 record=own_0055 N=2376 loss=8.41615
+epoch=89 step=350/369 record=external_0004 N=792 loss=0.102829
+epoch=89 step=369/369 record=own_0209 N=1440 loss=5.4647
+epoch=89 val: E_RMSE=5.4087 meV/atom F_RMSE=0.114584 eV/A loss=13.4221 best=88
+epoch=90 step=1/369 record=external_0067 N=1152 loss=0.16333
+epoch=90 step=50/369 record=own_0237 N=540 loss=4.35526
+epoch=90 step=100/369 record=external_0123 N=1188 loss=0.0223593
+epoch=90 step=150/369 record=external_0104 N=864 loss=0.125454
+epoch=90 step=200/369 record=own_0172 N=2592 loss=3.68125
+epoch=90 step=250/369 record=external_0136 N=540 loss=0.195683
+epoch=90 step=300/369 record=external_0100 N=1296 loss=0.0815221
+epoch=90 step=350/369 record=own_0044 N=1632 loss=8.37358
+epoch=90 step=369/369 record=own_0118 N=1608 loss=3.26947
+epoch=90 val: E_RMSE=4.9033 meV/atom F_RMSE=0.113810 eV/A loss=13.1931 best=90
+epoch=91 step=1/369 record=external_0119 N=720 loss=0.120046
+epoch=91 step=50/369 record=external_0245 N=3456 loss=5.68439
+epoch=91 step=100/369 record=external_0269 N=4608 loss=3.35974
+epoch=91 step=150/369 record=external_0171 N=504 loss=0.261255
+epoch=91 step=200/369 record=own_0230 N=2172 loss=5.67914
+epoch=91 step=250/369 record=external_0043 N=1026 loss=0.105891
+epoch=91 step=300/369 record=own_0223 N=864 loss=3.70347
+epoch=91 step=350/369 record=own_0043 N=816 loss=11.6807
+epoch=91 step=369/369 record=own_0004 N=372 loss=17.658
+epoch=91 val: E_RMSE=5.5647 meV/atom F_RMSE=0.117255 eV/A loss=14.0583 best=90
+epoch=92 step=1/369 record=external_0116 N=768 loss=0.201712
+epoch=92 step=50/369 record=external_0235 N=2880 loss=9.46683
+epoch=92 step=100/369 record=own_0029 N=2016 loss=5.99537
+epoch=92 step=150/369 record=external_0012 N=918 loss=0.0726389
+epoch=92 step=200/369 record=own_0196 N=2232 loss=5.40042
+epoch=92 step=250/369 record=external_0030 N=504 loss=0.0858474
+epoch=92 step=300/369 record=own_0213 N=2172 loss=5.79999
+epoch=92 step=350/369 record=external_0260 N=2592 loss=0.299223
+epoch=92 step=369/369 record=own_0105 N=1608 loss=5.557
+epoch=92 val: E_RMSE=4.6473 meV/atom F_RMSE=0.114811 eV/A loss=13.3976 best=90
+epoch=93 step=1/369 record=own_0049 N=1080 loss=8.38236
+epoch=93 step=50/369 record=external_0240 N=1728 loss=4.25409
+epoch=93 step=100/369 record=own_0232 N=2172 loss=6.04263
+epoch=93 step=150/369 record=external_0187 N=594 loss=0.188563
+epoch=93 step=200/369 record=own_0014 N=576 loss=4.6513
+epoch=93 step=250/369 record=external_0069 N=1152 loss=0.31621
+epoch=93 step=300/369 record=own_0169 N=1608 loss=4.77733
+epoch=93 step=350/369 record=own_0075 N=2172 loss=8.39845
+epoch=93 step=369/369 record=own_0021 N=1728 loss=7.36049
+epoch=93 val: E_RMSE=5.3937 meV/atom F_RMSE=0.115133 eV/A loss=13.5466 best=90
+epoch=94 step=1/369 record=own_0066 N=672 loss=9.85811
+epoch=94 step=50/369 record=own_0053 N=1620 loss=5.76722
+epoch=94 step=100/369 record=own_0021 N=1728 loss=6.96583
+epoch=94 step=150/369 record=external_0041 N=792 loss=0.113553
+epoch=94 step=200/369 record=own_0223 N=864 loss=3.71315
+epoch=94 step=250/369 record=own_0212 N=2172 loss=5.63834
+epoch=94 step=300/369 record=own_0199 N=576 loss=5.13462
+epoch=94 step=350/369 record=own_0197 N=2232 loss=6.33955
+epoch=94 step=369/369 record=external_0268 N=1296 loss=2.4615
+epoch=94 val: E_RMSE=5.4710 meV/atom F_RMSE=0.114497 eV/A loss=13.4088 best=90
+epoch=95 step=1/369 record=own_0139 N=2232 loss=5.59453
+epoch=95 step=50/369 record=external_0045 N=1512 loss=0.184517
+epoch=95 step=100/369 record=external_0115 N=792 loss=0.109212
+epoch=95 step=150/369 record=external_0016 N=972 loss=0.153683
+epoch=95 step=200/369 record=external_0065 N=288 loss=0.224864
+epoch=95 step=250/369 record=external_0144 N=192 loss=0.123421
+epoch=95 step=300/369 record=external_0249 N=2592 loss=5.24519
+epoch=95 step=350/369 record=own_0221 N=864 loss=4.36492
+epoch=95 step=369/369 record=own_0046 N=1032 loss=8.31619
+epoch=95 val: E_RMSE=5.6039 meV/atom F_RMSE=0.114714 eV/A loss=13.4734 best=90
+epoch=96 step=1/369 record=external_0103 N=600 loss=0.794906
+epoch=96 step=50/369 record=own_0129 N=2496 loss=15.9823
+epoch=96 step=100/369 record=external_0215 N=1188 loss=0.207417
+epoch=96 step=150/369 record=external_0257 N=864 loss=2.10155
+epoch=96 step=200/369 record=own_0020 N=1728 loss=6.85356
+epoch=96 step=250/369 record=own_0217 N=2172 loss=6.44245
+epoch=96 step=300/369 record=external_0102 N=2232 loss=1.28824
+epoch=96 step=350/369 record=own_0051 N=2112 loss=5.69353
+epoch=96 step=369/369 record=external_0111 N=936 loss=0.105516
+epoch=96 val: E_RMSE=5.8419 meV/atom F_RMSE=0.115040 eV/A loss=13.5756 best=90
+epoch=97 step=1/369 record=external_0270 N=4608 loss=2.33154
+epoch=97 step=50/369 record=external_0061 N=240 loss=0.348822
+epoch=97 step=100/369 record=external_0239 N=1728 loss=2.20015
+epoch=97 step=150/369 record=own_0234 N=540 loss=2.52394
+epoch=97 step=200/369 record=external_0246 N=2592 loss=4.96032
+epoch=97 step=250/369 record=own_0102 N=2496 loss=7.74146
+epoch=97 step=300/369 record=own_0035 N=1440 loss=8.35036
+epoch=97 step=350/369 record=own_0045 N=1632 loss=7.46302
+epoch=97 step=369/369 record=own_0040 N=1008 loss=16.2108
+epoch=97 val: E_RMSE=5.4039 meV/atom F_RMSE=0.115122 eV/A loss=13.5451 best=90
+epoch=98 step=1/369 record=own_0050 N=2112 loss=5.66409
+epoch=98 step=50/369 record=external_0119 N=720 loss=0.084006
+epoch=98 step=100/369 record=own_0005 N=372 loss=17.7828
+epoch=98 step=150/369 record=own_0206 N=1440 loss=5.4741
+epoch=98 step=200/369 record=external_0108 N=1404 loss=0.0931361
+epoch=98 step=250/369 record=external_0035 N=594 loss=0.149667
+epoch=98 step=300/369 record=own_0215 N=2172 loss=6.09769
+epoch=98 step=350/369 record=external_0041 N=792 loss=0.237335
+epoch=98 step=369/369 record=external_0009 N=264 loss=0.480631
+epoch=98 val: E_RMSE=4.7967 meV/atom F_RMSE=0.115131 eV/A loss=13.4853 best=90
+epoch=99 step=1/369 record=own_0223 N=864 loss=3.69134
+epoch=99 step=50/369 record=own_0020 N=1728 loss=6.84851
+epoch=99 step=100/369 record=own_0034 N=1440 loss=9.15543
+epoch=99 step=150/369 record=own_0121 N=1728 loss=8.18958
+epoch=99 step=200/369 record=own_0238 N=540 loss=5.15788
+epoch=99 step=250/369 record=own_0176 N=2592 loss=3.60565
+epoch=99 step=300/369 record=own_0054 N=2376 loss=8.52202
+epoch=99 step=350/369 record=external_0035 N=594 loss=0.0605374
+epoch=99 step=369/369 record=own_0170 N=2592 loss=3.20634
+epoch=99 val: E_RMSE=4.6737 meV/atom F_RMSE=0.114583 eV/A loss=13.3478 best=90
+epoch=100 step=1/369 record=external_0139 N=576 loss=0.0924679
+epoch=100 step=50/369 record=own_0222 N=864 loss=5.41294
+epoch=100 step=100/369 record=external_0050 N=432 loss=0.359113
+epoch=100 step=150/369 record=external_0113 N=756 loss=0.140425
+epoch=100 step=200/369 record=external_0231 N=1728 loss=0.625858
+epoch=100 step=250/369 record=external_0047 N=132 loss=0.299951
+epoch=100 step=300/369 record=external_0245 N=3456 loss=5.02756
+epoch=100 step=350/369 record=own_0002 N=348 loss=12.5202
+epoch=100 step=369/369 record=external_0174 N=504 loss=0.489313
+epoch=100 val: E_RMSE=6.6039 meV/atom F_RMSE=0.116008 eV/A loss=13.8941 best=90
+epoch=101 step=1/369 record=external_0087 N=972 loss=0.117665
+epoch=101 step=50/369 record=own_0162 N=2304 loss=5.53966
+epoch=101 step=100/369 record=own_0138 N=2232 loss=9.94307
+epoch=101 step=150/369 record=external_0234 N=2880 loss=9.60647
+epoch=101 step=200/369 record=external_0266 N=1296 loss=2.03015
+epoch=101 step=250/369 record=external_0118 N=792 loss=0.137118
+epoch=101 step=300/369 record=external_0212 N=1296 loss=0.19507
+epoch=101 step=350/369 record=own_0005 N=372 loss=19.521
+epoch=101 step=369/369 record=own_0190 N=816 loss=3.42384
+epoch=101 val: E_RMSE=5.0226 meV/atom F_RMSE=0.114966 eV/A loss=13.4695 best=90
+epoch=102 step=1/369 record=own_0235 N=540 loss=3.38532
+epoch=102 step=50/369 record=own_0155 N=2172 loss=5.23125
+epoch=102 step=100/369 record=own_0058 N=708 loss=6.98561
+epoch=102 step=150/369 record=own_0145 N=2280 loss=6.30455
+epoch=102 step=200/369 record=own_0079 N=1440 loss=10.1488
+epoch=102 step=250/369 record=own_0153 N=954 loss=6.40879
+epoch=102 step=300/369 record=own_0184 N=816 loss=2.29679
+epoch=102 step=350/369 record=external_0107 N=648 loss=0.0464826
+epoch=102 step=369/369 record=external_0254 N=2268 loss=0.0281391
+epoch=102 val: E_RMSE=4.9776 meV/atom F_RMSE=0.114260 eV/A loss=13.3032 best=90
+epoch=103 step=1/369 record=external_0055 N=1782 loss=0.0578714
+epoch=103 step=50/369 record=own_0069 N=2304 loss=7.02203
+epoch=103 step=100/369 record=own_0239 N=540 loss=2.77553
+epoch=103 step=150/369 record=own_0073 N=1728 loss=7.15141
+epoch=103 step=200/369 record=own_0216 N=2172 loss=5.31679
+epoch=103 step=250/369 record=own_0223 N=864 loss=3.11918
+epoch=103 step=300/369 record=external_0255 N=1296 loss=0.264713
+epoch=103 step=350/369 record=external_0147 N=168 loss=0.147899
+epoch=103 step=369/369 record=external_0173 N=504 loss=0.320267
+epoch=103 val: E_RMSE=4.4974 meV/atom F_RMSE=0.114438 eV/A loss=13.2984 best=90
+epoch=104 step=1/369 record=external_0254 N=2268 loss=0.0550291
+epoch=104 step=50/369 record=external_0123 N=1188 loss=0.0884869
+epoch=104 step=100/369 record=own_0088 N=864 loss=2.88845
+epoch=104 step=150/369 record=own_0182 N=1608 loss=2.43307
+epoch=104 step=200/369 record=own_0076 N=2172 loss=5.02895
+epoch=104 step=250/369 record=external_0236 N=2160 loss=0.566868
+epoch=104 step=300/369 record=external_0263 N=1296 loss=1.44952
+epoch=104 step=350/369 record=own_0028 N=2592 loss=3.63031
+epoch=104 step=369/369 record=own_0231 N=2172 loss=4.94225
+epoch=104 val: E_RMSE=4.9284 meV/atom F_RMSE=0.113693 eV/A loss=13.169 best=104
+epoch=105 step=1/369 record=own_0163 N=1608 loss=2.77281
+epoch=105 step=50/369 record=own_0102 N=2496 loss=7.59967
+epoch=105 step=100/369 record=own_0165 N=1608 loss=3.26158
+epoch=105 step=150/369 record=own_0051 N=2112 loss=4.44853
+epoch=105 step=200/369 record=own_0234 N=540 loss=2.03245
+epoch=105 step=250/369 record=external_0041 N=792 loss=0.0455973
+epoch=105 step=300/369 record=external_0077 N=1296 loss=0.0340121
+epoch=105 step=350/369 record=own_0145 N=2280 loss=6.38561
+epoch=105 step=369/369 record=external_0224 N=756 loss=0.192804
+epoch=105 val: E_RMSE=4.6738 meV/atom F_RMSE=0.113585 eV/A loss=13.12 best=105
+epoch=106 step=1/369 record=external_0052 N=432 loss=0.241682
+epoch=106 step=50/369 record=own_0218 N=2172 loss=5.50019
+epoch=106 step=100/369 record=own_0172 N=2592 loss=2.82421
+epoch=106 step=150/369 record=external_0260 N=2592 loss=0.1929
+epoch=106 step=200/369 record=own_0160 N=2304 loss=4.61499
+epoch=106 step=250/369 record=own_0048 N=1080 loss=8.24042
+epoch=106 step=300/369 record=own_0139 N=2232 loss=4.70125
+epoch=106 step=350/369 record=own_0058 N=708 loss=6.77498
+epoch=106 step=369/369 record=external_0136 N=540 loss=0.0651629
+epoch=106 val: E_RMSE=4.7751 meV/atom F_RMSE=0.114573 eV/A loss=13.355 best=105
+epoch=107 step=1/369 record=own_0224 N=864 loss=3.47357
+epoch=107 step=50/369 record=own_0185 N=816 loss=2.38633
+epoch=107 step=100/369 record=own_0028 N=2592 loss=3.6963
+epoch=107 step=150/369 record=own_0140 N=2592 loss=11.6545
+epoch=107 step=200/369 record=own_0040 N=1008 loss=15.7656
+epoch=107 step=250/369 record=own_0236 N=540 loss=3.23902
+epoch=107 step=300/369 record=external_0245 N=3456 loss=4.823
+epoch=107 step=350/369 record=own_0089 N=1728 loss=3.86373
+epoch=107 step=369/369 record=external_0108 N=1404 loss=0.0512416
+epoch=107 val: E_RMSE=5.4728 meV/atom F_RMSE=0.113624 eV/A loss=13.2099 best=105
+epoch=108 step=1/369 record=external_0049 N=144 loss=0.145357
+epoch=108 step=50/369 record=external_0058 N=1944 loss=0.06394
+epoch=108 step=100/369 record=own_0220 N=864 loss=3.173
+epoch=108 step=150/369 record=own_0089 N=1728 loss=3.88696
+epoch=108 step=200/369 record=external_0137 N=648 loss=0.0371905
+epoch=108 step=250/369 record=own_0055 N=2376 loss=7.58951
+epoch=108 step=300/369 record=own_0179 N=1608 loss=2.37481
+epoch=108 step=350/369 record=own_0205 N=1440 loss=4.13698
+epoch=108 step=369/369 record=external_0117 N=1152 loss=0.128821
+epoch=108 val: E_RMSE=4.7667 meV/atom F_RMSE=0.114323 eV/A loss=13.297 best=105
+epoch=109 step=1/369 record=own_0169 N=1608 loss=3.41914
+epoch=109 step=50/369 record=external_0258 N=864 loss=1.4463
+epoch=109 step=100/369 record=external_0267 N=1296 loss=0.486096
+epoch=109 step=150/369 record=external_0256 N=1296 loss=1.6596
+epoch=109 step=200/369 record=own_0183 N=1608 loss=3.17155
+epoch=109 step=250/369 record=external_0199 N=1296 loss=0.0849923
+epoch=109 step=300/369 record=external_0270 N=4608 loss=2.0085
+epoch=109 step=350/369 record=external_0250 N=2592 loss=4.20083
+epoch=109 step=369/369 record=external_0087 N=972 loss=0.137963
+epoch=109 val: E_RMSE=4.4639 meV/atom F_RMSE=0.114310 eV/A loss=13.266 best=105
+epoch=110 step=1/369 record=own_0015 N=576 loss=6.90499
+epoch=110 step=50/369 record=external_0040 N=1188 loss=0.0748588
+epoch=110 step=100/369 record=own_0230 N=2172 loss=4.84109
+epoch=110 step=150/369 record=own_0116 N=978 loss=25.2936
+epoch=110 step=200/369 record=external_0215 N=1188 loss=0.0661768
+epoch=110 step=250/369 record=external_0057 N=1008 loss=0.0579425
+epoch=110 step=300/369 record=own_0092 N=2352 loss=8.54271
+epoch=110 step=350/369 record=external_0054 N=1620 loss=0.0982062
+epoch=110 step=369/369 record=external_0241 N=1728 loss=0.114783
+epoch=110 val: E_RMSE=4.8225 meV/atom F_RMSE=0.114180 eV/A loss=13.2697 best=105
+epoch=111 step=1/369 record=external_0245 N=3456 loss=4.8559
+epoch=111 step=50/369 record=external_0038 N=252 loss=0.735052
+epoch=111 step=100/369 record=external_0171 N=504 loss=0.192165
+epoch=111 step=150/369 record=external_0091 N=720 loss=0.519952
+epoch=111 step=200/369 record=own_0232 N=2172 loss=4.93684
+epoch=111 step=250/369 record=external_0055 N=1782 loss=0.174802
+epoch=111 step=300/369 record=own_0185 N=816 loss=2.56816
+epoch=111 step=350/369 record=own_0005 N=372 loss=13.7952
+epoch=111 step=369/369 record=external_0260 N=2592 loss=0.298782
+epoch=111 val: E_RMSE=5.2970 meV/atom F_RMSE=0.114121 eV/A loss=13.3041 best=105
+epoch=112 step=1/369 record=own_0205 N=1440 loss=4.30553
+epoch=112 step=50/369 record=own_0155 N=2172 loss=5.35718
+epoch=112 step=100/369 record=own_0207 N=1440 loss=4.64302
+epoch=112 step=150/369 record=own_0129 N=2496 loss=12.9293
+epoch=112 step=200/369 record=own_0047 N=1032 loss=7.1189
+epoch=112 step=250/369 record=own_0181 N=1608 loss=2.27594
+epoch=112 step=300/369 record=external_0102 N=2232 loss=0.978142
+epoch=112 step=350/369 record=own_0028 N=2592 loss=3.53828
+epoch=112 step=369/369 record=external_0108 N=1404 loss=0.0932239
+epoch=112 val: E_RMSE=4.6027 meV/atom F_RMSE=0.114680 eV/A loss=13.3633 best=105
+epoch=113 step=1/369 record=own_0015 N=576 loss=6.49204
+epoch=113 step=50/369 record=external_0241 N=1728 loss=0.288389
+epoch=113 step=100/369 record=own_0054 N=2376 loss=6.97428
+epoch=113 step=150/369 record=external_0269 N=4608 loss=3.14414
+epoch=113 step=200/369 record=own_0089 N=1728 loss=4.14744
+epoch=113 step=250/369 record=external_0005 N=648 loss=0.0442351
+epoch=113 step=300/369 record=own_0193 N=2232 loss=5.05848
+epoch=113 step=350/369 record=external_0035 N=594 loss=0.0885213
+epoch=113 step=369/369 record=external_0224 N=756 loss=0.103917
+epoch=113 val: E_RMSE=4.6632 meV/atom F_RMSE=0.114587 eV/A loss=13.3476 best=105
+epoch=114 step=1/369 record=external_0040 N=1188 loss=0.106658
+epoch=114 step=50/369 record=external_0177 N=468 loss=1.2195
+epoch=114 step=100/369 record=external_0068 N=1152 loss=0.176892
+epoch=114 step=150/369 record=own_0031 N=1296 loss=9.02506
+epoch=114 step=200/369 record=own_0187 N=816 loss=4.4253
+epoch=114 step=250/369 record=external_0256 N=1296 loss=1.56125
+epoch=114 step=300/369 record=own_0180 N=1608 loss=2.59511
+epoch=114 step=350/369 record=external_0105 N=1080 loss=0.0741824
+epoch=114 step=369/369 record=external_0076 N=180 loss=0.0759176
+epoch=114 val: E_RMSE=4.6704 meV/atom F_RMSE=0.114200 eV/A loss=13.2598 best=105
+epoch=115 step=1/369 record=external_0246 N=2592 loss=4.35316
+epoch=115 step=50/369 record=own_0006 N=816 loss=1.96533
+epoch=115 step=100/369 record=external_0058 N=1944 loss=0.0537151
+epoch=115 step=150/369 record=own_0042 N=816 loss=10.3482
+epoch=115 step=200/369 record=own_0079 N=1440 loss=9.6277
+epoch=115 step=250/369 record=own_0061 N=2592 loss=10.5342
+epoch=115 step=300/369 record=external_0001 N=576 loss=0.607985
+epoch=115 step=350/369 record=own_0100 N=1800 loss=4.94715
+epoch=115 step=369/369 record=own_0000 N=540 loss=1.82972
+epoch=115 val: E_RMSE=7.0200 meV/atom F_RMSE=0.114067 eV/A loss=13.504 best=105
+epoch=116 step=1/369 record=own_0075 N=2172 loss=7.0017
+epoch=116 step=50/369 record=external_0055 N=1782 loss=0.0927191
+epoch=116 step=100/369 record=own_0220 N=864 loss=3.28282
+epoch=116 step=150/369 record=external_0259 N=2592 loss=0.204183
+epoch=116 step=200/369 record=own_0236 N=540 loss=3.61289
+epoch=116 step=250/369 record=external_0144 N=192 loss=0.0610505
+epoch=116 step=300/369 record=external_0264 N=1296 loss=1.62156
+epoch=116 step=350/369 record=own_0055 N=2376 loss=6.98291
+epoch=116 step=369/369 record=own_0013 N=672 loss=16.4209
+epoch=116 val: E_RMSE=4.7188 meV/atom F_RMSE=0.113554 eV/A loss=13.1173 best=116
+epoch=117 step=1/369 record=own_0042 N=816 loss=10.3026
+epoch=117 step=50/369 record=external_0120 N=1512 loss=0.0494793
+epoch=117 step=100/369 record=external_0094 N=2160 loss=0.290516
+epoch=117 step=150/369 record=own_0156 N=2304 loss=4.14821
+epoch=117 step=200/369 record=own_0193 N=2232 loss=5.22098
+epoch=117 step=250/369 record=own_0052 N=1620 loss=4.61732
+epoch=117 step=300/369 record=own_0203 N=576 loss=4.88139
+epoch=117 step=350/369 record=external_0039 N=1440 loss=0.152249
+epoch=117 step=369/369 record=external_0266 N=1296 loss=1.87821
+epoch=117 val: E_RMSE=4.6488 meV/atom F_RMSE=0.114399 eV/A loss=13.3033 best=116
+epoch=118 step=1/369 record=external_0209 N=2160 loss=0.15865
+epoch=118 step=50/369 record=external_0043 N=1026 loss=0.0461873
+epoch=118 step=100/369 record=external_0215 N=1188 loss=0.0228233
+epoch=118 step=150/369 record=external_0180 N=918 loss=0.0927247
+epoch=118 step=200/369 record=own_0087 N=864 loss=2.91062
+epoch=118 step=250/369 record=own_0178 N=1608 loss=2.35589
+epoch=118 step=300/369 record=own_0093 N=1440 loss=3.37138
+epoch=118 step=350/369 record=external_0058 N=1944 loss=0.0486039
+epoch=118 step=369/369 record=own_0001 N=540 loss=4.10947
+epoch=118 val: E_RMSE=4.6629 meV/atom F_RMSE=0.114127 eV/A loss=13.2425 best=116
+epoch=119 step=1/369 record=own_0220 N=864 loss=2.92161
+epoch=119 step=50/369 record=external_0054 N=1620 loss=0.07161
+epoch=119 step=100/369 record=own_0140 N=2592 loss=11.6809
+epoch=119 step=150/369 record=own_0216 N=2172 loss=5.25297
+epoch=119 step=200/369 record=own_0049 N=1080 loss=7.32489
+epoch=119 step=250/369 record=external_0170 N=540 loss=0.0437504
+epoch=119 step=300/369 record=external_0040 N=1188 loss=0.104281
+epoch=119 step=350/369 record=external_0168 N=126 loss=0.599726
+epoch=119 step=369/369 record=own_0202 N=576 loss=4.18974
+epoch=119 val: E_RMSE=4.4543 meV/atom F_RMSE=0.113723 eV/A loss=13.1314 best=116
+epoch=120 step=1/369 record=external_0129 N=144 loss=0.145636
+epoch=120 step=50/369 record=external_0257 N=864 loss=1.26082
+epoch=120 step=100/369 record=own_0004 N=372 loss=14.4422
+epoch=120 step=150/369 record=own_0208 N=1440 loss=5.00392
+epoch=120 step=200/369 record=external_0174 N=504 loss=0.423224
+epoch=120 step=250/369 record=own_0171 N=2592 loss=2.57457
+epoch=120 step=300/369 record=external_0067 N=1152 loss=0.324613
+epoch=120 step=350/369 record=external_0261 N=1296 loss=0.252945
+epoch=120 step=369/369 record=external_0195 N=1152 loss=0.295044
+epoch=120 val: E_RMSE=4.4093 meV/atom F_RMSE=0.114281 eV/A loss=13.2546 best=116
+epoch=121 step=1/369 record=external_0126 N=288 loss=0.143578
+epoch=121 step=50/369 record=external_0003 N=432 loss=0.0442817
+epoch=121 step=100/369 record=external_0224 N=756 loss=0.0823662
+epoch=121 step=150/369 record=external_0194 N=1458 loss=0.133986
+epoch=121 step=200/369 record=external_0146 N=120 loss=0.669026
+epoch=121 step=250/369 record=own_0030 N=1296 loss=9.02931
+epoch=121 step=300/369 record=external_0001 N=576 loss=0.460892
+epoch=121 step=350/369 record=own_0105 N=1608 loss=4.12804
+epoch=121 step=369/369 record=external_0114 N=1188 loss=0.0541319
+epoch=121 val: E_RMSE=4.7194 meV/atom F_RMSE=0.113881 eV/A loss=13.1917 best=116
+epoch=122 step=1/369 record=own_0236 N=540 loss=2.58946
+epoch=122 step=50/369 record=external_0258 N=864 loss=1.40885
+epoch=122 step=100/369 record=external_0067 N=1152 loss=0.127451
+epoch=122 step=150/369 record=external_0139 N=576 loss=0.14859
+epoch=122 step=200/369 record=own_0106 N=2304 loss=7.28775
+epoch=122 step=250/369 record=own_0181 N=1608 loss=2.25236
+epoch=122 step=300/369 record=own_0049 N=1080 loss=7.33146
+epoch=122 step=350/369 record=own_0153 N=954 loss=5.90234
+epoch=122 step=369/369 record=own_0204 N=576 loss=5.23031
+epoch=122 val: E_RMSE=4.8299 meV/atom F_RMSE=0.114657 eV/A loss=13.3794 best=116
+epoch=123 step=1/369 record=own_0216 N=2172 loss=4.88031
+epoch=123 step=50/369 record=external_0197 N=648 loss=0.0889501
+epoch=123 step=100/369 record=external_0087 N=972 loss=0.0851804
+epoch=123 step=150/369 record=external_0245 N=3456 loss=4.71794
+epoch=123 step=200/369 record=external_0195 N=1152 loss=0.209351
+epoch=123 step=250/369 record=own_0182 N=1608 loss=2.52064
+epoch=123 step=300/369 record=external_0237 N=2160 loss=0.527998
+epoch=123 step=350/369 record=external_0247 N=2520 loss=0.0756919
+epoch=123 step=369/369 record=own_0024 N=2880 loss=10.2852
+epoch=123 val: E_RMSE=4.5698 meV/atom F_RMSE=0.114184 eV/A loss=13.2469 best=116
+epoch=124 step=1/369 record=own_0170 N=2592 loss=2.71646
+epoch=124 step=50/369 record=external_0121 N=1008 loss=0.0831744
+epoch=124 step=100/369 record=own_0189 N=816 loss=2.07807
+epoch=124 step=150/369 record=external_0130 N=312 loss=0.662979
+epoch=124 step=200/369 record=external_0212 N=1296 loss=0.0748717
+epoch=124 step=250/369 record=own_0228 N=2172 loss=4.63809
+epoch=124 step=300/369 record=own_0127 N=1728 loss=5.26172
+epoch=124 step=350/369 record=external_0040 N=1188 loss=0.120623
+epoch=124 step=369/369 record=external_0252 N=3456 loss=2.95702
+epoch=124 val: E_RMSE=5.2501 meV/atom F_RMSE=0.114585 eV/A loss=13.4054 best=116
+epoch=125 step=1/369 record=own_0128 N=2496 loss=12.7279
+epoch=125 step=50/369 record=own_0020 N=1728 loss=5.582
+epoch=125 step=100/369 record=own_0162 N=2304 loss=4.53042
+epoch=125 step=150/369 record=own_0153 N=954 loss=6.08205
+epoch=125 step=200/369 record=external_0075 N=648 loss=0.0562416
+epoch=125 step=250/369 record=own_0169 N=1608 loss=3.03906
+epoch=125 step=300/369 record=external_0224 N=756 loss=0.253388
+epoch=125 step=350/369 record=own_0174 N=2592 loss=2.71796
+epoch=125 step=369/369 record=own_0167 N=1608 loss=2.78451
+epoch=125 val: E_RMSE=4.4343 meV/atom F_RMSE=0.115105 eV/A loss=13.4459 best=116
+epoch=126 step=1/369 record=external_0253 N=2268 loss=0.036845
+epoch=126 step=50/369 record=own_0215 N=2172 loss=5.11512
+epoch=126 step=100/369 record=own_0172 N=2592 loss=2.64791
+epoch=126 step=150/369 record=own_0211 N=1440 loss=4.62535
+epoch=126 step=200/369 record=own_0181 N=1608 loss=2.06771
+epoch=126 step=250/369 record=own_0239 N=540 loss=2.11424
+epoch=126 step=300/369 record=own_0061 N=2592 loss=10.2956
+epoch=126 step=350/369 record=external_0231 N=1728 loss=0.551887
+epoch=126 step=369/369 record=own_0101 N=1800 loss=3.98787
+epoch=126 val: E_RMSE=4.5635 meV/atom F_RMSE=0.114268 eV/A loss=13.2654 best=116
+epoch=127 step=1/369 record=own_0144 N=2280 loss=6.0567
+epoch=127 step=50/369 record=own_0173 N=2592 loss=2.78026
+epoch=127 step=100/369 record=own_0182 N=1608 loss=2.14584
+epoch=127 step=150/369 record=external_0235 N=2880 loss=9.36864
+epoch=127 step=200/369 record=own_0039 N=1440 loss=3.90281
+epoch=127 step=250/369 record=own_0183 N=1608 loss=3.00963
+epoch=127 step=300/369 record=own_0227 N=2172 loss=4.39027
+epoch=127 step=350/369 record=external_0071 N=720 loss=0.0418529
+epoch=127 step=369/369 record=external_0009 N=264 loss=0.392486
+epoch=127 val: E_RMSE=4.3603 meV/atom F_RMSE=0.114955 eV/A loss=13.4047 best=116
+epoch=128 step=1/369 record=own_0041 N=1008 loss=12.5325
+epoch=128 step=50/369 record=own_0088 N=864 loss=2.60372
+epoch=128 step=100/369 record=external_0161 N=306 loss=0.390708
+epoch=128 step=150/369 record=own_0040 N=1008 loss=14.575
+epoch=128 step=200/369 record=own_0139 N=2232 loss=4.52839
+epoch=128 step=250/369 record=external_0263 N=1296 loss=1.16771
+epoch=128 step=300/369 record=own_0231 N=2172 loss=4.6292
+epoch=128 step=350/369 record=external_0001 N=576 loss=0.371981
+epoch=128 step=369/369 record=external_0158 N=528 loss=0.696276
+epoch=128 val: E_RMSE=4.3153 meV/atom F_RMSE=0.113935 eV/A loss=13.1674 best=116
+epoch=129 step=1/369 record=external_0247 N=2520 loss=0.0157561
+epoch=129 step=50/369 record=own_0195 N=2232 loss=4.73683
+epoch=129 step=100/369 record=own_0237 N=540 loss=1.56608
+epoch=129 step=150/369 record=external_0271 N=4608 loss=1.70686
+epoch=129 step=200/369 record=external_0100 N=1296 loss=0.0256586
+epoch=129 step=250/369 record=external_0174 N=504 loss=0.388633
+epoch=129 step=300/369 record=own_0006 N=816 loss=1.78766
+epoch=129 step=350/369 record=external_0166 N=1296 loss=0.0311888
+epoch=129 step=369/369 record=own_0150 N=2460 loss=6.37431
+epoch=129 val: E_RMSE=4.9607 meV/atom F_RMSE=0.113911 eV/A loss=13.2219 best=116
+epoch=130 step=1/369 record=own_0126 N=1728 loss=5.39025
+epoch=130 step=50/369 record=external_0164 N=168 loss=0.499137
+epoch=130 step=100/369 record=external_0075 N=648 loss=0.0482942
+epoch=130 step=150/369 record=external_0239 N=1728 loss=1.59752
+epoch=130 step=200/369 record=external_0243 N=2592 loss=4.14634
+epoch=130 step=250/369 record=external_0116 N=768 loss=0.0321522
+epoch=130 step=300/369 record=external_0056 N=1458 loss=0.0655663
+epoch=130 step=350/369 record=own_0155 N=2172 loss=4.6609
+epoch=130 step=369/369 record=own_0095 N=2304 loss=9.76151
+epoch=130 val: E_RMSE=4.6046 meV/atom F_RMSE=0.113871 eV/A loss=13.1787 best=116
+epoch=131 step=1/369 record=own_0139 N=2232 loss=4.58549
+epoch=131 step=50/369 record=own_0054 N=2376 loss=6.33794
+epoch=131 step=100/369 record=own_0223 N=864 loss=2.60903
+epoch=131 step=150/369 record=own_0173 N=2592 loss=2.58847
+epoch=131 step=200/369 record=own_0109 N=2640 loss=5.3168
+epoch=131 step=250/369 record=own_0049 N=1080 loss=7.12236
+epoch=131 step=300/369 record=external_0012 N=918 loss=0.0331512
+epoch=131 step=350/369 record=own_0050 N=2112 loss=4.07958
+epoch=131 step=369/369 record=external_0264 N=1296 loss=1.51314
+epoch=131 val: E_RMSE=4.7754 meV/atom F_RMSE=0.114104 eV/A loss=13.2477 best=116
+epoch=132 step=1/369 record=own_0211 N=1440 loss=4.0859
+epoch=132 step=50/369 record=own_0174 N=2592 loss=2.21693
+epoch=132 step=100/369 record=own_0169 N=1608 loss=2.82563
+epoch=132 step=150/369 record=external_0117 N=1152 loss=0.0178485
+epoch=132 step=200/369 record=external_0147 N=168 loss=0.127441
+epoch=132 step=250/369 record=external_0008 N=1080 loss=0.0544919
+epoch=132 step=300/369 record=own_0043 N=816 loss=10.4584
+epoch=132 step=350/369 record=own_0101 N=1800 loss=3.66931
+epoch=132 step=369/369 record=own_0073 N=1728 loss=7.00615
+epoch=132 val: E_RMSE=4.8283 meV/atom F_RMSE=0.114074 eV/A loss=13.246 best=116
+epoch=133 step=1/369 record=own_0034 N=1440 loss=7.53655
+epoch=133 step=50/369 record=own_0176 N=2592 loss=2.36631
+epoch=133 step=100/369 record=own_0108 N=2640 loss=4.69554
+epoch=133 step=150/369 record=own_0198 N=576 loss=3.90614
+epoch=133 step=200/369 record=own_0033 N=2592 loss=2.23412
+epoch=133 step=250/369 record=external_0136 N=540 loss=0.013522
+epoch=133 step=300/369 record=own_0222 N=864 loss=3.79456
+epoch=133 step=350/369 record=external_0045 N=1512 loss=0.028736
+epoch=133 step=369/369 record=external_0100 N=1296 loss=0.0334131
+epoch=133 val: E_RMSE=4.7002 meV/atom F_RMSE=0.114071 eV/A loss=13.2332 best=116
+epoch=134 step=1/369 record=own_0015 N=576 loss=5.46351
+epoch=134 step=50/369 record=own_0170 N=2592 loss=2.17014
+epoch=134 step=100/369 record=own_0104 N=1608 loss=2.44034
+epoch=134 step=150/369 record=external_0052 N=432 loss=0.155756
+epoch=134 step=200/369 record=own_0002 N=348 loss=10.3638
+epoch=134 step=250/369 record=external_0047 N=132 loss=0.183202
+epoch=134 step=300/369 record=external_0250 N=2592 loss=3.85883
+epoch=134 step=350/369 record=own_0116 N=978 loss=25.3446
+epoch=134 step=369/369 record=external_0066 N=1512 loss=0.256458
+epoch=134 val: E_RMSE=4.5926 meV/atom F_RMSE=0.113959 eV/A loss=13.1977 best=116
+epoch=135 step=1/369 record=own_0161 N=2304 loss=4.00547
+epoch=135 step=50/369 record=external_0271 N=4608 loss=1.67644
+epoch=135 step=100/369 record=own_0043 N=816 loss=10.4845
+epoch=135 step=150/369 record=own_0047 N=1032 loss=6.53025
+epoch=135 step=200/369 record=own_0196 N=2232 loss=4.8513
+epoch=135 step=250/369 record=external_0115 N=792 loss=0.0565315
+epoch=135 step=300/369 record=external_0246 N=2592 loss=4.13381
+epoch=135 step=350/369 record=own_0073 N=1728 loss=6.69433
+epoch=135 step=369/369 record=own_0184 N=816 loss=1.82963
+epoch=135 val: E_RMSE=4.9127 meV/atom F_RMSE=0.114255 eV/A loss=13.2956 best=116
+epoch=136 step=1/369 record=own_0167 N=1608 loss=2.37937
+epoch=136 step=50/369 record=own_0030 N=1296 loss=8.43092
+epoch=136 step=100/369 record=external_0143 N=1728 loss=0.459148
+epoch=136 step=150/369 record=external_0239 N=1728 loss=1.50251
+epoch=136 step=200/369 record=external_0018 N=1134 loss=0.0404281
+epoch=136 step=250/369 record=external_0199 N=1296 loss=0.0199478
+epoch=136 step=300/369 record=external_0174 N=504 loss=0.324912
+epoch=136 step=350/369 record=external_0169 N=288 loss=0.42909
+epoch=136 step=369/369 record=own_0219 N=864 loss=2.5619
+epoch=136 val: E_RMSE=4.6478 meV/atom F_RMSE=0.113947 eV/A loss=13.1998 best=116
+epoch=137 step=1/369 record=external_0236 N=2160 loss=0.494168
+epoch=137 step=50/369 record=external_0183 N=540 loss=0.0949667
+epoch=137 step=100/369 record=external_0143 N=1728 loss=0.498736
+epoch=137 step=150/369 record=external_0075 N=648 loss=0.0194697
+epoch=137 step=200/369 record=external_0013 N=1080 loss=0.0938484
+epoch=137 step=250/369 record=external_0070 N=756 loss=0.0609728
+epoch=137 step=300/369 record=external_0124 N=864 loss=0.0309277
+epoch=137 step=350/369 record=external_0026 N=162 loss=0.0252848
+epoch=137 step=369/369 record=own_0154 N=2172 loss=4.671
+epoch=137 val: E_RMSE=5.2718 meV/atom F_RMSE=0.114032 eV/A loss=13.2812 best=116
+epoch=138 step=1/369 record=own_0095 N=2304 loss=9.46346
+epoch=138 step=50/369 record=own_0004 N=372 loss=13.2611
+epoch=138 step=100/369 record=own_0043 N=816 loss=11.0604
+epoch=138 step=150/369 record=external_0245 N=3456 loss=4.63702
+epoch=138 step=200/369 record=own_0108 N=2640 loss=4.6184
+epoch=138 step=250/369 record=own_0181 N=1608 loss=1.86841
+epoch=138 step=300/369 record=external_0067 N=1152 loss=0.119267
+epoch=138 step=350/369 record=external_0008 N=1080 loss=0.0450783
+epoch=138 step=369/369 record=own_0013 N=672 loss=15.8258
+epoch=138 val: E_RMSE=4.8009 meV/atom F_RMSE=0.114082 eV/A loss=13.2451 best=116
+epoch=139 step=1/369 record=external_0215 N=1188 loss=0.0448532
+epoch=139 step=50/369 record=external_0048 N=336 loss=0.198937
+epoch=139 step=100/369 record=external_0235 N=2880 loss=8.87708
+epoch=139 step=150/369 record=external_0132 N=468 loss=0.0751207
+epoch=139 step=200/369 record=external_0004 N=792 loss=0.040524
+epoch=139 step=250/369 record=own_0212 N=2172 loss=4.50719
+epoch=139 step=300/369 record=own_0091 N=2352 loss=6.40465
+epoch=139 step=350/369 record=external_0102 N=2232 loss=0.916567
+epoch=139 step=369/369 record=external_0091 N=720 loss=0.515544
+epoch=139 val: E_RMSE=4.7173 meV/atom F_RMSE=0.114113 eV/A loss=13.2443 best=116
+epoch=140 step=1/369 record=external_0193 N=1620 loss=0.0618041
+epoch=140 step=50/369 record=external_0271 N=4608 loss=1.65344
+epoch=140 step=100/369 record=own_0045 N=1632 loss=6.34022
+epoch=140 step=150/369 record=own_0220 N=864 loss=2.60522
+epoch=140 step=200/369 record=external_0246 N=2592 loss=4.11158
+epoch=140 step=250/369 record=external_0081 N=72 loss=0.0814319
+epoch=140 step=300/369 record=own_0155 N=2172 loss=4.58562
+epoch=140 step=350/369 record=external_0120 N=1512 loss=0.0285818
+epoch=140 step=369/369 record=own_0223 N=864 loss=2.53193
+epoch=140 val: E_RMSE=4.6634 meV/atom F_RMSE=0.113965 eV/A loss=13.2055 best=116
+epoch=141 step=1/369 record=external_0195 N=1152 loss=0.121024
+epoch=141 step=50/369 record=own_0194 N=2232 loss=5.13841
+epoch=141 step=100/369 record=own_0075 N=2172 loss=6.59001
+epoch=141 step=150/369 record=own_0238 N=540 loss=1.37448
+epoch=141 step=200/369 record=external_0087 N=972 loss=0.0386471
+epoch=141 step=250/369 record=external_0232 N=1728 loss=1.45121
+epoch=141 step=300/369 record=external_0267 N=1296 loss=0.323535
+epoch=141 step=350/369 record=own_0094 N=1440 loss=2.82835
+epoch=141 step=369/369 record=external_0111 N=936 loss=0.04069
+epoch=141 val: E_RMSE=4.6957 meV/atom F_RMSE=0.114016 eV/A loss=13.22 best=116
+epoch=142 step=1/369 record=own_0216 N=2172 loss=4.5534
+epoch=142 step=50/369 record=external_0026 N=162 loss=0.0423431
+epoch=142 step=100/369 record=external_0199 N=1296 loss=0.0183106
+epoch=142 step=150/369 record=own_0201 N=576 loss=4.18399
+epoch=142 step=200/369 record=own_0207 N=1440 loss=3.71461
+epoch=142 step=250/369 record=external_0069 N=1152 loss=0.133214
+epoch=142 step=300/369 record=own_0071 N=2592 loss=5.25909
+epoch=142 step=350/369 record=external_0153 N=756 loss=0.0174088
+epoch=142 step=369/369 record=external_0256 N=1296 loss=1.52763
+epoch=142 val: E_RMSE=4.8988 meV/atom F_RMSE=0.114234 eV/A loss=13.2893 best=116
+epoch=143 step=1/369 record=own_0101 N=1800 loss=3.53881
+epoch=143 step=50/369 record=own_0126 N=1728 loss=5.25036
+epoch=143 step=100/369 record=own_0195 N=2232 loss=4.66703
+epoch=143 step=150/369 record=own_0170 N=2592 loss=2.0696
+epoch=143 step=200/369 record=own_0082 N=2304 loss=3.83036
+epoch=143 step=250/369 record=own_0054 N=2376 loss=6.3825
+epoch=143 step=300/369 record=own_0204 N=576 loss=4.37411
+epoch=143 step=350/369 record=own_0227 N=2172 loss=4.08847
+epoch=143 step=369/369 record=external_0071 N=720 loss=0.0294561
+epoch=143 val: E_RMSE=4.6784 meV/atom F_RMSE=0.114294 eV/A loss=13.2821 best=116
+epoch=144 step=1/369 record=external_0239 N=1728 loss=1.44236
+epoch=144 step=50/369 record=external_0030 N=504 loss=0.0139388
+epoch=144 step=100/369 record=external_0251 N=3456 loss=2.65799
+epoch=144 step=150/369 record=own_0102 N=2496 loss=6.66874
+epoch=144 step=200/369 record=own_0057 N=708 loss=5.95521
+epoch=144 step=250/369 record=external_0153 N=756 loss=0.0236311
+epoch=144 step=300/369 record=external_0195 N=1152 loss=0.145244
+epoch=144 step=350/369 record=external_0260 N=2592 loss=0.154552
+epoch=144 step=369/369 record=own_0039 N=1440 loss=3.3505
+epoch=144 val: E_RMSE=4.4852 meV/atom F_RMSE=0.114301 eV/A loss=13.266 best=116
+epoch=145 step=1/369 record=external_0091 N=720 loss=0.502165
+epoch=145 step=50/369 record=external_0255 N=1296 loss=0.204436
+epoch=145 step=100/369 record=external_0163 N=288 loss=0.524309
+epoch=145 step=150/369 record=external_0123 N=1188 loss=0.00968556
+epoch=145 step=200/369 record=own_0173 N=2592 loss=2.36685
+epoch=145 step=250/369 record=external_0045 N=1512 loss=0.0240985
+epoch=145 step=300/369 record=external_0038 N=252 loss=0.763767
+epoch=145 step=350/369 record=external_0244 N=3456 loss=4.72282
+epoch=145 step=369/369 record=external_0074 N=576 loss=0.417977
+epoch=145 val: E_RMSE=4.5825 meV/atom F_RMSE=0.114251 eV/A loss=13.2632 best=116
+epoch=146 step=1/369 record=external_0066 N=1512 loss=0.18772
+epoch=146 step=50/369 record=external_0171 N=504 loss=0.1318
+epoch=146 step=100/369 record=external_0104 N=864 loss=0.035996
+epoch=146 step=150/369 record=own_0032 N=2592 loss=2.02064
+epoch=146 step=200/369 record=own_0148 N=1680 loss=5.20659
+epoch=146 step=250/369 record=own_0039 N=1440 loss=3.36875
+epoch=146 step=300/369 record=own_0013 N=672 loss=16.2208
+epoch=146 step=350/369 record=own_0194 N=2232 loss=5.10216
+epoch=146 step=369/369 record=external_0232 N=1728 loss=1.43462
+epoch=146 val: E_RMSE=4.9432 meV/atom F_RMSE=0.114260 eV/A loss=13.2997 best=116
+{"best_epoch": 116, "best_val_loss": 13.11727775245964, "finished": "2026-10-26T21:54:18.477773+00:00", "last_completed_epoch": 146, "reason": "early_stopping", "status": "COMPLETE", "test_evaluated": false}
+Latest: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/latest_checkpoint.pt
+Best common checkpoint: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt
+[common_train] 1521s, exit 0
+
+################ router_train ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/router_distill_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1/manifest.csv
+allow-list: train 738, val 76  |  deny-list: test 210
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/audit_router.jsonl
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/router_distill_adapter.py --dataset_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1 --output_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router --device cuda --seed 20260811 --torch_threads 16
+
+PILOT ADAPTER original expectation (112, 22, 22); actual (369, 38, 0)
+======================================================================================================================
+STAGE B2: DISTILL LOCAL ROUTING INTO TORCHSOAP GATE
+======================================================================================================================
+Dataset:          <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1
+Output:           <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router
+Device:           cuda
+Splits:           train=369, val=38, test=0
+Input dim:        392
+Hidden dims:      [256, 128]
+Dropout:          0.05
+Loss:             structure-balanced KL(teacher || student)
+Max epochs:       300
+Patience:         35
+Seed:             20260811
+======================================================================================================================
+Epoch 001 train_KL=0.14351493 val_KL=0.09624745 lr=1.000e-03 *
+Epoch 002 train_KL=0.07873039 val_KL=0.07946640 lr=1.000e-03 *
+Epoch 003 train_KL=0.06033785 val_KL=0.06656865 lr=1.000e-03 *
+Epoch 004 train_KL=0.05068288 val_KL=0.05619592 lr=1.000e-03 *
+Epoch 005 train_KL=0.04499667 val_KL=0.05525098 lr=1.000e-03 *
+Epoch 007 train_KL=0.04118208 val_KL=0.05361902 lr=1.000e-03 *
+Epoch 008 train_KL=0.03778152 val_KL=0.05205168 lr=1.000e-03 *
+Epoch 010 train_KL=0.03359707 val_KL=0.06026132 lr=1.000e-03 
+Epoch 011 train_KL=0.03755852 val_KL=0.04513804 lr=1.000e-03 *
+Epoch 013 train_KL=0.03061835 val_KL=0.04355027 lr=1.000e-03 *
+Epoch 014 train_KL=0.02941647 val_KL=0.04232960 lr=1.000e-03 *
+Epoch 015 train_KL=0.02753923 val_KL=0.04754460 lr=1.000e-03 
+Epoch 017 train_KL=0.02747323 val_KL=0.03982462 lr=1.000e-03 *
+Epoch 019 train_KL=0.02522743 val_KL=0.03875949 lr=1.000e-03 *
+Epoch 020 train_KL=0.02518516 val_KL=0.03805823 lr=1.000e-03 *
+Epoch 021 train_KL=0.02348985 val_KL=0.03749868 lr=1.000e-03 *
+Epoch 025 train_KL=0.02231365 val_KL=0.03953419 lr=1.000e-03 
+Epoch 027 train_KL=0.02222974 val_KL=0.03749495 lr=1.000e-03 *
+Epoch 028 train_KL=0.02026749 val_KL=0.03476573 lr=1.000e-03 *
+Epoch 030 train_KL=0.02117521 val_KL=0.04616352 lr=1.000e-03 
+Epoch 032 train_KL=0.01993046 val_KL=0.03263868 lr=1.000e-03 *
+Epoch 035 train_KL=0.02014296 val_KL=0.03371531 lr=1.000e-03 
+Epoch 040 train_KL=0.01773806 val_KL=0.03166430 lr=1.000e-03 *
+Epoch 045 train_KL=0.01650885 val_KL=0.03803992 lr=1.000e-03 
+Epoch 049 train_KL=0.01875845 val_KL=0.02971020 lr=1.000e-03 *
+Epoch 050 train_KL=0.01655538 val_KL=0.03675001 lr=1.000e-03 
+Epoch 055 train_KL=0.01591966 val_KL=0.03066621 lr=1.000e-03 
+Epoch 060 train_KL=0.01576221 val_KL=0.03060977 lr=5.000e-04 
+Epoch 061 train_KL=0.01290523 val_KL=0.02882729 lr=5.000e-04 *
+Epoch 065 train_KL=0.01235341 val_KL=0.02817158 lr=5.000e-04 *
+Epoch 070 train_KL=0.01201672 val_KL=0.03060319 lr=5.000e-04 
+Epoch 075 train_KL=0.01194262 val_KL=0.02830944 lr=5.000e-04 
+Epoch 077 train_KL=0.01090009 val_KL=0.02758286 lr=2.500e-04 *
+Epoch 079 train_KL=0.01069757 val_KL=0.02740646 lr=2.500e-04 *
+Epoch 080 train_KL=0.01073566 val_KL=0.02729335 lr=2.500e-04 *
+Epoch 081 train_KL=0.01068375 val_KL=0.02727252 lr=2.500e-04 *
+Epoch 082 train_KL=0.01068715 val_KL=0.02712158 lr=2.500e-04 *
+Epoch 085 train_KL=0.01063065 val_KL=0.02804808 lr=2.500e-04 
+Epoch 090 train_KL=0.01042018 val_KL=0.02731312 lr=2.500e-04 
+Epoch 092 train_KL=0.01030545 val_KL=0.02696102 lr=2.500e-04 *
+Epoch 095 train_KL=0.01024913 val_KL=0.02800003 lr=2.500e-04 
+Epoch 100 train_KL=0.01003706 val_KL=0.02676218 lr=2.500e-04 *
+Epoch 105 train_KL=0.01005302 val_KL=0.02913217 lr=2.500e-04 
+Epoch 110 train_KL=0.00986053 val_KL=0.02646794 lr=2.500e-04 *
+Epoch 115 train_KL=0.00969239 val_KL=0.02895250 lr=2.500e-04 
+Epoch 120 train_KL=0.00974961 val_KL=0.02651184 lr=2.500e-04 
+Epoch 125 train_KL=0.00918917 val_KL=0.02760060 lr=1.250e-04 
+Epoch 130 train_KL=0.00918042 val_KL=0.02722539 lr=1.250e-04 
+Epoch 135 train_KL=0.00896767 val_KL=0.02730030 lr=6.250e-05 
+Epoch 140 train_KL=0.00893526 val_KL=0.02724143 lr=6.250e-05 
+Epoch 145 train_KL=0.00884086 val_KL=0.02708730 lr=3.125e-05 
+Early stopping at epoch 145; best epoch=110, best val KL=0.02646794
+PILOT ADAPTER: save_test_predictions suppressed
+
+======================================================================================================================
+ROUTING DISTILLATION RESULTS
+======================================================================================================================
+split   region               SB_KL        MAE_w       top1     cosine
+----------------------------------------------------------------------
+train   all              0.0075710    0.0078722     0.9734    0.99684
+train   interface        0.0209435    0.0159846     0.9286    0.99098
+train   phase1_bulk      0.0022738    0.0054965     0.9803    0.99895
+train   phase2_bulk      0.0037248    0.0061439     0.9822    0.99892
+val     all              0.0264679    0.0147753     0.9445    0.98769
+val     interface        0.0528276    0.0262355     0.8918    0.97422
+val     phase1_bulk      0.0047854    0.0074047     0.9660    0.99835
+val     phase2_bulk      0.0049784    0.0077385     0.9941    0.99814
+
+======================================================================================================================
+TEST FORCE-MIXTURE REPRODUCTION
+======================================================================================================================
+predictor  region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+--------------------------------------------------------------------------
+
+Saved:
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/training_history.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/routing_distillation_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/test_force_mixture_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/training_info.json
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/test_predictions
+
+Stage B2 acceptance target: the student should closely reproduce the teacher routing and keep TEST force-mixture RMSE near the frozen teacher values (all ≈0.457742, interface ≈0.630823 eV/A SB).
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    369   (raw opens 738)
+  val    distinct files     38   (raw opens 76)
+  test   distinct files      0   (raw opens 0)
+  other  distinct files      1   (raw opens 1)
+  distinct data files opened: 408
+  test-partition files: 0  -> CLEAN
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/audit_router.jsonl
+[router_train] 113s, exit 0
+
+################ c1b_train ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/c1b_holdout40_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/manifest.csv
+allow-list: train 369, val 38  |  deny-list: test 105
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/audit_c1b.jsonl
+sys.path += <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/c1b_holdout40_adapter.py --stage_b1_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage --common_checkpoint <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt --routing_checkpoint <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt --torchsoap_module <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py --output_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b --device cuda --energy_weight 10000.0 --force_weight 1000.0 --seed 20260811
+
+==========================================================================================================================
+STAGE C1b: FROZEN-ROUTING CONSERVATIVE LOCAL-MoE RESIDUAL
+==========================================================================================================================
+Stage B1 root:        <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage
+C1a checkpoint:       <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt
+B2 routing checkpoint:<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt
+TorchSOAP module:     <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+Output root:          <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b
+Device:               cuda
+Splits:               train=369, val=38, test=0
+N atoms range:        72 - 4608
+e_ref:                -9.668443844548 eV/atom
+Residual architecture: 392 -> 256 -> 128 -> 7
+Residual centering:   per atom across 7 expert channels
+C1a parameters:       frozen
+Routing parameters:   frozen
+Routing vs R:         LIVE (NOT detached)
+Loss weights:         E=10000.0, F=1000.0
+Initial LR:           0.00025
+Grad clip:            1.0
+Max epochs:           200
+Patience:             30
+Start epoch:          1
+max |common_mean-route_mean|: 0.000e+00
+max |common_std-route_std|:   0.000e+00
+==========================================================================================================================
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=648 | edges(search)=16416
+
+ZERO-INITIALIZATION AUDIT: |MoE residual total energy|=0.000000e+00 eV
+
+EPOCH-0 C1a VALIDATION BASELINE | E=4.719 meV/atom F=0.113554 eV/A valL=13.11727775
+Epoch 001 | train E=   2.759 meV/atom F= 0.05810 eV/A dE_MoE=  2.005 meV/atom | val E=   6.048 meV/atom F= 0.11409 eV/A dE_MoE=  2.641 meV/atom | valL=  13.38137 lr=2.50e-04 mem=1.25 GiB 
+Epoch 002 | train E=   2.554 meV/atom F= 0.05731 eV/A dE_MoE=  1.840 meV/atom | val E=   4.496 meV/atom F= 0.11361 eV/A dE_MoE=  1.487 meV/atom | valL=  13.10867 lr=2.50e-04 mem=1.25 GiB *
+Epoch 003 | train E=   2.229 meV/atom F= 0.05705 eV/A dE_MoE=  1.358 meV/atom | val E=   4.588 meV/atom F= 0.11354 eV/A dE_MoE=  1.108 meV/atom | valL=  13.10238 lr=2.50e-04 mem=1.25 GiB *
+Epoch 004 | train E=   2.088 meV/atom F= 0.05696 eV/A dE_MoE=  1.211 meV/atom | val E=   4.569 meV/atom F= 0.11358 eV/A dE_MoE=  1.485 meV/atom | valL=  13.10906 lr=2.50e-04 mem=1.25 GiB 
+Epoch 005 | train E=   2.026 meV/atom F= 0.05687 eV/A dE_MoE=  1.112 meV/atom | val E=   4.784 meV/atom F= 0.11355 eV/A dE_MoE=  0.541 meV/atom | valL=  13.12328 lr=2.50e-04 mem=1.25 GiB 
+Epoch 006 | train E=   2.148 meV/atom F= 0.05681 eV/A dE_MoE=  1.077 meV/atom | val E=   4.654 meV/atom F= 0.11351 eV/A dE_MoE=  0.568 meV/atom | valL=  13.10166 lr=2.50e-04 mem=1.25 GiB *
+Epoch 007 | train E=   2.088 meV/atom F= 0.05675 eV/A dE_MoE=  1.057 meV/atom | val E=   4.534 meV/atom F= 0.11349 eV/A dE_MoE=  0.797 meV/atom | valL=  13.08533 lr=2.50e-04 mem=1.25 GiB *
+Epoch 008 | train E=   1.987 meV/atom F= 0.05671 eV/A dE_MoE=  0.815 meV/atom | val E=   4.566 meV/atom F= 0.11352 eV/A dE_MoE=  0.669 meV/atom | valL=  13.09481 lr=2.50e-04 mem=1.25 GiB 
+Epoch 009 | train E=   2.021 meV/atom F= 0.05662 eV/A dE_MoE=  0.924 meV/atom | val E=   4.516 meV/atom F= 0.11370 eV/A dE_MoE=  1.446 meV/atom | valL=  13.13170 lr=2.50e-04 mem=1.25 GiB 
+Epoch 010 | train E=   2.039 meV/atom F= 0.05661 eV/A dE_MoE=  1.022 meV/atom | val E=   4.655 meV/atom F= 0.11353 eV/A dE_MoE=  0.925 meV/atom | valL=  13.10643 lr=2.50e-04 mem=1.25 GiB 
+Epoch 011 | train E=   2.002 meV/atom F= 0.05654 eV/A dE_MoE=  0.868 meV/atom | val E=   4.550 meV/atom F= 0.11350 eV/A dE_MoE=  0.791 meV/atom | valL=  13.08954 lr=2.50e-04 mem=1.25 GiB 
+Epoch 012 | train E=   1.931 meV/atom F= 0.05651 eV/A dE_MoE=  0.949 meV/atom | val E=   4.526 meV/atom F= 0.11350 eV/A dE_MoE=  0.917 meV/atom | valL=  13.08616 lr=2.50e-04 mem=1.25 GiB 
+Epoch 013 | train E=   1.970 meV/atom F= 0.05643 eV/A dE_MoE=  0.949 meV/atom | val E=   4.504 meV/atom F= 0.11323 eV/A dE_MoE=  0.909 meV/atom | valL=  13.02433 lr=2.50e-04 mem=1.25 GiB *
+Epoch 014 | train E=   2.008 meV/atom F= 0.05635 eV/A dE_MoE=  0.894 meV/atom | val E=   4.477 meV/atom F= 0.11343 eV/A dE_MoE=  1.166 meV/atom | valL=  13.06782 lr=2.50e-04 mem=1.25 GiB 
+Epoch 015 | train E=   1.973 meV/atom F= 0.05630 eV/A dE_MoE=  0.898 meV/atom | val E=   4.503 meV/atom F= 0.11345 eV/A dE_MoE=  1.465 meV/atom | valL=  13.07362 lr=2.50e-04 mem=1.25 GiB 
+Epoch 016 | train E=   1.947 meV/atom F= 0.05619 eV/A dE_MoE=  0.910 meV/atom | val E=   4.765 meV/atom F= 0.11324 eV/A dE_MoE=  0.707 meV/atom | valL=  13.05081 lr=2.50e-04 mem=1.25 GiB 
+Epoch 017 | train E=   1.971 meV/atom F= 0.05611 eV/A dE_MoE=  0.973 meV/atom | val E=   4.734 meV/atom F= 0.11338 eV/A dE_MoE=  0.655 meV/atom | valL=  13.08007 lr=2.50e-04 mem=1.25 GiB 
+Epoch 018 | train E=   1.957 meV/atom F= 0.05603 eV/A dE_MoE=  0.931 meV/atom | val E=   4.503 meV/atom F= 0.11334 eV/A dE_MoE=  0.823 meV/atom | valL=  13.04758 lr=2.50e-04 mem=1.25 GiB 
+Epoch 019 | train E=   1.946 meV/atom F= 0.05593 eV/A dE_MoE=  0.954 meV/atom | val E=   4.429 meV/atom F= 0.11335 eV/A dE_MoE=  1.409 meV/atom | valL=  13.04396 lr=2.50e-04 mem=1.25 GiB 
+Epoch 020 | train E=   1.885 meV/atom F= 0.05589 eV/A dE_MoE=  0.899 meV/atom | val E=   4.642 meV/atom F= 0.11320 eV/A dE_MoE=  0.912 meV/atom | valL=  13.02953 lr=2.50e-04 mem=1.25 GiB 
+Epoch 021 | train E=   1.914 meV/atom F= 0.05575 eV/A dE_MoE=  0.937 meV/atom | val E=   4.693 meV/atom F= 0.11337 eV/A dE_MoE=  0.719 meV/atom | valL=  13.07341 lr=2.50e-04 mem=1.25 GiB 
+Epoch 022 | train E=   1.882 meV/atom F= 0.05565 eV/A dE_MoE=  0.908 meV/atom | val E=   4.506 meV/atom F= 0.11341 eV/A dE_MoE=  1.152 meV/atom | valL=  13.06499 lr=2.50e-04 mem=1.25 GiB 
+Epoch 023 | train E=   1.963 meV/atom F= 0.05561 eV/A dE_MoE=  0.993 meV/atom | val E=   4.474 meV/atom F= 0.11364 eV/A dE_MoE=  0.702 meV/atom | valL=  13.11508 lr=2.50e-04 mem=1.25 GiB 
+Epoch 024 | train E=   1.944 meV/atom F= 0.05547 eV/A dE_MoE=  0.956 meV/atom | val E=   4.681 meV/atom F= 0.11361 eV/A dE_MoE=  0.850 meV/atom | valL=  13.12688 lr=1.25e-04 mem=1.25 GiB 
+Epoch 025 | train E=   1.895 meV/atom F= 0.05512 eV/A dE_MoE=  0.794 meV/atom | val E=   4.644 meV/atom F= 0.11372 eV/A dE_MoE=  0.736 meV/atom | valL=  13.14802 lr=1.25e-04 mem=1.25 GiB 
+Epoch 026 | train E=   1.820 meV/atom F= 0.05498 eV/A dE_MoE=  0.804 meV/atom | val E=   4.686 meV/atom F= 0.11376 eV/A dE_MoE=  0.788 meV/atom | valL=  13.16028 lr=1.25e-04 mem=1.25 GiB 
+Epoch 027 | train E=   1.821 meV/atom F= 0.05486 eV/A dE_MoE=  0.845 meV/atom | val E=   4.658 meV/atom F= 0.11381 eV/A dE_MoE=  0.611 meV/atom | valL=  13.16962 lr=1.25e-04 mem=1.25 GiB 
+Epoch 028 | train E=   1.822 meV/atom F= 0.05480 eV/A dE_MoE=  0.857 meV/atom | val E=   4.463 meV/atom F= 0.11384 eV/A dE_MoE=  0.806 meV/atom | valL=  13.15883 lr=1.25e-04 mem=1.25 GiB 
+Epoch 029 | train E=   1.875 meV/atom F= 0.05468 eV/A dE_MoE=  0.889 meV/atom | val E=   4.402 meV/atom F= 0.11381 eV/A dE_MoE=  1.169 meV/atom | valL=  13.14638 lr=1.25e-04 mem=1.25 GiB 
+Epoch 030 | train E=   1.854 meV/atom F= 0.05461 eV/A dE_MoE=  0.873 meV/atom | val E=   4.537 meV/atom F= 0.11371 eV/A dE_MoE=  0.727 meV/atom | valL=  13.13660 lr=1.25e-04 mem=1.25 GiB 
+Epoch 031 | train E=   1.812 meV/atom F= 0.05452 eV/A dE_MoE=  0.884 meV/atom | val E=   4.413 meV/atom F= 0.11392 eV/A dE_MoE=  0.736 meV/atom | valL=  13.17352 lr=1.25e-04 mem=1.25 GiB 
+Epoch 032 | train E=   1.850 meV/atom F= 0.05441 eV/A dE_MoE=  0.921 meV/atom | val E=   4.799 meV/atom F= 0.11388 eV/A dE_MoE=  0.650 meV/atom | valL=  13.19989 lr=1.25e-04 mem=1.25 GiB 
+Epoch 033 | train E=   1.825 meV/atom F= 0.05435 eV/A dE_MoE=  0.915 meV/atom | val E=   4.831 meV/atom F= 0.11396 eV/A dE_MoE=  0.939 meV/atom | valL=  13.21970 lr=1.25e-04 mem=1.25 GiB 
+Epoch 034 | train E=   1.861 meV/atom F= 0.05427 eV/A dE_MoE=  0.996 meV/atom | val E=   4.444 meV/atom F= 0.11406 eV/A dE_MoE=  0.784 meV/atom | valL=  13.20817 lr=1.25e-04 mem=1.25 GiB 
+Epoch 035 | train E=   1.824 meV/atom F= 0.05420 eV/A dE_MoE=  0.899 meV/atom | val E=   4.426 meV/atom F= 0.11396 eV/A dE_MoE=  1.387 meV/atom | valL=  13.18370 lr=6.25e-05 mem=1.25 GiB 
+Epoch 036 | train E=   1.794 meV/atom F= 0.05389 eV/A dE_MoE=  0.821 meV/atom | val E=   4.607 meV/atom F= 0.11392 eV/A dE_MoE=  0.792 meV/atom | valL=  13.19110 lr=6.25e-05 mem=1.25 GiB 
+Epoch 037 | train E=   1.797 meV/atom F= 0.05378 eV/A dE_MoE=  0.803 meV/atom | val E=   4.418 meV/atom F= 0.11384 eV/A dE_MoE=  1.088 meV/atom | valL=  13.15420 lr=6.25e-05 mem=1.25 GiB 
+Epoch 038 | train E=   1.767 meV/atom F= 0.05371 eV/A dE_MoE=  0.849 meV/atom | val E=   4.548 meV/atom F= 0.11398 eV/A dE_MoE=  0.807 meV/atom | valL=  13.19771 lr=6.25e-05 mem=1.25 GiB 
+Epoch 039 | train E=   1.784 meV/atom F= 0.05366 eV/A dE_MoE=  0.799 meV/atom | val E=   4.292 meV/atom F= 0.11402 eV/A dE_MoE=  1.103 meV/atom | valL=  13.18443 lr=6.25e-05 mem=1.25 GiB 
+Epoch 040 | train E=   1.746 meV/atom F= 0.05361 eV/A dE_MoE=  0.856 meV/atom | val E=   4.620 meV/atom F= 0.11418 eV/A dE_MoE=  0.689 meV/atom | valL=  13.25095 lr=6.25e-05 mem=1.25 GiB 
+Epoch 041 | train E=   1.758 meV/atom F= 0.05355 eV/A dE_MoE=  0.769 meV/atom | val E=   4.488 meV/atom F= 0.11415 eV/A dE_MoE=  0.696 meV/atom | valL=  13.23175 lr=6.25e-05 mem=1.25 GiB 
+Epoch 042 | train E=   1.740 meV/atom F= 0.05349 eV/A dE_MoE=  0.838 meV/atom | val E=   4.444 meV/atom F= 0.11403 eV/A dE_MoE=  0.775 meV/atom | valL=  13.20016 lr=6.25e-05 mem=1.25 GiB 
+Epoch 043 | train E=   1.779 meV/atom F= 0.05342 eV/A dE_MoE=  0.807 meV/atom | val E=   4.333 meV/atom F= 0.11419 eV/A dE_MoE=  1.128 meV/atom | valL=  13.22703 lr=6.25e-05 mem=1.25 GiB 
+Early stopping at epoch 43; best epoch=13, best val loss=13.02433082
+
+==========================================================================================================================
+FINAL EVALUATION USING BEST C1b CHECKPOINT
+==========================================================================================================================
+best epoch: 13, best val loss: 13.02433082
+
+split     E_RMSE(meV/atom)   E_MAE(meV/atom)    F_SB_RMSE(eV/A)   MoE_E_RMS(meV/a)    mean |Fnet|     max |Fnet|
+------------------------------------------------------------------------------------------------------------------------------
+train             1.831247          1.042587           0.056298           0.948778      4.046e-14      4.067e-13
+val               4.503537          2.517596           0.113232           0.908932      4.156e-14      1.612e-13
+
+TEST REGION FORCE METRICS
+region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+------------------------------------------------------------------
+
+Saved:
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/latest_checkpoint.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/training_history.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/final_split_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/test_region_force_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/training_info.json
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    738   (raw opens 1476)
+  val    distinct files     76   (raw opens 152)
+  test   distinct files      0   (raw opens 0)
+  other  distinct files      3   (raw opens 3)
+  distinct data files opened: 817
+  test-partition files: 0  -> CLEAN
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/audit_c1b.jsonl
+[c1b_train] 552s, exit 0
+
+################ physics ################
+================================================================================================
+ASSEMBLED-MODEL PHYSICS VERIFICATION (nonzero exit on failure)
+================================================================================================
+trainer   3705bf0a3aa4bf  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters/c1b_holdout40_adapter.py
+corrected 0afd9a1ba7b9a2  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+device cuda | torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19
+descriptor variant: 'rotinv_v1'
+e_ref = -9.66844384454791   r_cut = 5.000 A
+checkpoint hashes: common 5b17849752a535  router 9e8e0ca6af4976  residual c7ad2a89c57054
+residual normalisation = common (train_c1b_holdout40.py line 1277)
+records: test=0, train=369, val=38
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+
+external_0081  (train, 72 atoms)
+  E = -711.602880164817 eV   (-9.883373336 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 9.315e-14 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 8.453e-03 A   FD step 3.381e-03
+  gradient consistency: 2.803e-04 eV/A  tol 1.106e-02 (floor 5.53e-04, residual 15.7 eV)  -> pass
+
+external_0095  (train, 108 atoms)
+  E = -1067.081228643410 eV   (-9.880381747 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 1.009e-13 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 1.598e-04 A   FD step 6.391e-05
+  gradient consistency: EXEMPT -- threshold 8.698e-01 eV/A exceeds 5% of max|F|=4.638e-01
+      h is capped at 6.39e-05 by the 1.598e-04 A cutoff gap; residual scale 23.3 eV
+
+external_0165  (val, 180 atoms)
+  E = -1779.118954054602 eV   (-9.883994189 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 8.049e-14 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 7.386e-05 A   FD step 2.954e-05
+  gradient consistency: EXEMPT -- threshold 3.149e+00 eV/A exceeds 5% of max|F|=5.013e-01
+      h is capped at 2.95e-05 by the 7.386e-05 A cutoff gap; residual scale 39.0 eV
+
+================================================================================================
+records checked 3 | failures 0
+gradient consistency VERIFIED   on 1 record(s)
+gradient consistency NOT VERIFIED on 2 record(s): ['external_0095', 'external_0165']
+  An exemption is NOT a pass.  Those records' forces are unverified by
+  finite difference; rotation invariance and covariance still hold for them.
+NOTE: with checkpoints trained on UNCORRECTED features these energies are
+      interface validation only, never an accuracy result.
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/physics_pilot.json
+RESULT: PASS_WITH_UNVERIFIED_GRADIENTS
+[physics] 6s, exit 3
+
+################ summary ################
+  common_train       1521s exit 0
+  router_train        113s exit 0
+  c1b_train           552s exit 0
+  physics               6s exit 3
+  audit_c1b.jsonl test opens = 0
+  audit_router.jsonl test opens = 0
+  5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt

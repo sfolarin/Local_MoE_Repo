@@ -1,0 +1,7 @@
+{
+  "common_train": {"seconds": 1521, "exit": 0},
+  "router_train": {"seconds": 113, "exit": 0},
+  "c1b_train": {"seconds": 552, "exit": 0},
+  "physics": {"seconds": 6, "exit": 3},
+  "done": true
+}

@@ -1,0 +1,25 @@
+{
+  "best_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/best_torchsoap_routing_gate.pt",
+  "best_epoch": 2,
+  "best_val_structure_balanced_KL": 0.07946640208951737,
+  "dataset_root": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1",
+  "dropout": 0.05,
+  "expert_names": [
+    "ML-BKS",
+    "Original_BKS",
+    "Chik_BKS",
+    "PSO1_BKS",
+    "PSO2_BKS",
+    "Tersoff",
+    "Vashishta"
+  ],
+  "hidden_dims": [
+    256,
+    128
+  ],
+  "important_note": "This checkpoint must later be paired with on-the-fly differentiable TorchSOAP using the same rcut=5,nmax=6,lmax=4 and species one-hot ordering [Si,O].",
+  "input_dim": 392,
+  "purpose": "Distill frozen DScribe dense local-routing teacher into a new gate operating in differentiable local TorchSOAP feature space.",
+  "seed": 20260811,
+  "stage": "B2"
+}

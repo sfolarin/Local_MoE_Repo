@@ -1,0 +1,98 @@
+{
+  "corrected_module": {
+    "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py",
+    "sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21"
+  },
+  "snapshot": {
+    "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1",
+    "installed_sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21",
+    "provenance_rows": 18
+  },
+  "adapters": {
+    "prep_features_adapter.py": {
+      "sha256": "175ecc61b4fb4d3c8a581e818bd14e0a6ad53a942e1964febf4ac05d8dc805dd",
+      "expected": "175ecc61b4fb4d3c8a581e818bd14e0a6ad53a942e1964febf4ac05d8dc805dd",
+      "matches": true
+    },
+    "router_distill_adapter.py": {
+      "sha256": "5940fc1e517e6d38d99ef301216fa9e6c0da7de65c79ba82f263e3014bb27c9c",
+      "expected": "5940fc1e517e6d38d99ef301216fa9e6c0da7de65c79ba82f263e3014bb27c9c",
+      "matches": true
+    },
+    "c1b_holdout40_adapter.py": {
+      "sha256": "3705bf0a3aa4bf2dbe7d74091e9da79754867db7c8d728d6f63c2ecd0e8710fa",
+      "expected": "3705bf0a3aa4bf2dbe7d74091e9da79754867db7c8d728d6f63c2ecd0e8710fa",
+      "matches": true
+    },
+    "regenerable": true
+  },
+  "physics": {
+    "verify_assembled_gpu.json": {
+      "verdict": "PASS_WITH_UNVERIFIED_GRADIENTS",
+      "variant": "rotinv_v1",
+      "verified": [
+        "external_0081"
+      ],
+      "unverified": [
+        "external_0165"
+      ],
+      "failures": []
+    },
+    "verify_assembled.json": {
+      "verdict": "PASS_WITH_UNVERIFIED_GRADIENTS",
+      "variant": "rotinv_v1",
+      "verified": [
+        "external_0081"
+      ],
+      "unverified": [
+        "external_0165"
+      ],
+      "failures": []
+    }
+  },
+  "audits": {
+    "probe_audit.jsonl": {
+      "entries": 2,
+      "test": 2,
+      "fatal": 1,
+      "deliberate_probe": true
+    }
+  },
+  "router_contract": "resolved_from_training_info_json",
+  "router_procedure_assumed": [
+    "grad_clip",
+    "lr",
+    "max_epochs",
+    "min_delta",
+    "patience",
+    "weight_decay"
+  ],
+  "budget": {
+    "cap": 8.0,
+    "jobs": [
+      {
+        "job": "60302080",
+        "elapsed_s": 2611,
+        "gpus": 4,
+        "alloc_gpu_h": 2.901111111111111,
+        "state": "COMPLETED"
+      },
+      {
+        "job": "60334084",
+        "elapsed_s": 85,
+        "gpus": 1,
+        "alloc_gpu_h": 0.02361111111111111,
+        "state": "COMPLETED"
+      }
+    ],
+    "allocated_gpu_hours": 2.9247222222222224,
+    "remaining": 5.075277777777778
+  },
+  "blockers": [],
+  "notes": [
+    "verify_assembled_gpu.json: gradient consistency UNVERIFIED on ['external_0165'] -- an incomplete diagnostic, not a physics pass",
+    "verify_assembled.json: gradient consistency UNVERIFIED on ['external_0165'] -- an incomplete diagnostic, not a physics pass",
+    "router comparison is NOT exactly matched: ['grad_clip', 'lr', 'max_epochs', 'min_delta', 'patience', 'weight_decay'] are assumptions from the current source, not settings the historical run recorded"
+  ],
+  "pf5_sha256": "2cd250fc96d7aa2b6f434e6f6f34d3d70fad9c213f4ba33d8f92886b011bcc81"
+}

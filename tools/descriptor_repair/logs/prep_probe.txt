@@ -1,0 +1,29 @@
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/prep_features_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1/manifest.csv
+allow-list: train 369, val 38  |  deny-list: test 105
+audit    : prep_probe_audit.jsonl
+sys.path += <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/prep_features_adapter.py compute --dataset <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1 --snapshot <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1 --out <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1 --rank 0 --world 128 --threads 16
+
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=648 | edges(search)=16416
+rank=0 external_0000 PASS N=648 0.90s
+rank=0 external_0221 PASS N=1728 0.10s
+B1 historical diff own_0107 max_abs=6.608237e-01 allclose=False
+rank=0 own_0107 PASS N=2304 0.15s
+rank=0 external_0196 PASS N=432 0.05s
+{"rank": 0, "processed": 4, "reused": 0, "failures": 0, "finished": "2026-10-26T21:12:49.227259+00:00"}
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files      3   (raw opens 6)
+  val    distinct files      1   (raw opens 2)
+  test   distinct files      0   (raw opens 0)
+  other  distinct files      1   (raw opens 2)
+  distinct data files opened: 5
+  test-partition files: 0  -> CLEAN
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/prep_probe_audit.jsonl

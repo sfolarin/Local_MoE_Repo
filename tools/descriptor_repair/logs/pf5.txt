@@ -1,0 +1,81 @@
+============================================================================================
+CONSOLIDATED HARDENED PREFLIGHT (pf5)
+============================================================================================
+pf5.py sha256 2cd250fc96d7aa2b6f434e6f6f34d3d70fad9c213f4ba33d8f92886b011bcc81
+cap 8.000 allocated GPU-hours
+
+============================================================================================
+A. corrected descriptor module
+============================================================================================
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+  sha256 0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21
+  matches the pinned corrected hash
+  declares DESCRIPTOR_VARIANT = rotinv_v1
+
+============================================================================================
+B. corrected source snapshot, verified as the feature prep will
+============================================================================================
+  installed torchsoap_autograd_module_periodic_regnorm.py
+    sha256 0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21
+    run_c1b_matpes_r2scan_fourcase_fullmoe_float64.py          verified
+    torchsoap_autograd_module_periodic_regnorm.py              verified
+    train_c1b_frozen_routing_conservative_residual_v3_196train.py verified
+    train_conservative_common_energy_baseline_augmented.py     verified
+
+============================================================================================
+C. adapters: present, and reproducible from the current originals
+============================================================================================
+  prep_features_adapter.py     hash matches
+  router_distill_adapter.py    hash matches
+  c1b_holdout40_adapter.py     hash matches
+  regenerated from current originals: identical
+
+============================================================================================
+D. assembled-model physics verdict
+============================================================================================
+  verify_assembled_gpu.json
+    verdict  PASS_WITH_UNVERIFIED_GRADIENTS
+    variant  'rotinv_v1'
+    gradient verified   : ['external_0081']
+    gradient UNVERIFIED : ['external_0165']
+  verify_assembled.json
+    verdict  PASS_WITH_UNVERIFIED_GRADIENTS
+    variant  'rotinv_v1'
+    gradient verified   : ['external_0081']
+    gradient UNVERIFIED : ['external_0165']
+
+============================================================================================
+E. executed-path audit: zero test-partition opens
+============================================================================================
+  probe_audit.jsonl            entries    2  test   2  fatal 1   (deliberate probe)
+
+============================================================================================
+F. router dataset contract
+============================================================================================
+  provenance            resolved_from_training_info_json
+  membership (distill)  True
+  membership (routing)  True
+  procedure assumed     ['grad_clip', 'lr', 'max_epochs', 'min_delta', 'patience', 'weight_decay']
+  procedure determined  ['loss', 'normalization', 'optimizer', 'scheduler', 'scheduler_params', 'selection_metric']
+  procedure unknown     none
+
+============================================================================================
+G. budget: ALLOCATED GPU-hours (elapsed x GPUs the scheduler gave)
+============================================================================================
+  job list: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/gpu_jobs.txt (2 job ids)
+    60302080        2611s x 4 GPU =  2.9011 GPU-h   COMPLETED
+    60334084          85s x 1 GPU =  0.0236 GPU-h   COMPLETED
+
+  ALLOCATED total 2.9247 of 8.000 GPU-hours; remaining 5.0753
+
+============================================================================================
+SUMMARY
+============================================================================================
+  notes    : 3
+    - verify_assembled_gpu.json: gradient consistency UNVERIFIED on ['external_0165'] -- an incomplete diagnostic, not a physics pass
+    - verify_assembled.json: gradient consistency UNVERIFIED on ['external_0165'] -- an incomplete diagnostic, not a physics pass
+    - router comparison is NOT exactly matched: ['grad_clip', 'lr', 'max_epochs', 'min_delta', 'patience', 'weight_decay'] are assumptions from the current source, not settings the historical run recorded
+  BLOCKERS : 0
+
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pf5.json
+RESULT: CLEAR TO RUN

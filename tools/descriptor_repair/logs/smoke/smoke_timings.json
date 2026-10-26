@@ -1,0 +1,10 @@
+{
+  "features_compute": {"seconds": 77, "exit": 0},
+  "features_finalize": {"seconds": 11, "exit": 0},
+  "common_train": {"seconds": 44, "exit": 0},
+  "distill_dataset": {"seconds": 40, "exit": 0},
+  "router_train": {"seconds": 13, "exit": 0},
+  "c1b_train": {"seconds": 38, "exit": 0},
+  "physics": {"seconds": 5, "exit": 3},
+  "done": true
+}

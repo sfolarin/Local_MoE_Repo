@@ -1,0 +1,1076 @@
+dataset  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1
+features <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1
+snapshot <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1
+epochs   2   (smoke: interface exercise, NOT an accuracy result)
+
+################ features_compute ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/prep_features_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1/manifest.csv
+allow-list: train 369, val 38  |  deny-list: test 105
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_features.jsonl
+sys.path += <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/prep_features_adapter.py compute --dataset <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1 --snapshot <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1 --out <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1 --rank 0 --world 1 --threads 16
+
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=576 | edges(search)=17620
+rank=0 external_0001 PASS N=576 0.95s
+rank=0 external_0003 PASS N=432 0.04s
+rank=0 external_0004 PASS N=792 0.06s
+rank=0 external_0005 PASS N=648 0.05s
+rank=0 external_0006 PASS N=504 0.04s
+rank=0 external_0008 PASS N=1080 0.08s
+rank=0 external_0009 PASS N=264 0.03s
+rank=0 external_0012 PASS N=918 0.06s
+rank=0 external_0013 PASS N=1080 0.09s
+rank=0 external_0014 PASS N=972 0.08s
+rank=0 external_0016 PASS N=972 0.06s
+rank=0 external_0017 PASS N=864 0.07s
+rank=0 external_0018 PASS N=1134 0.08s
+rank=0 external_0019 PASS N=540 0.04s
+rank=0 external_0024 PASS N=594 0.06s
+rank=0 external_0025 PASS N=396 0.02s
+rank=0 external_0026 PASS N=162 0.02s
+rank=0 external_0030 PASS N=504 0.03s
+rank=0 external_0031 PASS N=756 0.05s
+rank=0 external_0032 PASS N=504 0.06s
+rank=0 external_0035 PASS N=594 0.04s
+rank=0 external_0038 PASS N=252 0.03s
+rank=0 external_0039 PASS N=1440 0.09s
+rank=0 external_0040 PASS N=1188 0.09s
+rank=0 external_0041 PASS N=792 0.07s
+rank=0 external_0043 PASS N=1026 0.07s
+rank=0 external_0045 PASS N=1512 0.11s
+rank=0 external_0047 PASS N=132 0.02s
+rank=0 external_0048 PASS N=336 0.03s
+rank=0 external_0049 PASS N=144 0.02s
+rank=0 external_0050 PASS N=432 0.05s
+rank=0 external_0052 PASS N=432 0.03s
+rank=0 external_0054 PASS N=1620 0.12s
+rank=0 external_0055 PASS N=1782 0.13s
+rank=0 external_0056 PASS N=1458 0.12s
+rank=0 external_0057 PASS N=1008 0.07s
+rank=0 external_0058 PASS N=1944 0.12s
+rank=0 external_0061 PASS N=240 0.02s
+rank=0 external_0062 PASS N=1152 0.07s
+rank=0 external_0063 PASS N=240 0.02s
+rank=0 external_0065 PASS N=288 0.03s
+rank=0 external_0066 PASS N=1512 0.11s
+rank=0 external_0067 PASS N=1152 0.10s
+rank=0 external_0068 PASS N=1152 0.07s
+rank=0 external_0069 PASS N=1152 0.07s
+rank=0 external_0070 PASS N=756 0.06s
+rank=0 external_0071 PASS N=720 0.05s
+rank=0 external_0072 PASS N=540 0.05s
+rank=0 external_0074 PASS N=576 0.04s
+rank=0 external_0075 PASS N=648 0.07s
+rank=0 external_0076 PASS N=180 0.02s
+rank=0 external_0077 PASS N=1296 0.09s
+rank=0 external_0080 PASS N=288 0.03s
+rank=0 external_0081 PASS N=72 0.01s
+rank=0 external_0087 PASS N=972 0.08s
+rank=0 external_0091 PASS N=720 0.05s
+rank=0 external_0092 PASS N=3456 0.09s
+rank=0 external_0094 PASS N=2160 0.14s
+rank=0 external_0095 PASS N=108 0.02s
+rank=0 external_0097 PASS N=324 0.03s
+rank=0 external_0099 PASS N=648 0.04s
+rank=0 external_0100 PASS N=1296 0.09s
+rank=0 external_0102 PASS N=2232 0.13s
+rank=0 external_0103 PASS N=600 0.04s
+rank=0 external_0104 PASS N=864 0.07s
+rank=0 external_0105 PASS N=1080 0.07s
+rank=0 external_0107 PASS N=648 0.06s
+rank=0 external_0108 PASS N=1404 0.09s
+rank=0 external_0111 PASS N=936 0.07s
+rank=0 external_0112 PASS N=864 0.06s
+rank=0 external_0113 PASS N=756 0.05s
+rank=0 external_0114 PASS N=1188 0.08s
+rank=0 external_0115 PASS N=792 0.05s
+rank=0 external_0116 PASS N=768 0.05s
+rank=0 external_0117 PASS N=1152 0.07s
+rank=0 external_0118 PASS N=792 0.06s
+rank=0 external_0119 PASS N=720 0.05s
+rank=0 external_0120 PASS N=1512 0.12s
+rank=0 external_0121 PASS N=1008 0.09s
+rank=0 external_0123 PASS N=1188 0.08s
+rank=0 external_0124 PASS N=864 0.06s
+rank=0 external_0125 PASS N=480 0.05s
+rank=0 external_0126 PASS N=288 0.02s
+rank=0 external_0129 PASS N=144 0.02s
+rank=0 external_0130 PASS N=312 0.04s
+rank=0 external_0132 PASS N=468 0.04s
+rank=0 external_0135 PASS N=378 0.04s
+rank=0 external_0136 PASS N=540 0.04s
+rank=0 external_0137 PASS N=648 0.05s
+rank=0 external_0139 PASS N=576 0.06s
+rank=0 external_0143 PASS N=1728 0.12s
+rank=0 external_0144 PASS N=192 0.02s
+rank=0 external_0146 PASS N=120 0.02s
+rank=0 external_0147 PASS N=168 0.03s
+rank=0 external_0151 PASS N=672 0.05s
+rank=0 external_0153 PASS N=756 0.05s
+rank=0 external_0157 PASS N=528 0.04s
+rank=0 external_0158 PASS N=528 0.05s
+rank=0 external_0161 PASS N=306 0.03s
+rank=0 external_0162 PASS N=120 0.02s
+rank=0 external_0163 PASS N=288 0.04s
+rank=0 external_0164 PASS N=168 0.02s
+rank=0 external_0166 PASS N=1296 0.09s
+rank=0 external_0168 PASS N=126 0.02s
+rank=0 external_0169 PASS N=288 0.03s
+rank=0 external_0170 PASS N=540 0.06s
+rank=0 external_0171 PASS N=504 0.04s
+rank=0 external_0173 PASS N=504 0.05s
+rank=0 external_0174 PASS N=504 0.04s
+rank=0 external_0175 PASS N=672 0.06s
+rank=0 external_0177 PASS N=468 0.04s
+rank=0 external_0180 PASS N=918 0.08s
+rank=0 external_0181 PASS N=1080 0.07s
+rank=0 external_0183 PASS N=540 0.04s
+rank=0 external_0187 PASS N=594 0.05s
+rank=0 external_0190 PASS N=594 0.05s
+rank=0 external_0193 PASS N=1620 0.11s
+rank=0 external_0194 PASS N=1458 0.09s
+rank=0 external_0195 PASS N=1152 0.07s
+rank=0 external_0197 PASS N=648 0.08s
+rank=0 external_0198 PASS N=180 0.02s
+rank=0 external_0199 PASS N=1296 0.10s
+rank=0 external_0201 PASS N=288 0.03s
+rank=0 external_0209 PASS N=2160 0.14s
+rank=0 external_0212 PASS N=1296 0.10s
+rank=0 external_0214 PASS N=768 0.06s
+rank=0 external_0215 PASS N=1188 0.07s
+rank=0 external_0222 PASS N=192 0.03s
+rank=0 external_0224 PASS N=756 0.03s
+rank=0 external_0229 PASS N=1296 0.10s
+rank=0 external_0231 PASS N=1728 0.06s
+rank=0 external_0232 PASS N=1728 0.09s
+rank=0 external_0233 PASS N=1728 0.08s
+rank=0 external_0234 PASS N=2880 0.21s
+rank=0 external_0235 PASS N=2880 0.17s
+rank=0 external_0236 PASS N=2160 0.06s
+rank=0 external_0237 PASS N=2160 0.07s
+rank=0 external_0238 PASS N=2160 0.11s
+rank=0 external_0239 PASS N=1728 0.11s
+rank=0 external_0240 PASS N=1728 0.08s
+rank=0 external_0241 PASS N=1728 0.12s
+rank=0 external_0242 PASS N=1728 0.06s
+rank=0 external_0243 PASS N=2592 0.13s
+rank=0 external_0244 PASS N=3456 0.15s
+rank=0 external_0245 PASS N=3456 0.17s
+rank=0 external_0246 PASS N=2592 0.19s
+rank=0 external_0247 PASS N=2520 0.06s
+rank=0 external_0248 PASS N=2520 0.09s
+rank=0 external_0249 PASS N=2592 0.12s
+rank=0 external_0250 PASS N=2592 0.15s
+rank=0 external_0251 PASS N=3456 0.15s
+rank=0 external_0252 PASS N=3456 0.16s
+rank=0 external_0253 PASS N=2268 0.09s
+rank=0 external_0254 PASS N=2268 0.05s
+rank=0 external_0255 PASS N=1296 0.06s
+rank=0 external_0256 PASS N=1296 0.07s
+rank=0 external_0257 PASS N=864 0.04s
+rank=0 external_0258 PASS N=864 0.05s
+rank=0 external_0259 PASS N=2592 0.10s
+rank=0 external_0260 PASS N=2592 0.10s
+rank=0 external_0261 PASS N=1296 0.06s
+rank=0 external_0262 PASS N=1296 0.07s
+rank=0 external_0263 PASS N=1296 0.05s
+rank=0 external_0264 PASS N=1296 0.09s
+rank=0 external_0265 PASS N=1296 0.06s
+rank=0 external_0266 PASS N=1296 0.07s
+rank=0 external_0267 PASS N=1296 0.07s
+rank=0 external_0268 PASS N=1296 0.05s
+rank=0 external_0269 PASS N=4608 0.22s
+rank=0 external_0270 PASS N=4608 0.19s
+rank=0 external_0271 PASS N=4608 0.24s
+B1 historical diff own_0000 max_abs=5.546873e-01 allclose=False
+rank=0 own_0000 PASS N=540 0.05s
+B1 historical diff own_0001 max_abs=5.555425e-01 allclose=False
+rank=0 own_0001 PASS N=540 0.07s
+B1 historical diff own_0002 max_abs=5.206891e-01 allclose=False
+rank=0 own_0002 PASS N=348 0.03s
+B1 historical diff own_0003 max_abs=5.211352e-01 allclose=False
+rank=0 own_0003 PASS N=348 0.05s
+B1 historical diff own_0004 max_abs=5.671485e-01 allclose=False
+rank=0 own_0004 PASS N=372 0.03s
+B1 historical diff own_0005 max_abs=5.669663e-01 allclose=False
+rank=0 own_0005 PASS N=372 0.05s
+B1 historical diff own_0006 max_abs=5.582290e-01 allclose=False
+rank=0 own_0006 PASS N=816 0.06s
+B1 historical diff own_0007 max_abs=5.582290e-01 allclose=False
+rank=0 own_0007 PASS N=816 0.07s
+B1 historical diff own_0012 max_abs=5.688686e-01 allclose=False
+rank=0 own_0012 PASS N=672 0.05s
+B1 historical diff own_0013 max_abs=5.672247e-01 allclose=False
+rank=0 own_0013 PASS N=672 0.06s
+B1 historical diff own_0014 max_abs=5.538468e-01 allclose=False
+rank=0 own_0014 PASS N=576 0.05s
+B1 historical diff own_0015 max_abs=5.536367e-01 allclose=False
+rank=0 own_0015 PASS N=576 0.05s
+B1 historical diff own_0018 max_abs=6.925691e-01 allclose=False
+rank=0 own_0018 PASS N=504 0.05s
+B1 historical diff own_0019 max_abs=6.210037e-01 allclose=False
+rank=0 own_0019 PASS N=1008 0.08s
+B1 historical diff own_0020 max_abs=5.483634e-01 allclose=False
+rank=0 own_0020 PASS N=1728 0.14s
+B1 historical diff own_0021 max_abs=5.483634e-01 allclose=False
+rank=0 own_0021 PASS N=1728 0.14s
+B1 historical diff own_0024 max_abs=5.689533e-01 allclose=False
+rank=0 own_0024 PASS N=2880 0.20s
+B1 historical diff own_0025 max_abs=5.429853e-01 allclose=False
+rank=0 own_0025 PASS N=1152 0.08s
+B1 historical diff own_0026 max_abs=5.429853e-01 allclose=False
+rank=0 own_0026 PASS N=1152 0.08s
+B1 historical diff own_0027 max_abs=5.492845e-01 allclose=False
+rank=0 own_0027 PASS N=2592 0.19s
+B1 historical diff own_0028 max_abs=5.452703e-01 allclose=False
+rank=0 own_0028 PASS N=2592 0.17s
+B1 historical diff own_0029 max_abs=5.459974e-01 allclose=False
+rank=0 own_0029 PASS N=2016 0.14s
+B1 historical diff own_0030 max_abs=4.877376e-01 allclose=False
+rank=0 own_0030 PASS N=1296 0.10s
+B1 historical diff own_0031 max_abs=6.033759e-01 allclose=False
+rank=0 own_0031 PASS N=1296 0.09s
+B1 historical diff own_0032 max_abs=5.782850e-01 allclose=False
+rank=0 own_0032 PASS N=2592 0.20s
+B1 historical diff own_0033 max_abs=5.782850e-01 allclose=False
+rank=0 own_0033 PASS N=2592 0.17s
+B1 historical diff own_0034 max_abs=5.597761e-01 allclose=False
+rank=0 own_0034 PASS N=1440 0.10s
+B1 historical diff own_0035 max_abs=5.597762e-01 allclose=False
+rank=0 own_0035 PASS N=1440 0.10s
+B1 historical diff own_0038 max_abs=5.387436e-01 allclose=False
+rank=0 own_0038 PASS N=1440 0.10s
+B1 historical diff own_0039 max_abs=5.387436e-01 allclose=False
+rank=0 own_0039 PASS N=1440 0.10s
+B1 historical diff own_0040 max_abs=5.570137e-01 allclose=False
+rank=0 own_0040 PASS N=1008 0.10s
+B1 historical diff own_0041 max_abs=5.507499e-01 allclose=False
+rank=0 own_0041 PASS N=1008 0.09s
+B1 historical diff own_0042 max_abs=5.832943e-01 allclose=False
+rank=0 own_0042 PASS N=816 0.06s
+B1 historical diff own_0043 max_abs=5.773059e-01 allclose=False
+rank=0 own_0043 PASS N=816 0.06s
+B1 historical diff own_0044 max_abs=5.474545e-01 allclose=False
+rank=0 own_0044 PASS N=1632 0.14s
+B1 historical diff own_0045 max_abs=5.474545e-01 allclose=False
+rank=0 own_0045 PASS N=1632 0.14s
+B1 historical diff own_0046 max_abs=5.731385e-01 allclose=False
+rank=0 own_0046 PASS N=1032 0.09s
+B1 historical diff own_0047 max_abs=5.731384e-01 allclose=False
+rank=0 own_0047 PASS N=1032 0.10s
+B1 historical diff own_0048 max_abs=4.734260e-01 allclose=False
+rank=0 own_0048 PASS N=1080 0.08s
+B1 historical diff own_0049 max_abs=4.734259e-01 allclose=False
+rank=0 own_0049 PASS N=1080 0.08s
+B1 historical diff own_0050 max_abs=7.174273e-01 allclose=False
+rank=0 own_0050 PASS N=2112 0.18s
+B1 historical diff own_0051 max_abs=7.174273e-01 allclose=False
+rank=0 own_0051 PASS N=2112 0.15s
+B1 historical diff own_0052 max_abs=5.269278e-01 allclose=False
+rank=0 own_0052 PASS N=1620 0.11s
+B1 historical diff own_0053 max_abs=5.269278e-01 allclose=False
+rank=0 own_0053 PASS N=1620 0.11s
+B1 historical diff own_0054 max_abs=5.221034e-01 allclose=False
+rank=0 own_0054 PASS N=2376 0.17s
+B1 historical diff own_0055 max_abs=5.221034e-01 allclose=False
+rank=0 own_0055 PASS N=2376 0.16s
+B1 historical diff own_0056 max_abs=5.500579e-01 allclose=False
+rank=0 own_0056 PASS N=504 0.04s
+B1 historical diff own_0057 max_abs=5.911525e-01 allclose=False
+rank=0 own_0057 PASS N=708 0.07s
+B1 historical diff own_0058 max_abs=5.911524e-01 allclose=False
+rank=0 own_0058 PASS N=708 0.06s
+B1 historical diff own_0061 max_abs=5.287443e-01 allclose=False
+rank=0 own_0061 PASS N=2592 0.22s
+B1 historical diff own_0066 max_abs=6.673893e-01 allclose=False
+rank=0 own_0066 PASS N=672 0.06s
+B1 historical diff own_0067 max_abs=5.639563e-01 allclose=False
+rank=0 own_0067 PASS N=672 0.06s
+B1 historical diff own_0068 max_abs=4.997450e-01 allclose=False
+rank=0 own_0068 PASS N=2304 0.15s
+B1 historical diff own_0069 max_abs=4.997450e-01 allclose=False
+rank=0 own_0069 PASS N=2304 0.15s
+B1 historical diff own_0070 max_abs=6.319364e-01 allclose=False
+rank=0 own_0070 PASS N=2688 0.18s
+B1 historical diff own_0071 max_abs=6.048591e-01 allclose=False
+rank=0 own_0071 PASS N=2592 0.20s
+B1 historical diff own_0072 max_abs=6.048591e-01 allclose=False
+rank=0 own_0072 PASS N=2592 0.18s
+B1 historical diff own_0073 max_abs=5.168774e-01 allclose=False
+rank=0 own_0073 PASS N=1728 0.12s
+B1 historical diff own_0074 max_abs=5.628802e-01 allclose=False
+rank=0 own_0074 PASS N=1728 0.12s
+B1 historical diff own_0075 max_abs=5.334277e-01 allclose=False
+rank=0 own_0075 PASS N=2172 0.14s
+B1 historical diff own_0076 max_abs=6.867549e-01 allclose=False
+rank=0 own_0076 PASS N=2172 0.14s
+B1 historical diff own_0079 max_abs=4.317851e-01 allclose=False
+rank=0 own_0079 PASS N=1440 0.11s
+B1 historical diff own_0080 max_abs=4.313229e-01 allclose=False
+rank=0 own_0080 PASS N=1440 0.10s
+B1 historical diff own_0081 max_abs=5.805389e-01 allclose=False
+rank=0 own_0081 PASS N=2304 0.17s
+B1 historical diff own_0082 max_abs=5.805389e-01 allclose=False
+rank=0 own_0082 PASS N=2304 0.14s
+B1 historical diff own_0083 max_abs=5.371405e-01 allclose=False
+rank=0 own_0083 PASS N=1632 0.11s
+B1 historical diff own_0084 max_abs=5.371401e-01 allclose=False
+rank=0 own_0084 PASS N=1632 0.11s
+B1 historical diff own_0087 max_abs=5.466697e-01 allclose=False
+rank=0 own_0087 PASS N=864 0.09s
+B1 historical diff own_0088 max_abs=5.466697e-01 allclose=False
+rank=0 own_0088 PASS N=864 0.08s
+B1 historical diff own_0089 max_abs=5.846291e-01 allclose=False
+rank=0 own_0089 PASS N=1728 0.12s
+B1 historical diff own_0090 max_abs=5.978295e-01 allclose=False
+rank=0 own_0090 PASS N=1728 0.12s
+B1 historical diff own_0091 max_abs=6.048272e-01 allclose=False
+rank=0 own_0091 PASS N=2352 0.16s
+B1 historical diff own_0092 max_abs=5.828891e-01 allclose=False
+rank=0 own_0092 PASS N=2352 0.16s
+B1 historical diff own_0093 max_abs=4.517281e-01 allclose=False
+rank=0 own_0093 PASS N=1440 0.10s
+B1 historical diff own_0094 max_abs=4.526520e-01 allclose=False
+rank=0 own_0094 PASS N=1440 0.10s
+B1 historical diff own_0095 max_abs=5.310610e-01 allclose=False
+rank=0 own_0095 PASS N=2304 0.16s
+B1 historical diff own_0100 max_abs=5.468604e-01 allclose=False
+rank=0 own_0100 PASS N=1800 0.13s
+B1 historical diff own_0101 max_abs=5.248265e-01 allclose=False
+rank=0 own_0101 PASS N=1800 0.13s
+B1 historical diff own_0102 max_abs=6.778232e-01 allclose=False
+rank=0 own_0102 PASS N=2496 0.17s
+B1 historical diff own_0103 max_abs=5.562278e-01 allclose=False
+rank=0 own_0103 PASS N=2496 0.17s
+B1 historical diff own_0104 max_abs=6.309720e-01 allclose=False
+rank=0 own_0104 PASS N=1608 0.11s
+B1 historical diff own_0105 max_abs=5.645467e-01 allclose=False
+rank=0 own_0105 PASS N=1608 0.11s
+B1 historical diff own_0106 max_abs=5.819787e-01 allclose=False
+rank=0 own_0106 PASS N=2304 0.15s
+B1 historical diff own_0108 max_abs=5.848211e-01 allclose=False
+rank=0 own_0108 PASS N=2640 0.17s
+B1 historical diff own_0109 max_abs=5.646776e-01 allclose=False
+rank=0 own_0109 PASS N=2640 0.19s
+B1 historical diff own_0116 max_abs=5.907019e-01 allclose=False
+rank=0 own_0116 PASS N=978 0.09s
+B1 historical diff own_0117 max_abs=5.912905e-01 allclose=False
+rank=0 own_0117 PASS N=978 0.08s
+B1 historical diff own_0118 max_abs=6.101897e-01 allclose=False
+rank=0 own_0118 PASS N=1608 0.11s
+B1 historical diff own_0119 max_abs=5.433918e-01 allclose=False
+rank=0 own_0119 PASS N=1608 0.11s
+B1 historical diff own_0120 max_abs=5.563690e-01 allclose=False
+rank=0 own_0120 PASS N=1728 0.11s
+B1 historical diff own_0121 max_abs=5.418953e-01 allclose=False
+rank=0 own_0121 PASS N=1728 0.11s
+B1 historical diff own_0126 max_abs=5.430934e-01 allclose=False
+rank=0 own_0126 PASS N=1728 0.11s
+B1 historical diff own_0127 max_abs=5.797567e-01 allclose=False
+rank=0 own_0127 PASS N=1728 0.13s
+B1 historical diff own_0128 max_abs=7.371750e-01 allclose=False
+rank=0 own_0128 PASS N=2496 0.17s
+B1 historical diff own_0129 max_abs=7.371751e-01 allclose=False
+rank=0 own_0129 PASS N=2496 0.17s
+B1 historical diff own_0130 max_abs=5.845808e-01 allclose=False
+rank=0 own_0130 PASS N=2352 0.16s
+B1 historical diff own_0131 max_abs=5.223927e-01 allclose=False
+rank=0 own_0131 PASS N=2832 0.20s
+B1 historical diff own_0138 max_abs=5.307077e-01 allclose=False
+rank=0 own_0138 PASS N=2232 0.18s
+B1 historical diff own_0139 max_abs=5.680055e-01 allclose=False
+rank=0 own_0139 PASS N=2232 0.15s
+B1 historical diff own_0140 max_abs=5.230953e-01 allclose=False
+rank=0 own_0140 PASS N=2592 0.17s
+B1 historical diff own_0141 max_abs=5.230953e-01 allclose=False
+rank=0 own_0141 PASS N=2592 0.17s
+B1 historical diff own_0144 max_abs=5.374932e-01 allclose=False
+rank=0 own_0144 PASS N=2280 0.18s
+B1 historical diff own_0145 max_abs=5.374928e-01 allclose=False
+rank=0 own_0145 PASS N=2280 0.18s
+B1 historical diff own_0148 max_abs=4.830256e-01 allclose=False
+rank=0 own_0148 PASS N=1680 0.12s
+B1 historical diff own_0149 max_abs=4.830259e-01 allclose=False
+rank=0 own_0149 PASS N=1680 0.13s
+B1 historical diff own_0150 max_abs=5.939672e-01 allclose=False
+rank=0 own_0150 PASS N=2460 0.17s
+B1 historical diff own_0151 max_abs=5.939670e-01 allclose=False
+rank=0 own_0151 PASS N=2460 0.16s
+B1 historical diff own_0152 max_abs=5.838883e-01 allclose=False
+rank=0 own_0152 PASS N=954 0.07s
+B1 historical diff own_0153 max_abs=5.838883e-01 allclose=False
+rank=0 own_0153 PASS N=954 0.08s
+B1 historical diff own_0154 max_abs=5.558600e-01 allclose=False
+rank=0 own_0154 PASS N=2172 0.17s
+B1 historical diff own_0155 max_abs=5.558600e-01 allclose=False
+rank=0 own_0155 PASS N=2172 0.16s
+B1 historical diff own_0156 max_abs=5.805389e-01 allclose=False
+rank=0 own_0156 PASS N=2304 0.14s
+B1 historical diff own_0157 max_abs=5.805389e-01 allclose=False
+rank=0 own_0157 PASS N=2304 0.15s
+B1 historical diff own_0158 max_abs=5.805389e-01 allclose=False
+rank=0 own_0158 PASS N=2304 0.14s
+B1 historical diff own_0159 max_abs=5.805389e-01 allclose=False
+rank=0 own_0159 PASS N=2304 0.14s
+B1 historical diff own_0160 max_abs=5.805389e-01 allclose=False
+rank=0 own_0160 PASS N=2304 0.14s
+B1 historical diff own_0161 max_abs=5.805389e-01 allclose=False
+rank=0 own_0161 PASS N=2304 0.14s
+B1 historical diff own_0162 max_abs=5.805389e-01 allclose=False
+rank=0 own_0162 PASS N=2304 0.14s
+B1 historical diff own_0163 max_abs=6.309720e-01 allclose=False
+rank=0 own_0163 PASS N=1608 0.11s
+B1 historical diff own_0164 max_abs=6.309720e-01 allclose=False
+rank=0 own_0164 PASS N=1608 0.11s
+B1 historical diff own_0165 max_abs=6.309720e-01 allclose=False
+rank=0 own_0165 PASS N=1608 0.12s
+B1 historical diff own_0166 max_abs=6.309720e-01 allclose=False
+rank=0 own_0166 PASS N=1608 0.12s
+B1 historical diff own_0167 max_abs=6.309720e-01 allclose=False
+rank=0 own_0167 PASS N=1608 0.13s
+B1 historical diff own_0168 max_abs=6.309720e-01 allclose=False
+rank=0 own_0168 PASS N=1608 0.11s
+B1 historical diff own_0169 max_abs=6.309720e-01 allclose=False
+rank=0 own_0169 PASS N=1608 0.12s
+B1 historical diff own_0170 max_abs=5.782850e-01 allclose=False
+rank=0 own_0170 PASS N=2592 0.18s
+B1 historical diff own_0171 max_abs=5.782850e-01 allclose=False
+rank=0 own_0171 PASS N=2592 0.17s
+B1 historical diff own_0172 max_abs=5.782850e-01 allclose=False
+rank=0 own_0172 PASS N=2592 0.17s
+B1 historical diff own_0173 max_abs=5.782850e-01 allclose=False
+rank=0 own_0173 PASS N=2592 0.21s
+B1 historical diff own_0174 max_abs=5.782850e-01 allclose=False
+rank=0 own_0174 PASS N=2592 0.17s
+B1 historical diff own_0175 max_abs=5.782850e-01 allclose=False
+rank=0 own_0175 PASS N=2592 0.17s
+B1 historical diff own_0176 max_abs=5.782850e-01 allclose=False
+rank=0 own_0176 PASS N=2592 0.21s
+B1 historical diff own_0177 max_abs=5.433918e-01 allclose=False
+rank=0 own_0177 PASS N=1608 0.11s
+B1 historical diff own_0178 max_abs=5.433918e-01 allclose=False
+rank=0 own_0178 PASS N=1608 0.11s
+B1 historical diff own_0179 max_abs=5.433918e-01 allclose=False
+rank=0 own_0179 PASS N=1608 0.11s
+B1 historical diff own_0180 max_abs=5.433918e-01 allclose=False
+rank=0 own_0180 PASS N=1608 0.12s
+B1 historical diff own_0181 max_abs=5.433918e-01 allclose=False
+rank=0 own_0181 PASS N=1608 0.13s
+B1 historical diff own_0182 max_abs=5.433918e-01 allclose=False
+rank=0 own_0182 PASS N=1608 0.11s
+B1 historical diff own_0183 max_abs=5.433918e-01 allclose=False
+rank=0 own_0183 PASS N=1608 0.12s
+B1 historical diff own_0184 max_abs=5.582290e-01 allclose=False
+rank=0 own_0184 PASS N=816 0.07s
+B1 historical diff own_0185 max_abs=5.582290e-01 allclose=False
+rank=0 own_0185 PASS N=816 0.07s
+B1 historical diff own_0186 max_abs=5.582290e-01 allclose=False
+rank=0 own_0186 PASS N=816 0.07s
+B1 historical diff own_0187 max_abs=5.591745e-01 allclose=False
+rank=0 own_0187 PASS N=816 0.07s
+B1 historical diff own_0188 max_abs=5.582290e-01 allclose=False
+rank=0 own_0188 PASS N=816 0.08s
+B1 historical diff own_0189 max_abs=5.582290e-01 allclose=False
+rank=0 own_0189 PASS N=816 0.06s
+B1 historical diff own_0190 max_abs=5.582290e-01 allclose=False
+rank=0 own_0190 PASS N=816 0.08s
+B1 historical diff own_0191 max_abs=5.680055e-01 allclose=False
+rank=0 own_0191 PASS N=2232 0.15s
+B1 historical diff own_0192 max_abs=5.680055e-01 allclose=False
+rank=0 own_0192 PASS N=2232 0.15s
+B1 historical diff own_0193 max_abs=5.680055e-01 allclose=False
+rank=0 own_0193 PASS N=2232 0.15s
+B1 historical diff own_0194 max_abs=5.680055e-01 allclose=False
+rank=0 own_0194 PASS N=2232 0.15s
+B1 historical diff own_0195 max_abs=5.680055e-01 allclose=False
+rank=0 own_0195 PASS N=2232 0.15s
+B1 historical diff own_0196 max_abs=5.680055e-01 allclose=False
+rank=0 own_0196 PASS N=2232 0.17s
+B1 historical diff own_0197 max_abs=5.680055e-01 allclose=False
+rank=0 own_0197 PASS N=2232 0.17s
+B1 historical diff own_0198 max_abs=5.538468e-01 allclose=False
+rank=0 own_0198 PASS N=576 0.05s
+B1 historical diff own_0199 max_abs=5.538468e-01 allclose=False
+rank=0 own_0199 PASS N=576 0.05s
+B1 historical diff own_0200 max_abs=5.538468e-01 allclose=False
+rank=0 own_0200 PASS N=576 0.06s
+B1 historical diff own_0201 max_abs=5.538468e-01 allclose=False
+rank=0 own_0201 PASS N=576 0.05s
+B1 historical diff own_0202 max_abs=5.538468e-01 allclose=False
+rank=0 own_0202 PASS N=576 0.05s
+B1 historical diff own_0203 max_abs=5.577577e-01 allclose=False
+rank=0 own_0203 PASS N=576 0.06s
+B1 historical diff own_0204 max_abs=5.577090e-01 allclose=False
+rank=0 own_0204 PASS N=576 0.05s
+B1 historical diff own_0205 max_abs=5.387436e-01 allclose=False
+rank=0 own_0205 PASS N=1440 0.11s
+B1 historical diff own_0206 max_abs=5.387436e-01 allclose=False
+rank=0 own_0206 PASS N=1440 0.10s
+B1 historical diff own_0207 max_abs=5.387436e-01 allclose=False
+rank=0 own_0207 PASS N=1440 0.10s
+B1 historical diff own_0208 max_abs=5.387436e-01 allclose=False
+rank=0 own_0208 PASS N=1440 0.10s
+B1 historical diff own_0209 max_abs=5.387436e-01 allclose=False
+rank=0 own_0209 PASS N=1440 0.12s
+B1 historical diff own_0210 max_abs=5.387436e-01 allclose=False
+rank=0 own_0210 PASS N=1440 0.11s
+B1 historical diff own_0211 max_abs=5.387436e-01 allclose=False
+rank=0 own_0211 PASS N=1440 0.11s
+B1 historical diff own_0212 max_abs=5.558600e-01 allclose=False
+rank=0 own_0212 PASS N=2172 0.15s
+B1 historical diff own_0213 max_abs=5.558600e-01 allclose=False
+rank=0 own_0213 PASS N=2172 0.15s
+B1 historical diff own_0214 max_abs=5.558600e-01 allclose=False
+rank=0 own_0214 PASS N=2172 0.15s
+B1 historical diff own_0215 max_abs=5.558600e-01 allclose=False
+rank=0 own_0215 PASS N=2172 0.15s
+B1 historical diff own_0216 max_abs=5.638262e-01 allclose=False
+rank=0 own_0216 PASS N=2172 0.15s
+B1 historical diff own_0217 max_abs=5.665380e-01 allclose=False
+rank=0 own_0217 PASS N=2172 0.15s
+B1 historical diff own_0218 max_abs=5.678076e-01 allclose=False
+rank=0 own_0218 PASS N=2172 0.15s
+B1 historical diff own_0219 max_abs=5.466697e-01 allclose=False
+rank=0 own_0219 PASS N=864 0.07s
+B1 historical diff own_0220 max_abs=5.466697e-01 allclose=False
+rank=0 own_0220 PASS N=864 0.08s
+B1 historical diff own_0221 max_abs=5.466697e-01 allclose=False
+rank=0 own_0221 PASS N=864 0.07s
+B1 historical diff own_0222 max_abs=5.466697e-01 allclose=False
+rank=0 own_0222 PASS N=864 0.06s
+B1 historical diff own_0223 max_abs=5.466697e-01 allclose=False
+rank=0 own_0223 PASS N=864 0.08s
+B1 historical diff own_0224 max_abs=5.466697e-01 allclose=False
+rank=0 own_0224 PASS N=864 0.06s
+B1 historical diff own_0225 max_abs=5.466697e-01 allclose=False
+rank=0 own_0225 PASS N=864 0.08s
+B1 historical diff own_0226 max_abs=6.867549e-01 allclose=False
+rank=0 own_0226 PASS N=2172 0.17s
+B1 historical diff own_0227 max_abs=6.867549e-01 allclose=False
+rank=0 own_0227 PASS N=2172 0.16s
+B1 historical diff own_0228 max_abs=6.867549e-01 allclose=False
+rank=0 own_0228 PASS N=2172 0.14s
+B1 historical diff own_0229 max_abs=6.867549e-01 allclose=False
+rank=0 own_0229 PASS N=2172 0.14s
+B1 historical diff own_0230 max_abs=6.867549e-01 allclose=False
+rank=0 own_0230 PASS N=2172 0.14s
+B1 historical diff own_0231 max_abs=6.867549e-01 allclose=False
+rank=0 own_0231 PASS N=2172 0.14s
+B1 historical diff own_0232 max_abs=6.867549e-01 allclose=False
+rank=0 own_0232 PASS N=2172 0.14s
+B1 historical diff own_0233 max_abs=5.546873e-01 allclose=False
+rank=0 own_0233 PASS N=540 0.05s
+B1 historical diff own_0234 max_abs=5.546873e-01 allclose=False
+rank=0 own_0234 PASS N=540 0.06s
+B1 historical diff own_0235 max_abs=5.546873e-01 allclose=False
+rank=0 own_0235 PASS N=540 0.05s
+B1 historical diff own_0236 max_abs=5.546873e-01 allclose=False
+rank=0 own_0236 PASS N=540 0.05s
+B1 historical diff own_0237 max_abs=5.546873e-01 allclose=False
+rank=0 own_0237 PASS N=540 0.05s
+B1 historical diff own_0238 max_abs=5.546873e-01 allclose=False
+rank=0 own_0238 PASS N=540 0.08s
+B1 historical diff own_0239 max_abs=5.546873e-01 allclose=False
+rank=0 own_0239 PASS N=540 0.05s
+rank=0 external_0007 PASS N=432 0.05s
+rank=0 external_0010 PASS N=768 0.03s
+rank=0 external_0027 PASS N=432 0.05s
+rank=0 external_0029 PASS N=612 0.05s
+rank=0 external_0037 PASS N=1080 0.08s
+rank=0 external_0059 PASS N=1296 0.08s
+rank=0 external_0073 PASS N=432 0.05s
+rank=0 external_0079 PASS N=672 0.05s
+rank=0 external_0082 PASS N=240 0.04s
+rank=0 external_0088 PASS N=1296 0.08s
+rank=0 external_0106 PASS N=720 0.05s
+rank=0 external_0138 PASS N=864 0.08s
+rank=0 external_0140 PASS N=486 0.04s
+rank=0 external_0165 PASS N=180 0.03s
+rank=0 external_0176 PASS N=504 0.05s
+B1 historical diff own_0008 max_abs=4.550539e-01 allclose=False
+rank=0 own_0008 PASS N=528 0.05s
+B1 historical diff own_0009 max_abs=4.720440e-01 allclose=False
+rank=0 own_0009 PASS N=528 0.05s
+B1 historical diff own_0016 max_abs=5.173723e-01 allclose=False
+rank=0 own_0016 PASS N=912 0.07s
+B1 historical diff own_0017 max_abs=5.955173e-01 allclose=False
+rank=0 own_0017 PASS N=912 0.07s
+B1 historical diff own_0064 max_abs=6.411589e-01 allclose=False
+rank=0 own_0064 PASS N=1872 0.15s
+B1 historical diff own_0065 max_abs=6.411586e-01 allclose=False
+rank=0 own_0065 PASS N=1872 0.12s
+B1 historical diff own_0077 max_abs=5.610092e-01 allclose=False
+rank=0 own_0077 PASS N=2976 0.20s
+B1 historical diff own_0078 max_abs=5.610094e-01 allclose=False
+rank=0 own_0078 PASS N=2976 0.20s
+B1 historical diff own_0085 max_abs=7.220013e-01 allclose=False
+rank=0 own_0085 PASS N=2784 0.19s
+B1 historical diff own_0086 max_abs=6.346591e-01 allclose=False
+rank=0 own_0086 PASS N=2784 0.18s
+B1 historical diff own_0096 max_abs=5.586169e-01 allclose=False
+rank=0 own_0096 PASS N=2952 0.22s
+B1 historical diff own_0097 max_abs=5.640972e-01 allclose=False
+rank=0 own_0097 PASS N=2952 0.19s
+B1 historical diff own_0112 max_abs=5.768186e-01 allclose=False
+rank=0 own_0112 PASS N=1320 0.09s
+B1 historical diff own_0113 max_abs=5.768186e-01 allclose=False
+rank=0 own_0113 PASS N=1320 0.09s
+B1 historical diff own_0124 max_abs=6.377502e-01 allclose=False
+rank=0 own_0124 PASS N=2664 0.20s
+B1 historical diff own_0125 max_abs=5.828876e-01 allclose=False
+rank=0 own_0125 PASS N=2664 0.18s
+B1 historical diff own_0132 max_abs=4.966205e-01 allclose=False
+rank=0 own_0132 PASS N=2688 0.18s
+B1 historical diff own_0133 max_abs=4.966205e-01 allclose=False
+rank=0 own_0133 PASS N=2688 0.20s
+B1 historical diff own_0134 max_abs=6.214904e-01 allclose=False
+rank=0 own_0134 PASS N=2592 0.17s
+B1 historical diff own_0135 max_abs=6.511728e-01 allclose=False
+rank=0 own_0135 PASS N=2592 0.17s
+B1 historical diff own_0142 max_abs=5.826668e-01 allclose=False
+rank=0 own_0142 PASS N=2808 0.18s
+B1 historical diff own_0143 max_abs=5.826668e-01 allclose=False
+rank=0 own_0143 PASS N=2808 0.22s
+rank=0 external_0002 PASS N=432 0.03s
+rank=0 external_0011 PASS N=756 0.07s
+rank=0 external_0015 PASS N=648 0.04s
+rank=0 external_0020 PASS N=1620 0.11s
+rank=0 external_0021 PASS N=1296 0.08s
+rank=0 external_0022 PASS N=234 0.02s
+rank=0 external_0023 PASS N=432 0.03s
+rank=0 external_0028 PASS N=828 0.07s
+rank=0 external_0033 PASS N=648 0.05s
+rank=0 external_0034 PASS N=612 0.05s
+rank=0 external_0036 PASS N=1404 0.09s
+rank=0 external_0042 PASS N=900 0.06s
+rank=0 external_0044 PASS N=720 0.04s
+rank=0 external_0046 PASS N=1008 0.08s
+rank=0 external_0051 PASS N=168 0.02s
+rank=0 external_0053 PASS N=1620 0.12s
+rank=0 external_0060 PASS N=540 0.06s
+rank=0 external_0064 PASS N=792 0.05s
+rank=0 external_0078 PASS N=1008 0.08s
+rank=0 external_0083 PASS N=432 0.04s
+rank=0 external_0084 PASS N=810 0.06s
+rank=0 external_0085 PASS N=486 0.04s
+rank=0 external_0086 PASS N=360 0.02s
+rank=0 external_0089 PASS N=972 0.06s
+rank=0 external_0090 PASS N=60 0.01s
+rank=0 external_0093 PASS N=1152 0.06s
+rank=0 external_0096 PASS N=810 0.07s
+rank=0 external_0098 PASS N=360 0.03s
+rank=0 external_0101 PASS N=648 0.06s
+rank=0 external_0109 PASS N=3456 0.10s
+rank=0 external_0110 PASS N=4608 0.10s
+rank=0 external_0122 PASS N=378 0.03s
+rank=0 external_0127 PASS N=1512 0.09s
+rank=0 external_0128 PASS N=1512 0.09s
+rank=0 external_0131 PASS N=648 0.06s
+rank=0 external_0133 PASS N=1134 0.07s
+rank=0 external_0134 PASS N=972 0.05s
+rank=0 external_0141 PASS N=162 0.02s
+rank=0 external_0142 PASS N=864 0.07s
+rank=0 external_0145 PASS N=288 0.03s
+rank=0 external_0148 PASS N=216 0.03s
+rank=0 external_0149 PASS N=480 0.02s
+rank=0 external_0150 PASS N=90 0.02s
+rank=0 external_0152 PASS N=810 0.07s
+rank=0 external_0154 PASS N=810 0.06s
+rank=0 external_0155 PASS N=1152 0.06s
+rank=0 external_0156 PASS N=2112 0.13s
+rank=0 external_0159 PASS N=864 0.06s
+rank=0 external_0160 PASS N=576 0.05s
+rank=0 external_0167 PASS N=2160 0.13s
+rank=0 external_0172 PASS N=336 0.03s
+rank=0 external_0178 PASS N=216 0.03s
+rank=0 external_0179 PASS N=756 0.06s
+rank=0 external_0182 PASS N=648 0.05s
+rank=0 external_0184 PASS N=1620 0.10s
+rank=0 external_0185 PASS N=1296 0.10s
+rank=0 external_0186 PASS N=432 0.04s
+rank=0 external_0188 PASS N=828 0.05s
+rank=0 external_0189 PASS N=648 0.06s
+rank=0 external_0191 PASS N=900 0.04s
+rank=0 external_0192 PASS N=720 0.05s
+rank=0 external_0200 PASS N=1008 0.07s
+rank=0 external_0202 PASS N=432 0.03s
+rank=0 external_0203 PASS N=810 0.06s
+rank=0 external_0204 PASS N=486 0.04s
+rank=0 external_0205 PASS N=360 0.03s
+rank=0 external_0206 PASS N=972 0.07s
+rank=0 external_0207 PASS N=60 0.01s
+rank=0 external_0208 PASS N=1152 0.09s
+rank=0 external_0210 PASS N=810 0.06s
+rank=0 external_0211 PASS N=360 0.03s
+rank=0 external_0213 PASS N=648 0.05s
+rank=0 external_0216 PASS N=648 0.06s
+rank=0 external_0217 PASS N=1134 0.07s
+rank=0 external_0218 PASS N=972 0.07s
+rank=0 external_0219 PASS N=162 0.02s
+rank=0 external_0220 PASS N=864 0.06s
+rank=0 external_0223 PASS N=480 0.04s
+rank=0 external_0225 PASS N=810 0.07s
+rank=0 external_0226 PASS N=1152 0.08s
+rank=0 external_0227 PASS N=864 0.06s
+rank=0 external_0228 PASS N=576 0.05s
+rank=0 external_0230 PASS N=216 0.02s
+B1 historical diff own_0010 max_abs=4.917988e-01 allclose=False
+rank=0 own_0010 PASS N=912 0.08s
+B1 historical diff own_0011 max_abs=4.917988e-01 allclose=False
+rank=0 own_0011 PASS N=912 0.07s
+B1 historical diff own_0022 max_abs=6.725227e-01 allclose=False
+rank=0 own_0022 PASS N=2880 0.19s
+B1 historical diff own_0023 max_abs=6.725227e-01 allclose=False
+rank=0 own_0023 PASS N=2880 0.19s
+B1 historical diff own_0036 max_abs=4.809442e-01 allclose=False
+rank=0 own_0036 PASS N=1296 0.11s
+B1 historical diff own_0037 max_abs=4.809442e-01 allclose=False
+rank=0 own_0037 PASS N=1296 0.11s
+B1 historical diff own_0059 max_abs=4.737744e-01 allclose=False
+rank=0 own_0059 PASS N=2808 0.20s
+B1 historical diff own_0060 max_abs=4.737744e-01 allclose=False
+rank=0 own_0060 PASS N=2808 0.18s
+B1 historical diff own_0062 max_abs=4.979747e-01 allclose=False
+rank=0 own_0062 PASS N=2736 0.18s
+B1 historical diff own_0063 max_abs=4.979737e-01 allclose=False
+rank=0 own_0063 PASS N=2736 0.22s
+B1 historical diff own_0098 max_abs=5.666147e-01 allclose=False
+rank=0 own_0098 PASS N=2976 0.19s
+B1 historical diff own_0099 max_abs=5.753742e-01 allclose=False
+rank=0 own_0099 PASS N=2976 0.19s
+B1 historical diff own_0110 max_abs=6.185426e-01 allclose=False
+rank=0 own_0110 PASS N=1872 0.13s
+B1 historical diff own_0111 max_abs=6.185426e-01 allclose=False
+rank=0 own_0111 PASS N=1872 0.13s
+B1 historical diff own_0114 max_abs=5.900086e-01 allclose=False
+rank=0 own_0114 PASS N=2664 0.17s
+B1 historical diff own_0115 max_abs=5.900088e-01 allclose=False
+rank=0 own_0115 PASS N=2664 0.17s
+B1 historical diff own_0122 max_abs=5.169088e-01 allclose=False
+rank=0 own_0122 PASS N=2832 0.18s
+B1 historical diff own_0123 max_abs=5.169088e-01 allclose=False
+rank=0 own_0123 PASS N=2832 0.21s
+B1 historical diff own_0136 max_abs=5.522517e-01 allclose=False
+rank=0 own_0136 PASS N=384 0.04s
+B1 historical diff own_0137 max_abs=5.522517e-01 allclose=False
+rank=0 own_0137 PASS N=384 0.06s
+B1 historical diff own_0146 max_abs=6.120173e-01 allclose=False
+rank=0 own_0146 PASS N=2592 0.18s
+B1 historical diff own_0147 max_abs=6.120176e-01 allclose=False
+rank=0 own_0147 PASS N=2592 0.17s
+{"rank": 0, "processed": 508, "reused": 4, "failures": 0, "finished": "2026-10-26T21:19:44.297177+00:00"}
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    369   (raw opens 738)
+  val    distinct files     38   (raw opens 76)
+  test   distinct files    105   (raw opens 210)
+  other  distinct files    239   (raw opens 478)
+  distinct data files opened: 751
+  test-partition files: 105  -> SCOPE VIOLATION
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_features.jsonl
+[features_compute] 77s, exit 0
+
+################ features_finalize ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/prep_features_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1/manifest.csv
+allow-list: train 369, val 38  |  deny-list: test 105
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_features.jsonl
+sys.path += <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/prep_features_adapter.py finalize --dataset <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1 --snapshot <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/src_snapshot_rotinv_v1 --out <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1 --threads 16
+
+Feature status: {"PASS": 512}
+Features by split: {"test": 105, "train": 369, "val": 38}
+Training-only moments: 369 structures, 515322 atoms
+Raw features: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1/manifest.csv
+Training moments: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1/training_feature_moments.npz
+Trainer excerpt to share: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1/training_adapter_context.txt
+No checkpoints changed or model training performed. Force training requires live features.
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    369   (raw opens 1476)
+  val    distinct files     38   (raw opens 76)
+  test   distinct files    105   (raw opens 210)
+  other  distinct files      0   (raw opens 0)
+  distinct data files opened: 512
+  test-partition files: 105  -> SCOPE VIOLATION
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_features.jsonl
+[features_finalize] 11s, exit 0
+
+################ normalization check ################
+finalization_status  : PASS
+training_moments_ready: True
+feature_counts       : {'test': 105, 'train': 369, 'val': 38}
+train_record_ids     : 369 (must be 369: TRAIN ONLY)
+mean shape           : (392,)
+features src_snapshot descriptor: 0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21
+RESULT: normalization is train-only and the descriptor is corrected
+
+################ common_train ################
+Common-model startup check: external_0271 N=4608 (two disposable training steps)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=4608 | edges(search)=114076
+Startup PASS: 1.146 GiB allocated, 1.279 GiB reserved; C1b loader PASS
+Common training: 369 train / 38 val; 105 test reserved
+e_ref=-9.66844384454791 eV/atom; train atoms=515322; one structure/step
+epoch=1 step=1/369 record=own_0176 N=2592 loss=1064.17
+epoch=1 step=50/369 record=external_0125 N=480 loss=66.4474
+epoch=1 step=100/369 record=external_0255 N=1296 loss=17.1085
+epoch=1 step=150/369 record=external_0118 N=792 loss=7.11708
+epoch=1 step=200/369 record=own_0153 N=954 loss=382.771
+epoch=1 step=250/369 record=own_0073 N=1728 loss=130.674
+epoch=1 step=300/369 record=external_0253 N=2268 loss=12.9744
+epoch=1 step=350/369 record=external_0157 N=528 loss=20.6668
+epoch=1 step=369/369 record=own_0236 N=540 loss=287.222
+epoch=1 val: E_RMSE=43.0064 meV/atom F_RMSE=0.311751 eV/A loss=115.684 best=1
+epoch=2 step=1/369 record=own_0216 N=2172 loss=141.804
+epoch=2 step=50/369 record=external_0265 N=1296 loss=33.0033
+epoch=2 step=100/369 record=own_0117 N=978 loss=210.014
+epoch=2 step=150/369 record=own_0090 N=1728 loss=206.949
+epoch=2 step=200/369 record=own_0169 N=1608 loss=405.631
+epoch=2 step=250/369 record=external_0000 N=648 loss=18.0119
+epoch=2 step=300/369 record=own_0047 N=1032 loss=129.05
+epoch=2 step=350/369 record=external_0080 N=288 loss=23.1375
+epoch=2 step=369/369 record=own_0092 N=2352 loss=79.6577
+epoch=2 val: E_RMSE=18.0523 meV/atom F_RMSE=0.225258 eV/A loss=54.0002 best=2
+{"best_epoch": 2, "best_val_loss": 54.00022527531916, "finished": "2026-10-26T21:20:39.622657+00:00", "last_completed_epoch": 2, "reason": "max_epochs", "status": "COMPLETE", "test_evaluated": false}
+Latest: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/common/latest_checkpoint.pt
+Best common checkpoint: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/common/best_checkpoint.pt
+[common_train] 44s, exit 0
+
+################ distill_dataset ################
+Prepared: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1
+Frozen counts: {'train': 369, 'val': 38, 'test': 105}
+Feature shards: 512
+No training performed; teacher weights and cached features were only joined.
+[distill_dataset] 40s, exit 0
+
+################ router_train ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/router_distill_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1/manifest.csv
+allow-list: train 738, val 76  |  deny-list: test 210
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_router.jsonl
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/router_distill_adapter.py --dataset_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1 --output_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router --device cuda --seed 20260811 --torch_threads 16 --max_epochs 2
+
+PILOT ADAPTER original expectation (112, 22, 22); actual (369, 38, 0)
+======================================================================================================================
+STAGE B2: DISTILL LOCAL ROUTING INTO TORCHSOAP GATE
+======================================================================================================================
+Dataset:          <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation_rotinv_v1
+Output:           <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router
+Device:           cuda
+Splits:           train=369, val=38, test=0
+Input dim:        392
+Hidden dims:      [256, 128]
+Dropout:          0.05
+Loss:             structure-balanced KL(teacher || student)
+Max epochs:       2
+Patience:         35
+Seed:             20260811
+======================================================================================================================
+Epoch 001 train_KL=0.14351493 val_KL=0.09624745 lr=1.000e-03 *
+Epoch 002 train_KL=0.07873039 val_KL=0.07946640 lr=1.000e-03 *
+PILOT ADAPTER: save_test_predictions suppressed
+
+======================================================================================================================
+ROUTING DISTILLATION RESULTS
+======================================================================================================================
+split   region               SB_KL        MAE_w       top1     cosine
+----------------------------------------------------------------------
+train   all              0.0633858    0.0298672     0.9088    0.97481
+train   interface        0.1187046    0.0441990     0.8313    0.94918
+train   phase1_bulk      0.0409775    0.0271346     0.8829    0.97825
+train   phase2_bulk      0.0494683    0.0277493     0.9086    0.98147
+val     all              0.0794664    0.0341872     0.8914    0.96487
+val     interface        0.1338877    0.0471822     0.8215    0.94200
+val     phase1_bulk      0.0541716    0.0312011     0.9191    0.97730
+val     phase2_bulk      0.0500389    0.0277753     0.9421    0.98197
+
+======================================================================================================================
+TEST FORCE-MIXTURE REPRODUCTION
+======================================================================================================================
+predictor  region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+--------------------------------------------------------------------------
+
+Saved:
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/best_torchsoap_routing_gate.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/training_history.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/routing_distillation_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/test_force_mixture_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/training_info.json
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/test_predictions
+
+Stage B2 acceptance target: the student should closely reproduce the teacher routing and keep TEST force-mixture RMSE near the frozen teacher values (all ≈0.457742, interface ≈0.630823 eV/A SB).
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    369   (raw opens 738)
+  val    distinct files     38   (raw opens 76)
+  test   distinct files      0   (raw opens 0)
+  other  distinct files      1   (raw opens 1)
+  distinct data files opened: 408
+  test-partition files: 0  -> CLEAN
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_router.jsonl
+[router_train] 13s, exit 0
+
+################ c1b_train ################
+==============================================================================================
+INSTRUMENTED STAGE RUN -- file access audited
+==============================================================================================
+adapter  : adapters/c1b_holdout40_adapter.py
+manifest : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/manifest.csv
+allow-list: train 369, val 38  |  deny-list: test 105
+audit    : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_c1b.jsonl
+sys.path += <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts
+sys.path += <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+argv     : adapters/c1b_holdout40_adapter.py --stage_b1_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage --common_checkpoint <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/common/best_checkpoint.pt --routing_checkpoint <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/best_torchsoap_routing_gate.pt --torchsoap_module <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py --output_root <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b --device cuda --energy_weight 10000.0 --force_weight 1000.0 --seed 20260811 --max_epochs 2
+
+==========================================================================================================================
+STAGE C1b: FROZEN-ROUTING CONSERVATIVE LOCAL-MoE RESIDUAL
+==========================================================================================================================
+Stage B1 root:        <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage
+C1a checkpoint:       <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/common/best_checkpoint.pt
+B2 routing checkpoint:<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/router/best_torchsoap_routing_gate.pt
+TorchSOAP module:     <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+Output root:          <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b
+Device:               cuda
+Splits:               train=369, val=38, test=0
+N atoms range:        72 - 4608
+e_ref:                -9.668443844548 eV/atom
+Residual architecture: 392 -> 256 -> 128 -> 7
+Residual centering:   per atom across 7 expert channels
+C1a parameters:       frozen
+Routing parameters:   frozen
+Routing vs R:         LIVE (NOT detached)
+Loss weights:         E=10000.0, F=1000.0
+Initial LR:           0.00025
+Grad clip:            1.0
+Max epochs:           2
+Patience:             30
+Start epoch:          1
+max |common_mean-route_mean|: 0.000e+00
+max |common_std-route_std|:   0.000e+00
+==========================================================================================================================
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=648 | edges(search)=16416
+
+ZERO-INITIALIZATION AUDIT: |MoE residual total energy|=0.000000e+00 eV
+
+EPOCH-0 C1a VALIDATION BASELINE | E=18.052 meV/atom F=0.225258 eV/A valL=54.00022528
+Epoch 001 | train E=  13.116 meV/atom F= 0.18488 eV/A dE_MoE= 15.080 meV/atom | val E=  14.820 meV/atom F= 0.20089 eV/A dE_MoE=  7.283 meV/atom | valL=  42.55327 lr=2.50e-04 mem=1.25 GiB *
+Epoch 002 | train E=  11.042 meV/atom F= 0.16619 eV/A dE_MoE= 15.633 meV/atom | val E=  12.954 meV/atom F= 0.18376 eV/A dE_MoE=  8.899 meV/atom | valL=  35.44485 lr=2.50e-04 mem=1.25 GiB *
+
+==========================================================================================================================
+FINAL EVALUATION USING BEST C1b CHECKPOINT
+==========================================================================================================================
+best epoch: 2, best val loss: 35.44484619
+
+split     E_RMSE(meV/atom)   E_MAE(meV/atom)    F_SB_RMSE(eV/A)   MoE_E_RMS(meV/a)    mean |Fnet|     max |Fnet|
+------------------------------------------------------------------------------------------------------------------------------
+train             9.247696          7.739633           0.149760          11.363156      3.564e-14      2.953e-13
+val              12.954067         10.486762           0.183757           8.898827      5.472e-14      2.468e-13
+
+TEST REGION FORCE METRICS
+region             SB_RMSE    pooled_RMSE   Nstruct    Natoms
+------------------------------------------------------------------
+
+Saved:
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/best_c1b_residual_model.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/latest_checkpoint.pt
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/training_history.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/final_split_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/test_region_force_metrics.csv
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/c1b/training_info.json
+
+==============================================================================================
+FILE ACCESS AUDIT
+==============================================================================================
+  train  distinct files    738   (raw opens 1476)
+  val    distinct files     76   (raw opens 152)
+  test   distinct files      0   (raw opens 0)
+  other  distinct files      3   (raw opens 3)
+  distinct data files opened: 817
+  test-partition files: 0  -> CLEAN
+  audit log: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/audit_c1b.jsonl
+[c1b_train] 38s, exit 0
+
+################ checkpoint reload ################
+common    sha256 20124e2533950b10  reloaded, 1 state dict(s), 16 keys
+router    sha256 ff3803dad0b18267  reloaded, 1 state dict(s), 11 keys
+residual  sha256 6f457ac7abd4c5ba  reloaded, 1 state dict(s), 15 keys
+
+################ physics ################
+================================================================================================
+ASSEMBLED-MODEL PHYSICS VERIFICATION (nonzero exit on failure)
+================================================================================================
+trainer   3705bf0a3aa4bf  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters/c1b_holdout40_adapter.py
+corrected 0afd9a1ba7b9a2  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+device cuda | torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19
+descriptor variant: 'rotinv_v1'
+e_ref = -9.66844384454791   r_cut = 5.000 A
+checkpoint hashes: common 20124e2533950b  router ff3803dad0b182  residual 6f457ac7abd4c5
+residual normalisation = common (train_c1b_holdout40.py line 1277)
+records: test=0, train=369, val=38
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+
+external_0081  (train, 72 atoms)
+  E = -710.850517809227 eV   (-9.872923858 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 8.354e-14 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 8.453e-03 A   FD step 1.000e-03
+  gradient consistency: EXEMPT -- threshold 3.510e-02 eV/A exceeds 5% of max|F|=4.153e-01
+      h is capped at 1.00e-03 by the 8.453e-03 A cutoff gap; residual scale 14.7 eV
+
+external_0165  (val, 180 atoms)
+  E = -1776.764839738198 eV   (-9.870915776 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 7.766e-14 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 7.386e-05 A   FD step 2.954e-05
+  gradient consistency: EXEMPT -- threshold 2.941e+00 eV/A exceeds 5% of max|F|=3.696e-01
+      h is capped at 2.95e-05 by the 7.386e-05 A cutoff gap; residual scale 36.4 eV
+
+================================================================================================
+records checked 2 | failures 0
+gradient consistency VERIFIED   on 0 record(s)
+gradient consistency NOT VERIFIED on 2 record(s): ['external_0081', 'external_0165']
+  An exemption is NOT a pass.  Those records' forces are unverified by
+  finite difference; rotation invariance and covariance still hold for them.
+NOTE: with checkpoints trained on UNCORRECTED features these energies are
+      interface validation only, never an accuracy result.
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/smoke/physics_smoke.json
+RESULT: PASS_WITH_UNVERIFIED_GRADIENTS
+[physics] 5s, exit 3
+
+################ summary ################
+  features_compute        77s  exit 0
+  features_finalize       11s  exit 0
+  common_train            44s  exit 0
+  distill_dataset         40s  exit 0
+  router_train            13s  exit 0
+  c1b_train               38s  exit 0
+  physics                  5s  exit 3
+
+  audit_c1b.jsonl: test-partition opens = 0
+  audit_features.jsonl: test-partition opens = 210
+  audit_router.jsonl: test-partition opens = 0
+
+SMOKE COMPLETE -- interface exercise only.  2 epochs per stage is not
+an accuracy result and must not be reported as one.

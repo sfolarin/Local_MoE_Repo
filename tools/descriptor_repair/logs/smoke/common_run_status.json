@@ -1,0 +1,9 @@
+{
+  "best_epoch": 2,
+  "best_val_loss": 54.00022527531916,
+  "finished": "2026-10-26T21:20:39.622657+00:00",
+  "last_completed_epoch": 2,
+  "reason": "max_epochs",
+  "status": "COMPLETE",
+  "test_evaluated": false
+}
