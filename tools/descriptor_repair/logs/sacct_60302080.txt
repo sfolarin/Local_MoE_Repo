@@ -1,0 +1,9 @@
+JobID                     JobName    Elapsed ElapsedRaw   NNodes      NCPUS                                                                        AllocTRES      State 
+------------ -------------------- ---------- ---------- -------- ---------- -------------------------------------------------------------------------------- ---------- 
+60302080              interactive   00:43:31       2611        1        128  billing=128,cpu=128,energy=898773,gres/gpu:a100=4,gres/gpu=4,mem=487802M,node=1  COMPLETED 
+
+# GPU-hours vs node billing
+# ElapsedRaw 2611 s = 0.7253 h wall on the allocation
+# allocated GPUs: see AllocTRES gres/gpu above
+# NERSC charged a full node (billing=128); the 8 GPU-hour cap is counted
+# as single-GPU wall time, which is the smaller figure, and both are reported
