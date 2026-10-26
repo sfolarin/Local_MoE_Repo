@@ -1,0 +1,44 @@
+external_0082  split=val  N=240  O160Si80  cellpar=[  8.812  21.25   26.895 109.146  90.115  65.502]
+neighbour pairs within r_cut+0.05 : 6604 (all periodic images)
+pairs within 1e-03 A of r_cut      : 8
+pairs within 2e-03 A of r_cut      : 18
+pairs within 5e-03 A of r_cut      : 38
+closest any pair gets to r_cut    : 1.922e-04 A
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=240 | edges(search)=6362
+diagnostic energy = -335.499081 eV   rms|F| = 0.5899 eV/A
+  roundoff floor eps*|E|/h at h=1e-03 : 7.448e-11 eV/A
+  roundoff floor eps*|E|/h at h=5e-04 : 1.490e-10 eV/A
+
+component    dev 2e-3   dev 1e-3   dev 5e-4   Richardson  order  min|r-rcut| of this atom
+atom 145   x  3.842e-06 9.606e-07 2.402e-07 8.453e-11   2.00  4.557e-02
+atom 145   y  3.638e-08 9.128e-09 2.250e-09 4.317e-11   2.02  4.557e-02
+atom 145   z  5.795e-06 1.449e-06 3.622e-07 4.129e-11   2.00  4.557e-02
+atom 209   x  3.275e-07 8.189e-08 2.049e-08 3.076e-11   2.00  1.275e-01
+atom 209   y  9.448e-07 2.362e-07 5.906e-08 2.119e-11   2.00  1.275e-01
+atom 209   z  8.087e-06 2.022e-06 5.054e-07 9.580e-12   2.00  1.275e-01
+atom 183   x  1.287e-05 4.954e-06 1.240e-06 2.673e-09   2.00  1.922e-04  <-- within a step of the cutoff
+atom 183   y  4.553e-07 1.350e-08 4.778e-08 6.820e-08  -1.82  1.922e-04  <-- within a step of the cutoff
+atom 183   z  8.886e-06 2.209e-06 4.119e-07 1.871e-07   2.42  1.922e-04  <-- within a step of the cutoff
+atom 197   x  8.371e-07 2.093e-07 5.230e-08 3.557e-11   2.00  1.354e-02
+atom 197   y  6.771e-06 1.693e-06 4.232e-07 2.861e-11   2.00  1.354e-02
+atom 197   z  8.508e-06 2.127e-06 5.318e-07 4.226e-11   2.00  1.354e-02
+atom 135   x  4.233e-06 1.058e-06 2.646e-07 3.762e-12   2.00  9.114e-02
+atom 135   y  2.714e-06 6.784e-07 1.696e-07 2.986e-11   2.00  9.114e-02
+atom 135   z  8.598e-06 2.150e-06 5.374e-07 1.627e-11   2.00  9.114e-02
+atom 72    x  3.138e-07 7.842e-08 1.967e-08 8.914e-11   2.00  1.148e-02
+atom 72    y  6.556e-06 1.639e-06 4.097e-07 5.183e-11   2.00  1.148e-02
+atom 72    z  8.520e-06 2.130e-06 5.325e-07 2.269e-11   2.00  1.148e-02
+atom 218   x  5.941e-06 1.485e-06 3.713e-07 1.904e-11   2.00  6.259e-03
+atom 218   y  2.437e-06 6.091e-07 1.523e-07 9.002e-13   2.00  6.259e-03
+atom 218   z  9.167e-06 2.292e-06 5.730e-07 1.803e-12   2.00  6.259e-03
+atom 13    x  8.971e-06 2.243e-06 5.607e-07 3.724e-11   2.00  4.418e-02
+atom 13    y  1.246e-06 3.114e-07 7.787e-08 3.476e-11   2.00  4.418e-02
+atom 13    z  7.784e-06 1.946e-06 4.865e-07 4.292e-12   2.00  4.418e-02
+atom 53    x  5.326e-06 1.331e-06 3.329e-07 7.237e-11   2.00  6.181e-01
+atom 53    y  1.094e-06 2.736e-07 6.841e-08 2.287e-11   2.00  6.181e-01
+atom 53    z  5.083e-06 1.271e-06 3.177e-07 2.738e-11   2.00  6.181e-01
+atom 159   x  1.295e-06 3.237e-07 8.093e-08 3.088e-12   2.00  2.101e-02
+atom 159   y  1.018e-05 2.546e-06 6.365e-07 2.792e-12   2.00  2.101e-02
+atom 159   z  1.193e-05 2.982e-06 7.454e-07 8.021e-11   2.00  2.101e-02
+
+worst Richardson residual 1.871e-07 eV/A at atom 183 z; that atom's min|r-rcut| = 1.922e-04 A; observed order 2.42

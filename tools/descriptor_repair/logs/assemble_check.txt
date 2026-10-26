@@ -1,0 +1,43 @@
+<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/assemble_check.py:88: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  ("  value=%.9g" % float(v)) if v.ndim == 0 else "")
+==============================================================================================
+ASSEMBLED-MODEL PHYSICS CHECKS
+==============================================================================================
+trainer   3705bf0a3aa4bf
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters/c1b_holdout40_adapter.py
+corrected 0afd9a1ba7b9a2
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+device cpu | torch 2.8.0+cu128
+descriptor variant: rotinv_v1
+common loaded; e_ref = -9.66844384454791
+load_routing_checkpoint returned 4 objects: ['MLP', 'Tensor', 'Tensor', 'dict']
+residual loaded: 392 -> [256, 128] -> 7
+records: train=369, val=38, test=0
+probe record: external_0081, 72 atoms, split=train
+
+--- model_terms(*, record: 'StructureRecord', positions: 'torch.Tensor', cell: 'torch.Tensor', descriptor, common_model: 'nn.Module', common_mean: 'torch.Tensor', common_std: 'torch.Tensor', routing_model: 'nn.Module', routing_mean: 'torch.Tensor', routing_std: 'torch.Tensor', residual_model: 'nn.Module', residual_mean: 'torch.Tensor', residual_std: 'torch.Tensor', e_ref: 'float')
+    required: ['record', 'descriptor', 'common_model', 'common_mean', 'common_std', 'routing_model', 'routing_mean', 'routing_std', 'residual_model', 'residual_mean', 'residual_std', 'e_ref']
+    MISSING : none
+
+--- predict_energy_forces(*, record: 'StructureRecord', descriptor, common_model: 'nn.Module', common_mean: 'torch.Tensor', common_std: 'torch.Tensor', routing_model: 'nn.Module', routing_mean: 'torch.Tensor', routing_std: 'torch.Tensor', residual_model: 'nn.Module', residual_mean: 'torch.Tensor', residual_std: 'torch.Tensor', e_ref: 'float', device: 'torch.device', create_graph: 'bool')
+    required: ['record', 'descriptor', 'common_model', 'common_mean', 'common_std', 'routing_model', 'routing_mean', 'routing_std', 'residual_model', 'residual_mean', 'residual_std', 'e_ref', 'device', 'create_graph']
+    MISSING : none
+geometry from record: positions (72, 3), cell (3, 3)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+model_terms returned dict with 5 entries:
+    total_energy                   Tensor shape=() dtype=float64 requires_grad=True  value=-653.846067
+    common_residual_total          Tensor shape=() dtype=float64 requires_grad=True  value=42.1428375
+    moe_residual_total             Tensor shape=() dtype=float64 requires_grad=True  value=0.139052287
+    weights                        Tensor shape=(72, 7) dtype=float32 requires_grad=True
+    centered_delta                 Tensor shape=(72, 7) dtype=float32 requires_grad=True
+  -> using 'total_energy' as the total energy
+
+E = -653.846066996291 eV   (-9.081195375 eV/atom)
+  rotation 1: |dE| = 0.000e+00 eV   max|F' - F R^T| = 3.739e-13 eV/A
+  rotation 2: |dE| = 0.000e+00 eV   max|F' - F R^T| = 4.030e-13 eV/A
+  rotation 3: |dE| = 0.000e+00 eV   max|F' - F R^T| = 2.953e-13 eV/A
+  energy invariance : 0.000e+00 eV    -> PASS
+  force covariance  : 4.030e-13 eV/A  -> PASS
+
+wrote assemble_check.json

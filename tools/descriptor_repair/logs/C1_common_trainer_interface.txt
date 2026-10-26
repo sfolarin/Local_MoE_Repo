@@ -1,0 +1,98 @@
+### location and hash
+-rw-rw---- 1 <user> <user> 39575 Oct 18 07:18 <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts/train_expanded_moe_common.py
+-rw-rw---- 1 <user> <user> 39575 Sep 24 18:20 <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts/train_expanded_moe_common.py
+dba8920e80bff68731ddfad9fbf804a208066ab070877d0a8bb395974e59294a  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts/train_expanded_moe_common.py
+
+### argparse
+693:    p.add_argument("command", choices=("train", "evaluate"))
+694:    p.add_argument("--features", type=Path, required=True)
+695:    p.add_argument("--out", type=Path, required=True)
+696:    p.add_argument("--resume", action="store_true", help="Start or resume a matching run; never overwrite it.")
+697:    p.add_argument("--hidden-dims", nargs="+", type=int, default=[256, 128])
+698:    p.add_argument("--energy-weight", type=float, default=10.0)
+699:    p.add_argument("--force-weight", type=float, default=1000.0)
+700:    p.add_argument("--lr", type=float, default=1e-3)
+701:    p.add_argument("--weight-decay", type=float, default=1e-7)
+702:    p.add_argument("--grad-clip", type=float, default=1.0)
+703:    p.add_argument("--max-epochs", type=int, default=200)
+704:    p.add_argument("--patience", type=int, default=30)
+705:    p.add_argument("--scheduler-patience", type=int, default=10)
+706:    p.add_argument("--min-delta", type=float, default=1e-5)
+707:    p.add_argument("--seed", type=int, default=20260811)
+708:    p.add_argument("--threads", type=int, default=16)
+709:    p.add_argument("--max-hours", type=float, default=0.0,
+711:    p.add_argument("--log-every", type=int, default=50)
+712:    p.add_argument("--splits", choices=SPLITS, nargs="+", default=["val", "test"],
+
+### features, geometry, descriptor, normalisation, e_ref
+8:structure_loss, and compute_feature_normalization are used directly. The new
+14:Cached raw features are used only for train-only normalization and a startup
+16:e_ref; all common-network parameters start fresh.
+56:SOAP = "torchsoap_autograd_module_periodic_regnorm.py"
+94:    if summary["finalization_status"] != "PASS" or not summary["training_moments_ready"]:
+117:    for key in ("split_group", "phase_pair_group", "geometry_sha256"):
+136:    moments = feature_root / "training_feature_moments.npz"
+137:    checked_hash(moments, summary["training_moments_sha256"])
+140:    with np.load(moments, allow_pickle=False) as d:
+141:        saved_ids = d["train_record_ids"].tolist()
+153:        training_moments_sha256=io.sha256(moments),
+171:            g = io.geometry(d)
+173:            if io.geometry_hash(g) != row["geometry_sha256"]:
+187:            x = d["X_local_torchsoap"]
+190:            if (d["record_id"].item(), d["split"].item(), d["geometry_sha256"].item()) != (
+191:                    rid, row["split"], row["geometry_sha256"]):
+197:            atomic_numbers=g["atomic_numbers"], positions_np=g["positions"],
+204:def normalization(trainer, records, raw_mean):
+206:    mean, std = trainer.compute_feature_normalization(records)
+211:        raise ValueError("Invalid normalization from original trainer")
+213:        raise ValueError("Original train-only mean disagrees with saved training moments")
+234:        feature_mean=ctx.mean, feature_std=ctx.std, e_ref=ctx.e_ref,
+245:    if create_graph and not forces.requires_grad:
+321:                e_ref_eV_per_atom=ctx.e_ref, energy_weight=args.energy_weight,
+324:                energy_reference_policy="unchanged_constant_from_baseline_common_checkpoint")
+349:        if not x.requires_grad:
+353:                raw = ctx.torch.from_numpy(d["X_local_torchsoap"]).to(ctx.device)
+356:                raise ValueError("Common live features disagree with normalized cached features")
+381:        loaded, mean, std, e_ref, _ = next_trainer.load_common_checkpoint(
+384:                or e_ref != ctx.e_ref):
+429:            "input_dim", "hidden_dims", "feature_mean", "feature_std", "e_ref_eV_per_atom",
+431:            "energy_reference_policy", "best_epoch", "best_val_loss")}
+491:    mean_np, std_np = normalization(trainer, records["train"], inputs["raw_mean"])
+493:    e_ref = float(old["e_ref_eV_per_atom"])
+494:    if not math.isfinite(e_ref):
+497:    soap = trainer.import_torchsoap(inputs["sources"][SOAP])
+502:        parameter.requires_grad_(False)
+505:                          std=torch.from_numpy(std_np).to(device), e_ref=e_ref)
+509:                    normalization_sha256=vector_digest(mean_np, std_np),
+510:                    normalization_policy="original_compute_feature_normalization_on_train_only",
+511:                    e_ref_eV_per_atom=e_ref, energy_reference_policy="preserve_baseline_constant",
+512:                    initialization="fresh_common_network", geometry_dtype="float64", network_dtype="float32",
+518:    io.write_npz(out / "common_normalization.npz", dict(
+548:            "epoch", "best_epoch", "best_val_loss", "best_model_state_dict", "patience_reference_loss",
+555:                     patience_reference_loss=None, bad_epochs=0, history=[], stop_reason=None)
+559:    print("e_ref={:.15g} eV/atom; train atoms={}; one structure/step".format(
+560:        ctx.e_ref, inputs["binding"]["training_atoms"]), flush=True)
+608:        if (state["patience_reference_loss"] is None
+609:                or val_loss < state["patience_reference_loss"] - args.min_delta):
+610:            state.update(patience_reference_loss=val_loss, bad_epochs=0)
+
+### cap and resume
+27:latest_checkpoint.pt is atomic and resumable at completed-epoch boundaries.
+371:            row["elapsed_s"] = time.perf_counter() - start
+531:    latest = out / "latest_checkpoint.pt"
+532:    if latest.exists() and not args.resume:
+533:        raise FileExistsError("Use --resume to continue this run")
+542:    if latest.exists():
+543:        ck = torch.load(latest, map_location="cpu", weights_only=False)
+556:        save_torch(ctx, latest, make_checkpoint(ctx, model, optimizer, scheduler, rng, args, contract_hash, state))
+575:        elapsed = time.monotonic() - start_time
+577:        if args.max_hours > 0 and elapsed + 1.2 * estimate >= args.max_hours * 3600:
+602:            pause_reason = "signal_partial_epoch_replayed_on_resume"
+624:        save_torch(ctx, latest, checkpoint)
+637:    print("Latest: " + str(latest), flush=True)
+644:    checkpoint = ctx.torch.load(out / "latest_checkpoint.pt", map_location="cpu", weights_only=False)
+696:    p.add_argument("--resume", action="store_true", help="Start or resume a matching run; never overwrite it.")
+709:    p.add_argument("--max-hours", type=float, default=0.0,
+717:    nonnegative = ("weight_decay", "scheduler_patience", "min_delta", "max_hours")
+736:    elif out.exists() and any(out.iterdir()) and not args.resume:
+737:        raise FileExistsError("Output is not empty; use --resume for this run, or a new --out")

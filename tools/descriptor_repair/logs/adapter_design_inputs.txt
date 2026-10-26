@@ -1,0 +1,264 @@
+=== A. does the B1 check raise, or only record? ===
+        if entry is None or io.sha256(path) != entry["sha256"]:
+            raise ValueError("Source snapshot did not verify: " + str(path))
+        hashes[name] = entry["sha256"]
+    alias_file = dataset / "all_source_records.csv"
+    aliases = io.read_csv(alias_file)
+    original_features = {r["representative_id"]: Path(r["feature_file"])
+                         for r in aliases if r["source"] == "Own_augmented"
+                         and r["record_id"] == r["representative_id"]}
+    contract = dict(dataset=str(dataset), dataset_manifest_sha256=io.sha256(manifest),
+                    source_snapshot=str(snapshot), source_sha256=hashes,
+                    alias_manifest_sha256=io.sha256(alias_file),
+                    feature_dim=392, soap_dim=390, species_order=["Si", "O"],
+                    geometry_dtype="float64", feature_dtype="float32",
+                    r_cut_A=5.0, n_max=6, l_max=4,
+                    baseline_feature_check_atol=1e-5, baseline_feature_check_rtol=1e-5,
+                    counts=counts, feature_preparation_script_sha256=io.sha256(Path(__file__)))
+    return dataset, rows, paths, original_features, contract
+
+
+def cache_paths(out, row):
+    rid = row["record_id"]
+    if Path(rid).name != rid or rid in (".", "..", ""):
+        raise ValueError("Unsafe record ID")
+    return out / "features" / (rid + ".npz"), out / "status" / (rid + ".json")
+
+
+def valid_cache(out, row, contract_hash):
+    path, marker = cache_paths(out, row)
+    if not marker.exists():
+        return False, "PENDING"
+    try:
+            cell = torch.tensor(g["cell"], dtype=torch.float64, device=device)
+            torch.cuda.reset_peak_memory_stats()
+            with torch.no_grad():
+                x_tensor = trainer.live_raw_features(record, positions, cell, descriptor)
+                x = x_tensor.detach().cpu().numpy().astype(np.float32, copy=True)
+            if x.shape != (record.n_atoms, 392) or not np.isfinite(x).all():
+                raise ValueError("Invalid raw feature shape or nonfinite values")
+            expected_species = np.stack([g["atomic_numbers"] == 14, g["atomic_numbers"] == 8], axis=1)
+            if not np.array_equal(x[:, 390:], expected_species.astype(np.float32)):
+                raise ValueError("Species feature order differs from [Si, O]")
+            if row["record_id"] in original_features:
+                with np.load(original_features[row["record_id"]], allow_pickle=False) as d:
+                    old_x = np.asarray(d["X_local_torchsoap"], dtype=np.float32)
+                if old_x.shape != x.shape or not np.isfinite(old_x).all():
+                    raise ValueError("Existing B1 features have invalid shape/values")
+                status["old_B1_max_abs_feature_difference"] = float(np.abs(x - old_x).max())
+                if not np.allclose(x, old_x, atol=1e-5, rtol=1e-5):
+                    raise ValueError("Live features disagree with existing B1 features; investigate descriptor provenance")
+            io.write_npz(target, dict(X_local_torchsoap=x, record_id=row["record_id"],
+                                      split=row["split"], geometry_sha256=row["geometry_sha256"]))
+            status.update(status="PASS", feature_file=str(target), feature_sha256=io.sha256(target),
+                          peak_allocated_GiB=torch.cuda.max_memory_allocated() / 1024**3)
+        except Exception as exc:
+            oom = isinstance(exc, torch.cuda.OutOfMemoryError) or "out of memory" in str(exc).lower()
+            status.update(status="CUDA_OOM" if oom else "ERROR", error=str(exc), traceback=traceback.format_exc())
+            failures += 1
+        status.update(finished=io.now(), elapsed_s=time.perf_counter() - start)
+        io.write_json(marker, status)
+        processed += 1
+        print("rank={} {} {} N={} {:.2f}s".format(args.rank, row["record_id"], status["status"],
+                                                 row["n_atoms"], status["elapsed_s"]), flush=True)
+        del positions, cell, x_tensor
+        gc.collect()
+        torch.cuda.empty_cache()
+    result = dict(rank=args.rank, processed=processed, reused=skipped, failures=failures, finished=io.now())
+    io.write_json(out / "logs" / ("worker_{}_{}.json".format(args.rank, time.time_ns())), result)
+
+=== C. router: test predictions and the hardcoded counts ===
+
+
+def load_dataset(dataset_root: Path) -> Dict[str, List[StructureData]]:
+    manifest = read_csv(dataset_root / "manifest.csv")
+    out: Dict[str, List[StructureData]] = {"train": [], "val": [], "test": []}
+
+    for row in manifest:
+        split = str(row["split"]).strip()
+        if split not in out:
+            raise RuntimeError(f"Unexpected split {split!r}")
+
+                    "region": region,
+                }
+                row.update(result)
+                rows.append(row)
+    return rows
+
+
+def save_test_predictions(
+    output_root: Path,
+    test_structures: Sequence[StructureData],
+    predictions: Dict[str, np.ndarray],
+) -> None:
+    pred_root = output_root / "test_predictions"
+    for s in test_structures:
+        # Avoid source path collisions by using feature shard stem.
+        name = s.feature_file.stem.replace("_local_torchsoap", "")
+        path = pred_root / f"{name}_student_routing.npz"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(
+            path,
+            student_weights=predictions[s.source_file],
+            teacher_weights=s.teacher_weights,
+            phase=s.phase,
+            interface_center=s.interface_center,
+            expert_names=np.asarray(EXPERTS),
+            source_file=np.asarray(s.source_file),
+                "Use --overwrite only when intentionally regenerating."
+            )
+
+    output_root.mkdir(parents=True, exist_ok=True)
+
+    device = choose_device(args.device)
+    dataset = load_dataset(dataset_root)
+
+    train_set = dataset["train"]
+    val_set = dataset["val"]
+    test_set = dataset["test"]
+
+    if (len(train_set), len(val_set), len(test_set)) != (112, 22, 22):
+        raise RuntimeError(
+            "Unexpected split sizes: "
+            f"{len(train_set)}/{len(val_set)}/{len(test_set)}"
+        )
+
+    input_dim = train_set[0].X.shape[1]
+    if input_dim != 392:
+        raise RuntimeError(f"Expected input_dim=392, found {input_dim}")
+
+    feature_mean, feature_std = compute_train_normalization(train_set)
+    feature_mean_t = torch.from_numpy(feature_mean).to(device)
+    feature_std_t = torch.from_numpy(feature_std).to(device)
+
+    model = RoutingMLP(
+        input_dim=input_dim,
+        hidden_dims=args.hidden_dims,
+        n_experts=len(EXPERTS),
+        dropout=args.dropout,
+    ).to(device)
+
+    optimizer = torch.optim.AdamW(
+        model.parameters(),
+        lr=args.lr,
+        weight_decay=args.weight_decay,
+    )
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        factor=0.5,
+        patience=10,
+        min_lr=1.0e-6,
+    )
+
+    rng = np.random.default_rng(args.seed)
+
+    print("=" * 118)
+    print("STAGE B2: DISTILL LOCAL ROUTING INTO TORCHSOAP GATE")
+    print("=" * 118)
+    print(f"Dataset:          {dataset_root}")
+    print(f"Output:           {output_root}")
+    print(f"Device:           {device}")
+    print(f"Splits:           train={len(train_set)}, val={len(val_set)}, test={len(test_set)}")
+    print(f"Input dim:        {input_dim}")
+    print(f"Hidden dims:      {args.hidden_dims}")
+    print(f"Dropout:          {args.dropout}")
+    print(f"Loss:             structure-balanced KL(teacher || student)")
+    print(f"Max epochs:       {args.max_epochs}")
+    print(f"Patience:         {args.patience}")
+
+=== D. c1b: test evaluation sites ===
+
+
+def load_records(stage_b1_root: Path) -> Dict[str, List[StructureRecord]]:
+    manifest = read_csv(stage_b1_root / "manifest.csv")
+
+    records: Dict[str, List[StructureRecord]] = {
+        "train": [],
+        "val": [],
+        "test": [],
+    }
+
+    for row in manifest:
+        split = str(row["split"]).strip()
+        if split not in records:
+            raise RuntimeError(f"Unexpected split {split!r}")
+
+        exist_ok=True,
+    )
+
+    records = load_records(stage_b1_root)
+
+    train_records = records["train"]
+    val_records = records["val"]
+    test_records = records["test"]
+
+    if (
+        len(train_records),
+        len(val_records),
+        len(test_records),
+    ) != (369, 38, 105):  # run-specific: expanded_holdout40_v1
+        raise RuntimeError(
+            "Unexpected split sizes: "
+            f"{len(train_records)}/"
+            f"{len(val_records)}/"
+            f"{len(test_records)}"
+        )
+
+    common_model, common_mean, common_std, e_ref, common_ck = (
+        load_common_checkpoint(
+            common_checkpoint_path,
+            device,
+        )
+    print(f"TorchSOAP module:     {torchsoap_module}")
+    print(f"Output root:          {output_root}")
+    print(f"Device:               {device}")
+    print(
+        "Splits:               "
+        f"train={len(train_records)}, "
+        f"val={len(val_records)}, "
+        f"test={len(test_records)}"
+    )
+    print(
+        f"N atoms range:        "
+        f"{min(r.n_atoms for r in train_records + val_records + test_records)}"
+        f" - "
+        f"{max(r.n_atoms for r in train_records + val_records + test_records)}"
+    )
+    print(f"e_ref:                {e_ref:+.12f} eV/atom")
+    print(
+        "Residual architecture:"
+        f" 392 -> "
+        f"{' -> '.join(map(str,args.residual_hidden_dims))}"
+        " -> 7"
+    print("=" * 122)
+    print(
+        f"best epoch: {best['best_epoch']}, "
+        f"best val loss: {best['best_val_loss']:.8f}"
+    )
+
+    split_summaries = []
+    test_region_rows = []
+
+    for split_name, split_records in [
+        ("train", train_records),
+        ("val", val_records),
+        ("test", test_records),
+    ]:
+        summary, region_rows = evaluate_split(
+            residual_model=residual_model,
+            descriptor=descriptor,
+            common_model=common_model,
+            common_mean=common_mean,
+            common_std=common_std,
+            routing_model=routing_model,
+            routing_mean=routing_mean,
+            routing_std=routing_std,
+            residual_mean=residual_mean,
+            residual_std=residual_std,
+            records=split_records,
+
+=== E. holdout40 distillation split counts ===
+  val    38
+  train  369
+  test   105

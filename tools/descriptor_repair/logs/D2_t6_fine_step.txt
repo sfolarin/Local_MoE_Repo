@@ -1,0 +1,8 @@
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=240 | edges(search)=6362
+atom 183: steps BELOW the 1.922e-04 A cutoff gap, so no stencil straddles it
+cmp  h=1e-4      h=5e-5      h=2.5e-5    Richardson  order  roundoff floor
+x    9.362e-10 2.006e-10 2.006e-10 2.006e-10   0.00  2.979e-09
+y    1.733e-09 5.963e-10 1.109e-09 1.677e-09  -0.90  2.979e-09
+z    1.613e-08 4.474e-09 1.632e-09 6.845e-10   1.46  2.979e-09
+
+autograd force on atom 183 = [-0.00474255  0.05516136  0.2637924 ] eV/A

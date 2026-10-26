@@ -1,0 +1,68 @@
+{
+  "corrected_sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21",
+  "original_sha256": "30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86",
+  "torch": "2.8.0+cu128",
+  "numpy": "1.26.4",
+  "python": "3.9.19",
+  "device": "cuda",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "dtype": "float64",
+  "reps": 5,
+  "warmup": 2,
+  "synchronised": true,
+  "records": [
+    {
+      "record": "external_0003",
+      "split": "train",
+      "n_atoms": 432,
+      "rot_rel_corrected": 1.1492395430725368e-14,
+      "rot_rel_original": 0.7173652118001349,
+      "dense_nl_rel": 7.029329244035905e-15,
+      "corrected_s": 0.009417619206942618,
+      "original_s": 0.00885309058940038,
+      "ratio": 1.0637662759509245,
+      "corrected_peak_GiB": 0.060706138610839844,
+      "original_peak_GiB": 0.060873985290527344
+    },
+    {
+      "record": "external_0017",
+      "split": "train",
+      "n_atoms": 864,
+      "rot_rel_corrected": 1.2356331400790511e-14,
+      "rot_rel_original": 0.8491938316573794,
+      "dense_nl_rel": 6.1781657003952556e-15,
+      "corrected_s": 0.009843809402082116,
+      "original_s": 0.009006133198272436,
+      "ratio": 1.0930117493676825,
+      "corrected_peak_GiB": 0.11252212524414062,
+      "original_peak_GiB": 0.11284828186035156
+    },
+    {
+      "record": "external_0056",
+      "split": "train",
+      "n_atoms": 1458,
+      "rot_rel_corrected": 1.2150307677389963e-14,
+      "rot_rel_original": 0.8345738592402714,
+      "dense_nl_rel": 1.2538673676210647e-14,
+      "corrected_s": 0.009857981000095606,
+      "original_s": 0.009224144194740802,
+      "ratio": 1.0687149714892998,
+      "corrected_peak_GiB": 0.19255447387695312,
+      "original_peak_GiB": 0.19313907623291016
+    },
+    {
+      "record": "external_0102",
+      "split": "train",
+      "n_atoms": 2232,
+      "rot_rel_corrected": 1.1472597087922552e-14,
+      "rot_rel_original": 0.8115938619373446,
+      "dense_nl_rel": 1.0590089619620817e-14,
+      "corrected_s": 0.010060327395331114,
+      "original_s": 0.009433648397680372,
+      "ratio": 1.066430183872958,
+      "corrected_peak_GiB": 0.3332943916320801,
+      "original_peak_GiB": 0.3343524932861328
+    }
+  ],
+  "ratio_max": 1.0930117493676825
+}

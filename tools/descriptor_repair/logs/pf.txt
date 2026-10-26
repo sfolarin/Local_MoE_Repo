@@ -1,0 +1,96 @@
+======================================================================================
+PILOT PREFLIGHT (compact) -- read-only, no GPU
+======================================================================================
+pf.py sha256 4702c1affdf478dd28a9f72ed2eee7d1a3f62abd658aa079047bd18e742c7f19
+PROJ <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1
+REPO <scratch>/GitHub-Repositories/local-moe-silica-interfaces
+
+--- 1. snapshot and e_ref ---
+  snapshot: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T211412_938406Z
+  snapshot: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T211545_412890Z
+  snapshot: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z
+  baseline/common.pt                    a03a4f2b488ccf  <-- recorded reference_checkpoint
+  baseline/own_augmented_manifest.csv   dd6980f652710a
+  baseline/residual.pt                  916b195e653ccb
+  baseline/routing.pt                   6116ace42c9dd8
+  e_ref in checkpoint = -9.668443844547909
+  checkpoint keys: ['best_epoch', 'best_val_loss', 'e_ref_eV_per_atom', 'energy_weight', 'feature_mean', 'feature_std', 'force_weight', 'hidden_dims', 'input_dim', 'model_role', 'model_state_dict', 'seed', 'torchsoap']
+
+--- 2. feature-prep dataset root (--dataset) ---
+  prep script sha256 f7facba6abb67f6f54f686b6c45369c21f0030dd03bece7d34b73fce9e66954c
+  metadata it names: ['all_source_records.csv', 'feature_contract.json', 'feature_status.csv', 'feature_summary.json', 'manifest.csv', 'snapshot_provenance.csv', 'split_summary.json']
+  expanded_grouped_4608_v1                           2/2  n=512  {'train': 410, 'test': 58, 'val': 44}
+  expanded_holdout40_v1                              2/2  n=512  {'train': 369, 'test': 105, 'val': 38}
+  oishi_293_dataset_v1                               2/2  n=0  {}
+  RESOLVED --dataset = <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1
+
+--- 3. descriptor module to correct ---
+  scripts_nl  30acc0838fb689 = known PRODUCTION NL
+  scripts     --             MISSING
+  snapshot    186453838f89f7 = known ORIGINAL pre-NL
+  feature_contract source_sha256 = {'torchsoap_autograd_module_periodic_regnorm.py': '186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c', 'train_c1b_frozen_routing_conservative_residual_v3_196train.py': '89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680', 'train_conservative_common_energy_baseline_augmented.py': '25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551'}
+  contract baseline keys: {'baseline_feature_check_atol': 1e-05, 'baseline_feature_check_rtol': 1e-05}
+  BLOCKER [descriptor-identity] contract records {'torchsoap_autograd_module_periodic_regnorm.py': '186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c', 'train_c1b_frozen_routing_conservative_residual_v3_196train.py': '89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680', 'train_conservative_common_energy_baseline_augmented.py': '25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551'} but no candidate has that hash; do not correct any module until reconciled
+
+--- 4. checkpoint basenames and --device forms ---
+  common  common_holdout40_ew10000_v1                ['best_checkpoint.pt', 'latest_checkpoint.pt']
+  common  common_holdout40_ew1000_v1                 ['best_checkpoint.pt', 'latest_checkpoint.pt']
+  common  common_holdout40_ew10_v1                   ['best_checkpoint.pt', 'latest_checkpoint.pt']
+  common  common_holdout40_ew3200_v1                 ['best_checkpoint.pt', 'latest_checkpoint.pt']
+  common  common_holdout40_smoke_v1                  ['best_checkpoint.pt', 'latest_checkpoint.pt']
+  router  torchsoap_gate_distillation_expanded_4608_ ['best_torchsoap_routing_gate.pt']
+  router  torchsoap_gate_distillation_holdout40_v1   ['best_torchsoap_routing_gate.pt']
+  c1b     c1b_holdout40_e10000_v1                    ['best_c1b_residual_model.pt', 'latest_checkpoint.pt']
+  c1b     c1b_holdout40_e10_v1                       ['best_c1b_residual_model.pt', 'latest_checkpoint.pt']
+  router  --device choices=['cpu', 'cuda', 'auto'] default=['auto']  sha256 d34dfd668b5ccd
+  c1b     --device choices=['cpu', 'cuda', 'auto'] default=['auto']  sha256 333dd835069596
+  common  --device choices=unrestricted default=none  sha256 dba8920e80bff6
+
+--- 5. test-partition access and B1 baseline check ---
+  prep-feat (1 hits)
+         32 SPLITS = ("train", "val", "test")
+  prep-dist (0 hits)
+  common (5 hits)
+         57 SPLITS = ("train", "val", "test")
+        102 if set(counts) != set(SPLITS) or counts != fc["counts"] or counts != summary["feature_counts"]:
+        558 len(records["train"]), len(records["val"]), inputs["binding"]["counts"]["test"]), flush=True)
+        634 test_evaluated=False, finished=io.now())
+        712 p.add_argument("--splits", choices=SPLITS, nargs="+", default=["val", "test"],
+  router (16 hits)
+        184 out: Dict[str, List[StructureData]] = {"train": [], "val": [], "test": []}
+        569 test_structures: Sequence[StructureData],
+        572 pred_root = output_root / "test_predictions"
+        573 for s in test_structures:
+        615 test_set = dataset["test"]
+        617 if (len(train_set), len(val_set), len(test_set)) != (112, 22, 22):
+        620 f"{len(train_set)}/{len(val_set)}/{len(test_set)}"
+        659 print(f"Splits:           train={len(train_set)}, val={len(val_set)}, test={len(test_set)}")
+  c1b (16 hits)
+        333 "test": [],
+       1232 test_records = records["test"]
+       1237 len(test_records),
+       1243 f"{len(test_records)}"
+       1387 f"test={len(test_records)}"
+       1391 f"{min(r.n_atoms for r in train_records + val_records + test_records)}"
+       1393 f"{max(r.n_atoms for r in train_records + val_records + test_records)}"
+       1762 test_region_rows = []
+  B1 baseline-check references in prep script: 3; flags: NONE
+         30 COMMON = "train_conservative_common_energy_baseline_augmented.py"
+         74 baseline_feature_check_atol=1e-5, baseline_feature_check_rtol=1e-5,
+        185 status["old_B1_max_abs_feature_difference"] = float(np.abs(x - old_x).max())
+  BLOCKER [baseline-check] prep script compares against baseline B1 features but has no flag to adapt it; an adapter must keep geometry/membership/species/hash and live-vs-cache checks and drop only equality-with-uncorrected
+
+======================================================================================
+  dataset_root           <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1
+  descriptor_to_correct  UNRESOLVED
+  snapshot_root          <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z
+  eref_checkpoint        <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z/baseline/common.pt
+  eref_value             -9.668443844547909
+  checkpoint_basenames   {'common': ['best_checkpoint.pt', 'latest_checkpoint.pt'], 'router': ['best_torchsoap_routing_gate.pt'], 'c1b': ['best_c1b_residual_model.pt', 'latest_checkpoint.pt']}
+
+  BLOCKERS: 2
+    [descriptor-identity] contract records {'torchsoap_autograd_module_periodic_regnorm.py': '186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c', 'train_c1b_frozen_routing_conservative_residual_v3_196train.py': '89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680', 'train_conservative_common_energy_baseline_augmented.py': '25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551'} but no candidate has that hash; do not correct any module until reconciled
+    [baseline-check] prep script compares against baseline B1 features but has no flag to adapt it; an adapter must keep geometry/membership/species/hash and live-vs-cache checks and drop only equality-with-uncorrected
+
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pf.json
+RESULT: BLOCKED (2)

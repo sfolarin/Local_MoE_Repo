@@ -1,0 +1,312 @@
+{
+  "proj": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1",
+  "repo": "<scratch>/GitHub-Repositories/local-moe-silica-interfaces",
+  "snapshot_root": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z",
+  "eref_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z/baseline/common.pt",
+  "eref_value": -9.668443844547909,
+  "prepare_features_sha256": "f7facba6abb67f6f54f686b6c45369c21f0030dd03bece7d34b73fce9e66954c",
+  "prep_metadata_files": [
+    "all_source_records.csv",
+    "feature_contract.json",
+    "feature_status.csv",
+    "feature_summary.json",
+    "manifest.csv",
+    "snapshot_provenance.csv",
+    "split_summary.json"
+  ],
+  "dataset_candidates": [
+    {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_grouped_4608_v1",
+      "markers": [
+        "split_summary.json",
+        "all_source_records.csv"
+      ],
+      "n": 512,
+      "splits": {
+        "train": 410,
+        "test": 58,
+        "val": 44
+      }
+    },
+    {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1",
+      "markers": [
+        "split_summary.json",
+        "all_source_records.csv"
+      ],
+      "n": 512,
+      "splits": {
+        "train": 369,
+        "test": 105,
+        "val": 38
+      }
+    },
+    {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/oishi_293_dataset_v1",
+      "markers": [
+        "split_summary.json",
+        "all_source_records.csv"
+      ],
+      "n": 0,
+      "splits": {}
+    }
+  ],
+  "dataset_root": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1",
+  "descriptor_candidates": {
+    "scripts_nl": {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py",
+      "sha256": "30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86",
+      "id": "= known PRODUCTION NL"
+    },
+    "scripts": {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts/torchsoap_autograd_module_periodic_regnorm.py",
+      "sha256": null,
+      "id": "MISSING"
+    },
+    "snapshot": {
+      "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/size_pilot_prep_20260918T223242_204092Z/src_snapshot/torchsoap_autograd_module_periodic_regnorm.py",
+      "sha256": "186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c",
+      "id": "= known ORIGINAL pre-NL"
+    }
+  },
+  "contract_source_sha256": {
+    "torchsoap_autograd_module_periodic_regnorm.py": "186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c",
+    "train_c1b_frozen_routing_conservative_residual_v3_196train.py": "89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680",
+    "train_conservative_common_energy_baseline_augmented.py": "25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551"
+  },
+  "contract_baseline_keys": {
+    "baseline_feature_check_atol": 1e-05,
+    "baseline_feature_check_rtol": 1e-05
+  },
+  "checkpoint_basenames": {
+    "common": [
+      "best_checkpoint.pt",
+      "latest_checkpoint.pt"
+    ],
+    "router": [
+      "best_torchsoap_routing_gate.pt"
+    ],
+    "c1b": [
+      "best_c1b_residual_model.pt",
+      "latest_checkpoint.pt"
+    ]
+  },
+  "device_args": {
+    "router": {
+      "choices": [
+        "cpu",
+        "cuda",
+        "auto"
+      ],
+      "default": [
+        "auto"
+      ],
+      "sha256": "d34dfd668b5ccdf8e289c23c0a241b4e76297cac016f93b3dea4b82e4075bbe8"
+    },
+    "c1b": {
+      "choices": [
+        "cpu",
+        "cuda",
+        "auto"
+      ],
+      "default": [
+        "auto"
+      ],
+      "sha256": "333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f"
+    },
+    "common": {
+      "choices": [],
+      "default": [],
+      "sha256": "dba8920e80bff68731ddfad9fbf804a208066ab070877d0a8bb395974e59294a"
+    }
+  },
+  "test_access": {
+    "prep-feat": [
+      {
+        "line": 32,
+        "text": "SPLITS = (\"train\", \"val\", \"test\")"
+      }
+    ],
+    "prep-dist": [],
+    "common": [
+      {
+        "line": 57,
+        "text": "SPLITS = (\"train\", \"val\", \"test\")"
+      },
+      {
+        "line": 102,
+        "text": "if set(counts) != set(SPLITS) or counts != fc[\"counts\"] or counts != summary[\"feature_counts\"]:"
+      },
+      {
+        "line": 558,
+        "text": "len(records[\"train\"]), len(records[\"val\"]), inputs[\"binding\"][\"counts\"][\"test\"]), flush=True)"
+      },
+      {
+        "line": 634,
+        "text": "test_evaluated=False, finished=io.now())"
+      },
+      {
+        "line": 712,
+        "text": "p.add_argument(\"--splits\", choices=SPLITS, nargs=\"+\", default=[\"val\", \"test\"],"
+      }
+    ],
+    "router": [
+      {
+        "line": 184,
+        "text": "out: Dict[str, List[StructureData]] = {\"train\": [], \"val\": [], \"test\": []}"
+      },
+      {
+        "line": 569,
+        "text": "test_structures: Sequence[StructureData],"
+      },
+      {
+        "line": 572,
+        "text": "pred_root = output_root / \"test_predictions\""
+      },
+      {
+        "line": 573,
+        "text": "for s in test_structures:"
+      },
+      {
+        "line": 615,
+        "text": "test_set = dataset[\"test\"]"
+      },
+      {
+        "line": 617,
+        "text": "if (len(train_set), len(val_set), len(test_set)) != (112, 22, 22):"
+      },
+      {
+        "line": 620,
+        "text": "f\"{len(train_set)}/{len(val_set)}/{len(test_set)}\""
+      },
+      {
+        "line": 659,
+        "text": "print(f\"Splits:           train={len(train_set)}, val={len(val_set)}, test={len(test_set)}\")"
+      },
+      {
+        "line": 764,
+        "text": "(\"test\", test_set),"
+      },
+      {
+        "line": 781,
+        "text": "test_set,"
+      },
+      {
+        "line": 782,
+        "text": "predictions_by_split[\"test\"],"
+      },
+      {
+        "line": 784,
+        "text": "write_csv(output_root / \"test_force_mixture_metrics.csv\", force_rows)"
+      },
+      {
+        "line": 788,
+        "text": "test_set,"
+      },
+      {
+        "line": 789,
+        "text": "predictions_by_split[\"test\"],"
+      },
+      {
+        "line": 855,
+        "text": "\"test_force_mixture_metrics.csv\","
+      },
+      {
+        "line": 857,
+        "text": "\"test_predictions/\","
+      }
+    ],
+    "c1b": [
+      {
+        "line": 333,
+        "text": "\"test\": [],"
+      },
+      {
+        "line": 1232,
+        "text": "test_records = records[\"test\"]"
+      },
+      {
+        "line": 1237,
+        "text": "len(test_records),"
+      },
+      {
+        "line": 1243,
+        "text": "f\"{len(test_records)}\""
+      },
+      {
+        "line": 1387,
+        "text": "f\"test={len(test_records)}\""
+      },
+      {
+        "line": 1391,
+        "text": "f\"{min(r.n_atoms for r in train_records + val_records + test_records)}\""
+      },
+      {
+        "line": 1393,
+        "text": "f\"{max(r.n_atoms for r in train_records + val_records + test_records)}\""
+      },
+      {
+        "line": 1762,
+        "text": "test_region_rows = []"
+      },
+      {
+        "line": 1767,
+        "text": "(\"test\", test_records),"
+      },
+      {
+        "line": 1785,
+        "text": "include_regions=(split_name == \"test\"),"
+      },
+      {
+        "line": 1792,
+        "text": "if split_name == \"test\":"
+      },
+      {
+        "line": 1793,
+        "text": "test_region_rows = ["
+      },
+      {
+        "line": 1803,
+        "text": "output_root / \"test_region_force_metrics.csv\","
+      },
+      {
+        "line": 1804,
+        "text": "test_region_rows,"
+      },
+      {
+        "line": 1875,
+        "text": "for row in test_region_rows:"
+      },
+      {
+        "line": 1890,
+        "text": "\"test_region_force_metrics.csv\","
+      }
+    ]
+  },
+  "baseline_check_hits": [
+    {
+      "line": 30,
+      "text": "COMMON = \"train_conservative_common_energy_baseline_augmented.py\""
+    },
+    {
+      "line": 74,
+      "text": "baseline_feature_check_atol=1e-5, baseline_feature_check_rtol=1e-5,"
+    },
+    {
+      "line": 185,
+      "text": "status[\"old_B1_max_abs_feature_difference\"] = float(np.abs(x - old_x).max())"
+    }
+  ],
+  "baseline_check_flags": [],
+  "blockers": [
+    {
+      "tag": "descriptor-identity",
+      "detail": "contract records {'torchsoap_autograd_module_periodic_regnorm.py': '186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c', 'train_c1b_frozen_routing_conservative_residual_v3_196train.py': '89bca3bd84cfc19b523c6856ae9a73e41b6fa82586fc3550c5c79264d0866680', 'train_conservative_common_energy_baseline_augmented.py': '25562ed1aceb99911d8739c9bd3ee65d8ad7304d19bd2563c99623d1ab469551'} but no candidate has that hash; do not correct any module until reconciled"
+    },
+    {
+      "tag": "baseline-check",
+      "detail": "prep script compares against baseline B1 features but has no flag to adapt it; an adapter must keep geometry/membership/species/hash and live-vs-cache checks and drop only equality-with-uncorrected"
+    }
+  ],
+  "pf_sha256": "4702c1affdf478dd28a9f72ed2eee7d1a3f62abd658aa079047bd18e742c7f19"
+}

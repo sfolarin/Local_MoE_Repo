@@ -1,0 +1,57 @@
+{
+  "nl_sha256": "30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86",
+  "prenl_sha256": "186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c",
+  "records": [
+    {
+      "record": "external_0081",
+      "n_atoms": 72,
+      "split": "train",
+      "nl_shape": [
+        72,
+        390
+      ],
+      "prenl_shape": [
+        72,
+        390
+      ],
+      "max_abs_diff": 4.107825191113079e-15,
+      "max_rel_diff": 6.427594489265341e-15,
+      "rot_rel_NL": 0.7227406990432929,
+      "rot_rel_preNL": 0.7227406990432905
+    },
+    {
+      "record": "external_0095",
+      "n_atoms": 108,
+      "split": "train",
+      "nl_shape": [
+        108,
+        390
+      ],
+      "prenl_shape": [
+        108,
+        390
+      ],
+      "max_abs_diff": 4.6351811278100286e-15,
+      "max_rel_diff": 7.186242515355662e-15,
+      "rot_rel_NL": 0.7884077503143908,
+      "rot_rel_preNL": 0.7884077503143917
+    },
+    {
+      "record": "external_0146",
+      "n_atoms": 120,
+      "split": "train",
+      "nl_shape": [
+        120,
+        390
+      ],
+      "prenl_shape": [
+        120,
+        390
+      ],
+      "max_abs_diff": 7.271960811294775e-15,
+      "max_rel_diff": 1.1206715604476778e-14,
+      "rot_rel_NL": 0.81831758235747,
+      "rot_rel_preNL": 0.8183175823574701
+    }
+  ]
+}

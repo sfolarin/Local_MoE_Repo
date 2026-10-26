@@ -1,0 +1,30 @@
+================================================================================================================
+ROTATIONAL-INVARIANCE CHECK ON GENUINE TRAIN/VAL CONFIGURATIONS
+  descriptor + DIAGNOSTIC random MLP only; no checkpoint is loaded
+  corrected via SUBCLASS: C1 homogeneous basis, C2 exact weights, C4 isotropic
+  C3 (isotropic distance inside compute_per_center) NOT active here ->
+  expect a ~1e-12 floor rather than ~1e-15; C3 is in the shipped module
+================================================================================================================
+production module : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py
+  sha256          : 30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86
+this script sha256: 07d3a621391a6754e44a1c8c5db0696894f54cd36716ff0d9367560f6fdf411d
+torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19 | device cpu
+seed 20261025 | 12 random rotations + 6 named
+tolerances: desc64<1e-10, e64<1e-09, f64<1e-09, s64<1e-07, desc32<1e-04, e32<1e-02, f32<1e-04
+per-centre dim 390 | global dim 783 | variant rotinv_subclass_C1C2C4
+  w(l=0) = [1.0]
+  w(l=1) = [3.0, 3.0, 3.0]
+  w(l=2) = [15.0, 15.0, 5.0, 15.0, 15.0]
+  w(l=3) = [4.375, 105.0, 2.625, 1.75, 2.625, 26.25, 4.375]
+  w(l=4) = [78.75, 39.375, 11.25, 5.625, 0.140625, 5.625, 2.8125, 39.375, 4.921875]
+
+================================================================================================================
+REAL STRUCTURES (train/val only; the test partition is never opened)
+================================================================================================================
+  manifest        : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/manifest.csv
+  columns         : split='split' id='source_file' path='output_file'
+  manifest counts : {'test': 105, 'train': 369, 'val': 38}
+  allow-list      : 407 files from train/val rows; 105 test rows excluded before any file was opened
+  guards          : (1) manifest filter (2) path allow-list (3) each shard's own split field
+  requested       : 3 PER SPLIT (not a total) -> 6 in all
+  LOAD FAILED for split 'val': asked 3, got 2. First errors: []

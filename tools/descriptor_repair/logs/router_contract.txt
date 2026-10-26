@@ -1,0 +1,76 @@
+==========================================================================================
+ROUTER DATASET CONTRACT
+==========================================================================================
+stage manifest      expanded_holdout40_v1_c1b_stage id=source_file split=split
+  counts: {'test': 105, 'train': 369, 'val': 38}
+
+distillation manifest manifest.csv           id=record_id split=split
+  counts: {'test': 105, 'train': 369, 'val': 38}
+  train membership vs stage: IDENTICAL  (only-here 0, only-stage 0)
+  val   membership vs stage: IDENTICAL  (only-here 0, only-stage 0)
+
+routing manifest dataset_manifest.csv   id=record_id split=split
+  counts: {'test': 105, 'train': 369, 'val': 38}
+  train membership vs stage: IDENTICAL  (only-here 0, only-stage 0)
+  val   membership vs stage: IDENTICAL  (only-here 0, only-stage 0)
+
+==========================================================================================
+PROVENANCE OF THE EXISTING ROUTER CHECKPOINT
+==========================================================================================
+the router script asserts (112, 22, 22); searching every manifest for those counts
+
+training_info.json records its own provenance:
+  dataset_root = <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation
+  best_epoch   = 93
+  dataset_root is the holdout-40 distillation dataset: True
+  split sizes recorded by the run: {'train': 369, 'val': 38, 'test': 105}
+  -> MATCHES the preserved stage manifest {'test': 105, 'train': 369, 'val': 38}
+  -> the (112, 22, 22) assertion in the script on disk is STALE;
+     that file was edited after this run, or another version produced it.
+
+  recorded training procedure settings:
+    seed                       20260811
+    dropout                    0.05
+    hidden_dims                [256, 128]
+    NOT RECORDED: ['lr', 'weight_decay', 'max_epochs', 'patience', 'min_delta', 'grad_clip', 'optimizer', 'scheduler', 'loss', 'selection_metric', 'normalization', 'feature_space']
+
+  additionally recorded in the checkpoint:
+    best_epoch                 93
+    best_val_structure_balanced_KL 0.03335634206795428
+    dropout                    0.05
+    feature_space              'local TorchSOAP rcut=5,nmax=6,lmax=4 + [isSi,isO]'
+    hidden_dims                [256, 128]
+    input_dim                  392
+    seed                       20260811
+    feature_mean/std           present (392-dim), i.e. normalisation is stored with
+                               the checkpoint, not recomputed at load time
+
+  the trainer's argparse defaults would supply:
+    grad_clip                  5.0   (ASSUMED, not recorded by the run)
+    lr                         1.0e-3   (ASSUMED, not recorded by the run)
+    max_epochs                 300   (ASSUMED, not recorded by the run)
+    min_delta                  1.0e-6   (ASSUMED, not recorded by the run)
+    patience                   35   (ASSUMED, not recorded by the run)
+    weight_decay               1.0e-6   (ASSUMED, not recorded by the run)
+
+  determined by reading the trainer source:
+    loss                       structure-balanced KL(teacher || student)
+    normalization              compute_train_normalization
+    optimizer                  AdamW
+    scheduler                  ReduceLROnPlateau
+    scheduler_params           0.5 10 1.0e-6
+    selection_metric           structure_balanced_KL
+
+  PROCEDURE MATCH SUMMARY
+    recorded by the run        : ['dropout', 'hidden_dims', 'seed']
+    recorded in the checkpoint : ['best_epoch', 'best_val_structure_balanced_KL', 'dropout', 'feature_space', 'hidden_dims', 'input_dim', 'normalization_stored_in_checkpoint', 'seed']
+    assumed from trainer flags : ['grad_clip', 'lr', 'max_epochs', 'min_delta', 'patience', 'weight_decay']
+    determined from source     : ['loss', 'normalization', 'optimizer', 'scheduler', 'scheduler_params', 'selection_metric']
+    neither recorded nor found : none
+    -> the PROCEDURE is matched only to the extent above.  Settings in
+       the 'assumed' row are the trainer's defaults, which the run did
+       not record; they must be reported as assumed, not verified.
+
+blockers: 0
+wrote router_contract.json
+RESULT: membership verified

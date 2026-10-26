@@ -1,0 +1,34 @@
+============================================================================================
+TRAIN/VALIDATION-ONLY ADAPTERS
+============================================================================================
+mkadapt.py sha256 f0bbd9c3903b312aebf2f600b101154d647e6ecfb480e334292af70f86142a1e
+originals read only; adapters written to <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters
+
+scripts/prepare_expanded_moe_features.py
+  source sha256 f7facba6abb67f6f54f686b6c45369c21f0030dd03bece7d34b73fce9e66954c
+  B1   historical B1 equality -> recorded difference              1
+  adapter prep_features_adapter.py     sha256 175ecc61b4fb4d3c8a581e818bd14e0a6ad53a942e1964febf4ac05d8dc805dd
+  parses cleanly
+
+runs/train_local_torchsoap_gate_distillation.py
+  source sha256 d34dfd668b5ccdf8e289c23c0a241b4e76297cac016f93b3dea4b82e4075bbe8
+  R1   skip test rows before the shard is opened                  1
+  R2   split assertion now requires only that test be empty       1
+  R3   suppress test-prediction output                            1
+  adapter router_distill_adapter.py    sha256 5940fc1e517e6d38d99ef301216fa9e6c0da7de65c79ba82f263e3014bb27c9c
+  parses cleanly
+
+scripts/train_c1b_holdout40.py
+  source sha256 333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f
+  X1   skip test rows before the shard is opened                  1
+  X2   expected split sizes 369/38/0 (split metadata itself unchanged) 1
+  X3   drop test from the evaluation loop                         1
+  adapter c1b_holdout40_adapter.py     sha256 3705bf0a3aa4bf2dbe7d74091e9da79754867db7c8d728d6f63c2ecd0e8710fa
+  parses cleanly
+
+originals unchanged:
+  scripts/prepare_expanded_moe_features.py                   f7facba6abb67f
+  runs/train_local_torchsoap_gate_distillation.py            d34dfd668b5ccd
+  scripts/train_c1b_holdout40.py                             333dd835069596
+
+Invoke adapters through run_adapted.py so every shard opened is audited.

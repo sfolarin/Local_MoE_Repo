@@ -1,0 +1,34 @@
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+============================================================================================
+FINITE-DIFFERENCE DIAGNOSIS: external_0081, 72 atoms
+============================================================================================
+E = -653.846066996291 eV
+dtypes returned by model_terms:
+  total_energy             float64 ()
+  common_residual_total    float64 ()
+  moe_residual_total       float64 ()
+  weights                  float32 (72, 7)
+  centered_delta           float32 (72, 7)
+descriptor dtype float64; the above shows where single precision enters.
+
+nearest pair to r_cut: 8.4531e-03 A  (h must stay below 0.4*gap = 3.381e-03)
+probing atom 0 axis 0, analytic force -2.751814963 eV/A
+
+h            central difference      abs error      err*h
+1e-01        skipped: straddles r_cut
+3e-02        skipped: straddles r_cut
+1e-02        skipped: straddles r_cut
+3e-03              -2.751313150      5.018e-04   1.51e-06
+1e-03              -2.752572298      7.573e-04   7.57e-07
+3e-04              -2.751325568      4.894e-04   1.47e-07
+1e-04              -2.744868398      6.947e-03   6.95e-07
+3e-05              -2.815077702      6.326e-02   1.90e-06
+1e-05              -2.878159285      1.263e-01   1.26e-06
+
+log-log slope of error vs h : -1.09
+  -1 => roundoff dominated (precision limited, forces fine)
+  +2 => truncation dominated (forces would be wrong if error stays large)
+effective epsilon of the energy: 1.545e-09   (float32 1.19e-07, float64 2.22e-16)
+best achievable: err 4.894e-04 eV/A at h 3e-04
+
+VERDICT: roundoff-limited; the force is consistent with the energy gradient to the precision the evaluation allows

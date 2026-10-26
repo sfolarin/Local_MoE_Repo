@@ -1,0 +1,214 @@
+============================================================================================
+COMMON  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/common_holdout40_ew10000_v1/best_checkpoint.pt
+============================================================================================
+  sha256 fde94fa621c1a06d450e7c4ae99e992d4eea4f69969457d82432d9ec202e129c
+  top-level keys (16): ['best_epoch', 'best_val_loss', 'e_ref_eV_per_atom', 'energy_reference_policy', 'energy_weight', 'epoch', 'feature_mean', 'feature_std', 'force_weight', 'hidden_dims', 'input_dim', 'model_state_dict', 'seed', 'selection_split', 'stage', 'training_contract_sha256']
+  best_epoch                         128
+  best_val_loss                      17.884299530524544
+  e_ref_eV_per_atom                  -9.668443844547909
+  energy_reference_policy            'unchanged_constant_from_baseline_common_checkpoint'
+  energy_weight                      10000.0
+  epoch                              128
+  feature_mean                       tensor [392]
+  feature_std                        tensor [392]
+  force_weight                       1000.0
+  hidden_dims                        list len=2
+  input_dim                          392
+  model_state_dict: state dict, 10 tensors
+      network.0.weight                               [256, 392]
+      network.0.bias                                 [256]
+      network.1.weight                               [256]
+      network.1.bias                                 [256]
+      network.3.weight                               [128, 256]
+      network.3.bias                                 [128]
+      network.4.weight                               [128]
+      network.4.bias                                 [128]
+      network.6.weight                               [1, 128]
+      network.6.bias                                 [1]
+  seed                               20260811
+  selection_split                    'val'
+  stage                              'expanded_common_energy'
+  training_contract_sha256           '38f54951ee962d2ebd63b7eab45b2d951f5d8252b1d3bfa0504857ee0618c5b3'
+  e_ref = -9.66844384454791  (baseline constant)
+
+============================================================================================
+ROUTER  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/torchsoap_gate_distillation_holdout40_v1/best_torchsoap_routing_gate.pt
+============================================================================================
+  sha256 625915d496ca4127f81e24c1f6413e8b31078b46b0ba009a4a3b472b670823dd
+  top-level keys (11): ['best_epoch', 'best_val_structure_balanced_KL', 'dropout', 'expert_names', 'feature_mean', 'feature_space', 'feature_std', 'hidden_dims', 'input_dim', 'model_state_dict', 'seed']
+  best_epoch                         93
+  best_val_structure_balanced_KL     0.03335634206795428
+  dropout                            0.05
+  expert_names                       list len=7
+  feature_mean                       tensor [392]
+  feature_space                      'local TorchSOAP rcut=5,nmax=6,lmax=4 + [isSi,isO]'
+  feature_std                        tensor [392]
+  hidden_dims                        list len=2
+  input_dim                          392
+  model_state_dict: state dict, 10 tensors
+      network.0.weight                               [256, 392]
+      network.0.bias                                 [256]
+      network.1.weight                               [256]
+      network.1.bias                                 [256]
+      network.4.weight                               [128, 256]
+      network.4.bias                                 [128]
+      network.5.weight                               [128]
+      network.5.bias                                 [128]
+      network.8.weight                               [7, 128]
+      network.8.bias                                 [7]
+  seed                               20260811
+
+============================================================================================
+RESIDUAL  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/c1b_holdout40_e10000_v1/best_c1b_residual_model.pt
+============================================================================================
+  sha256 99d0cfaec332de044c5fa96e0a26716eedacea4c7de6a00b3f7fcdd00877ebba
+  top-level keys (15): ['best_epoch', 'best_val_loss', 'common_checkpoint', 'e_ref_eV_per_atom', 'energy_weight', 'expert_names', 'force_weight', 'input_dim', 'model_role', 'residual_centering', 'residual_hidden_dims', 'residual_model_state_dict', 'routing_checkpoint', 'routing_coordinate_gradient', 'seed']
+  best_epoch                         3
+  best_val_loss                      17.80891151905897
+  common_checkpoint                  '<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/common_holdout40_ew10000_v1/best_checkpoint.pt'
+  e_ref_eV_per_atom                  -9.668443844547909
+  energy_weight                      10000.0
+  expert_names                       list len=7
+  force_weight                       1000.0
+  input_dim                          392
+  model_role                         'C1b frozen-routing conservative Local-MoE residual'
+  residual_centering                 'delta_ik = raw_delta_ik - mean_k(raw_delta_ik)'
+  residual_hidden_dims               list len=2
+  residual_model_state_dict: state dict, 10 tensors
+      network.0.weight                               [256, 392]
+      network.0.bias                                 [256]
+      network.1.weight                               [256]
+      network.1.bias                                 [256]
+      network.3.weight                               [128, 256]
+      network.3.bias                                 [128]
+      network.4.weight                               [128]
+      network.4.bias                                 [128]
+      network.6.weight                               [7, 128]
+      network.6.bias                                 [7]
+  routing_checkpoint                 '<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/torchsoap_gate_distillation_holdout40_v1/best_torchsoap_routing_gate.pt'
+  routing_coordinate_gradient        'enabled; routing parameters frozen, weights not detached'
+  seed                               20260811
+  e_ref = -9.66844384454791  (baseline constant)
+
+============================================================================================
+TRAINER  <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts/train_c1b_holdout40.py
+============================================================================================
+  sha256 333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f
+  module-level callables relevant to loading / assembly / energy:
+      build_symbols_masses                     (z: np.ndarray)
+      load_records                             (stage_b1_root: Path)
+      load_common_checkpoint                   (path: Path, device: torch.device,)
+      load_routing_checkpoint                  (path: Path, device: torch.device,)
+      model_terms                              (*, record: StructureRecord, positions: torch.Tensor, cell: torch.Tensor, descriptor,)
+      predict_energy_forces                    (*, record: StructureRecord, descriptor, common_model: nn.Module, common_mean: torch.)
+      evaluate_split                           (*, residual_model: nn.Module, descriptor, common_model: nn.Module, common_mean: torc)
+      save_checkpoint                          (path: Path, *, residual_model: nn.Module, optimizer, scheduler, epoch: int, best_epo)
+      restore_checkpoint                       (path: Path, *, residual_model: nn.Module, optimizer, scheduler, rng: np.random.Gener)
+
+  --- load_common_checkpoint  (36 lines) ---
+    def load_common_checkpoint(
+        path: Path,
+        device: torch.device,
+    ):
+        checkpoint = torch.load(
+            path.expanduser().resolve(),
+            map_location="cpu",
+            weights_only=False,
+        )
+    
+        model = MLP(
+            input_dim=int(checkpoint["input_dim"]),
+            hidden_dims=[int(x) for x in checkpoint["hidden_dims"]],
+            output_dim=1,
+            dropout=0.0,
+        ).to(device)
+    
+        model.load_state_dict(checkpoint["model_state_dict"])
+        model.eval()
+    
+        for p in model.parameters():
+            p.requires_grad_(False)
+    
+        mean = checkpoint["feature_mean"].to(
+            device=device,
+            dtype=torch.float32,
+    ... 10 more lines
+
+  --- load_routing_checkpoint  (40 lines) ---
+    def load_routing_checkpoint(
+        path: Path,
+        device: torch.device,
+    ):
+        checkpoint = torch.load(
+            path.expanduser().resolve(),
+            map_location="cpu",
+            weights_only=False,
+        )
+    
+        names = [str(x) for x in checkpoint["expert_names"]]
+        if names != EXPERTS:
+            raise RuntimeError(
+                f"Routing expert-order mismatch: {names}"
+            )
+    
+        model = MLP(
+            input_dim=int(checkpoint["input_dim"]),
+            hidden_dims=[int(x) for x in checkpoint["hidden_dims"]],
+            output_dim=7,
+            dropout=float(checkpoint["dropout"]),
+        ).to(device)
+    
+        model.load_state_dict(checkpoint["model_state_dict"])
+        model.eval()
+    
+    ... 14 more lines
+
+  --- evaluate_split  (172 lines) ---
+    def evaluate_split(
+        *,
+        residual_model: nn.Module,
+        descriptor,
+        common_model: nn.Module,
+        common_mean: torch.Tensor,
+        common_std: torch.Tensor,
+        routing_model: nn.Module,
+        routing_mean: torch.Tensor,
+        routing_std: torch.Tensor,
+        residual_mean: torch.Tensor,
+        residual_std: torch.Tensor,
+        records: Sequence[StructureRecord],
+        e_ref: float,
+        device: torch.device,
+        energy_weight: float,
+        force_weight: float,
+        include_regions: bool,
+    ) -> Tuple[Dict[str, float], List[Dict]]:
+        residual_model.eval()
+        common_model.eval()
+        routing_model.eval()
+    
+        losses = []
+        de_pa_values = []
+        abs_de_pa_values = []
+    ... 146 more lines
+
+  --- import_torchsoap  (17 lines) ---
+    def import_torchsoap(module_path: Path):
+        module_path = module_path.expanduser().resolve()
+        if not module_path.is_file():
+            raise FileNotFoundError(module_path)
+    
+        spec = importlib.util.spec_from_file_location(
+            "local_moe_torchsoap_c1b_training",
+            str(module_path),
+        )
+        if spec is None or spec.loader is None:
+            raise RuntimeError(f"Could not import {module_path}")
+    
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+        return module
+    
+
+wrote P3_inspect.json

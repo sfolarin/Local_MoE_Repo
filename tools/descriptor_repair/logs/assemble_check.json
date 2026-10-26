@@ -1,0 +1,12 @@
+{
+  "record": "external_0081",
+  "n_atoms": 72,
+  "E_eV": -653.8460669962913,
+  "residual_normalization": "common (train_c1b_holdout40.py line 1277)",
+  "rot1_dE": 0.0,
+  "rot1_dF": 3.739231146937527e-13,
+  "rot2_dE": 0.0,
+  "rot2_dF": 4.030109579389318e-13,
+  "rot3_dE": 0.0,
+  "rot3_dF": 2.9531932455029164e-13
+}

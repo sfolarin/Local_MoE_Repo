@@ -1,0 +1,247 @@
+{
+  "common": {
+    "present": true,
+    "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/common_holdout40_ew10000_v1/best_checkpoint.pt",
+    "sha256": "fde94fa621c1a06d450e7c4ae99e992d4eea4f69969457d82432d9ec202e129c",
+    "top_level_keys": [
+      "best_epoch",
+      "best_val_loss",
+      "e_ref_eV_per_atom",
+      "energy_reference_policy",
+      "energy_weight",
+      "epoch",
+      "feature_mean",
+      "feature_std",
+      "force_weight",
+      "hidden_dims",
+      "input_dim",
+      "model_state_dict",
+      "seed",
+      "selection_split",
+      "stage",
+      "training_contract_sha256"
+    ],
+    "scalars": {
+      "best_epoch": 128,
+      "best_val_loss": 17.884299530524544,
+      "e_ref_eV_per_atom": -9.668443844547909,
+      "energy_reference_policy": "unchanged_constant_from_baseline_common_checkpoint",
+      "energy_weight": 10000.0,
+      "epoch": 128,
+      "force_weight": 1000.0,
+      "input_dim": 392,
+      "seed": 20260811,
+      "selection_split": "val",
+      "stage": "expanded_common_energy",
+      "training_contract_sha256": "38f54951ee962d2ebd63b7eab45b2d951f5d8252b1d3bfa0504857ee0618c5b3"
+    },
+    "tensors": {
+      "feature_mean": [
+        392
+      ],
+      "feature_std": [
+        392
+      ]
+    },
+    "state_dicts": {
+      "model_state_dict": {
+        "network.0.weight": [
+          256,
+          392
+        ],
+        "network.0.bias": [
+          256
+        ],
+        "network.1.weight": [
+          256
+        ],
+        "network.1.bias": [
+          256
+        ],
+        "network.3.weight": [
+          128,
+          256
+        ],
+        "network.3.bias": [
+          128
+        ],
+        "network.4.weight": [
+          128
+        ],
+        "network.4.bias": [
+          128
+        ],
+        "network.6.weight": [
+          1,
+          128
+        ],
+        "network.6.bias": [
+          1
+        ]
+      }
+    },
+    "e_ref_ok": true,
+    "e_ref": -9.668443844547909
+  },
+  "router": {
+    "present": true,
+    "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/torchsoap_gate_distillation_holdout40_v1/best_torchsoap_routing_gate.pt",
+    "sha256": "625915d496ca4127f81e24c1f6413e8b31078b46b0ba009a4a3b472b670823dd",
+    "top_level_keys": [
+      "best_epoch",
+      "best_val_structure_balanced_KL",
+      "dropout",
+      "expert_names",
+      "feature_mean",
+      "feature_space",
+      "feature_std",
+      "hidden_dims",
+      "input_dim",
+      "model_state_dict",
+      "seed"
+    ],
+    "scalars": {
+      "best_epoch": 93,
+      "best_val_structure_balanced_KL": 0.03335634206795428,
+      "dropout": 0.05,
+      "feature_space": "local TorchSOAP rcut=5,nmax=6,lmax=4 + [isSi,isO]",
+      "input_dim": 392,
+      "seed": 20260811
+    },
+    "tensors": {
+      "feature_mean": [
+        392
+      ],
+      "feature_std": [
+        392
+      ]
+    },
+    "state_dicts": {
+      "model_state_dict": {
+        "network.0.weight": [
+          256,
+          392
+        ],
+        "network.0.bias": [
+          256
+        ],
+        "network.1.weight": [
+          256
+        ],
+        "network.1.bias": [
+          256
+        ],
+        "network.4.weight": [
+          128,
+          256
+        ],
+        "network.4.bias": [
+          128
+        ],
+        "network.5.weight": [
+          128
+        ],
+        "network.5.bias": [
+          128
+        ],
+        "network.8.weight": [
+          7,
+          128
+        ],
+        "network.8.bias": [
+          7
+        ]
+      }
+    }
+  },
+  "residual": {
+    "present": true,
+    "path": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/c1b_holdout40_e10000_v1/best_c1b_residual_model.pt",
+    "sha256": "99d0cfaec332de044c5fa96e0a26716eedacea4c7de6a00b3f7fcdd00877ebba",
+    "top_level_keys": [
+      "best_epoch",
+      "best_val_loss",
+      "common_checkpoint",
+      "e_ref_eV_per_atom",
+      "energy_weight",
+      "expert_names",
+      "force_weight",
+      "input_dim",
+      "model_role",
+      "residual_centering",
+      "residual_hidden_dims",
+      "residual_model_state_dict",
+      "routing_checkpoint",
+      "routing_coordinate_gradient",
+      "seed"
+    ],
+    "scalars": {
+      "best_epoch": 3,
+      "best_val_loss": 17.80891151905897,
+      "common_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/common_holdout40_ew10000_v1/best_checkpoint.pt",
+      "e_ref_eV_per_atom": -9.668443844547909,
+      "energy_weight": 10000.0,
+      "force_weight": 1000.0,
+      "input_dim": 392,
+      "model_role": "C1b frozen-routing conservative Local-MoE residual",
+      "residual_centering": "delta_ik = raw_delta_ik - mean_k(raw_delta_ik)",
+      "routing_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/torchsoap_gate_distillation_holdout40_v1/best_torchsoap_routing_gate.pt",
+      "routing_coordinate_gradient": "enabled; routing parameters frozen, weights not detached",
+      "seed": 20260811
+    },
+    "state_dicts": {
+      "residual_model_state_dict": {
+        "network.0.weight": [
+          256,
+          392
+        ],
+        "network.0.bias": [
+          256
+        ],
+        "network.1.weight": [
+          256
+        ],
+        "network.1.bias": [
+          256
+        ],
+        "network.3.weight": [
+          128,
+          256
+        ],
+        "network.3.bias": [
+          128
+        ],
+        "network.4.weight": [
+          128
+        ],
+        "network.4.bias": [
+          128
+        ],
+        "network.6.weight": [
+          7,
+          128
+        ],
+        "network.6.bias": [
+          7
+        ]
+      }
+    },
+    "e_ref_ok": true,
+    "e_ref": -9.668443844547909
+  },
+  "trainer": {
+    "path": "<scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts/train_c1b_holdout40.py",
+    "sha256": "333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f",
+    "candidates": [
+      "build_symbols_masses",
+      "load_records",
+      "load_common_checkpoint",
+      "load_routing_checkpoint",
+      "model_terms",
+      "predict_energy_forces",
+      "evaluate_split",
+      "save_checkpoint",
+      "restore_checkpoint"
+    ]
+  }
+}

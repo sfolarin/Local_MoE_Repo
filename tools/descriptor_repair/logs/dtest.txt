@@ -1,0 +1,10 @@
+variant rotinv_v1   r_cut 5.000 A   float64 CPU
+train+val rows 407 (test never opened)
+
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+  external_0081      72 atoms  S=3.829069e+02  nearest pair 8.453e-03 A from r_cut  h=1.00e-03
+      Richardson FD vs autograd: max err 1.250e-10   threshold 1.700e-09 (floor 8.50e-11)  -> pass
+  external_0095     108 atoms  S=6.095916e+02  nearest pair 1.598e-04 A from r_cut  h=6.39e-05
+      Richardson FD vs autograd: max err 3.287e-09   threshold 4.236e-08 (floor 2.12e-09)  -> pass
+
+derivative test: 0 failed, 0 exempt

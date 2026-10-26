@@ -1,0 +1,769 @@
+{
+  "script": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/rotinv_cluster_check.py",
+  "script_sha256": "07d3a621391a6754e44a1c8c5db0696894f54cd36716ff0d9367560f6fdf411d",
+  "production_module": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py",
+  "production_sha256": "30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86",
+  "variant": "rotinv_subclass_C1C2C4",
+  "c3_applied": false,
+  "torch": "2.8.0+cu128",
+  "numpy": "1.26.4",
+  "python": "3.9.19",
+  "device": "cuda:0",
+  "seed": 20261025,
+  "nrot": 4,
+  "tolerances": {
+    "desc64": 1e-10,
+    "e64": 1e-09,
+    "f64": 1e-09,
+    "s64": 1e-07,
+    "desc32": 0.0001,
+    "e32": 0.01,
+    "f32": 0.0001
+  },
+  "weights": {
+    "0": [
+      1.0
+    ],
+    "1": [
+      3.0,
+      3.0,
+      3.0
+    ],
+    "2": [
+      15.0,
+      15.0,
+      5.0,
+      15.0,
+      15.0
+    ],
+    "3": [
+      4.375,
+      105.0,
+      2.625,
+      1.75,
+      2.625,
+      26.25,
+      4.375
+    ],
+    "4": [
+      78.75,
+      39.375,
+      11.25,
+      5.625,
+      0.140625,
+      5.625,
+      2.8125,
+      39.375,
+      4.921875
+    ]
+  },
+  "real": {
+    "manifest": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/manifest.csv",
+    "split_column": "split",
+    "id_column": "source_file",
+    "path_column": "output_file",
+    "manifest_counts": {
+      "test": 105,
+      "train": 369,
+      "val": 38
+    },
+    "allow_list_size": 407,
+    "test_rows_excluded": 105,
+    "per_split_requested": 2,
+    "records": [
+      {
+        "record_id": "own_0196",
+        "split": "train",
+        "n_atoms": 2232,
+        "formula": "O1488Si744",
+        "computed_geometry_sha256": "45d340f7200c2097a440ee1ada5c3b2856b0ecbdfe733dacde6323b433a7dad4",
+        "manifest_geometry_sha256": "7760dd74772fc333f676507624a1219979a5b9d52bc7d8f4166d6e53b3331fb3",
+        "shard_declared_split": "train",
+        "shard": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/geometry/own_0196.npz",
+        "cellpar": [
+          73.984,
+          13.52,
+          47.754,
+          90.0,
+          90.0,
+          90.0
+        ]
+      },
+      {
+        "record_id": "own_0210",
+        "split": "train",
+        "n_atoms": 1440,
+        "formula": "O960Si480",
+        "computed_geometry_sha256": "c98befc206c72b338ca43932bc029a0fe6795f128d19819adc100d939d8f9281",
+        "manifest_geometry_sha256": "1a16817053f95d700d582edc2d434e3c336c5588468bb570b2d753f7b45df715",
+        "shard_declared_split": "train",
+        "shard": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/geometry/own_0210.npz",
+        "cellpar": [
+          26.468,
+          19.8,
+          42.126,
+          90.0,
+          90.0,
+          90.0
+        ]
+      },
+      {
+        "record_id": "external_0027",
+        "split": "val",
+        "n_atoms": 432,
+        "formula": "O288Si144",
+        "computed_geometry_sha256": "728c9eb5f930bc9536c6c1a24331a35246958341d2616553a7ade0de76f07130",
+        "manifest_geometry_sha256": "4973348653ffb1e6675c099034b639f2afa0c3f1a96b26d8d0fdb7ea7d82400f",
+        "shard_declared_split": "val",
+        "shard": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/geometry/external_0027.npz",
+        "cellpar": [
+          13.042,
+          34.506,
+          20.018,
+          90.0,
+          90.0,
+          79.107
+        ]
+      },
+      {
+        "record_id": "external_0007",
+        "split": "val",
+        "n_atoms": 432,
+        "formula": "O288Si144",
+        "computed_geometry_sha256": "e0c22f8309160896bb56a35a6c3e15c5812f93bf074f68614fea7a348973edd0",
+        "manifest_geometry_sha256": "2bc05ed853fc4a86511c444750380c67a9312943d3d7e7348f69662bbd6dcbd4",
+        "shard_declared_split": "val",
+        "shard": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/geometry/external_0007.npz",
+        "cellpar": [
+          21.461,
+          12.39,
+          30.994,
+          90.001,
+          89.998,
+          90.0
+        ]
+      }
+    ],
+    "n_loaded": 4
+  },
+  "rows": [
+    {
+      "test": "T1",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "per-centre features, max rel",
+      "value": 8.306310158044242e-12,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": "10 rotations"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "per-centre features f32",
+      "value": 1.3357969692151528e-05,
+      "tol": 0.0001,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "diagnostic energy |dE|",
+      "value": 7.538374544264862e-12,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "force covariance max|dF|",
+      "value": 1.4687584481976046e-11,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "rms|F|=0.605"
+    },
+    {
+      "test": "T4",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "stress covariance max|dS|",
+      "value": 5.266898028821743e-13,
+      "tol": 1e-07,
+      "unit": "GPa",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "mixed precision |dE|",
+      "value": 0.0,
+      "tol": 0.01,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": "desc f64, net f32"
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "mixed precision max|dF|",
+      "value": 9.303183645670288e-08,
+      "tol": 0.0001,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "translation max|dF|",
+      "value": 4.27158308724529e-14,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "permutation features",
+      "value": 2.1946908595688708e-16,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "permutation max|dF|",
+      "value": 1.7763568394002505e-15,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T7",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "lattice translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T6",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "force Richardson vs autograd",
+      "value": 3.945783699776939e-10,
+      "tol": 1e-07,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "(4d(h/2)-d(h))/3"
+    },
+    {
+      "test": "T8",
+      "structure": "REAL train own_0196 N=2232",
+      "quantity": "ORIGINAL features, max rel",
+      "value": 1.2891212219500725,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": true,
+      "note": "control: MUST exceed tolerance"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "per-centre features, max rel",
+      "value": 8.410057938021133e-12,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": "10 rotations"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "per-centre features f32",
+      "value": 5.8235186770616565e-06,
+      "tol": 0.0001,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "diagnostic energy |dE|",
+      "value": 1.3263464400855204e-11,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "force covariance max|dF|",
+      "value": 1.5308088130439046e-11,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "rms|F|=0.516"
+    },
+    {
+      "test": "T4",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "stress covariance max|dS|",
+      "value": 1.3962164757685969e-12,
+      "tol": 1e-07,
+      "unit": "GPa",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "mixed precision |dE|",
+      "value": 0.0,
+      "tol": 0.01,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": "desc f64, net f32"
+    },
+    {
+      "test": "T2",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "mixed precision max|dF|",
+      "value": 1.2781889235924382e-07,
+      "tol": 0.0001,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "translation max|dF|",
+      "value": 1.9109713811360507e-14,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "permutation features",
+      "value": 2.5084269528006826e-16,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "permutation max|dF|",
+      "value": 1.9984014443252818e-15,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T7",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "lattice translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T6",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "force Richardson vs autograd",
+      "value": 3.707449017925635e-10,
+      "tol": 1e-07,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "(4d(h/2)-d(h))/3"
+    },
+    {
+      "test": "T8",
+      "structure": "REAL train own_0210 N=1440",
+      "quantity": "ORIGINAL features, max rel",
+      "value": 1.2889028960490327,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": true,
+      "note": "control: MUST exceed tolerance"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "per-centre features, max rel",
+      "value": 3.2245355867356304e-12,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": "10 rotations"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "per-centre features f32",
+      "value": 5.845324267284013e-06,
+      "tol": 0.0001,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "diagnostic energy |dE|",
+      "value": 2.3684757858670005e-12,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "force covariance max|dF|",
+      "value": 8.219816334206244e-12,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "rms|F|=0.739"
+    },
+    {
+      "test": "T4",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "stress covariance max|dS|",
+      "value": 1.1369774739017138e-12,
+      "tol": 1e-07,
+      "unit": "GPa",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "mixed precision |dE|",
+      "value": 0.0,
+      "tol": 0.01,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": "desc f64, net f32"
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "mixed precision max|dF|",
+      "value": 1.3673072429831734e-07,
+      "tol": 0.0001,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "translation max|dF|",
+      "value": 1.5775575290533084e-14,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "permutation features",
+      "value": 2.2106861432319404e-16,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "permutation max|dF|",
+      "value": 1.4432899320127035e-15,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T7",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "lattice translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T6",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "force Richardson vs autograd",
+      "value": 1.0678815113679104e-10,
+      "tol": 1e-07,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "(4d(h/2)-d(h))/3"
+    },
+    {
+      "test": "T8",
+      "structure": "REAL val external_0027 N=432",
+      "quantity": "ORIGINAL features, max rel",
+      "value": 1.2353053192815848,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": true,
+      "note": "control: MUST exceed tolerance"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "per-centre features, max rel",
+      "value": 1.9884731703314037e-12,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": "10 rotations"
+    },
+    {
+      "test": "T1",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "per-centre features f32",
+      "value": 4.450700544111896e-06,
+      "tol": 0.0001,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "diagnostic energy |dE|",
+      "value": 5.26327952414889e-13,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "force covariance max|dF|",
+      "value": 7.1676119900443425e-12,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "rms|F|=0.554"
+    },
+    {
+      "test": "T4",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "stress covariance max|dS|",
+      "value": 7.283063041541027e-14,
+      "tol": 1e-07,
+      "unit": "GPa",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "mixed precision |dE|",
+      "value": 0.0,
+      "tol": 0.01,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": "desc f64, net f32"
+    },
+    {
+      "test": "T2",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "mixed precision max|dF|",
+      "value": 8.982276233915343e-08,
+      "tol": 0.0001,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "translation |dE|",
+      "value": 2.631639762074445e-13,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "translation max|dF|",
+      "value": 1.1324274851176597e-14,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "permutation features",
+      "value": 2.142059568067208e-16,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T3",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "permutation max|dF|",
+      "value": 1.7763568394002505e-15,
+      "tol": 1e-09,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T7",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "lattice translation |dE|",
+      "value": 0.0,
+      "tol": 1e-09,
+      "unit": "meV/atom",
+      "passed": true,
+      "control": false,
+      "note": ""
+    },
+    {
+      "test": "T6",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "force Richardson vs autograd",
+      "value": 9.552183089650557e-11,
+      "tol": 1e-07,
+      "unit": "eV/A",
+      "passed": true,
+      "control": false,
+      "note": "(4d(h/2)-d(h))/3"
+    },
+    {
+      "test": "T8",
+      "structure": "REAL val external_0007 N=432",
+      "quantity": "ORIGINAL features, max rel",
+      "value": 1.127255824255472,
+      "tol": 1e-10,
+      "unit": "rel",
+      "passed": true,
+      "control": true,
+      "note": "control: MUST exceed tolerance"
+    }
+  ],
+  "real_gate_passed": true,
+  "overall_pass": true
+}

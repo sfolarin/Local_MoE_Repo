@@ -1,0 +1,40 @@
+================================================================================================
+ASSEMBLED-MODEL PHYSICS VERIFICATION (nonzero exit on failure)
+================================================================================================
+trainer   3705bf0a3aa4bf  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/adapters/c1b_holdout40_adapter.py
+corrected 0afd9a1ba7b9a2  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+device cpu | torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19
+descriptor variant: 'rotinv_v1'
+e_ref = -9.66844384454791   r_cut = 5.000 A
+checkpoint hashes: common fde94fa621c1a0  router 625915d496ca41  residual 99d0cfaec332de
+residual normalisation = common (train_c1b_holdout40.py line 1277)
+records: test=0, train=369, val=38
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+
+external_0081  (train, 72 atoms)
+  E = -653.846066996291 eV   (-9.081195375 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 4.030e-13 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 8.453e-03 A   FD step 1.000e-03
+  gradient consistency: 2.868e-03 eV/A  tol 1.008e-01 (floor 5.04e-03, residual 42.3 eV)  -> pass
+
+external_0165  (val, 180 atoms)
+  E = -1613.783707841821 eV   (-8.965465044 eV/atom)
+  finiteness: all finite
+  energy invariance : 0.000e+00 eV    tol 1e-07  -> pass
+  force covariance  : 4.349e-13 eV/A  tol 1e-06  -> pass
+  nearest pair to r_cut: 7.386e-05 A   FD step 2.954e-05
+  gradient consistency: EXEMPT -- threshold 1.021e+01 eV/A exceeds 5% of max|F|=4.655e+00
+      h is capped at 2.95e-05 by the 7.386e-05 A cutoff gap; residual scale 126.5 eV
+
+================================================================================================
+records checked 2 | failures 0
+gradient consistency VERIFIED   on 1 record(s)
+gradient consistency NOT VERIFIED on 1 record(s): ['external_0165']
+  An exemption is NOT a pass.  Those records' forces are unverified by
+  finite difference; rotation invariance and covariance still hold for them.
+NOTE: with checkpoints trained on UNCORRECTED features these energies are
+      interface validation only, never an accuracy result.
+wrote verify_assembled.json
+RESULT: PASS_WITH_UNVERIFIED_GRADIENTS

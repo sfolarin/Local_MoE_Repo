@@ -1,0 +1,131 @@
+================================================================================================================
+ROTATIONAL-INVARIANCE CHECK ON GENUINE TRAIN/VAL CONFIGURATIONS
+  descriptor + DIAGNOSTIC random MLP only; no checkpoint is loaded
+  corrected via SUBCLASS: C1 homogeneous basis, C2 exact weights, C4 isotropic
+  C3 (isotropic distance inside compute_per_center) NOT active here ->
+  expect a ~1e-12 floor rather than ~1e-15; C3 is in the shipped module
+================================================================================================================
+production module : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py
+  sha256          : 30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86
+this script sha256: 629c4ca6b2686945c4750db12fb601a255c085e753c6e0f7ff567db207e4ba3a
+torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19 | device cpu
+seed 20261025 | 12 random rotations + 6 named
+tolerances: desc64<1e-10, e64<1e-09, f64<1e-09, s64<1e-07, desc32<1e-04, e32<1e-02, f32<1e-04
+per-centre dim 390 | global dim 783 | variant rotinv_subclass_C1C2C4
+  w(l=0) = [1.0]
+  w(l=1) = [3.0, 3.0, 3.0]
+  w(l=2) = [15.0, 15.0, 5.0, 15.0, 15.0]
+  w(l=3) = [4.375, 105.0, 2.625, 1.75, 2.625, 26.25, 4.375]
+  w(l=4) = [78.75, 39.375, 11.25, 5.625, 0.140625, 5.625, 2.8125, 39.375, 4.921875]
+
+================================================================================================================
+REAL STRUCTURES (train/val only; the test partition is never opened)
+================================================================================================================
+  manifest        : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage/manifest.csv
+  columns         : split='split' id='source_file' path='output_file'
+  manifest counts : {'test': 105, 'train': 369, 'val': 38}
+  allow-list      : 407 files from train/val rows; 105 test rows excluded before any file was opened
+  guards          : (1) manifest filter (2) path allow-list (3) each shard's own split field
+  requested       : 2 PER SPLIT (not a total) -> 4 in all
+  loaded per split: {'train': 2, 'val': 2} (total 4)
+  record id              split   atoms  formula          computed geom sha  manifest geom sha
+  external_0129          train     144  O96Si48          97e382fa8f495de0   9454a96eba8df5872f
+  external_0049          train     144  O96Si48          6d90a345cb42930e   16d363a70c2fd16f68
+  external_0082          val       240  O160Si80         60ef4036a53580f6   c966c86ad69f316f57
+  external_0165          val       180  O120Si60         6fb8754ebfdc5785   abed5e45fbeb050c2d
+
+================================================================================================================
+
+  -- REAL train external_0129 N=144  O96Si48  cellpar=[ 6.92 16.52 25.82 91.69 90.   65.25]
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=144 | edges(search)=4084
+    noise floor (same input twice): 0.000e+00 rel
+    T1   per-centre features, max rel       rel        3.563e-12  < 1.0e-10  ok   18 rotations
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=144 | edges(search)=4084
+    T1   per-centre features f32            rel        3.903e-06  < 1.0e-04  ok   
+    T2   diagnostic energy |dE|             meV/atom   3.947e-13  < 1.0e-09  ok   
+    T2   force covariance max|dF|           eV/A       1.209e-11  < 1.0e-09  ok   rms|F|=0.674
+    T4   stress covariance max|dS|          GPa        1.688e-14  < 1.0e-07  ok   
+    T2   mixed precision |dE|               meV/atom   0.000e+00  < 1.0e-02  ok   desc f64, net f32
+    T2   mixed precision max|dF|            eV/A       1.075e-11  < 1.0e-04  ok   
+    T3   translation |dE|                   meV/atom   0.000e+00  < 1.0e-09  ok   
+    T3   translation max|dF|                eV/A       8.882e-15  < 1.0e-09  ok   
+    net force |sum F| = 3.11e-15 eV/A
+    T3   permutation features               rel        1.972e-16  < 1.0e-10  ok   
+    T3   permutation max|dF|                eV/A       1.443e-15  < 1.0e-09  ok   
+    T7   lattice translation |dE|           meV/atom   0.000e+00  < 1.0e-09  ok   
+    FD dev: h=1e-3 2.94e-06, h=5e-4 7.36e-07 eV/A
+    T6   force Richardson vs autograd       eV/A       4.938e-11  < 1.0e-07  ok   (4d(h/2)-d(h))/3
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=144 | edges(search)=4084
+    T8   ORIGINAL features, max rel         rel        1.174e+00  > 1.0e-10  ok   control: MUST exceed tolerance
+
+  -- REAL train external_0049 N=144  O96Si48  cellpar=[ 9.05 10.26 28.8  90.   90.01 90.  ]
+    noise floor (same input twice): 0.000e+00 rel
+    T1   per-centre features, max rel       rel        2.471e-12  < 1.0e-10  ok   18 rotations
+    T1   per-centre features f32            rel        3.386e-06  < 1.0e-04  ok   
+    T2   diagnostic energy |dE|             meV/atom   2.566e-12  < 1.0e-09  ok   
+    T2   force covariance max|dF|           eV/A       1.148e-11  < 1.0e-09  ok   rms|F|=0.604
+    T4   stress covariance max|dS|          GPa        1.661e-13  < 1.0e-07  ok   
+    T2   mixed precision |dE|               meV/atom   0.000e+00  < 1.0e-02  ok   desc f64, net f32
+    T2   mixed precision max|dF|            eV/A       1.091e-11  < 1.0e-04  ok   
+    T3   translation |dE|                   meV/atom   1.974e-13  < 1.0e-09  ok   
+    T3   translation max|dF|                eV/A       1.021e-14  < 1.0e-09  ok   
+    net force |sum F| = 3.35e-15 eV/A
+    T3   permutation features               rel        1.832e-16  < 1.0e-10  ok   
+    T3   permutation max|dF|                eV/A       1.277e-15  < 1.0e-09  ok   
+    T7   lattice translation |dE|           meV/atom   0.000e+00  < 1.0e-09  ok   
+    FD dev: h=1e-3 1.30e-06, h=5e-4 3.25e-07 eV/A
+    T6   force Richardson vs autograd       eV/A       5.055e-11  < 1.0e-07  ok   (4d(h/2)-d(h))/3
+    T8   ORIGINAL features, max rel         rel        1.244e+00  > 1.0e-10  ok   control: MUST exceed tolerance
+
+  -- REAL val external_0082 N=240  O160Si80  cellpar=[  8.81  21.25  26.9  109.15  90.11  65.5 ]
+    noise floor (same input twice): 0.000e+00 rel
+    T1   per-centre features, max rel       rel        3.583e-12  < 1.0e-10  ok   18 rotations
+    T1   per-centre features f32            rel        3.829e-06  < 1.0e-04  ok   
+    T2   diagnostic energy |dE|             meV/atom   2.463e-11  < 1.0e-09  ok   
+    T2   force covariance max|dF|           eV/A       1.000e-11  < 1.0e-09  ok   rms|F|=0.590
+    T4   stress covariance max|dS|          GPa        2.268e-12  < 1.0e-07  ok   
+    T2   mixed precision |dE|               meV/atom   0.000e+00  < 1.0e-02  ok   desc f64, net f32
+    T2   mixed precision max|dF|            eV/A       7.651e-12  < 1.0e-04  ok   
+    T3   translation |dE|                   meV/atom   0.000e+00  < 1.0e-09  ok   
+    T3   translation max|dF|                eV/A       1.371e-14  < 1.0e-09  ok   
+    net force |sum F| = 2.03e-15 eV/A
+    T3   permutation features               rel        1.779e-16  < 1.0e-10  ok   
+    T3   permutation max|dF|                eV/A       1.221e-15  < 1.0e-09  ok   
+    T7   lattice translation |dE|           meV/atom   0.000e+00  < 1.0e-09  ok   
+    FD dev: h=1e-3 5.53e-06, h=5e-4 1.38e-06 eV/A
+    T6   force Richardson vs autograd       eV/A       1.873e-07  < 1.0e-07  FAIL (4d(h/2)-d(h))/3
+    T8   ORIGINAL features, max rel         rel        1.240e+00  > 1.0e-10  ok   control: MUST exceed tolerance
+
+  -- REAL val external_0165 N=180  O120Si60  cellpar=[ 12.68  12.62  20.85  90.01 102.99  89.94]
+    noise floor (same input twice): 0.000e+00 rel
+    T1   per-centre features, max rel       rel        2.830e-12  < 1.0e-10  ok   18 rotations
+    T1   per-centre features f32            rel        3.759e-06  < 1.0e-04  ok   
+    T2   diagnostic energy |dE|             meV/atom   4.737e-13  < 1.0e-09  ok   
+    T2   force covariance max|dF|           eV/A       1.116e-11  < 1.0e-09  ok   rms|F|=0.485
+    T4   stress covariance max|dS|          GPa        2.931e-14  < 1.0e-07  ok   
+    T2   mixed precision |dE|               meV/atom   0.000e+00  < 1.0e-02  ok   desc f64, net f32
+    T2   mixed precision max|dF|            eV/A       9.946e-12  < 1.0e-04  ok   
+    T3   translation |dE|                   meV/atom   3.158e-13  < 1.0e-09  ok   
+    T3   translation max|dF|                eV/A       1.166e-14  < 1.0e-09  ok   
+    net force |sum F| = 9.99e-16 eV/A
+    T3   permutation features               rel        1.906e-16  < 1.0e-10  ok   
+    T3   permutation max|dF|                eV/A       1.554e-15  < 1.0e-09  ok   
+    T7   lattice translation |dE|           meV/atom   0.000e+00  < 1.0e-09  ok   
+    FD dev: h=1e-3 1.34e-06, h=5e-4 3.35e-07 eV/A
+    T6   force Richardson vs autograd       eV/A       6.503e-11  < 1.0e-07  ok   (4d(h/2)-d(h))/3
+    T8   ORIGINAL features, max rel         rel        1.173e+00  > 1.0e-10  ok   control: MUST exceed tolerance
+
+================================================================================================================
+SUMMARY BY TEST
+================================================================================================================
+T1   descriptor invariance under proper rotations               8 checks     0 failed  PASS
+T2   diagnostic energy invariance and force covariance         16 checks     0 failed  PASS
+T3   translation and permutation                               16 checks     0 failed  PASS
+T4   stress covariance                                          4 checks     0 failed  PASS
+T6   force finite differences (Richardson)                      4 checks     1 failed  FAIL
+T7   periodic images                                            4 checks     0 failed  PASS
+T8   control: the ORIGINAL descriptor must fail                 4 checks     0 failed  PASS
+----------------------------------------------------------------------------------------------------------------
+real train/val structures loaded: 4 (requested 2 per split)  PASS
+OVERALL: FAIL   (56 checks, 1 failed)
+wrote V4_cluster_cpu_small.json

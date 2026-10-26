@@ -1,0 +1,30 @@
+==============================================================================================
+STEP 2: bounded GPU validation + cost measurement
+==============================================================================================
+corrected 0afd9a1ba7b9a2
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+original  30acc0838fb689
+  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py
+torch 2.8.0+cu128 | numpy 1.26.4 | python 3.9.19
+device cuda (NVIDIA A100-SXM4-80GB) | float64 | 5 reps after 2 warm-up
+sync: torch.cuda.synchronize() before and after each timed block
+
+train+val rows 407 (test never opened)
+selected sizes: [432, 864, 1458, 2232]
+
+record            atoms    rot rel   dense/nl   ratio    corr s    orig s    corr GiB
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=432 | edges(search)=11256
+[TorchSOAP PERIODIC] r_cut=5.000000 A | plane spacings=(21.444729, 12.381066, 31.040083) A | shift extents=(0,0,0) | n_shifts=1
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=432 | edges(search)=11256
+external_0003       432  1.149e-14  7.029e-15   1.064    0.0094    0.0089       0.061
+external_0017       864  1.236e-14  6.178e-15   1.093    0.0098    0.0090       0.113
+external_0056      1458  1.215e-14  1.254e-14   1.069    0.0099    0.0092       0.193
+external_0102      2232  1.147e-14  1.059e-14   1.066    0.0101    0.0094       0.333
+
+corrected invariant on all 4 sizes: YES
+original FAILS the same test on 4 of 4 (as it must, or the test is inert)
+cost ratio corrected/original: min 1.064 median 1.068 max 1.093
+  common net 3.20 h x 1.093 = 3.50 h     C1b 0.68 h x 1.093 = 0.74 h
+descriptor-only peak allocated: max 0.333 GiB (NOT the 50.20 GiB full C1b step)
+
+wrote gpu2.json

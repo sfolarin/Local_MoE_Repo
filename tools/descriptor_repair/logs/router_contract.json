@@ -1,0 +1,105 @@
+{
+  "stage_counts": {
+    "test": 105,
+    "train": 369,
+    "val": 38
+  },
+  "distillation_counts": {
+    "test": 105,
+    "train": 369,
+    "val": 38
+  },
+  "distillation_membership_matches_stage": true,
+  "routing_counts": {
+    "test": 105,
+    "train": 369,
+    "val": 38
+  },
+  "routing_membership_matches_stage": true,
+  "counts_112_22_22_found_in": [],
+  "router_training_info": {
+    "best_checkpoint": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/runs/torchsoap_gate_distillation_holdout40_v1/best_torchsoap_routing_gate.pt",
+    "best_epoch": 93,
+    "best_val_structure_balanced_KL": 0.03335634206795428,
+    "dataset_root": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_distillation",
+    "dropout": 0.05,
+    "expert_names": [
+      "ML-BKS",
+      "Original_BKS",
+      "Chik_BKS",
+      "PSO1_BKS",
+      "PSO2_BKS",
+      "Tersoff",
+      "Vashishta"
+    ],
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "important_note": "This checkpoint must later be paired with on-the-fly differentiable TorchSOAP using the same rcut=5,nmax=6,lmax=4 and species one-hot ordering [Si,O].",
+    "input_dim": 392,
+    "purpose": "Distill frozen DScribe dense local-routing teacher into a new gate operating in differentiable local TorchSOAP feature space.",
+    "reference_label_policy": "Frozen expanded MATPes-r2SCAN labels; no MPA-0 labels or inference.",
+    "reference_pes": "MATPes-r2SCAN",
+    "seed": 20260811,
+    "stage": "B2"
+  },
+  "router_dataset_root_matches_distillation": true,
+  "router_recorded_split_sizes": {
+    "train": 369,
+    "val": 38,
+    "test": 105
+  },
+  "router_provenance": "resolved_from_training_info_json",
+  "router_procedure_recorded": {
+    "seed": 20260811,
+    "dropout": 0.05,
+    "hidden_dims": [
+      256,
+      128
+    ]
+  },
+  "router_procedure_from_checkpoint": {
+    "best_epoch": 93,
+    "best_val_structure_balanced_KL": 0.03335634206795428,
+    "dropout": 0.05,
+    "feature_space": "local TorchSOAP rcut=5,nmax=6,lmax=4 + [isSi,isO]",
+    "hidden_dims": [
+      256,
+      128
+    ],
+    "input_dim": 392,
+    "seed": 20260811,
+    "normalization_stored_in_checkpoint": true
+  },
+  "router_procedure_not_recorded": [
+    "lr",
+    "weight_decay",
+    "max_epochs",
+    "patience",
+    "min_delta",
+    "grad_clip",
+    "optimizer",
+    "scheduler",
+    "loss",
+    "selection_metric"
+  ],
+  "router_procedure_trainer_defaults": {
+    "lr": "1.0e-3",
+    "weight_decay": "1.0e-6",
+    "max_epochs": "300",
+    "patience": "35",
+    "min_delta": "1.0e-6",
+    "grad_clip": "5.0"
+  },
+  "router_procedure_determined_from_source": {
+    "optimizer": "AdamW",
+    "scheduler": "ReduceLROnPlateau",
+    "scheduler_params": "0.5 10 1.0e-6",
+    "loss": "structure-balanced KL(teacher || student)",
+    "selection_metric": "structure_balanced_KL",
+    "normalization": "compute_train_normalization"
+  },
+  "router_procedure_unknown": [],
+  "blockers": []
+}

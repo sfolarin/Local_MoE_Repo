@@ -1,0 +1,36 @@
+========================================================================================
+PRE-NL vs NL EQUIVALENCE  +  rotation invariance of each
+========================================================================================
+  NL   (generator-compatible)  30acc0838fb689  torchsoap_autograd_module_periodic_regnorm_nl.py
+  preNL (made the features)    186453838f89f7  torchsoap_autograd_module_periodic_regnorm.py
+  descriptor classes: NL.TorchSOAPDescriptor  preNL.TorchSOAPDescriptor
+
+  train+val rows in stage manifest: 407 (test excluded before any read)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=72 | edges(search)=1864
+[TorchSOAP PERIODIC] r_cut=5.000000 A | plane spacings=(7.073167, 7.073674, 26.165531) A | shift extents=(1,1,0) | n_shifts=9
+
+  external_0081        72 atoms  split=train
+    NL features    (72, 390)
+    preNL features (72, 390)
+    max|NL - preNL| = 4.107825e-15   relative 6.427594e-15
+    -> IDENTICAL to machine precision
+    NL    rotation relative error 7.227407e-01  -> NOT invariant (defect present)
+    preNL rotation relative error 7.227407e-01  -> NOT invariant (defect present)
+
+  external_0095       108 atoms  split=train
+    NL features    (108, 390)
+    preNL features (108, 390)
+    max|NL - preNL| = 4.635181e-15   relative 7.186243e-15
+    -> IDENTICAL to machine precision
+    NL    rotation relative error 7.884078e-01  -> NOT invariant (defect present)
+    preNL rotation relative error 7.884078e-01  -> NOT invariant (defect present)
+
+  external_0146       120 atoms  split=train
+    NL features    (120, 390)
+    preNL features (120, 390)
+    max|NL - preNL| = 7.271961e-15   relative 1.120672e-14
+    -> IDENTICAL to machine precision
+    NL    rotation relative error 8.183176e-01  -> NOT invariant (defect present)
+    preNL rotation relative error 8.183176e-01  -> NOT invariant (defect present)
+
+wrote pf4.json
