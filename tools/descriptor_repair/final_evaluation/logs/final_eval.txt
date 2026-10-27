@@ -1,0 +1,80 @@
+features  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_features_rotinv_v1
+stage     <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/data/expanded_holdout40_v1_c1b_stage
+trainer   <scratch>/GitHub-Repositories/local-moe-silica-interfaces/scripts/train_c1b_holdout40.py   (ORIGINAL -- test included)
+
+---- frozen-artefact verification (before) ----
+  best_checkpoint.pt         5b17849752a53573  ok
+  best_torchsoap_routing_gate.pt 9e8e0ca6af4976ef  ok
+  best_c1b_residual_model.pt c7ad2a89c5705493  ok
+  torchsoap_corrected_rotinv_v1.py 0afd9a1ba7b9a24f  ok
+
+################ common_eval_and_export ################
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=648 | edges(search)=16416
+Raw test predictions: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/raw_predictions/train
+Raw test predictions: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/raw_predictions/val
+Raw test predictions: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/raw_predictions/test
+train ALL ALL Ncfg=369 E_RMSE=2.0101 meV/atom F_RMSE=0.057477 eV/A
+train Oishi_all179 ALL Ncfg=112 E_RMSE=1.1578 meV/atom F_RMSE=0.013205 eV/A
+train Oishi_relaxed52 ALL Ncfg=20 E_RMSE=0.7108 meV/atom F_RMSE=0.012315 eV/A
+train Own_augmented ALL Ncfg=196 E_RMSE=2.4093 meV/atom F_RMSE=0.075305 eV/A
+train Siddharth ALL Ncfg=41 E_RMSE=2.1698 meV/atom F_RMSE=0.045527 eV/A
+train Siddharth CHA_AEI Ncfg=12 E_RMSE=2.2735 meV/atom F_RMSE=0.052197 eV/A
+train Siddharth CHA_AFI Ncfg=4 E_RMSE=1.7765 meV/atom F_RMSE=0.067838 eV/A
+train Siddharth CHA_GME Ncfg=6 E_RMSE=0.8591 meV/atom F_RMSE=0.048600 eV/A
+train Siddharth ERI_OFF Ncfg=16 E_RMSE=2.6642 meV/atom F_RMSE=0.028423 eV/A
+train Siddharth FAU_EMT Ncfg=3 E_RMSE=0.3596 meV/atom F_RMSE=0.047545 eV/A
+val ALL ALL Ncfg=38 E_RMSE=4.7188 meV/atom F_RMSE=0.113554 eV/A
+val Oishi_all179 ALL Ncfg=15 E_RMSE=1.3150 meV/atom F_RMSE=0.023728 eV/A
+val Oishi_relaxed52 ALL Ncfg=1 E_RMSE=1.2997 meV/atom F_RMSE=0.017609 eV/A
+val Own_augmented ALL Ncfg=22 E_RMSE=6.0996 meV/atom F_RMSE=0.147900 eV/A
+test ALL ALL Ncfg=105 E_RMSE=2.4603 meV/atom F_RMSE=0.057647 eV/A
+test Oishi_all179 ALL Ncfg=52 E_RMSE=1.6283 meV/atom F_RMSE=0.020261 eV/A
+test Oishi_relaxed52 ALL Ncfg=31 E_RMSE=1.3622 meV/atom F_RMSE=0.023599 eV/A
+test Own_augmented ALL Ncfg=22 E_RMSE=4.4732 meV/atom F_RMSE=0.118766 eV/A
+Evaluation: <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/evaluation_train_val_test
+[common_eval_and_export] 43s, exit 0
+
+################ moe_export ################
+Using device: cuda
+Loaded C1b checkpoint: best_epoch=13, best_val_loss=13.024330822914758
+
+train: 369 structures
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=648 | edges(search)=16416
+
+val: 38 structures
+
+test: 105 structures
+
+Wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/moe/raw_predictions and <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/moe/per_configuration.csv
+Total structures exported: 512
+[moe_export] 14s, exit 0
+
+################ common_vs_full ################
+models: ['common_only', 'c1b'] | test structures 105 | e_ref -9.668444 eV/atom
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=432 | edges(search)=12972
+  20/105 structures done
+  40/105 structures done
+  60/105 structures done
+  80/105 structures done
+  100/105 structures done
+  105/105 structures done
+common-only model: max |moe_residual_total| over the test split = 0.00e+00 eV (must be 0)
+Traceback (most recent call last):
+  File "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts/eval_test_regions_common_vs_full.py", line 296, in <module>
+    main()
+  File "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/scripts/eval_test_regions_common_vs_full.py", line 202, in main
+    for row in pd.read_csv(rf).itertuples():
+  File "<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 581, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
+[common_vs_full] 8s, exit 1
+ABORT: common_vs_full failed (exit 1).  Later stages would report numbers built on it.

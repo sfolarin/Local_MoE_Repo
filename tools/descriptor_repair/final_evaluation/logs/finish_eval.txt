@@ -1,0 +1,121 @@
+---- frozen-artefact verification (before) ----
+  best_checkpoint.pt         5b17849752a53573  ok
+  best_torchsoap_routing_gate.pt 9e8e0ca6af4976ef  ok
+  best_c1b_residual_model.pt c7ad2a89c5705493  ok
+  torchsoap_corrected_rotinv_v1.py 0afd9a1ba7b9a24f  ok
+
+---- inherited outputs ----
+  common  train  369 npz (want  369)  ok
+  common  val     38 npz (want   38)  ok
+  common  test   105 npz (want  105)  ok
+  moe     train  369 npz (want  369)  ok
+  moe     val     38 npz (want   38)  ok
+  moe     test   105 npz (want  105)  ok
+  metrics.csv                                 19 lines  ok
+  per_configuration.csv                      513 lines  ok
+
+patched evaluator: 05926b2949ddd6ce  <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/eval_compare_patched.py
+
+################ common_vs_full ################
+models: ['common_only', 'c1b'] | test structures 105 | e_ref -9.668444 eV/atom
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=432 | edges(search)=12972
+  20/105 structures done
+  40/105 structures done
+  60/105 structures done
+  80/105 structures done
+  100/105 structures done
+  105/105 structures done
+common-only model: max |moe_residual_total| over the test split = 0.00e+00 eV (must be 0)
+(no usable <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/test_region_force_metrics.csv: absent or empty -- its reproduction is skipped)
+(no usable <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/final_split_metrics.csv: absent, empty, or no test row -- its reproduction is skipped)
+
+REPRODUCTION OF EXISTING NUMBERS (structure-balanced definition that matches the trainer: sb_rms; rtol 1e-05)
+  4 numbers compared, 4 reproduced, max relative difference 1.09e-15
+
+TEST SPLIT, all 105 structures, 117840 atoms (energy per atom; forces per component)
+         model  E RMSE meV/atom   E MAE   E bias  F SB RMSE eV/A  F AW RMSE eV/A
+common network          2.46035 1.19540 -0.30520         0.05765         0.07630
+  full MoE c1b          2.57346 1.22554  0.39886         0.05765         0.07622
+
+REGION FORCE BREAKDOWN: only 22 of 105 test structures carry region labels (47904 atoms)
+  labelled structures by source: Own_augmented 22
+     region  n_struct  n_atoms  common AW  common SB  full MoE c1b AW  full MoE c1b AW %  full MoE c1b SB  full MoE c1b SB %
+        all       105   117840    0.07630    0.05765          0.07622           -0.11164          0.05765            0.00735
+  interface        22    20038    0.16554    0.16823          0.16537           -0.10291          0.16779           -0.26433
+phase1_bulk        22    13876    0.07047    0.07909          0.06990           -0.81752          0.07831           -0.97933
+phase2_bulk        22    13990    0.05836    0.06193          0.05831           -0.08414          0.06168           -0.40208
+  (AW = atom-weighted, SB = structure-balanced force RMSE in eV/A; % = change relative to the common network, negative = better)
+
+PAIRED, interface atoms, 22 labelled structures: per-structure interface force RMSE, full MoE vs common network
+  full MoE c1b: lower on 19, higher on 3 of 22; mean change -0.00054 eV/A, largest decrease -0.00218, largest increase +0.00285
+
+saved <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/compare/local_moe_vs_common_per_structure.csv, <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/compare/local_moe_vs_common_regions.csv
+[common_vs_full] 14s, exit 0
+
+################ figure_moe ################
+split  records_in_files  structures_used  atoms  E_RMSE_meV_per_atom  E_MAE_meV_per_atom  E_bias_meV_per_atom  F_SB_RMSE_eV_A  F_atom_weighted_RMSE_eV_A
+train               369              369 515322               1.8312              1.0426               0.1678          0.0563                     0.0615
+  val                38               38  58638               4.5035              2.5176              -0.8971          0.1132                     0.1329
+ test               105              105 117840               2.5735              1.2255               0.3989          0.0577                     0.0762
+saved <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/figs_moe/energy_force_parity.png
+[figure_moe] 7s, exit 0
+
+################ figure_common ################
+split  records_in_files  structures_used  atoms  E_RMSE_meV_per_atom  E_MAE_meV_per_atom  E_bias_meV_per_atom  F_SB_RMSE_eV_A  F_atom_weighted_RMSE_eV_A
+train               369              369 515322               2.0101              1.2284              -0.6604          0.0575                     0.0626
+  val                38               38  58638               4.7188              2.7677              -1.6452          0.1136                     0.1331
+ test               105              105 117840               2.4603              1.1954              -0.3052          0.0576                     0.0763
+consistency with the evaluator's metrics.csv: max |dE_RMSE| = 4.44e-16 meV/atom, max |dF_SB| = 7.63e-17 eV/A
+saved <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/figs_common/energy_force_parity.png
+[figure_common] 6s, exit 0
+
+################ verification ################
+
+Local-MoE  (energy meV/atom, force eV/A)
+  split     N    atoms    E_RMSE     E_MAE     E_bias      F_SB  F_pooled
+  train   369   515322    1.8312    1.0426     0.1678   0.05630   0.06148
+  val      38    58638    4.5035    2.5176    -0.8971   0.11323   0.13288
+  test    105   117840    2.5735    1.2255     0.3989   0.05765   0.07622
+
+Common-network only
+  split     N    atoms    E_RMSE     E_MAE     E_bias      F_SB  F_pooled
+  train   369   515322    2.0101    1.2284    -0.6604   0.05748   0.06260
+  val      38    58638    4.7188    2.7677    -1.6452   0.11355   0.13311
+  test    105   117840    2.4603    1.1954    -0.3052   0.05765   0.07630
+
+common-only vs full Local-MoE, identical configurations:
+  split   E_RMSE  common -> MoE    F_SB  common -> MoE
+  train      2.0101 ->   1.8312  (  -8.9%)   0.05748 -> 0.05630  (  -2.1%)
+  val        4.7188 ->   4.5035  (  -4.6%)   0.11355 -> 0.11323  (  -0.3%)
+  test       2.4603 ->   2.5735  (  +4.6%)   0.05765 -> 0.05765  (  +0.0%)
+
+  Local-MoE  max |difference| vs its figure's stats CSV: 0.000e+00
+
+  common     max |difference| vs its figure's stats CSV: 0.000e+00
+
+cross-path check -- export (predict_energy_forces) vs pilot (evaluate_split):
+  train  E_RMSE   1.8312 vs   1.8312 (d=0.00e+00)   F_SB  0.05630 vs  0.05630 (d=0.00e+00)  ok
+  val    E_RMSE   4.5035 vs   4.5035 (d=0.00e+00)   F_SB  0.11323 vs  0.11323 (d=0.00e+00)  ok
+  test   no prior value -- never evaluated before, by design
+
+VERIFICATION: PASS
+
+---- frozen-artefact verification (after) ----
+  best_checkpoint.pt         5b17849752a53573  ok
+  best_torchsoap_routing_gate.pt 9e8e0ca6af4976ef  ok
+  best_c1b_residual_model.pt c7ad2a89c5705493  ok
+  torchsoap_corrected_rotinv_v1.py 0afd9a1ba7b9a24f  ok
+
+################ summary ################
+  common_vs_full            14s  exit 0
+  figure_moe                 7s  exit 0
+  figure_common              6s  exit 0
+
+per-configuration (MoE) : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/moe/per_configuration.csv
+per-partition metrics   : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/figs_moe/energy_force_parity_stats.csv
+six-panel figure        : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/figs_moe/energy_force_parity.{pdf,png}
+common-only figure      : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/figs_common/energy_force_parity.{pdf,png}
+common vs full (test)   : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/compare/local_moe_vs_common_{per_structure,regions}.csv
+verification            : <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/verification.json
+
+COMPLETE -- static evaluation and parity only.  No MD, no interface energy.

@@ -1,0 +1,136 @@
+{
+  "report": {
+    "train": {
+      "n": 369,
+      "energy |dE| per atom": {
+        "common": 2.0101263271870233,
+        "local_moe": 1.8312470976507063,
+        "unit": "meV/atom",
+        "ratio": 0.9110109513432217,
+        "better": 214,
+        "worse": 155,
+        "ties": 0,
+        "sign_p": 0.002486800307402803,
+        "ratio_ci": [
+          0.8773328163618754,
+          0.9396804403020956
+        ],
+        "ratio_ci_spans_one": false,
+        "paired_mean_dsq": -6.871419185962553e-07,
+        "paired_mean_dsq_ci": [
+          -1.038810717875871e-06,
+          -3.7080626168169123e-07
+        ]
+      },
+      "force RMSE per component": {
+        "common": 0.05747685178934238,
+        "local_moe": 0.056298315711977326,
+        "unit": "eV/A",
+        "ratio": 0.9794954657279336,
+        "better": 291,
+        "worse": 78,
+        "ties": 0,
+        "sign_p": 5.2172757976882765e-30,
+        "ratio_ci": [
+          0.9764937209519755,
+          0.9821280002813273
+        ],
+        "ratio_ci_spans_one": false,
+        "paired_mean_dsq": -0.00013408813960855666,
+        "paired_mean_dsq_ci": [
+          -0.00015288917138863976,
+          -0.00011636053612053443
+        ]
+      }
+    },
+    "val": {
+      "n": 38,
+      "energy |dE| per atom": {
+        "common": 4.718778106222516,
+        "local_moe": 4.5035373952748845,
+        "unit": "meV/atom",
+        "ratio": 0.9543863461891121,
+        "better": 23,
+        "worse": 15,
+        "ties": 0,
+        "sign_p": 0.2558750795433298,
+        "ratio_ci": [
+          0.926751584769747,
+          0.9920343895294494
+        ],
+        "ratio_ci_spans_one": false,
+        "paired_mean_dsq": -1.985017745125662e-06,
+        "paired_mean_dsq_ci": [
+          -4.155872801832373e-06,
+          -2.1153044345731e-07
+        ]
+      },
+      "force RMSE per component": {
+        "common": 0.11355443225300363,
+        "local_moe": 0.11323211705257641,
+        "unit": "eV/A",
+        "ratio": 0.9971615797460984,
+        "better": 20,
+        "worse": 18,
+        "ties": 0,
+        "sign_p": 0.8714146793645341,
+        "ratio_ci": [
+          0.9930134040907082,
+          1.0014515033727545
+        ],
+        "ratio_ci_spans_one": true,
+        "paired_mean_dsq": -7.309675209362575e-05,
+        "paired_mean_dsq_ci": [
+          -0.0001922607690800898,
+          3.382218867185274e-05
+        ]
+      }
+    },
+    "test": {
+      "n": 105,
+      "energy |dE| per atom": {
+        "common": 2.4603485838822543,
+        "local_moe": 2.5734580045032835,
+        "unit": "meV/atom",
+        "ratio": 1.04597292487821,
+        "better": 53,
+        "worse": 52,
+        "ties": 0,
+        "sign_p": 1.0,
+        "ratio_ci": [
+          0.9058808964125838,
+          1.0928001718162474
+        ],
+        "ratio_ci_spans_one": true,
+        "paired_mean_dsq": 5.693709467306066e-07,
+        "paired_mean_dsq_ci": [
+          -4.856135156526833e-07,
+          1.9713397318579642e-06
+        ]
+      },
+      "force RMSE per component": {
+        "common": 0.05764664558581973,
+        "local_moe": 0.05765087998147415,
+        "unit": "eV/A",
+        "ratio": 1.000073454328719,
+        "better": 51,
+        "worse": 54,
+        "ties": 0,
+        "sign_p": 0.8453703188825519,
+        "ratio_ci": [
+          0.9963570389262225,
+          1.0043193281864715
+        ],
+        "ratio_ci_spans_one": true,
+        "paired_mean_dsq": 4.882153412266494e-07,
+        "paired_mean_dsq_ci": [
+          -2.5317313806398362e-05,
+          2.757998250432733e-05
+        ]
+      }
+    }
+  },
+  "bootstrap": 20000,
+  "seed": 20260811,
+  "pairing_verified": true
+}

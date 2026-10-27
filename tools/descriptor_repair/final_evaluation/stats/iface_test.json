@@ -1,0 +1,102 @@
+{
+  "result": {
+    "n_test_structures": 105,
+    "interface": {
+      "n_structures": 22,
+      "n_atoms": 20038,
+      "lower": 19,
+      "higher": 3,
+      "sign_p": 0.0008554458618164062,
+      "mean_paired_change": -0.0005375211625165265,
+      "mean_paired_change_ci": [
+        -0.001007282723395198,
+        3.5215328678796224e-05
+      ],
+      "sb_common": 0.16823158567652582,
+      "sb_moe": 0.1677868933839331,
+      "sb_rel_percent": -0.26433341325556703,
+      "sb_ratio_ci": [
+        0.993797432237232,
+        1.00128513486889
+      ],
+      "sb_ratio_ci_spans_one": true,
+      "aw_common": 0.16554330911595547,
+      "aw_moe": 0.1653729558763984,
+      "aw_ratio_ci": [
+        0.9942308812466444,
+        1.0033900567316731
+      ],
+      "aw_ratio_ci_spans_one": true
+    },
+    "phase1_bulk": {
+      "n_structures": 22,
+      "n_atoms": 13876,
+      "lower": 14,
+      "higher": 8,
+      "sign_p": 0.28627872467041016,
+      "mean_paired_change": -0.0005372448444054239,
+      "mean_paired_change_ci": [
+        -0.0011612499639977434,
+        8.51720397108119e-05
+      ],
+      "sb_common": 0.07908911058991837,
+      "sb_moe": 0.07831457023871487,
+      "sb_rel_percent": -0.9793261618777555,
+      "sb_ratio_ci": [
+        0.9850609848013955,
+        0.9992239061165152
+      ],
+      "sb_ratio_ci_spans_one": false,
+      "aw_common": 0.07047149090883209,
+      "aw_moe": 0.06989537083827609,
+      "aw_ratio_ci": [
+        0.9833318168540368,
+        0.9996396015403035
+      ],
+      "aw_ratio_ci_spans_one": false
+    },
+    "phase2_bulk": {
+      "n_structures": 22,
+      "n_atoms": 13990,
+      "lower": 14,
+      "higher": 8,
+      "sign_p": 0.28627872467041016,
+      "mean_paired_change": -0.00013804412883700108,
+      "mean_paired_change_ci": [
+        -0.0005950020048368133,
+        0.00032903512110035396
+      ],
+      "sb_common": 0.06192678598567625,
+      "sb_moe": 0.061677792244296856,
+      "sb_rel_percent": -0.40207761054640223,
+      "sb_ratio_ci": [
+        0.9894299291710348,
+        1.003464788010092
+      ],
+      "sb_ratio_ci_spans_one": true,
+      "aw_common": 0.058358481432130536,
+      "aw_moe": 0.05830937747137251,
+      "aw_ratio_ci": [
+        0.9921776045900511,
+        1.0053458187855246
+      ],
+      "aw_ratio_ci_spans_one": true
+    },
+    "energy_labelled_subset": {
+      "n": 22,
+      "better": 18,
+      "worse": 4,
+      "sign_p": 0.004343509674072266,
+      "rmse_common_meV": 4.473160649757773,
+      "rmse_moe_meV": 4.807422587331456,
+      "ratio_ci": [
+        0.7565687323104986,
+        1.0986760250667362
+      ],
+      "ratio_ci_spans_one": true
+    }
+  },
+  "bootstrap": 20000,
+  "seed": 20260811,
+  "reproduced_published_numbers": true
+}

@@ -1,0 +1,57 @@
+
+==============================================================================
+TRAIN -- 369 configurations, pairing verified (identical ids, atom counts and reference data)
+==============================================================================
+
+  energy |dE| per atom
+    common 2.01013  ->  Local-MoE 1.83125  meV/atom   ratio 0.9110
+    Local-MoE better on 214 of 369 structures (worse on 155, tied 0)
+    exact two-sided sign test      p = 0.002487
+    bootstrap 95% CI on the ratio  [0.8773, 0.9397]  excludes 1.0 -- distinguishable
+    paired mean d(squared error)   -6.8714e-07  95% CI [-1.0388e-06, -3.7081e-07]
+
+  force RMSE per component
+    common 0.05748  ->  Local-MoE 0.05630  eV/A   ratio 0.9795
+    Local-MoE better on 291 of 369 structures (worse on 78, tied 0)
+    exact two-sided sign test      p = 5.217e-30
+    bootstrap 95% CI on the ratio  [0.9765, 0.9821]  excludes 1.0 -- distinguishable
+    paired mean d(squared error)   -1.3409e-04  95% CI [-1.5289e-04, -1.1636e-04]
+
+==============================================================================
+VAL -- 38 configurations, pairing verified (identical ids, atom counts and reference data)
+==============================================================================
+
+  energy |dE| per atom
+    common 4.71878  ->  Local-MoE 4.50354  meV/atom   ratio 0.9544
+    Local-MoE better on 23 of 38 structures (worse on 15, tied 0)
+    exact two-sided sign test      p = 0.2559
+    bootstrap 95% CI on the ratio  [0.9268, 0.9920]  excludes 1.0 -- distinguishable
+    paired mean d(squared error)   -1.9850e-06  95% CI [-4.1559e-06, -2.1153e-07]
+
+  force RMSE per component
+    common 0.11355  ->  Local-MoE 0.11323  eV/A   ratio 0.9972
+    Local-MoE better on 20 of 38 structures (worse on 18, tied 0)
+    exact two-sided sign test      p = 0.8714
+    bootstrap 95% CI on the ratio  [0.9930, 1.0015]  SPANS 1.0 -- not distinguishable
+    paired mean d(squared error)   -7.3097e-05  95% CI [-1.9226e-04, +3.3822e-05]
+
+==============================================================================
+TEST -- 105 configurations, pairing verified (identical ids, atom counts and reference data)
+==============================================================================
+
+  energy |dE| per atom
+    common 2.46035  ->  Local-MoE 2.57346  meV/atom   ratio 1.0460
+    Local-MoE better on 53 of 105 structures (worse on 52, tied 0)
+    exact two-sided sign test      p = 1
+    bootstrap 95% CI on the ratio  [0.9059, 1.0928]  SPANS 1.0 -- not distinguishable
+    paired mean d(squared error)   +5.6937e-07  95% CI [-4.8561e-07, +1.9713e-06]
+
+  force RMSE per component
+    common 0.05765  ->  Local-MoE 0.05765  eV/A   ratio 1.0001
+    Local-MoE better on 51 of 105 structures (worse on 54, tied 0)
+    exact two-sided sign test      p = 0.8454
+    bootstrap 95% CI on the ratio  [0.9964, 1.0043]  SPANS 1.0 -- not distinguishable
+    paired mean d(squared error)   +4.8822e-07  95% CI [-2.5317e-05, +2.7580e-05]
+
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/paired_test.json
+PAIRING: verified on every partition

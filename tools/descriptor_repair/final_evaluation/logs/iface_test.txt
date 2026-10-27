@@ -1,0 +1,39 @@
+
+==============================================================================
+INTERFACE -- 22 labelled test structures, 20038 atoms
+==============================================================================
+  reproduction of the regions CSV: max |difference| = 5.551e-17  ok
+  lower on 19, higher on 3 of 22; mean change -0.00054 eV/A, largest decrease -0.00218, largest increase +0.00285
+  exact two-sided sign test        p = 0.0008554
+  mean paired change               -0.000538 eV/A  95% CI [-0.001007, +0.000035]  SPANS 0
+  SB RMSE   common 0.16823 -> MoE 0.16779  (-0.26 %)  ratio CI [0.9938, 1.0013]  SPANS 1.0
+  AW RMSE   common 0.16554 -> MoE 0.16537           ratio CI [0.9942, 1.0034]  SPANS 1.0
+
+==============================================================================
+PHASE1_BULK -- 22 labelled test structures, 13876 atoms
+==============================================================================
+  reproduction of the regions CSV: max |difference| = 9.714e-17  ok
+  lower on 14, higher on 8 of 22; mean change -0.00054 eV/A, largest decrease -0.00298, largest increase +0.00225
+  exact two-sided sign test        p = 0.2863
+  mean paired change               -0.000537 eV/A  95% CI [-0.001161, +0.000085]  SPANS 0
+  SB RMSE   common 0.07909 -> MoE 0.07831  (-0.98 %)  ratio CI [0.9851, 0.9992]  excludes 1.0
+  AW RMSE   common 0.07047 -> MoE 0.06990           ratio CI [0.9833, 0.9996]  excludes 1.0
+
+==============================================================================
+PHASE2_BULK -- 22 labelled test structures, 13990 atoms
+==============================================================================
+  reproduction of the regions CSV: max |difference| = 5.551e-17  ok
+  lower on 14, higher on 8 of 22; mean change -0.00014 eV/A, largest decrease -0.00196, largest increase +0.00208
+  exact two-sided sign test        p = 0.2863
+  mean paired change               -0.000138 eV/A  95% CI [-0.000595, +0.000329]  SPANS 0
+  SB RMSE   common 0.06193 -> MoE 0.06168  (-0.40 %)  ratio CI [0.9894, 1.0035]  SPANS 1.0
+  AW RMSE   common 0.05836 -> MoE 0.05831           ratio CI [0.9922, 1.0053]  SPANS 1.0
+
+==============================================================================
+ENERGY on the same 22 labelled structures (context)
+==============================================================================
+  RMSE  common 4.47316 -> MoE 4.80742 meV/atom
+  MoE better on 18 of 22; sign test p = 0.004344; ratio CI [0.7566, 1.0987]  SPANS 1.0
+
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/final/iface_test.json
+REPRODUCTION: published numbers reproduced
