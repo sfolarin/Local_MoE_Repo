@@ -1,0 +1,40 @@
+model: c1b | energy weight 10000.0 / force weight 1000.0 | best epoch 13 (selected on validation) | e_ref -9.668444 eV/atom
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=180 | edges(search)=5050
+route check on 3 validation structures (N=[180, 240, 432]): max |dE| = 0.00e+00 eV, max |dF| = 0.00e+00 eV/A (tolerance 1e-09)
+  10/66 rows done
+  20/66 rows done
+  30/66 rows done
+  40/66 rows done
+  50/66 rows done
+  60/66 rows done
+  66/66 rows done
+identity gamma_full = gamma_common_part + gamma_residual_part: max |difference| = 3.60e-14 J/m2
+common part vs stand-alone common evaluation (66 rows): max |difference| = 2.05e-02 J/m2   <-- WARNING: larger than float noise; the two common-network evaluations disagree
+
+GAMMA (J/m2), 66 rows. Full Local-MoE and its common-network part, vs MATPes
+  set            model  N    MAE   bias   RMSE  Pearson  slope
+  all   full Local-MoE 66 0.0055 0.0052 0.0076   0.9251 0.9462
+  all common part only 66 0.0051 0.0048 0.0076   0.9182 0.9573
+ test   full Local-MoE 40 0.0060 0.0056 0.0082   0.9175 0.9229
+ test common part only 40 0.0056 0.0052 0.0085   0.9008 0.9445
+train   full Local-MoE 26 0.0048 0.0045 0.0067   0.9382 0.9780
+train common part only 26 0.0044 0.0042 0.0061   0.9485 0.9718
+
+HELD-OUT families (new split = test), N = 40
+  residual part of gamma: mean +0.0004, mean |.| 0.0014, max |.| 0.0051 J/m2
+  rows where the residual reduced |error| by > 0.0001: 15, increased it by > 0.0001: 22, within +/-0.0001: 3
+  mean change of |error| from adding the residual: +0.00038 J/m2 (negative = residual helps)
+  errors positive on 38 of 40; max predicted gamma 0.0798 vs MATPes max 0.0786
+
+largest absolute errors among held-out families (full Local-MoE):
+               case  gamma_MATPES_J_m2  gamma_full_J_m2  err_full  err_common_part  gamma_residual_part_J_m2
+MAR_0_0_1_TOL_0_0_1            +0.0108          +0.0423   +0.0314          +0.0365                   -0.0051
+ITG_0_0_1_IWW_1_0_0            +0.0340          +0.0495   +0.0156          +0.0164                   -0.0008
+LEV_0_0_1_SAT_0_0_1            +0.0263          +0.0399   +0.0136          +0.0144                   -0.0007
+CON_1_0_0_IWR_1_0_0            +0.0224          +0.0348   +0.0124          +0.0128                   -0.0004
+ANO_0_0_1_LEV_0_0_1            +0.0361          +0.0472   +0.0111          +0.0099                   +0.0011
+PTT_0_0_1_SAT_0_0_1            +0.0211          +0.0320   +0.0108          +0.0105                   +0.0004
+BEC_0_0_1_IWR_1_0_0            +0.0229          +0.0337   +0.0108          +0.0109                   -0.0001
+MTT_0_1_0_TON_1_1_0            +0.0234          +0.0340   +0.0105          +0.0105                   +0.0000
+
+saved gamma66_fullmoe_c1b_holdout40_e10000_ep13_v1.csv

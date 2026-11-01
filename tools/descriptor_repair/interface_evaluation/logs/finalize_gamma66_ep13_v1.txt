@@ -1,0 +1,25 @@
+atom counts verified on all 66 families: N_A + N_B == N_AB
+
+GAMMA vs MATPes-r2SCAN, J/m^2
+split                         model     status  N    MAE   RMSE   bias  pearson_r  slope
+  all                full Local-MoE    current 66 0.0055 0.0076 0.0052     0.9251 0.9462
+  all              common part only    current 66 0.0051 0.0076 0.0048     0.9182 0.9573
+  all common, pre-repair descriptor superseded 66 0.0101 0.0132 0.0085     0.7828 0.8683
+train                full Local-MoE    current 26 0.0048 0.0067 0.0045     0.9382 0.9780
+train              common part only    current 26 0.0044 0.0061 0.0042     0.9485 0.9718
+train common, pre-repair descriptor superseded 26 0.0091 0.0130 0.0064     0.6855 0.7319
+ test                full Local-MoE    current 40 0.0060 0.0082 0.0056     0.9175 0.9229
+ test              common part only    current 40 0.0056 0.0085 0.0052     0.9008 0.9445
+ test common, pre-repair descriptor superseded 40 0.0107 0.0132 0.0099     0.8403 0.9348
+
+residual contribution to gamma, and its effect on |error|
+  all   n=66  residual gamma mean +0.0004  mean|.| 0.0011  max|.| 0.0051  |  helped 23  hurt 36  unchanged  7  |  mean d|err| +0.00038
+  train n=26  residual gamma mean +0.0003  mean|.| 0.0007  max|.| 0.0021  |  helped  8  hurt 14  unchanged  4  |  mean d|err| +0.00039
+  test  n=40  residual gamma mean +0.0004  mean|.| 0.0014  max|.| 0.0051  |  helped 15  hurt 22  unchanged  3  |  mean d|err| +0.00038
+
+families retained: 66 (none dropped); negative predicted gamma: 0
+identity max |gamma_full - gamma_common - gamma_residual| = 3.60e-14 J/m2
+
+wrote <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/External_Benchmark_Oishi2025/Gamma66_EP13_Deliverable_v1/gamma66_ep13_v1_per_family.csv
+      <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/External_Benchmark_Oishi2025/Gamma66_EP13_Deliverable_v1/gamma66_ep13_v1_summary.csv
+      <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/External_Benchmark_Oishi2025/Gamma66_EP13_Deliverable_v1/gamma66_ep13_v1_residual_effect.csv

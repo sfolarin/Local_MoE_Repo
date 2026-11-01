@@ -1,0 +1,13 @@
+66 Oishi interfaces kept; dropped: {}
+training status of the kept rows: {'test': 40, 'train': 26}
+
+STATISTICS (J/m2)
+                 N    MAE   bias   RMSE  Pearson  slope
+all        66.0000 0.0055 0.0052 0.0076   0.9251 0.9462
+train      26.0000 0.0048 0.0045 0.0067   0.9382 0.9780
+val + test 40.0000 0.0060 0.0056 0.0082   0.9175 0.9229
+test       40.0000 0.0060 0.0056 0.0082   0.9175 0.9229
+
+errors positive on 60 of 66 rows; unseen (val+test) positive on 38 of 40
+
+saved to <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/External_Benchmark_Oishi2025/Gamma66_EP13_Deliverable_v1
