@@ -19,11 +19,10 @@ dba8a1895aa79e80012c27a1030824f6fc706f535339b4ef1da545fdef197c23  run_gamma66_ep
 # Content is otherwise verbatim; the originals were not modified, so
 # the hashes below differ from those of the originals.
 # finalize_gamma66_ep13_v1.log                         3 substitution(s)
-# parity_gamma66_ep13_v1.log                           1 substitution(s)
 # run_gamma66_ep13_cpu.sh                              1 substitution(s)
 
 ## packaged files
-63127dc4adb9c6509e7568d08d2f0abc4084dd4993678b6070b1d7e5465bcf88  INTERFACE_EVALUATION.md
+4d46f4bfadb86b34c96e89bc3e2752d32122766073f39f5fbe9630b0c02cb177  INTERFACE_EVALUATION.md
 715c7ee20fab556e185027e1510ad1c725dcf35c93359c31378e56865acbacf9  gamma66_ep13_v1_per_family.csv
 92d0359251472901b90ba4800d9c199fed1cfa4cbcbf14b29e902777928c7819  gamma66_ep13_v1_residual_effect.csv
 1fd8b4bdf68ee39001f03b00f2d9cd1b9d9e2eb88fe78fa9fe44345a3d35d8f4  gamma66_ep13_v1_rows.csv
@@ -32,12 +31,13 @@ e51271b96f16b9351e258d6f618e29e632f2c0102f4179dbe83efb99e9ff7615  gamma66_ep13_v
 b64e8f67014fcd86286c6005273541c2e45e6eee6ca3911be269675cb87f38a1  gamma66_fullmoe_c1b_holdout40_e10000_ep13_v1.csv
 45f5ba7ab11bdd215cc5ca71d7a9bfb105314e36eaebdf0b9e9d38302cb2f8b7  logs/finalize_gamma66_ep13_v1.log
 75c9b33f737fcb79eff74aedcd8628f116b265794d72ee2f59bc6a6b3b8a3396  logs/gamma66_fullmoe_ep13_v1_60632181.log
-dee470d3e18f8398fefb8dd6d713e14cdf2a650ee3c6d9b582a636d7a2efc6d8  logs/parity_gamma66_ep13_v1.log
-c78728459bcef863bf3af41a70b3f5bc30d75227237b1154e912fe198f50dfb1  parity_gamma66_ep13_v1.pdf
-08a569e003dd30f957f60968dd83546cac4badb1c49b35f7960976cf2479281f  parity_gamma66_ep13_v1.png
+b1ce8b4e67e06dbfc319f584ad8d063e3d77fe6bd72c9e1b4d6799c30dd4c7d0  logs/parity_gamma66_ep13_v1.log
+bca3a297cbcc83acf87217c33c70018c8fc3c0726560775fba8a0c7495f7a6fd  parity_gamma66_ep13_v1.pdf
+9ea34e05d3f1ebae21a32272cc9d5c68dde7585342238f4c34efd483bb5c1ddc  parity_gamma66_ep13_v1.png
+b56d3ab9902be053e9d16d2b57b3ba7ccf8c7c4e1d23d359cb17aba3980ea746  parity_gamma66_ep13_v1_residual_metrics.csv
 37bf101af94479353bcc8816a4a70615f9411b7be65f13ed6c2af10304b115d6  scripts/eval_gamma66_fullmoe.py
 7c3d88e64a66c76a7a510f4a0e63bb252b698f0d71437155aee6908bafdd5187  scripts/finalize_gamma66_ep13.py
-2c2b1072366c90005c1b2f01d44d52fc9962a1098fb8afc96b5035f6d29e2d8c  scripts/make_parity_plot.py
+aad5a8a4e1bee96fbad5cbdaa9c036a372e62008ed6653ba32d7aa25643854c1  scripts/make_parity_gamma66_ep13.py
 dd94782337342433a16f2168bb895e3a5c35133b485bfdb851c0b244977b8d80  scripts/run_gamma66_ep13_cpu.sh
 333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  scripts/train_c1b_holdout40.py
 574a5b183e9bd87abe3046e829c3de5875ea6a6747b0b649f4b15560fd1627c5  table_gamma66_ep13_v1_paper.pdf

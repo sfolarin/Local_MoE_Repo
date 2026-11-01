@@ -1,13 +1,28 @@
-66 Oishi interfaces kept; dropped: {}
-training status of the kept rows: {'test': 40, 'train': 26}
+66 families: 26 training, 40 test. All retained.
 
-STATISTICS (J/m2)
-                 N    MAE   bias   RMSE  Pearson  slope
-all        66.0000 0.0055 0.0052 0.0076   0.9251 0.9462
-train      26.0000 0.0048 0.0045 0.0067   0.9382 0.9780
-val + test 40.0000 0.0060 0.0056 0.0082   0.9175 0.9229
-test       40.0000 0.0060 0.0056 0.0082   0.9175 0.9229
+full Local-MoE vs MACE-MatPES-r2SCAN-0, J/m^2
+  all   n=66  MAE 0.005521  RMSE 0.007640  bias +0.005207  r 0.9251  slope 0.9462
+  train n=26  MAE 0.004771  RMSE 0.006738  bias +0.004530  r 0.9382  slope 0.9780
+  test  n=40  MAE 0.006008  RMSE 0.008173  bias +0.005648  r 0.9175  slope 0.9229
 
-errors positive on 60 of 66 rows; unseen (val+test) positive on 38 of 40
+annotations agree with the committed summary to within 5.0e-06
 
-saved to <scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/External_Benchmark_Oishi2025/Gamma66_EP13_Deliverable_v1
+residual effect (full vs common-only), the substantive comparison
+  all
+    MAE       common +0.005139 -> full +0.005521    +7.43%   worse (lower is better)
+    RMSE      common +0.007641 -> full +0.007640    -0.01%   better (lower is better)
+    bias      common +0.004831 -> full +0.005207    +7.79%   worse (nearer zero is better)
+    pearson_r common +0.918228 -> full +0.925122    +0.75%   better (higher is better)
+  train
+    MAE       common +0.004386 -> full +0.004771    +8.78%   worse (lower is better)
+    RMSE      common +0.006149 -> full +0.006738    +9.57%   worse (lower is better)
+    bias      common +0.004197 -> full +0.004530    +7.93%   worse (nearer zero is better)
+    pearson_r common +0.948497 -> full +0.938164    -1.09%   worse (higher is better)
+  test
+    MAE       common +0.005628 -> full +0.006008    +6.75%   worse (lower is better)
+    RMSE      common +0.008470 -> full +0.008173    -3.51%   better (lower is better)
+    bias      common +0.005243 -> full +0.005648    +7.72%   worse (nearer zero is better)
+    pearson_r common +0.900774 -> full +0.917513    +1.86%   better (higher is better)
+saved parity_gamma66_ep13_v1.pdf
+saved parity_gamma66_ep13_v1.png
+wrote parity_gamma66_ep13_v1_residual_metrics.csv
