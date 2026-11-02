@@ -199,6 +199,12 @@ def binned_envelope(curves, duration, bins):
                          "n_contributing_structures": count.astype(int)})
 
 
+# Display names for the source groups in figure legends. "Own_augmented" is this
+# study's own constructed set, so the figures label it "This work"; the style and
+# ordering tables above stay keyed on the internal group name.
+DISPLAY = {"Own": "This work"}
+
+
 def source_series(summary):
     group = summary.source.map(lambda x: SOURCE_GROUP.get(x, str(x)))
     names = [x for x in ("Oishi", "Siddharth", "Own") if (group == x).any()]
@@ -285,7 +291,7 @@ def paper_figure(a, out, summary, envelope):
         for name, mask, color, marker in source_series(summary):
             handles.append(Line2D([], [], marker=marker, ls="", color=color,
                                   markersize=4.4, markeredgecolor="white", markeredgewidth=0.3,
-                                  label=f"{name} ({int(mask.sum())})"))
+                                  label=f"{DISPLAY.get(name, name)} ({int(mask.sum())})"))
         fig.legend(handles=handles, loc="upper center", bbox_to_anchor=(0.52, 0.99),
                    ncol=min(4, len(handles)), frameon=False, fontsize=7.6,
                    handlelength=1.5, handletextpad=0.5, columnspacing=1.6, borderaxespad=0)
@@ -320,9 +326,9 @@ def diagnostic_figures(a, out, summary, curves):
     save(fig, "max_energy_excursion")
     fig, axes = plt.subplots(1, 2, figsize=(12, 4.8))
     for name, mask, color, marker in source_series(summary):
-        axes[0].scatter(summary.n_atoms[mask], maximum[mask], c=color, marker=marker, label=name)
+        axes[0].scatter(summary.n_atoms[mask], maximum[mask], c=color, marker=marker, label=DISPLAY.get(name, name))
         axes[1].scatter(summary.n_atoms[mask], summary.linear_drift_meV_per_atom_per_ps[mask],
-                        c=color, marker=marker, label=name)
+                        c=color, marker=marker, label=DISPLAY.get(name, name))
     axes[0].axhline(a.limit, color="0.35", ls=":", lw=1)
     axes[1].axhline(0, color="0.35", ls="--", lw=0.8)
     axes[0].set_ylabel("Maximum energy excursion (meV/atom)")

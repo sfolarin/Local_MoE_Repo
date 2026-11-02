@@ -1,0 +1,63 @@
+{
+  "manifest_records": 52,
+  "complete_records": 52,
+  "omitted": [],
+  "analysis_start_ps": 0.0,
+  "analysis_end_ps": 10.0,
+  "n_atoms_min": 162,
+  "n_atoms_max": 4608,
+  "raw_source_counts": {
+    "Own_augmented": 22,
+    "Oishi_relaxed52": 16,
+    "Oishi_all179": 14
+  },
+  "display_source_counts": {
+    "Oishi": 30,
+    "Own": 22
+  },
+  "distinct_manifest_family_labels": 41,
+  "recorded_split_counts": {
+    "test": 52
+  },
+  "recorded_dtype_counts": {
+    "float64": 52
+  },
+  "shared_protocol": {
+    "compressibility_per_bar": 4.57e-05,
+    "conservation_limit_meV_per_atom": 0.1,
+    "dt_fs": 0.5,
+    "frame_every_steps": 200,
+    "log_every_steps": 20,
+    "npt_cell_scaling": "isotropic default NPTBerendsen",
+    "npt_integrator": "ASE NPTBerendsen",
+    "npt_ps": 5.0,
+    "nve_integrator": "ASE VelocityVerlet",
+    "nve_ps": 10.0,
+    "post_npt_velocity_rescale": "exact to target temperature",
+    "pressure_bar": 1.0,
+    "taup_fs": 1000.0,
+    "taut_fs": 100.0,
+    "temperature_K": 300.0
+  },
+  "criterion_meV_per_atom": 0.1,
+  "passing_records": 52,
+  "largest_excursion_meV_per_atom": 0.008296754733905232,
+  "worst_record_id": "external_0051",
+  "median_max_excursion_meV_per_atom": 0.0031259441968245483,
+  "largest_absolute_slope_microeV_per_atom_per_ps": 0.42483257060529517,
+  "median_slope_microeV_per_atom_per_ps": -0.008499441367083886,
+  "binned_envelope": {
+    "bins": 250,
+    "width_ps": 0.04,
+    "range": "extrema over structures and all logged samples in each time bin",
+    "mean": "equal-weight mean of per-structure bin means"
+  },
+  "max_energy_sum_error_eV": 1.7706724975141697e-11,
+  "max_energy_per_atom_error_eV": 5.329070518200751e-15,
+  "max_volume_relative_range": 0.0,
+  "notes": [
+    "Run names such as holdout40 do not establish the number of families in the supplied manifest.",
+    "Training-family disjointness cannot be checked without the training split assignments.",
+    "All metrics use the same analysis window and the first NVE sample as the energy reference."
+  ]
+}
