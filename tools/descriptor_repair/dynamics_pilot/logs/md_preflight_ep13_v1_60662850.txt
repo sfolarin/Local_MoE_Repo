@@ -1,0 +1,37 @@
+== artifact hashes as used ==
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+== stage root present: yes ==
+
+== 1. route parity vs the trainer ==
+test records available: 105
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=162 | edges(search)=3944
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=162 | edges(search)=3944
+PARITY external_0219: N=162, calculator dtype=float64
+  energy  calculator -1599.259117 eV   trainer -1599.259118 eV   diff +0.00000 meV/atom
+  forces  max |diff| 3.430e-07 eV/A   rms 7.686e-08 eV/A   (trainer |F| max 0.266)
+  PASS (agreement at the level of float32 rounding)
+
+real	0m13.126s
+user	0m20.231s
+sys	0m8.473s
+
+== 2. finite-difference forces and stress ==
+test records available: 105
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=162 | edges(search)=3944
+CHECK external_0219: N=162, dtype=float64, energy -1599.259117 eV
+  stress[00]  analytic -1.47895352e-02  FD -1.47895537e-02  eV/A^3   diff 1.86e-08
+  stress[11]  analytic -1.47895199e-02  FD -1.47895385e-02  eV/A^3   diff 1.86e-08
+  stress[22]  analytic -1.15943385e-02  FD -1.15943641e-02  eV/A^3   diff 2.56e-08
+  stress[12]  analytic +4.46845567e-09  FD +4.46849760e-09  eV/A^3   diff 4.19e-14
+  stress[02]  analytic -2.73774502e-10  FD -2.73765270e-10  eV/A^3   diff 9.23e-15
+  stress[01]  analytic +1.62088090e-08  FD +1.62088852e-08  eV/A^3   diff 7.62e-14
+  forces: worst |FD - analytic| = 3.038e-07 eV/A  (PASS, limit 1e-5)
+  stress: worst |FD - analytic| = 2.562e-08 eV/A^3 = 4.105e-06 GPa  (PASS, limit 2e-6 eV/A^3)
+
+real	0m5.207s
+user	1m16.535s
+sys	0m12.193s

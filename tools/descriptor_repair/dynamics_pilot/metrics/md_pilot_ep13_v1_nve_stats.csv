@@ -1,0 +1,16 @@
+quantity,value
+nve_max_abs_energy_drift_meV_per_atom,0.005262494028102083
+nve_final_energy_drift_meV_per_atom,0.002971687058206385
+nve_peak_to_peak_energy_meV_per_atom,0.00938441444908733
+nve_linear_drift_meV_per_atom_per_ps,1.5297663065058446e-05
+nve_mean_temperature_K,303.228342977474
+nve_min_temperature_K,262.2499826936719
+nve_max_temperature_K,341.0823665008496
+baseline_total_energy_eV,-1587.383158871996
+baseline_total_energy_per_atom_eV,-9.798661474518497
+n_atoms,162.0
+npt_walltime_seconds,538.0950634479523
+nve_walltime_seconds,548.7439994812012
+npt_steps_per_second,18.584076828215057
+nve_steps_per_second,36.44686779064298
+energy_conserving,1.0

@@ -1,0 +1,94 @@
+{
+  "record_id": "external_0219",
+  "phase_pair": "LOV__VSV",
+  "split": "test",
+  "n_atoms": 162,
+  "selected_model": "C1b frozen-routing conservative Local-MoE (holdout-40), neighbour-list TorchSOAP",
+  "dtype": "float64",
+  "seed": 20261030,
+  "relaxation": {
+    "optimizers": [
+      "FIRE",
+      "BFGS"
+    ],
+    "fire_steps": 6,
+    "polish_steps": 20,
+    "Fmax_initial_eV_A": 0.2689083503527436,
+    "Fmax_final_eV_A": 0.009824568692144172,
+    "E_initial_eV": -1599.2591172685943,
+    "E_final_eV": -1599.3074460864013,
+    "walltime_seconds": 1.8746209144592285
+  },
+  "initial_pressure_GPa": 2.190548086857443,
+  "npt_initial_volume_A3": 3156.0612751633594,
+  "npt_final_volume_A3": 3233.359306148017,
+  "npt_volume_change_percent": 2.449192973309944,
+  "npt_mean_temperature_K": 292.70700356684205,
+  "npt_mean_pressure_GPa": 0.013185759767104097,
+  "npt_final_temperature_K": 292.27575095225836,
+  "npt_final_pressure_GPa": -0.012337038217283732,
+  "final_npt_cell_A": [
+    [
+      7.1721248558331885,
+      0.0,
+      0.0
+    ],
+    [
+      -1.251771930716866e-06,
+      7.172124855833077,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      62.85767098527194
+    ]
+  ],
+  "npt_walltime_seconds": 538.0950634479523,
+  "npt_steps_per_second": 18.584076828215057,
+  "temperature_before_velocity_rescale_K": 292.27575095225836,
+  "temperature_after_velocity_rescale_K": 299.99999999999994,
+  "velocity_scale_factor": 1.0131278055579689,
+  "nve_walltime_seconds": 548.7439994812012,
+  "nve_steps_per_second": 36.44686779064298,
+  "nve_mean_temperature_K": 303.228342977474,
+  "nve_min_temperature_K": 262.2499826936719,
+  "nve_max_temperature_K": 341.0823665008496,
+  "nve_last50_mean_temperature_K": 302.91895196206434,
+  "nve_final_energy_drift_meV_per_atom": 0.002971687056430028,
+  "nve_max_abs_energy_drift_meV_per_atom": 0.005262494026325726,
+  "nve_peak_to_peak_energy_meV_per_atom": 0.00938441444908733,
+  "nve_linear_drift_meV_per_atom_per_ps": 1.5297663079182835e-05,
+  "energy_conserving": true,
+  "protocol": {
+    "temperature_K": 300.0,
+    "pressure_bar": 1.0,
+    "dt_fs": 0.5,
+    "npt_integrator": "ASE NPTBerendsen",
+    "npt_cell_scaling": "isotropic default NPTBerendsen",
+    "npt_ps": 5.0,
+    "taut_fs": 100.0,
+    "taup_fs": 1000.0,
+    "compressibility_per_bar": 4.57e-05,
+    "post_npt_velocity_rescale": "exact to target temperature",
+    "nve_integrator": "ASE VelocityVerlet",
+    "nve_ps": 10.0,
+    "log_every_steps": 20,
+    "frame_every_steps": 200,
+    "conservation_limit_meV_per_atom": 0.1
+  },
+  "provenance": {
+    "checkpoints": {
+      "common": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/common/best_checkpoint.pt",
+      "routing": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt",
+      "c1b": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt",
+      "soap": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/Local_MoE_MATPES_R2SCAN_Expanded_v1/descriptor_repair/torchsoap_corrected_rotinv_v1.py"
+    },
+    "trainer_script": "<scratch>/my_project/MoE-Project-New/database/MoE-v6/Without-Descriptor/RUN_3x3x3_Angle/HETEROSTRUCTURES/moe-interface-potential/training/train_c1b_holdout40.py",
+    "host": "nid006635",
+    "slurm_job": "60663099",
+    "torch": "2.8.0+cu128",
+    "started": "2026-11-01 15:18:52",
+    "ase": "3.26.0"
+  }
+}

@@ -1,0 +1,42 @@
+== artifact hashes as used ==
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+== stage root present: yes ==
+
+== pilot: external_0219 (LOV__VSV, 162 atoms, test) ==
+relax -> NPT 5 ps 300 K 1 bar -> NVE 10 ps, dt 0.5 fs, all defaults
+test records available: 105
+records for this process (1): ['external_0219']
+==============================================================================================================
+external_0219  N=162  phase pair=LOV__VSV  dtype=float64  dt=0.5 fs
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=162 | edges(search)=3944
+  relaxed: FIRE 6 + BFGS 20 steps, Fmax 0.269 -> 0.0098 eV/A
+  NPT 5.0 ps (10000 steps), initial pressure +2.1905 GPa
+  [NPT] step   2000/10000  T= 302.35 K  P= +0.0279 GPa  E/N=-9.800841648 eV
+  [NPT] step   4000/10000  T= 291.07 K  P= +0.2095 GPa  E/N=-9.799288424 eV
+  [NPT] step   6000/10000  T= 332.71 K  P= +0.1470 GPa  E/N=-9.800163069 eV
+  [NPT] step   8000/10000  T= 307.29 K  P= -0.0647 GPa  E/N=-9.799288130 eV
+  [NPT] step  10000/10000  T= 292.28 K  P= -0.0123 GPa  E/N=-9.799659911 eV
+  rescale 292.276 K -> 300.000 K (factor 1.013128); NVE 10.0 ps (20000 steps)
+  [NVE] step   2000/20000  T= 291.98 K  P= +0.0089 GPa  E/N=-9.798660537 eV
+  [NVE] step   4000/20000  T= 300.73 K  P= -0.2140 GPa  E/N=-9.798662692 eV
+  [NVE] step   6000/20000  T= 312.22 K  P= -0.3385 GPa  E/N=-9.798663024 eV
+  [NVE] step   8000/20000  T= 277.42 K  P= -0.4753 GPa  E/N=-9.798657388 eV
+  [NVE] step  10000/20000  T= 316.40 K  P= -0.4620 GPa  E/N=-9.798663635 eV
+  [NVE] step  12000/20000  T= 308.08 K  P= -0.0054 GPa  E/N=-9.798662244 eV
+  [NVE] step  14000/20000  T= 284.91 K  P= -0.6085 GPa  E/N=-9.798662147 eV
+  [NVE] step  16000/20000  T= 314.70 K  P= +0.3414 GPa  E/N=-9.798660828 eV
+  [NVE] step  18000/20000  T= 303.26 K  P= -0.6990 GPa  E/N=-9.798660056 eV
+  [NVE] step  20000/20000  T= 288.10 K  P= -0.2332 GPa  E/N=-9.798658503 eV
+  DONE external_0219: max |drift| 0.00526 meV/atom, final +0.00297, conserving; NPT 18.6 and NVE 36.4 steps/s
+
+STATUS {
+ "external_0219": "done"
+}
+
+real	18m20.537s
+user	1154m11.629s
+sys	26m3.344s

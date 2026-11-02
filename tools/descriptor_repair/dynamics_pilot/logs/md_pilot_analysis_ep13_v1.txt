@@ -1,0 +1,50 @@
+case external_0219   N=162   pair=LOV__VSV   split=test   dtype=float64
+NVE samples: 1001 over 10.00 ps
+
+baseline (initial NVE sample)
+  total energy            -1587.383158872 eV
+  total energy per atom   -9.798661474518 eV/atom
+
+recomputed vs the runner's summary
+  nve_max_abs_energy_drift_meV_per_atom      +5.262494e-03  summary +5.262494e-03  rel 3.4e-10  ok
+  nve_final_energy_drift_meV_per_atom        +2.971687e-03  summary +2.971687e-03  rel 6.0e-10  ok
+  nve_peak_to_peak_energy_meV_per_atom       +9.384414e-03  summary +9.384414e-03  rel 0.0e+00  ok
+  nve_linear_drift_meV_per_atom_per_ps       +1.529766e-05  summary +1.529766e-05  rel 9.2e-10  ok
+  nve_mean_temperature_K                     +3.032283e+02  summary +3.032283e+02  rel 0.0e+00  ok
+  nve_min_temperature_K                      +2.622500e+02  summary +2.622500e+02  rel 0.0e+00  ok
+  nve_max_temperature_K                      +3.410824e+02  summary +3.410824e+02  rel 0.0e+00  ok
+
+energy conserving: True  (max |excursion| 0.005262 meV/atom, limit 0.1)
+
+NPT (5 ps, 300 K, 1 bar)
+  initial_pressure_GPa               +2.190548
+  npt_mean_pressure_GPa              +0.013186
+  npt_final_pressure_GPa             -0.012337
+  npt_mean_temperature_K             +292.707004
+  npt_volume_change_percent          +2.449193
+  pressure mean from log             +0.013186 GPa
+
+velocity rescale  292.275751 K -> 300.000000 K  (factor 1.013127806)
+
+relaxation
+  relax_fire.log     7 steps, final Fmax 0.0436 eV/A
+  relax_polish.log   21 steps, final Fmax 0.0098 eV/A
+
+measured cost at N=162 on CPU
+  NPT   538.10 s  (18.58 steps/s)
+  NVE   548.74 s  (36.45 steps/s)
+  per case (15 ps) 18.1 min
+
+cohort projection, 52 cases, 75606 atoms in total
+  measured 6.709 s per atom per 15 ps at N=162
+  LINEAR in N:        140.9 core-node-hours wall if run one at a time
+  largest single case N=4608 -> 8.6 h
+  500 ps NVE at N=162  -> 7.6 h (1e6 steps at the measured NVE rate)
+
+  Assumption: cost linear in N, which the neighbour-list descriptor
+  supports but 64-thread efficiency does not -- a 162-atom cell
+  underuses the node, so larger cases will cost LESS per atom than
+  this. Treat the linear figure as an upper bound and measure one
+  mid-size case before committing the cohort.
+
+wrote md_pilot_ep13_v1_nve_stats.csv
