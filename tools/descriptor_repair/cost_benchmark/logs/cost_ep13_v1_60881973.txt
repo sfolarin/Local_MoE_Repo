@@ -1,0 +1,489 @@
+torch 2.8.0+cu128 cuda True
+== artifacts ==
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+  4f994650e08bf6167885a2aa  benchmark_cost_holdout40_nl.py
+NVIDIA A100-SXM4-80GB, 81920 MiB, 580.178.04
+NVIDIA A100-SXM4-80GB, 81920 MiB, 580.178.04
+NVIDIA A100-SXM4-80GB, 81920 MiB, 580.178.04
+NVIDIA A100-SXM4-80GB, 81920 MiB, 580.178.04
+GPU: NVIDIA A100-SXM4-80GB | CUDA_VISIBLE_DEVICES=0 | memory in use before start: 426 MiB of 81152
+test structures: 105; with N <= 5000: 105 (N from 60 to 4608); dropped sizes: []
+
+GATES
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+  G1 common-only vs zero-residual full model on N=[60, 60, 90]: max |dE| = 0.00e+00 eV, max |dF| = 6.73e-16 eV/A (tolerance 1e-07)
+  G2 full model vs stored parity-export predictions: max |dE| = 0.00e+00 eV, max |dF| = 8.32e-16 eV/A (tolerance 0.0001)
+<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+cuequivariance or cuequivariance_torch is not available. Cuequivariance acceleration will be disabled.
+Using model under Academic Software License (ASL) license, see https://github.com/gabor1/ASL 
+ To use this model you accept the terms of the license.
+Using Materials Project MACE for MACECalculator with <home>/.cache/mace/MACEmatpesr2scanomatftmodel
+Using float64 for MACECalculator, which is slower but more accurate. Recommended for geometry optimization.
+<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Using head default out of ['default']
+  info: MATPes float64 here vs stored labels on N=[60, 60, 90]: max |dE| = 1.14e-13 eV, max |dF| = 6.95e-15 eV/A
+
+====================================================================================================
+MATPes-r2SCAN | precision: float64 | 105 of 105 structures to time | torch default dtype torch.float64
+====================================================================================================
+  N=   60  median=    30.68 ms  repeats= 30  peak=    498.4 MiB  EDI__THO
+  N=   60  median=    30.18 ms  repeats= 30  peak=    501.2 MiB  EDI__THO
+  N=   90  median=    30.73 ms  repeats= 30  peak=    683.0 MiB  NAT__THO
+  N=  162  median=    33.13 ms  repeats= 30  peak=   1196.9 MiB  LOV__VSV
+  N=  162  median=    33.12 ms  repeats= 30  peak=   1193.0 MiB  LOV__VSV
+  N=  168  median=    35.10 ms  repeats= 30  peak=   1283.0 MiB  ATT__GIS
+  N=  216  median=    42.09 ms  repeats= 30  peak=   1857.8 MiB  MTT__TON
+  N=  216  median=    37.89 ms  repeats= 30  peak=   1558.9 MiB  RSN__VSV
+  N=  216  median=    37.75 ms  repeats= 30  peak=   1548.7 MiB  RSN__VSV
+  N=  234  median=    43.42 ms  repeats= 30  peak=   1705.4 MiB  AFV__AFX
+  N=  288  median=    47.72 ms  repeats= 30  peak=   2108.5 MiB  MER__SIV
+  N=  336  median=    58.96 ms  repeats= 30  peak=   2841.1 MiB  SSZ31E__SSZ31G
+  N=  360  median=    54.89 ms  repeats= 30  peak=   2543.9 MiB  EAB__PTT
+  N=  360  median=    55.61 ms  repeats= 30  peak=   2616.9 MiB  ERI__PTT
+  N=  360  median=    54.62 ms  repeats= 30  peak=   2535.4 MiB  EAB__PTT
+  N=  360  median=    55.29 ms  repeats= 30  peak=   2586.0 MiB  ERI__PTT
+  N=  378  median=    57.96 ms  repeats= 30  peak=   2687.7 MiB  GME__OFF
+  N=  384  median=    58.42 ms  repeats= 30  peak=   2818.3 MiB  BEA__ISV
+  N=  384  median=    58.47 ms  repeats= 30  peak=   2818.6 MiB  BEA__ISV
+  N=  432  median=    73.85 ms  repeats= 28  peak=   3671.1 MiB  AEL__DON
+  N=  432  median=    64.05 ms  repeats= 30  peak=   3017.4 MiB  AFV__AVL
+  N=  432  median=    64.09 ms  repeats= 30  peak=   3081.5 MiB  EAB__ERI
+  N=  432  median=    63.73 ms  repeats= 30  peak=   2991.6 MiB  AFV__AVL
+  N=  432  median=    64.51 ms  repeats= 30  peak=   3108.1 MiB  EAB__ERI
+  N=  480  median=    67.58 ms  repeats= 30  peak=   3116.8 MiB  NAT__THO
+  N=  480  median=    67.55 ms  repeats= 30  peak=   3119.9 MiB  NAT__THO
+  N=  486  median=    71.06 ms  repeats= 29  peak=   3418.5 MiB  EAB__OFF
+  N=  486  median=    71.84 ms  repeats= 28  peak=   3471.2 MiB  EAB__OFF
+  N=  540  median=    76.77 ms  repeats= 27  peak=   3772.3 MiB  AVL__OFF
+  N=  576  median=    83.38 ms  repeats= 24  peak=   4117.7 MiB  PTT__SWY
+  N=  576  median=    82.72 ms  repeats= 25  peak=   4076.9 MiB  PTT__SWY
+  N=  612  median=    85.00 ms  repeats= 24  peak=   4190.9 MiB  AFX__LEV
+  N=  648  median=    90.00 ms  repeats= 23  peak=   4452.4 MiB  AFT__EAB
+  N=  648  median=    91.93 ms  repeats= 22  peak=   4565.7 MiB  AFX__GME
+  N=  648  median=    92.92 ms  repeats= 22  peak=   4657.5 MiB  ERI__SWY
+  N=  648  median=    90.13 ms  repeats= 23  peak=   4520.4 MiB  LEV__OFF
+  N=  648  median=    89.64 ms  repeats= 23  peak=   4417.1 MiB  AFT__EAB
+  N=  648  median=    91.40 ms  repeats= 22  peak=   4524.2 MiB  AFX__GME
+  N=  648  median=    92.37 ms  repeats= 22  peak=   4620.7 MiB  ERI__SWY
+  N=  648  median=    90.81 ms  repeats= 22  peak=   4561.3 MiB  LEV__OFF
+  N=  720  median=    99.86 ms  repeats= 21  peak=   5030.6 MiB  ANO__PTT
+  N=  720  median=    99.37 ms  repeats= 21  peak=   4999.9 MiB  ANO__PTT
+  N=  756  median=   103.05 ms  repeats= 20  peak=   5267.6 MiB  AFS__BPH
+  N=  756  median=   103.17 ms  repeats= 20  peak=   5267.6 MiB  AFS__BPH
+  N=  792  median=   117.36 ms  repeats= 18  peak=   5970.7 MiB  BEC__IWR
+  N=  810  median=   109.98 ms  repeats= 19  peak=   5555.7 MiB  EAB__LEV
+  N=  810  median=   110.94 ms  repeats= 19  peak=   5663.2 MiB  ERI__LEV
+  N=  810  median=   112.67 ms  repeats= 18  peak=   5774.7 MiB  OFF__SAT
+  N=  810  median=   112.99 ms  repeats= 18  peak=   5783.3 MiB  OFF__SWY
+  N=  810  median=   109.84 ms  repeats= 19  peak=   5552.7 MiB  EAB__LEV
+  N=  810  median=   111.15 ms  repeats= 18  peak=   5698.7 MiB  ERI__LEV
+  N=  810  median=   111.95 ms  repeats= 18  peak=   5747.6 MiB  OFF__SWY
+  N=  828  median=   111.89 ms  repeats= 18  peak=   5678.5 MiB  AFV__SFW
+  N=  828  median=   111.93 ms  repeats= 18  peak=   5659.8 MiB  AFV__SFW
+  N=  864  median=   119.29 ms  repeats= 17  peak=   6132.1 MiB  MAR__TOL
+  N=  864  median=   119.20 ms  repeats= 17  peak=   6108.7 MiB  PTT__SAT
+  N=  864  median=   120.24 ms  repeats= 17  peak=   6194.7 MiB  MAR__TOL
+  N=  864  median=   118.25 ms  repeats= 17  peak=   6041.0 MiB  PTT__SAT
+  N=  900  median=   122.43 ms  repeats= 17  peak=   6253.8 MiB  ANO__LEV
+  N=  900  median=   122.36 ms  repeats= 17  peak=   6258.6 MiB  ANO__LEV
+  N=  912  median=   146.33 ms  repeats= 14  peak=   7959.0 MiB  AFI__CRISTOBALITE
+  N=  912  median=   146.43 ms  repeats= 14  peak=   7959.0 MiB  AFI__CRISTOBALITE
+  N=  972  median=   132.62 ms  repeats= 16  peak=   6818.4 MiB  EAB__SWY
+  N=  972  median=   128.60 ms  repeats= 16  peak=   6566.2 MiB  LEV__SFW
+  N=  972  median=   132.51 ms  repeats= 16  peak=   6818.4 MiB  EAB__SWY
+  N=  972  median=   128.01 ms  repeats= 16  peak=   6540.0 MiB  LEV__SFW
+  N= 1008  median=   137.23 ms  repeats= 15  peak=   7096.7 MiB  ANO__SWY
+  N= 1008  median=   145.71 ms  repeats= 14  peak=   7562.0 MiB  CON__IWR
+  N= 1008  median=   145.61 ms  repeats= 14  peak=   7563.2 MiB  CON__IWR
+  N= 1134  median=   152.19 ms  repeats= 14  peak=   7907.6 MiB  LEV__SAT
+  N= 1134  median=   152.15 ms  repeats= 14  peak=   7911.4 MiB  LEV__SAT
+  N= 1152  median=   152.88 ms  repeats= 14  peak=   7890.7 MiB  EMT__SBS
+  N= 1152  median=   156.69 ms  repeats= 13  peak=   7980.2 MiB  PHI__SIV
+  N= 1152  median=   152.08 ms  repeats= 14  peak=   7855.8 MiB  EMT__SBS
+  N= 1152  median=   156.48 ms  repeats= 13  peak=   7980.2 MiB  PHI__SIV
+  N= 1296  median=   170.79 ms  repeats= 12  peak=   8966.2 MiB  AFT__SWY
+  N= 1296  median=   170.88 ms  repeats= 12  peak=   8964.6 MiB  AFT__SWY
+  N= 1296  median=   214.58 ms  repeats= 10  peak=  11710.4 MiB  AFI__MOGANITE
+  N= 1296  median=   214.63 ms  repeats= 10  peak=  11707.5 MiB  AFI__MOGANITE
+  N= 1404  median=   185.38 ms  repeats= 11  peak=   9741.2 MiB  AFX__SFW
+  N= 1512  median=   215.99 ms  repeats= 10  peak=  11444.2 MiB  ITG__IWW
+  N= 1512  median=   216.61 ms  repeats= 10  peak=  11606.9 MiB  ITH__ITR
+  N= 1620  median=   212.15 ms  repeats= 10  peak=  11228.1 MiB  AFT__SFW
+  N= 1620  median=   211.71 ms  repeats= 10  peak=  11178.4 MiB  AVE__EAB
+  N= 1620  median=   211.77 ms  repeats= 10  peak=  11199.7 MiB  AFT__SFW
+  N= 1872  median=   269.87 ms  repeats=  8  peak=  13670.7 MiB  EMT__MTW
+  N= 1872  median=   269.78 ms  repeats=  8  peak=  13670.7 MiB  EMT__MTW
+  N= 2112  median=   305.46 ms  repeats=  7  peak=  16704.9 MiB  PST24A__PST24B
+  N= 2160  median=   279.74 ms  repeats=  8  peak=  14956.6 MiB  SBS__SBT
+  N= 2592  median=   326.40 ms  repeats=  7  peak=  16293.2 MiB  CHA__EMT
+  N= 2592  median=   328.21 ms  repeats=  7  peak=  16293.2 MiB  CHA__EMT
+  N= 2664  median=   354.33 ms  repeats=  7  peak=  19277.1 MiB  FAU__MTW
+  N= 2664  median=   354.36 ms  repeats=  7  peak=  19277.1 MiB  FAU__MTW
+  N= 2736  median=   399.78 ms  repeats=  7  peak=  19062.0 MiB  EMT__FER
+  N= 2736  median=   399.14 ms  repeats=  7  peak=  19062.0 MiB  EMT__FER
+  N= 2808  median=   373.00 ms  repeats=  7  peak=  20100.1 MiB  BEA__FER
+  N= 2808  median=   372.94 ms  repeats=  7  peak=  20100.1 MiB  BEA__FER
+  N= 2832  median=   395.01 ms  repeats=  7  peak=  21362.7 MiB  CFI__MWW
+  N= 2832  median=   395.07 ms  repeats=  7  peak=  21362.7 MiB  CFI__MWW
+  N= 2880  median=   440.51 ms  repeats=  7  peak=  24150.2 MiB  MFI__TRIDYMITE
+  N= 2880  median=   440.07 ms  repeats=  7  peak=  24150.2 MiB  MFI__TRIDYMITE
+  N= 2976  median=   408.52 ms  repeats=  7  peak=  21936.4 MiB  ISV__MEL
+  N= 2976  median=   409.65 ms  repeats=  7  peak=  21945.8 MiB  ISV__MEL
+  N= 3456  median=   447.06 ms  repeats=  7  peak=  23593.7 MiB  FAU__SBS
+  N= 4608  median=   592.97 ms  repeats=  7  peak=  31543.0 MiB  FAU__SBT
+Using model under Academic Software License (ASL) license, see https://github.com/gabor1/ASL 
+ To use this model you accept the terms of the license.
+Using Materials Project MACE for MACECalculator with <home>/.cache/mace/MACEmatpesr2scanomatftmodel
+Using float32 for MACECalculator, which is faster but less accurate. Recommended for MD. Use float64 for geometry optimization.
+<scratch>/miniconda3/envs/silica_moe/lib/python3.9/site-packages/mace/calculators/mace.py:197: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+Using head default out of ['default']
+Default dtype float32 does not match model dtype float64, converting models to float32.
+
+====================================================================================================
+MATPes-r2SCAN (float32) | precision: float32 | 105 of 105 structures to time | torch default dtype torch.float32
+====================================================================================================
+  N=   60  median=    30.15 ms  repeats= 30  peak=    258.7 MiB  EDI__THO
+  N=   60  median=    30.11 ms  repeats= 30  peak=    261.0 MiB  EDI__THO
+  N=   90  median=    30.90 ms  repeats= 30  peak=    349.8 MiB  NAT__THO
+  N=  162  median=    32.30 ms  repeats= 30  peak=    608.8 MiB  LOV__VSV
+  N=  162  median=    32.28 ms  repeats= 30  peak=    607.2 MiB  LOV__VSV
+  N=  168  median=    33.49 ms  repeats= 30  peak=    650.6 MiB  ATT__GIS
+  N=  216  median=    37.05 ms  repeats= 30  peak=    938.3 MiB  MTT__TON
+  N=  216  median=    33.87 ms  repeats= 30  peak=    786.5 MiB  RSN__VSV
+  N=  216  median=    33.89 ms  repeats= 30  peak=    784.6 MiB  RSN__VSV
+  N=  234  median=    38.90 ms  repeats= 30  peak=    865.1 MiB  AFV__AFX
+  N=  288  median=    40.44 ms  repeats= 30  peak=   1062.0 MiB  MER__SIV
+  N=  336  median=    48.37 ms  repeats= 30  peak=   1431.2 MiB  SSZ31E__SSZ31G
+  N=  360  median=    45.43 ms  repeats= 30  peak=   1279.2 MiB  EAB__PTT
+  N=  360  median=    46.09 ms  repeats= 30  peak=   1316.5 MiB  ERI__PTT
+  N=  360  median=    45.38 ms  repeats= 30  peak=   1275.0 MiB  EAB__PTT
+  N=  360  median=    45.84 ms  repeats= 30  peak=   1300.1 MiB  ERI__PTT
+  N=  378  median=    47.89 ms  repeats= 30  peak=   1352.6 MiB  GME__OFF
+  N=  384  median=    48.17 ms  repeats= 30  peak=   1418.5 MiB  BEA__ISV
+  N=  384  median=    48.07 ms  repeats= 30  peak=   1418.6 MiB  BEA__ISV
+  N=  432  median=    59.41 ms  repeats= 30  peak=   1845.6 MiB  AEL__DON
+  N=  432  median=    52.57 ms  repeats= 30  peak=   1519.0 MiB  AFV__AVL
+  N=  432  median=    52.54 ms  repeats= 30  peak=   1552.7 MiB  EAB__ERI
+  N=  432  median=    52.43 ms  repeats= 30  peak=   1504.6 MiB  AFV__AVL
+  N=  432  median=    52.54 ms  repeats= 30  peak=   1564.6 MiB  EAB__ERI
+  N=  480  median=    55.65 ms  repeats= 30  peak=   1568.3 MiB  NAT__THO
+  N=  480  median=    55.79 ms  repeats= 30  peak=   1571.2 MiB  NAT__THO
+  N=  486  median=    57.97 ms  repeats= 30  peak=   1719.3 MiB  EAB__OFF
+  N=  486  median=    58.31 ms  repeats= 30  peak=   1745.7 MiB  EAB__OFF
+  N=  540  median=    62.07 ms  repeats= 30  peak=   1893.2 MiB  AVL__OFF
+  N=  576  median=    67.24 ms  repeats= 30  peak=   2070.5 MiB  PTT__SWY
+  N=  576  median=    66.94 ms  repeats= 30  peak=   2047.6 MiB  PTT__SWY
+  N=  612  median=    68.67 ms  repeats= 30  peak=   2106.7 MiB  AFX__LEV
+  N=  648  median=    72.40 ms  repeats= 28  peak=   2238.0 MiB  AFT__EAB
+  N=  648  median=    73.93 ms  repeats= 28  peak=   2295.1 MiB  AFX__GME
+  N=  648  median=    74.73 ms  repeats= 27  peak=   2339.7 MiB  ERI__SWY
+  N=  648  median=    72.43 ms  repeats= 28  peak=   2271.6 MiB  LEV__OFF
+  N=  648  median=    72.25 ms  repeats= 28  peak=   2220.7 MiB  AFT__EAB
+  N=  648  median=    73.51 ms  repeats= 28  peak=   2273.5 MiB  AFX__GME
+  N=  648  median=    74.36 ms  repeats= 27  peak=   2322.9 MiB  ERI__SWY
+  N=  648  median=    72.82 ms  repeats= 28  peak=   2292.3 MiB  LEV__OFF
+  N=  720  median=    80.23 ms  repeats= 25  peak=   2526.1 MiB  ANO__PTT
+  N=  720  median=    79.91 ms  repeats= 25  peak=   2511.5 MiB  ANO__PTT
+  N=  756  median=    82.35 ms  repeats= 25  peak=   2645.2 MiB  AFS__BPH
+  N=  756  median=    82.22 ms  repeats= 25  peak=   2645.2 MiB  AFS__BPH
+  N=  792  median=    93.50 ms  repeats= 22  peak=   2994.7 MiB  BEC__IWR
+  N=  810  median=    88.00 ms  repeats= 23  peak=   2789.6 MiB  EAB__LEV
+  N=  810  median=    88.54 ms  repeats= 23  peak=   2844.8 MiB  ERI__LEV
+  N=  810  median=    89.80 ms  repeats= 23  peak=   2900.1 MiB  OFF__SAT
+  N=  810  median=    89.89 ms  repeats= 23  peak=   2904.0 MiB  OFF__SWY
+  N=  810  median=    87.92 ms  repeats= 23  peak=   2788.5 MiB  EAB__LEV
+  N=  810  median=    88.87 ms  repeats= 23  peak=   2862.6 MiB  ERI__LEV
+  N=  810  median=    89.48 ms  repeats= 23  peak=   2885.3 MiB  OFF__SWY
+  N=  828  median=    90.03 ms  repeats= 23  peak=   2851.8 MiB  AFV__SFW
+  N=  828  median=    89.87 ms  repeats= 23  peak=   2842.6 MiB  AFV__SFW
+  N=  864  median=    94.92 ms  repeats= 22  peak=   3076.2 MiB  MAR__TOL
+  N=  864  median=    94.82 ms  repeats= 22  peak=   3063.8 MiB  PTT__SAT
+  N=  864  median=    95.64 ms  repeats= 21  peak=   3108.4 MiB  MAR__TOL
+  N=  864  median=    94.16 ms  repeats= 22  peak=   3029.8 MiB  PTT__SAT
+  N=  900  median=    97.88 ms  repeats= 21  peak=   3138.9 MiB  ANO__LEV
+  N=  900  median=    98.06 ms  repeats= 21  peak=   3140.5 MiB  ANO__LEV
+  N=  912  median=   114.75 ms  repeats= 18  peak=   3987.1 MiB  AFI__CRISTOBALITE
+  N=  912  median=   114.65 ms  repeats= 18  peak=   3987.1 MiB  AFI__CRISTOBALITE
+  N=  972  median=   105.30 ms  repeats= 19  peak=   3420.3 MiB  EAB__SWY
+  N=  972  median=   104.10 ms  repeats= 20  peak=   3292.1 MiB  LEV__SFW
+  N=  972  median=   105.23 ms  repeats= 20  peak=   3420.3 MiB  EAB__SWY
+  N=  972  median=   102.45 ms  repeats= 20  peak=   3277.6 MiB  LEV__SFW
+  N= 1008  median=   109.53 ms  repeats= 19  peak=   3557.6 MiB  ANO__SWY
+  N= 1008  median=   115.24 ms  repeats= 18  peak=   3794.2 MiB  CON__IWR
+  N= 1008  median=   115.13 ms  repeats= 18  peak=   3794.7 MiB  CON__IWR
+  N= 1134  median=   119.97 ms  repeats= 17  peak=   3963.0 MiB  LEV__SAT
+  N= 1134  median=   120.15 ms  repeats= 17  peak=   3965.0 MiB  LEV__SAT
+  N= 1152  median=   121.11 ms  repeats= 17  peak=   3955.7 MiB  EMT__SBS
+  N= 1152  median=   124.37 ms  repeats= 17  peak=   3998.9 MiB  PHI__SIV
+  N= 1152  median=   121.16 ms  repeats= 17  peak=   3938.5 MiB  EMT__SBS
+  N= 1152  median=   125.02 ms  repeats= 16  peak=   3998.9 MiB  PHI__SIV
+  N= 1296  median=   134.98 ms  repeats= 15  peak=   4493.3 MiB  AFT__SWY
+  N= 1296  median=   135.52 ms  repeats= 15  peak=   4492.2 MiB  AFT__SWY
+  N= 1296  median=   165.89 ms  repeats= 13  peak=   5868.4 MiB  AFI__MOGANITE
+  N= 1296  median=   165.93 ms  repeats= 13  peak=   5865.8 MiB  AFI__MOGANITE
+  N= 1404  median=   146.64 ms  repeats= 14  peak=   4878.9 MiB  AFX__SFW
+  N= 1512  median=   170.66 ms  repeats= 12  peak=   5732.4 MiB  ITG__IWW
+  N= 1512  median=   170.14 ms  repeats= 12  peak=   5812.6 MiB  ITH__ITR
+  N= 1620  median=   167.88 ms  repeats= 12  peak=   5623.5 MiB  AFT__SFW
+  N= 1620  median=   167.14 ms  repeats= 12  peak=   5597.4 MiB  AVE__EAB
+  N= 1620  median=   167.60 ms  repeats= 12  peak=   5608.4 MiB  AFT__SFW
+  N= 1872  median=   214.29 ms  repeats= 10  peak=   6846.7 MiB  EMT__MTW
+  N= 1872  median=   213.92 ms  repeats= 10  peak=   6846.7 MiB  EMT__MTW
+  N= 2112  median=   236.30 ms  repeats=  9  peak=   8365.3 MiB  PST24A__PST24B
+  N= 2160  median=   219.59 ms  repeats= 10  peak=   7490.8 MiB  SBS__SBT
+  N= 2592  median=   257.97 ms  repeats=  8  peak=   8158.3 MiB  CHA__EMT
+  N= 2592  median=   258.13 ms  repeats=  8  peak=   8158.3 MiB  CHA__EMT
+  N= 2664  median=   274.64 ms  repeats=  8  peak=   9653.0 MiB  FAU__MTW
+  N= 2664  median=   274.77 ms  repeats=  8  peak=   9653.0 MiB  FAU__MTW
+  N= 2736  median=   319.53 ms  repeats=  7  peak=   9544.1 MiB  EMT__FER
+  N= 2736  median=   320.14 ms  repeats=  7  peak=   9544.1 MiB  EMT__FER
+  N= 2808  median=   287.94 ms  repeats=  7  peak=  10061.9 MiB  BEA__FER
+  N= 2808  median=   287.73 ms  repeats=  7  peak=  10061.9 MiB  BEA__FER
+  N= 2832  median=   303.29 ms  repeats=  7  peak=  10692.7 MiB  CFI__MWW
+  N= 2832  median=   303.33 ms  repeats=  7  peak=  10692.7 MiB  CFI__MWW
+  N= 2880  median=   332.60 ms  repeats=  7  peak=  12084.8 MiB  MFI__TRIDYMITE
+  N= 2880  median=   332.09 ms  repeats=  7  peak=  12084.8 MiB  MFI__TRIDYMITE
+  N= 2976  median=   310.55 ms  repeats=  7  peak=  10985.3 MiB  ISV__MEL
+  N= 2976  median=   310.60 ms  repeats=  7  peak=  10988.7 MiB  ISV__MEL
+  N= 3456  median=   342.79 ms  repeats=  7  peak=  11809.6 MiB  FAU__SBS
+  N= 4608  median=   450.80 ms  repeats=  7  peak=  15785.6 MiB  FAU__SBT
+
+====================================================================================================
+Local-MoE common network | precision: float32 nets / float64 positions | 105 of 105 structures to time | torch default dtype torch.float32
+====================================================================================================
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+  N=   60  median=    12.01 ms  repeats= 30  peak=     23.6 MiB  EDI__THO
+  N=   60  median=    11.76 ms  repeats= 30  peak=     23.6 MiB  EDI__THO
+  N=   90  median=    12.17 ms  repeats= 30  peak=     26.5 MiB  NAT__THO
+  N=  162  median=    12.38 ms  repeats= 30  peak=     33.6 MiB  LOV__VSV
+  N=  162  median=    12.07 ms  repeats= 30  peak=     33.6 MiB  LOV__VSV
+  N=  168  median=    11.98 ms  repeats= 30  peak=     35.6 MiB  ATT__GIS
+  N=  216  median=    11.48 ms  repeats= 30  peak=     45.3 MiB  MTT__TON
+  N=  216  median=    12.01 ms  repeats= 30  peak=     40.1 MiB  RSN__VSV
+  N=  216  median=    11.47 ms  repeats= 30  peak=     40.1 MiB  RSN__VSV
+  N=  234  median=    11.90 ms  repeats= 30  peak=     42.8 MiB  AFV__AFX
+  N=  288  median=    12.33 ms  repeats= 30  peak=     48.2 MiB  MER__SIV
+  N=  336  median=    11.98 ms  repeats= 30  peak=     61.4 MiB  SSZ31E__SSZ31G
+  N=  360  median=    11.95 ms  repeats= 30  peak=     57.3 MiB  EAB__PTT
+  N=  360  median=    11.98 ms  repeats= 30  peak=     60.2 MiB  ERI__PTT
+  N=  360  median=    12.00 ms  repeats= 30  peak=     56.1 MiB  EAB__PTT
+  N=  360  median=    12.05 ms  repeats= 30  peak=     57.3 MiB  ERI__PTT
+  N=  378  median=    11.96 ms  repeats= 30  peak=     60.1 MiB  GME__OFF
+  N=  384  median=    12.00 ms  repeats= 30  peak=     62.4 MiB  BEA__ISV
+  N=  384  median=    12.00 ms  repeats= 30  peak=     62.5 MiB  BEA__ISV
+  N=  432  median=    11.99 ms  repeats= 30  peak=     72.1 MiB  AEL__DON
+  N=  432  median=    12.02 ms  repeats= 30  peak=     64.0 MiB  AFV__AVL
+  N=  432  median=    12.00 ms  repeats= 30  peak=     66.9 MiB  EAB__ERI
+  N=  432  median=    11.98 ms  repeats= 30  peak=     64.0 MiB  AFV__AVL
+  N=  432  median=    12.12 ms  repeats= 30  peak=     66.4 MiB  EAB__ERI
+  N=  480  median=    12.06 ms  repeats= 30  peak=     68.8 MiB  NAT__THO
+  N=  480  median=    12.03 ms  repeats= 30  peak=     68.6 MiB  NAT__THO
+  N=  486  median=    11.99 ms  repeats= 30  peak=     71.7 MiB  EAB__OFF
+  N=  486  median=    12.02 ms  repeats= 30  peak=     71.7 MiB  EAB__OFF
+  N=  540  median=    12.08 ms  repeats= 30  peak=     76.8 MiB  AVL__OFF
+  N=  576  median=    12.02 ms  repeats= 30  peak=     83.6 MiB  PTT__SWY
+  N=  576  median=    12.03 ms  repeats= 30  peak=     82.1 MiB  PTT__SWY
+  N=  612  median=    12.01 ms  repeats= 30  peak=     83.9 MiB  AFX__LEV
+  N=  648  median=    12.04 ms  repeats= 30  peak=     86.8 MiB  AFT__EAB
+  N=  648  median=    12.08 ms  repeats= 30  peak=     86.9 MiB  AFX__GME
+  N=  648  median=    12.08 ms  repeats= 30  peak=     92.6 MiB  ERI__SWY
+  N=  648  median=    12.02 ms  repeats= 30  peak=     91.2 MiB  LEV__OFF
+  N=  648  median=    12.01 ms  repeats= 30  peak=     86.7 MiB  AFT__EAB
+  N=  648  median=    12.02 ms  repeats= 30  peak=     85.1 MiB  AFX__GME
+  N=  648  median=    12.05 ms  repeats= 30  peak=     91.2 MiB  ERI__SWY
+  N=  648  median=    12.02 ms  repeats= 30  peak=     90.9 MiB  LEV__OFF
+  N=  720  median=    12.00 ms  repeats= 30  peak=     99.5 MiB  ANO__PTT
+  N=  720  median=    12.02 ms  repeats= 30  peak=     99.2 MiB  ANO__PTT
+  N=  756  median=    12.08 ms  repeats= 30  peak=    106.5 MiB  AFS__BPH
+  N=  756  median=    12.03 ms  repeats= 30  peak=    106.4 MiB  AFS__BPH
+  N=  792  median=    12.21 ms  repeats= 30  peak=    118.6 MiB  BEC__IWR
+  N=  810  median=    12.11 ms  repeats= 30  peak=    108.3 MiB  EAB__LEV
+  N=  810  median=    12.04 ms  repeats= 30  peak=    109.9 MiB  ERI__LEV
+  N=  810  median=    12.08 ms  repeats= 30  peak=    114.7 MiB  OFF__SAT
+  N=  810  median=    12.02 ms  repeats= 30  peak=    113.3 MiB  OFF__SWY
+  N=  810  median=    12.17 ms  repeats= 30  peak=    107.9 MiB  EAB__LEV
+  N=  810  median=    12.09 ms  repeats= 30  peak=    107.8 MiB  ERI__LEV
+  N=  810  median=    12.10 ms  repeats= 30  peak=    108.3 MiB  OFF__SWY
+  N=  828  median=    12.05 ms  repeats= 30  peak=    106.9 MiB  AFV__SFW
+  N=  828  median=    12.03 ms  repeats= 30  peak=    107.0 MiB  AFV__SFW
+  N=  864  median=    12.11 ms  repeats= 30  peak=    114.4 MiB  MAR__TOL
+  N=  864  median=    12.06 ms  repeats= 30  peak=    122.9 MiB  PTT__SAT
+  N=  864  median=    12.08 ms  repeats= 30  peak=    113.1 MiB  MAR__TOL
+  N=  864  median=    12.03 ms  repeats= 30  peak=    117.5 MiB  PTT__SAT
+  N=  900  median=    12.03 ms  repeats= 30  peak=    123.3 MiB  ANO__LEV
+  N=  900  median=    12.07 ms  repeats= 30  peak=    118.6 MiB  ANO__LEV
+  N=  912  median=    12.11 ms  repeats= 30  peak=    146.2 MiB  AFI__CRISTOBALITE
+  N=  912  median=    12.05 ms  repeats= 30  peak=    146.2 MiB  AFI__CRISTOBALITE
+  N=  972  median=    12.24 ms  repeats= 30  peak=    130.6 MiB  EAB__SWY
+  N=  972  median=    12.14 ms  repeats= 30  peak=    124.2 MiB  LEV__SFW
+  N=  972  median=    12.28 ms  repeats= 30  peak=    127.1 MiB  EAB__SWY
+  N=  972  median=    12.15 ms  repeats= 30  peak=    123.7 MiB  LEV__SFW
+  N= 1008  median=    12.22 ms  repeats= 30  peak=    135.6 MiB  ANO__SWY
+  N= 1008  median=    12.18 ms  repeats= 30  peak=    146.1 MiB  CON__IWR
+  N= 1008  median=    12.13 ms  repeats= 30  peak=    146.3 MiB  CON__IWR
+  N= 1134  median=    12.24 ms  repeats= 30  peak=    151.7 MiB  LEV__SAT
+  N= 1134  median=    12.11 ms  repeats= 30  peak=    145.5 MiB  LEV__SAT
+  N= 1152  median=    12.15 ms  repeats= 30  peak=    152.4 MiB  EMT__SBS
+  N= 1152  median=    12.12 ms  repeats= 30  peak=    142.0 MiB  PHI__SIV
+  N= 1152  median=    12.11 ms  repeats= 30  peak=    152.2 MiB  EMT__SBS
+  N= 1152  median=    12.21 ms  repeats= 30  peak=    142.0 MiB  PHI__SIV
+  N= 1296  median=    12.30 ms  repeats= 30  peak=    162.8 MiB  AFT__SWY
+  N= 1296  median=    12.53 ms  repeats= 30  peak=    161.4 MiB  AFT__SWY
+  N= 1296  median=    12.55 ms  repeats= 30  peak=    211.0 MiB  AFI__MOGANITE
+  N= 1296  median=    12.59 ms  repeats= 30  peak=    211.0 MiB  AFI__MOGANITE
+  N= 1404  median=    12.38 ms  repeats= 30  peak=    169.4 MiB  AFX__SFW
+  N= 1512  median=    12.53 ms  repeats= 30  peak=    215.0 MiB  ITG__IWW
+  N= 1512  median=    12.52 ms  repeats= 30  peak=    218.7 MiB  ITH__ITR
+  N= 1620  median=    12.41 ms  repeats= 30  peak=    192.5 MiB  AFT__SFW
+  N= 1620  median=    12.47 ms  repeats= 30  peak=    201.8 MiB  AVE__EAB
+  N= 1620  median=    12.50 ms  repeats= 30  peak=    188.0 MiB  AFT__SFW
+  N= 1872  median=    12.64 ms  repeats= 30  peak=    229.1 MiB  EMT__MTW
+  N= 1872  median=    12.70 ms  repeats= 30  peak=    229.1 MiB  EMT__MTW
+  N= 2112  median=    12.64 ms  repeats= 30  peak=    286.1 MiB  PST24A__PST24B
+  N= 2160  median=    12.49 ms  repeats= 30  peak=    281.4 MiB  SBS__SBT
+  N= 2592  median=    13.23 ms  repeats= 30  peak=    265.6 MiB  CHA__EMT
+  N= 2592  median=    13.19 ms  repeats= 30  peak=    265.6 MiB  CHA__EMT
+  N= 2664  median=    12.91 ms  repeats= 30  peak=    331.5 MiB  FAU__MTW
+  N= 2664  median=    12.92 ms  repeats= 30  peak=    331.5 MiB  FAU__MTW
+  N= 2736  median=    14.16 ms  repeats= 30  peak=    337.7 MiB  EMT__FER
+  N= 2736  median=    14.09 ms  repeats= 30  peak=    337.7 MiB  EMT__FER
+  N= 2808  median=    12.96 ms  repeats= 30  peak=    376.4 MiB  BEA__FER
+  N= 2808  median=    12.92 ms  repeats= 30  peak=    376.4 MiB  BEA__FER
+  N= 2832  median=    12.85 ms  repeats= 30  peak=    381.6 MiB  CFI__MWW
+  N= 2832  median=    12.95 ms  repeats= 30  peak=    381.6 MiB  CFI__MWW
+  N= 2880  median=    13.05 ms  repeats= 30  peak=    418.5 MiB  MFI__TRIDYMITE
+  N= 2880  median=    13.16 ms  repeats= 30  peak=    418.5 MiB  MFI__TRIDYMITE
+  N= 2976  median=    12.99 ms  repeats= 30  peak=    394.3 MiB  ISV__MEL
+  N= 2976  median=    13.03 ms  repeats= 30  peak=    394.4 MiB  ISV__MEL
+  N= 3456  median=    13.02 ms  repeats= 30  peak=    426.7 MiB  FAU__SBS
+  N= 4608  median=    13.96 ms  repeats= 30  peak=    568.3 MiB  FAU__SBT
+
+====================================================================================================
+Local-MoE full | precision: float32 nets / float64 positions | 105 of 105 structures to time | torch default dtype torch.float32
+====================================================================================================
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+  N=   60  median=    13.03 ms  repeats= 30  peak=     24.6 MiB  EDI__THO
+  N=   60  median=    13.00 ms  repeats= 30  peak=     24.6 MiB  EDI__THO
+  N=   90  median=    13.01 ms  repeats= 30  peak=     27.4 MiB  NAT__THO
+  N=  162  median=    13.02 ms  repeats= 30  peak=     34.4 MiB  LOV__VSV
+  N=  162  median=    13.02 ms  repeats= 30  peak=     34.4 MiB  LOV__VSV
+  N=  168  median=    12.99 ms  repeats= 30  peak=     36.4 MiB  ATT__GIS
+  N=  216  median=    13.01 ms  repeats= 30  peak=     46.0 MiB  MTT__TON
+  N=  216  median=    13.00 ms  repeats= 30  peak=     40.8 MiB  RSN__VSV
+  N=  216  median=    12.98 ms  repeats= 30  peak=     40.8 MiB  RSN__VSV
+  N=  234  median=    13.08 ms  repeats= 30  peak=     43.5 MiB  AFV__AFX
+  N=  288  median=    13.05 ms  repeats= 30  peak=     48.8 MiB  MER__SIV
+  N=  336  median=    13.01 ms  repeats= 30  peak=     61.9 MiB  SSZ31E__SSZ31G
+  N=  360  median=    13.02 ms  repeats= 30  peak=     57.8 MiB  EAB__PTT
+  N=  360  median=    12.98 ms  repeats= 30  peak=     60.8 MiB  ERI__PTT
+  N=  360  median=    13.05 ms  repeats= 30  peak=     56.7 MiB  EAB__PTT
+  N=  360  median=    13.05 ms  repeats= 30  peak=     57.9 MiB  ERI__PTT
+  N=  378  median=    12.99 ms  repeats= 30  peak=     60.6 MiB  GME__OFF
+  N=  384  median=    13.00 ms  repeats= 30  peak=     62.9 MiB  BEA__ISV
+  N=  384  median=    12.98 ms  repeats= 30  peak=     62.9 MiB  BEA__ISV
+  N=  432  median=    12.99 ms  repeats= 30  peak=     72.5 MiB  AEL__DON
+  N=  432  median=    13.00 ms  repeats= 30  peak=     64.4 MiB  AFV__AVL
+  N=  432  median=    13.01 ms  repeats= 30  peak=     67.3 MiB  EAB__ERI
+  N=  432  median=    12.98 ms  repeats= 30  peak=     64.4 MiB  AFV__AVL
+  N=  432  median=    13.00 ms  repeats= 30  peak=     66.8 MiB  EAB__ERI
+  N=  480  median=    13.01 ms  repeats= 30  peak=     69.1 MiB  NAT__THO
+  N=  480  median=    13.00 ms  repeats= 30  peak=     69.0 MiB  NAT__THO
+  N=  486  median=    13.04 ms  repeats= 30  peak=     72.0 MiB  EAB__OFF
+  N=  486  median=    13.02 ms  repeats= 30  peak=     72.0 MiB  EAB__OFF
+  N=  540  median=    13.01 ms  repeats= 30  peak=     77.1 MiB  AVL__OFF
+  N=  576  median=    13.02 ms  repeats= 30  peak=     83.8 MiB  PTT__SWY
+  N=  576  median=    13.03 ms  repeats= 30  peak=     82.3 MiB  PTT__SWY
+  N=  612  median=    13.03 ms  repeats= 30  peak=     84.0 MiB  AFX__LEV
+  N=  648  median=    13.03 ms  repeats= 30  peak=     86.9 MiB  AFT__EAB
+  N=  648  median=    13.04 ms  repeats= 30  peak=     87.0 MiB  AFX__GME
+  N=  648  median=    13.05 ms  repeats= 30  peak=     92.7 MiB  ERI__SWY
+  N=  648  median=    13.08 ms  repeats= 30  peak=     91.3 MiB  LEV__OFF
+  N=  648  median=    13.03 ms  repeats= 30  peak=     86.8 MiB  AFT__EAB
+  N=  648  median=    13.01 ms  repeats= 30  peak=     85.2 MiB  AFX__GME
+  N=  648  median=    13.02 ms  repeats= 30  peak=     91.3 MiB  ERI__SWY
+  N=  648  median=    12.99 ms  repeats= 30  peak=     91.0 MiB  LEV__OFF
+  N=  720  median=    13.01 ms  repeats= 30  peak=     98.8 MiB  ANO__PTT
+  N=  720  median=    13.04 ms  repeats= 30  peak=     98.5 MiB  ANO__PTT
+  N=  756  median=    13.03 ms  repeats= 30  peak=    105.9 MiB  AFS__BPH
+  N=  756  median=    13.04 ms  repeats= 30  peak=    105.7 MiB  AFS__BPH
+  N=  792  median=    13.06 ms  repeats= 30  peak=    118.2 MiB  BEC__IWR
+  N=  810  median=    13.06 ms  repeats= 30  peak=    107.9 MiB  EAB__LEV
+  N=  810  median=    13.01 ms  repeats= 30  peak=    109.2 MiB  ERI__LEV
+  N=  810  median=    12.99 ms  repeats= 30  peak=    114.1 MiB  OFF__SAT
+  N=  810  median=    13.02 ms  repeats= 30  peak=    112.7 MiB  OFF__SWY
+  N=  810  median=    13.20 ms  repeats= 30  peak=    107.0 MiB  EAB__LEV
+  N=  810  median=    13.04 ms  repeats= 30  peak=    107.4 MiB  ERI__LEV
+  N=  810  median=    13.07 ms  repeats= 30  peak=    108.0 MiB  OFF__SWY
+  N=  828  median=    12.99 ms  repeats= 30  peak=    106.2 MiB  AFV__SFW
+  N=  828  median=    13.01 ms  repeats= 30  peak=    106.3 MiB  AFV__SFW
+  N=  864  median=    13.06 ms  repeats= 30  peak=    113.8 MiB  MAR__TOL
+  N=  864  median=    13.01 ms  repeats= 30  peak=    122.0 MiB  PTT__SAT
+  N=  864  median=    13.11 ms  repeats= 30  peak=    112.5 MiB  MAR__TOL
+  N=  864  median=    13.01 ms  repeats= 30  peak=    116.6 MiB  PTT__SAT
+  N=  900  median=    13.05 ms  repeats= 30  peak=    122.1 MiB  ANO__LEV
+  N=  900  median=    13.01 ms  repeats= 30  peak=    118.0 MiB  ANO__LEV
+  N=  912  median=    13.19 ms  repeats= 30  peak=    145.9 MiB  AFI__CRISTOBALITE
+  N=  912  median=    13.10 ms  repeats= 30  peak=    145.9 MiB  AFI__CRISTOBALITE
+  N=  972  median=    13.10 ms  repeats= 30  peak=    129.5 MiB  EAB__SWY
+  N=  972  median=    13.02 ms  repeats= 30  peak=    123.1 MiB  LEV__SFW
+  N=  972  median=    13.08 ms  repeats= 30  peak=    126.2 MiB  EAB__SWY
+  N=  972  median=    13.08 ms  repeats= 30  peak=    122.5 MiB  LEV__SFW
+  N= 1008  median=    13.00 ms  repeats= 30  peak=    134.8 MiB  ANO__SWY
+  N= 1008  median=    13.07 ms  repeats= 30  peak=    144.8 MiB  CON__IWR
+  N= 1008  median=    13.03 ms  repeats= 30  peak=    145.1 MiB  CON__IWR
+  N= 1134  median=    13.32 ms  repeats= 30  peak=    150.7 MiB  LEV__SAT
+  N= 1134  median=    13.11 ms  repeats= 30  peak=    144.3 MiB  LEV__SAT
+  N= 1152  median=    13.09 ms  repeats= 30  peak=    151.2 MiB  EMT__SBS
+  N= 1152  median=    13.02 ms  repeats= 30  peak=    141.4 MiB  PHI__SIV
+  N= 1152  median=    13.04 ms  repeats= 30  peak=    151.0 MiB  EMT__SBS
+  N= 1152  median=    13.09 ms  repeats= 30  peak=    141.4 MiB  PHI__SIV
+  N= 1296  median=    13.26 ms  repeats= 30  peak=    161.9 MiB  AFT__SWY
+  N= 1296  median=    13.32 ms  repeats= 30  peak=    160.5 MiB  AFT__SWY
+  N= 1296  median=    13.58 ms  repeats= 30  peak=    210.2 MiB  AFI__MOGANITE
+  N= 1296  median=    13.58 ms  repeats= 30  peak=    210.2 MiB  AFI__MOGANITE
+  N= 1404  median=    13.48 ms  repeats= 30  peak=    168.2 MiB  AFX__SFW
+  N= 1512  median=    13.46 ms  repeats= 30  peak=    213.9 MiB  ITG__IWW
+  N= 1512  median=    13.42 ms  repeats= 30  peak=    217.6 MiB  ITH__ITR
+  N= 1620  median=    13.48 ms  repeats= 30  peak=    190.9 MiB  AFT__SFW
+  N= 1620  median=    13.49 ms  repeats= 30  peak=    200.3 MiB  AVE__EAB
+  N= 1620  median=    13.44 ms  repeats= 30  peak=    186.4 MiB  AFT__SFW
+  N= 1872  median=    13.90 ms  repeats= 30  peak=    227.5 MiB  EMT__MTW
+  N= 1872  median=    13.91 ms  repeats= 30  peak=    227.5 MiB  EMT__MTW
+  N= 2112  median=    13.86 ms  repeats= 30  peak=    284.1 MiB  PST24A__PST24B
+  N= 2160  median=    13.70 ms  repeats= 30  peak=    279.3 MiB  SBS__SBT
+  N= 2592  median=    14.06 ms  repeats= 30  peak=    262.9 MiB  CHA__EMT
+  N= 2592  median=    14.12 ms  repeats= 30  peak=    262.9 MiB  CHA__EMT
+  N= 2664  median=    13.97 ms  repeats= 30  peak=    328.7 MiB  FAU__MTW
+  N= 2664  median=    14.01 ms  repeats= 30  peak=    328.7 MiB  FAU__MTW
+  N= 2736  median=    15.03 ms  repeats= 30  peak=    334.8 MiB  EMT__FER
+  N= 2736  median=    15.06 ms  repeats= 30  peak=    334.8 MiB  EMT__FER
+  N= 2808  median=    13.98 ms  repeats= 30  peak=    373.4 MiB  BEA__FER
+  N= 2808  median=    14.00 ms  repeats= 30  peak=    373.4 MiB  BEA__FER
+  N= 2832  median=    13.98 ms  repeats= 30  peak=    378.5 MiB  CFI__MWW
+  N= 2832  median=    13.96 ms  repeats= 30  peak=    378.5 MiB  CFI__MWW
+  N= 2880  median=    14.05 ms  repeats= 30  peak=    415.4 MiB  MFI__TRIDYMITE
+  N= 2880  median=    14.03 ms  repeats= 30  peak=    415.4 MiB  MFI__TRIDYMITE
+  N= 2976  median=    14.01 ms  repeats= 30  peak=    391.1 MiB  ISV__MEL
+  N= 2976  median=    14.05 ms  repeats= 30  peak=    391.1 MiB  ISV__MEL
+  N= 3456  median=    14.01 ms  repeats= 30  peak=    422.4 MiB  FAU__SBS
+  N= 4608  median=    14.99 ms  repeats= 30  peak=    562.6 MiB  FAU__SBT
+
+====================================================================================================
+model                             n_ok n_oom  median t (ms)  max N  peak mem max (GiB)
+MATPes-r2SCAN                      105     0         112.99   4608               30.80
+MATPes-r2SCAN (float32)            105     0          90.03   4608               15.42
+Local-MoE common network           105     0          12.10   4608                0.55
+Local-MoE full                     105     0          13.05   4608                0.55
+speedup MATPes-r2SCAN / Local-MoE common network: n=105 mean 12.50  median 9.40  min 2.53  max 42.48 | memory reduction median 98.1%
+speedup MATPes-r2SCAN / Local-MoE full: n=105 mean 11.58  median 8.68  min 2.32  max 39.56 | memory reduction median 98.1%
+speedup MATPes-r2SCAN (float32) / Local-MoE common network: n=105 mean 9.88  median 7.48  min 2.51  max 32.29 | memory reduction median 96.1%
+speedup MATPes-r2SCAN (float32) / Local-MoE full: n=105 mean 9.16  median 6.93  min 2.31  max 30.07 | memory reduction median 96.2%
+
+saved: <proj>/eval_cost_ep13_v1/computational_cost_raw.csv | <proj>/eval_cost_ep13_v1/computational_cost_summary.json

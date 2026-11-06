@@ -1,0 +1,23 @@
+# cost_benchmark -- sha256 of every file in this package
+
+Selected-model artifacts, verified before assembly:
+
+    common      5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt
+    routing     9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt
+    c1b         c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt
+    descriptor  0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py
+
+Package files (sha256, path relative to tools/descriptor_repair/cost_benchmark):
+
+    17355481ea3a465bd941671060e98d8ed84e915367b3e6a2cc0dc56914778c49  figures/cost_ep13_v1_common_paper.pdf
+    fd825352ec3f027df81fe5e7afd9eeb6a519c69030589409d657cfc41ebb31a0  figures/cost_ep13_v1_common_paper.png
+    0f5f41069209ee210d3dba2f58f836b7c28efce9e1371fa000cc866cac449929  figures/cost_ep13_v1_common_paper.svg
+    d9426c04691a8085e7a4a4f57371fce312daa69186522fe003d5676333347b4d  figures/cost_ep13_v1_common_plot_data.csv
+    ed2780455467bca025e7c67eb205fe69b446a14f28767fd5ac201bb1e42aaeae  figures/cost_ep13_v1_full_paper.pdf
+    1b305b665b0ca8799dde7a983255276e3f4db35e1960dd43fed179369cc1cbeb  figures/cost_ep13_v1_full_paper.png
+    d49096ea694d713ff22de1466dcb77c0ee8125bd6d4ae88682ff07f6a61f2cb9  figures/cost_ep13_v1_full_paper.svg
+    335de7e878486d9f2b0c6b0455d9e6eea35633066c004418552c3e94bc521619  figures/cost_ep13_v1_full_plot_data.csv
+    aef85f3cdf8d5b84661fedd0293a84bf33724849c655b9afcd2c8547ffdafa72  logs/cost_ep13_v1_60881973.txt
+    1d158b89f2b541a45fed60d5e221bc2ea3887d41c90fcfb53c68e94920be4d90  metrics/computational_cost_raw.csv
+    0cd79b110893ccc015d6ed3d6d755a4783053cdafabcd54b7b42c1c9934d71c7  metrics/computational_cost_summary.json
+    984dfc2dd8e0ad7e719756549e6b2767b709b69f3df386017b367ce54b1455d7  scripts/run_cost_ep13_gpu.slurm

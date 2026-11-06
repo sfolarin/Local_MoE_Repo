@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "script": "benchmark_cost_holdout40_nl.py",
+    "script_sha256": "4f994650e08bf6167885a2aa97f53c670d4ec75900e82f3901c8b7aa405f7e66",
+    "gpu": "NVIDIA A100-SXM4-80GB",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "python": "3.9.19",
+    "host": "nid008336",
+    "slurm_job": "60881973",
+    "cuda_visible_devices": "0",
+    "models": [
+      "matpes64",
+      "matpes32",
+      "common",
+      "full"
+    ],
+    "n_structures": 105,
+    "max_atoms": 5000,
+    "n_warmup": 5,
+    "n_repeat": 30,
+    "min_repeat": 7,
+    "cap_s": 2.0,
+    "c1b_checkpoint": "<proj>/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt",
+    "common_checkpoint": "<proj>/descriptor_repair/pilot/common/best_checkpoint.pt",
+    "routing_checkpoint": "<proj>/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt",
+    "smoke": false,
+    "torchsoap_module": "<proj>/descriptor_repair/torchsoap_corrected_rotinv_v1.py",
+    "torchsoap_sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21"
+  },
+  "models": {
+    "matpes64": {
+      "label": "MATPes-r2SCAN",
+      "n_ok": 105,
+      "n_oom": 0,
+      "median_of_medians_ms": 112.99357650568709,
+      "max_N": 4608,
+      "peak_mem_max_GiB": 30.80370855331421
+    },
+    "matpes32": {
+      "label": "MATPes-r2SCAN (float32)",
+      "n_ok": 105,
+      "n_oom": 0,
+      "median_of_medians_ms": 90.03220102749765,
+      "max_N": 4608,
+      "peak_mem_max_GiB": 15.415610790252686
+    },
+    "common": {
+      "label": "Local-MoE common network",
+      "n_ok": 105,
+      "n_oom": 0,
+      "median_of_medians_ms": 12.09939195541665,
+      "max_N": 4608,
+      "peak_mem_max_GiB": 0.5549402236938477
+    },
+    "full": {
+      "label": "Local-MoE full",
+      "n_ok": 105,
+      "n_oom": 0,
+      "median_of_medians_ms": 13.04655900457874,
+      "max_N": 4608,
+      "peak_mem_max_GiB": 0.5494470596313477
+    }
+  },
+  "speedups": {
+    "matpes64/common": {
+      "n": 105,
+      "speedup_mean": 12.498004276993706,
+      "speedup_median": 9.399081878643036,
+      "speedup_min": 2.5260268277024087,
+      "speedup_max": 42.47826089712203,
+      "mem_reduction_median_pct": 98.0650916332007
+    },
+    "matpes64/full": {
+      "n": 105,
+      "speedup_mean": 11.579193513635307,
+      "speedup_median": 8.676736065735437,
+      "speedup_min": 2.3205856176772475,
+      "speedup_max": 39.556375122585074,
+      "mem_reduction_median_pct": 98.08121237256739
+    },
+    "matpes32/common": {
+      "n": 105,
+      "speedup_mean": 9.88386991990684,
+      "speedup_median": 7.477505484950758,
+      "speedup_min": 2.511202613095452,
+      "speedup_max": 32.293987069142375,
+      "mem_reduction_median_pct": 96.14353132887807
+    },
+    "matpes32/full": {
+      "n": 105,
+      "speedup_mean": 9.156812144855303,
+      "speedup_median": 6.92979922413507,
+      "speedup_min": 2.3149449894351366,
+      "speedup_max": 30.072631028956636,
+      "mem_reduction_median_pct": 96.1756615978819
+    }
+  }
+}
