@@ -1,47 +1,37 @@
-# MD pilot, epoch-13 Local-MoE -- sha256 manifest
+# dynamics_pilot -- sha256 of every file in this package
 
-## model artifacts (not packaged; hashes pin what the pilot ran)
-5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt  (common network)
-9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt  (routing gate)
-c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt  (C1b residual)
-0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py  (descriptor)
+Selected-model artifacts, verified before assembly:
 
-## executed code (packaged under scripts/)
-0202521b46a491f0dd1d18f8b548c28b49192d2e6b8ac2fec04dc36c8e8e5228  md/run_local_moe_md.py  (runner)
-787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04  src/local_moe/local_moe_ase.py  (calculator)
-333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  training/train_c1b_holdout40.py  (C1b model class)
+    common      5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt
+    routing     9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt
+    c1b         c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt
+    descriptor  0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py
 
-## path-scrubbed on copy
-# cluster paths, username and allocation replaced with placeholders;
-# content otherwise verbatim, originals unmodified, so these hashes
-# differ from the originals.
-# final_protocol_summary.json                        5 substitution(s)
-# run_md_pilot_ep13_cpu.sh                           1 substitution(s)
-# run_md_preflight_ep13_cpu.sh                       1 substitution(s)
+Package files (sha256, path relative to tools/descriptor_repair/dynamics_pilot):
 
-## packaged files
-d89c36be0621b64bf25805fdecdf57cefef50a0fcdc4bdeaf709f785e5c0e8c8  MD_PILOT.md
-c0a665769b20e0db95ff43c319aaa241451df5b5034b61127bde2a0278b4ccfb  case_external_0219/final_protocol_summary.json
-dfef9b18d58b70bf14303f3b3759868b4b694430da21dcb1c619b8ddc71cfbe6  case_external_0219/input_structure.extxyz
-5cb7c1159775f692d694053f459dd3f2b1fd66aceebffed7eea1beebdc8bf30e  case_external_0219/npt_5ps_frames.extxyz
-ee05ae45521d21a64251acb684819a6afbfc87f40a850d79cb27c299e05a2174  case_external_0219/npt_5ps_log.csv
-7456f137800ffa86a8f4f6567da2728de43d6139163f364de706de11dc95c668  case_external_0219/npt_final_structure.extxyz
-d0fa450d3a5eac8080a9379a3a4fb14b6cd099d90c751aa5ee57839335f1b8f3  case_external_0219/nve_10ps_frames.extxyz
-b46adc0efd477a6ef7089f28d14691b0b8d798cff1b692919d02848bdfa44da6  case_external_0219/nve_10ps_log.csv
-05f729f173b4bbfd92516e0292f65ca6930a83ef5b8a0ceb06b546bf4ed4084d  case_external_0219/nve_final_structure.extxyz
-aa33d76000d1bb209f88bb6c718143c6a38389369e9744c4deee8e4bb0fb6e71  case_external_0219/regions.npz
-1bb757acd2879c87463ee850bf2ba0045a446598cb47dc8c205da45e765e34ea  case_external_0219/relax_fire.log
-6374b07dc1c1b533349b472bc0bae35604ac356ae7fcc0c9797492728111af78  case_external_0219/relax_polish.log
-ca233ca3634f452a7fec2ea9b4702bb06278822eeae06026f5ec246ecfd2a6ac  case_external_0219/relaxed_structure.extxyz
-ef7066f9226ea667fec1ee24acdf1fdf89d9101e3f2021821258bbd15bba25cb  logs/md_pilot_analysis_ep13_v1.log
-57aeed315f6bbb1ff66032373a06335e7e52716a4e42e414614b0a468d196a79  logs/md_pilot_ep13_v1_60663099.log
-2bf102a83267f8ba12609317add708d1f5bae7f86683b427c84f95d0843e7ea5  logs/md_preflight_ep13_v1_60662850.log
-0fb0de1591f0e0c4b29f59f80a15e574b0820197d53f92dece7949c08e4c2440  md_pilot_ep13_v1_cost_projection.csv
-028902ce7a7338e9e74e8443f4dcbe5463cba13f03e913c397e8631f837cc2ea  md_pilot_ep13_v1_nve_stats.csv
-a827957f9192b3b59c1fe1b110d58822d766f2fe037cdafc0f6e0f42f197d986  scripts/analyze_md_pilot_ep13.py
-787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04  scripts/local_moe_ase.py
-0202521b46a491f0dd1d18f8b548c28b49192d2e6b8ac2fec04dc36c8e8e5228  scripts/run_local_moe_md.py
-1e630e79e118f7a5c284f46ebb07ccf97c684917e4abf7bd39f5c86beda3a997  scripts/run_md_pilot_ep13_cpu.sh
-26180cd3082fb6b77cae7f0e70fa970cdb99d2b8b21da369b7f98fd3f17dd2a1  scripts/run_md_preflight_ep13_cpu.sh
-333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  scripts/train_c1b_holdout40.py
-6b34964284ef2612ff6a301b817bcabfc112a9f52edfedd0ff0be0c7d96c372f  scripts/write_md_pilot_report.py
+    c0a665769b20e0db95ff43c319aaa241451df5b5034b61127bde2a0278b4ccfb  case_external_0219/final_protocol_summary.json
+    ee05ae45521d21a64251acb684819a6afbfc87f40a850d79cb27c299e05a2174  case_external_0219/npt_5ps_log.csv
+    b46adc0efd477a6ef7089f28d14691b0b8d798cff1b692919d02848bdfa44da6  case_external_0219/nve_10ps_log.csv
+    1bb757acd2879c87463ee850bf2ba0045a446598cb47dc8c205da45e765e34ea  case_external_0219/relax_fire.txt
+    6374b07dc1c1b533349b472bc0bae35604ac356ae7fcc0c9797492728111af78  case_external_0219/relax_polish.txt
+    024759ac8eb2ae87109f2a1c449ce85395f2ce2d21517b2c96a3e2b86ef8eda2  figures/LocalMoE_ep13_nve10ps_binned_envelope.csv
+    977e6213021ef3ab0c5316d6fa2ea7b51e0d5566da2a19543aaf404ae6090fa9  figures/LocalMoE_ep13_nve10ps_caption.txt
+    ac58b762cc292f379ae0242f2b53499d7939a4e4408c2cca78adfe88becb7ccd  figures/LocalMoE_ep13_nve10ps_energy_drift_summary.csv
+    d1d2dcbb66ebb0c9d7789c1df8b7eb69241de85132b8b25e77bddad4f65b3aa3  figures/LocalMoE_ep13_nve10ps_paper.pdf
+    75bef36495988a1cf81f152e023860998acb1049fbacf815eb7060929c393ec2  figures/LocalMoE_ep13_nve10ps_paper.svg
+    978564f503c621be05e62e3092534e131f811a7d77f7ca11f5dc2c88a87ff7d7  figures/LocalMoE_ep13_nve10ps_validation.json
+    ef7066f9226ea667fec1ee24acdf1fdf89d9101e3f2021821258bbd15bba25cb  logs/md_pilot_analysis_ep13_v1.txt
+    57aeed315f6bbb1ff66032373a06335e7e52716a4e42e414614b0a468d196a79  logs/md_pilot_ep13_v1_60663099.txt
+    2bf102a83267f8ba12609317add708d1f5bae7f86683b427c84f95d0843e7ea5  logs/md_preflight_ep13_v1_60662850.txt
+    7f62780038f3c11b81285f0787eef8903572c03eeab6aed781c4883e0646335d  metrics/md_cohort_ep13_v1_counts.csv
+    eb5904f7b476362f1bde6b19dcf11487db4350f80ec5b8280f693c6272655c70  metrics/md_cohort_ep13_v1_per_case.csv
+    2721303e88d7651f265e3a1185eca2020384a4b35fb979d69b30b28e7f212282  metrics/md_cohort_ep13_v1_scaling.csv
+    0fb0de1591f0e0c4b29f59f80a15e574b0820197d53f92dece7949c08e4c2440  metrics/md_pilot_ep13_v1_cost_projection.csv
+    028902ce7a7338e9e74e8443f4dcbe5463cba13f03e913c397e8631f837cc2ea  metrics/md_pilot_ep13_v1_nve_stats.csv
+    a827957f9192b3b59c1fe1b110d58822d766f2fe037cdafc0f6e0f42f197d986  scripts/analyze_md_pilot_ep13.py
+    787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04  scripts/local_moe_ase.py
+    0202521b46a491f0dd1d18f8b548c28b49192d2e6b8ac2fec04dc36c8e8e5228  scripts/run_local_moe_md.py
+    3999ea50f63ddf8d539c3f961f4a548d5884ea4d239cf2d9cff671be8218fe5e  scripts/run_md_cohort_ep13.slurm
+    1e630e79e118f7a5c284f46ebb07ccf97c684917e4abf7bd39f5c86beda3a997  scripts/run_md_pilot_ep13_cpu.sh
+    26180cd3082fb6b77cae7f0e70fa970cdb99d2b8b21da369b7f98fd3f17dd2a1  scripts/run_md_preflight_ep13_cpu.sh
+    333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  scripts/train_c1b_holdout40.py

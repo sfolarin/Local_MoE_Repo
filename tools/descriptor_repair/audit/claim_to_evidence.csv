@@ -4,7 +4,7 @@ item,claim,evidence,status,note
 2,"512 configurations, 369/38/105, 261 groups",data_splits/holdout40_records.csv,VERIFIED,reproduced independently
 3,forces differentiate the complete energy including gating,pilot/c1b/training_info.json; invariance/logs/,VERIFIED,"routing_coordinate_gradient_enabled true, plus FD agreement 3.038e-07 eV/A"
 3,manuscript settings match executed settings,n/a,REQUIRES AUTHOR INPUT,manuscript not supplied
-4,the residual carries no interface-specific signal,interface_evaluation/metrics/,VERIFIED,every train metric degrades while test RMSE improves
+4,"the residual's effect on held-out interface energies is metric-dependent: MAE +6.748166%, RMSE -3.508354%",interface_evaluation/metrics/parity_gamma66_ep13_v1_residual_metrics.csv,VERIFIED,"replaces the broader claim that the residual carries no interface-specific signal, which a metric-dependent result does not support; regional test force changes are all under 1% (interface SB -0.264333%), and held-out per-configuration energy degrades (RMSE 2.460349 to 2.573458 meV/atom)"
 5,the three-region figure shows 22 structures,routing_diagnostics/metrics/routing_nve_region_means.csv,CORRECTED,22 region-labelled; no code path yields 16
 5,figures are ordered by descriptor complexity,md/routing_from_md.py,CORRECTED,"ordering is source group, split group, record id; or numeric record id"
 5,PSO2-BKS is an unused channel,routing_diagnostics/metrics/routing_nve_region_means.csv,CORRECTED,nonzero in all 52; the claim came from rounding

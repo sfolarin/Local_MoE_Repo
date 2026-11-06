@@ -141,6 +141,45 @@ The residual was trained on per-configuration energies and forces, not
 on interface energies, and the per-split verdicts above are the evidence
 for how little interface-specific signal it carries.
 
+### Per-configuration accuracy, both models
+
+Energy in meV/atom, forces in eV/A. SB is structure-balanced, AW is
+atom-weighted pooled. Full precision in `audit/master_metrics.csv`.
+
+| split | model | n | E RMSE | E MAE | E bias | F SB RMSE | F AW RMSE |
+|---|---|---|---|---|---|---|---|
+| train | common only | 369 | 2.0101263271870233 | 1.228428436082133 | -0.6604482871101628 | 0.05747685178934238 | 0.06259969805484619 |
+| val | common only | 38 | 4.718778106222516 | 2.7677408834869364 | -1.6451540569004017 | 0.11355443225300363 | 0.13310762399702789 |
+| test | common only | 105 | 2.4603485838822543 | 1.1954048089610678 | -0.3052018922698581 | 0.05764664558581973 | 0.07630415638935518 |
+| train | full Local-MoE | 369 | 1.8312470976507063 | 1.042587234809736 | 0.16779727838560482 | 0.056298315711977326 | 0.06147626134977335 |
+| val | full Local-MoE | 38 | 4.5035373952748845 | 2.5175961684131964 | -0.8970682913415433 | 0.11323211705257641 | 0.1328764846122571 |
+| test | full Local-MoE | 105 | 2.5734580045032835 | 1.225542353711426 | 0.3988596595361209 | 0.05765087998147415 | 0.07621896888675658 |
+
+On the held-out test split the residual **degrades** energy accuracy
+(RMSE 2.460349 to 2.573458, MAE 1.195405 to 1.225542) while forces are
+essentially unchanged (SB 0.057647 to 0.057651). It improves both on
+train. That is the per-configuration counterpart to the metric-dependent
+interface result above.
+
+### Regional force errors on the test split
+
+| region | structures | atoms | common AW | full AW | change % | common SB | full SB | change % |
+|---|---|---|---|---|---|---|---|---|
+| all | 105 | 117840 | 0.07630415638935518 | 0.07621896888675658 | -0.11164202139123075 | 0.05764664558581973 | 0.05765087998147415 | 0.007345432871916049 |
+| interface | 22 | 20038 | 0.16554330911595547 | 0.1653729558763984 | -0.10290554204021378 | 0.16823158567652582 | 0.16778689338393313 | -0.26433341325555054 |
+| phase1_bulk | 22 | 13876 | 0.07047149090883209 | 0.06989537083827609 | -0.8175221825536837 | 0.07908911058991838 | 0.07831457023871487 | -0.9793261618777728 |
+| phase2_bulk | 22 | 13990 | 0.05835848143213053 | 0.05830937747137251 | -0.08414194398653645 | 0.06192678598567625 | 0.061677792244296856 | -0.40207761054640223 |
+
+Every regional change is under 1% in magnitude, the interface included
+(SB -0.264333%). The residual neither helps nor harms the interface
+appreciably on forces.
+
+`common_only_evaluation_summary.json` records `region_metrics_computed:
+false` and `gamma_evaluated: false` for that run, so the regional and
+interface numbers come from the comparison and gamma66 outputs rather
+than from the evaluator itself. The 18-row source/family breakdown in
+`common_only_evaluator_metrics.csv` exists for the common network only.
+
 ## 5. Routing diagnostics — CORRECTED
 
 Regenerated on the selected model; the 18 October figures came from pre-repair

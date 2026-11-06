@@ -22,16 +22,45 @@ All four artifacts are hash-checked before every run; a mismatch aborts.
 
 ## Item 6: dynamics
 
-10 ps protocol cohort (52 configurations), then its figure:
+10 ps protocol cohort, 52 configurations.
 
-    sbatch -A <alloc_cpu> dynamics_pilot/scripts/run_md_pilot_ep13_cpu.sh
+The 52-case cohort is driven by `run_md_cohort_ep13.slurm`, not by
+`run_md_pilot_ep13_cpu.sh` (which runs the single record `external_0219` into
+`md_ep13_pilot_v1`). The launcher requires `MD_JOB` and splits the manifest
+across five jobs of four 16-thread slots each; a case whose
+`nve_final_structure.extxyz` exists is skipped, so resubmission is safe:
+
+    for J in 0 1 2 3 4; do
+        MD_JOB=$J sbatch -A <alloc_cpu> \
+            dynamics_pilot/scripts/run_md_cohort_ep13.slurm
+    done
+
+`OUT_ROOT` defaults to `<proj>/md_ep13_v1`, and the launcher hashes the four
+artifacts plus the trainer, runner and calculator into each slot log. Then the
+figure:
+
     python3 <repo>/md/plot_local_moe_nve_drift.py \
         --md-root <proj>/md_ep13_v1 --out-dir <out> \
         --prefix LocalMoE_ep13_nve10ps --duration-ps 10 --limit 0.1 --paper --dpi 600
 
-500 ps cohort (ten configurations, resubmit to resume from `restart.npz`):
+500 ps cohort, ten configurations.
 
-    sbatch -A <alloc_cpu> long_dynamics/scripts/run_md_long_ep13.slurm
+`run_md_long_ep13.slurm` runs ONE record and requires `REC`
+(`REC="${REC:?set REC=<record_id>}"`), so it is submitted once per record from
+the pre-registered manifest. Resubmitting the same command resumes that record
+from its `restart.npz`:
+
+    for REC in $(tail -n +2 long_dynamics/metrics/long_manifest.csv | cut -d, -f1); do
+        REC=$REC sbatch -A <alloc_cpu> \
+            long_dynamics/scripts/run_md_long_ep13.slurm
+    done
+
+The ten records took 19 executions in four batches because of those resumes;
+each writes `<long-root>/logs/${REC}.log` and a Slurm log per execution, and all
+19 are in `long_dynamics/logs/`.
+
+Then the figure:
+
     python3 <repo>/md/plot_local_moe_nve_drift.py \
         --md-root <proj>/md_ep13_long500ps_v1 \
         --manifest <proj>/md_ep13_long500ps_v1/long_manifest_plot.csv \
