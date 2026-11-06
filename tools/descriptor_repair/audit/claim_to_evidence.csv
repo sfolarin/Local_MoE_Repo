@@ -1,0 +1,21 @@
+item,claim,evidence,status,note
+1,the four artifacts define the reported model,*/metrics/MANIFEST_SHA256.txt; */logs/*,VERIFIED,hashes checked before and after every run; contemporaneous in execution logs
+1,the model was retrained on repaired features,pilot/common/training_contract.json,VERIFIED,features_rotinv_v1; fresh_common_network; weights_discarded true
+2,"512 configurations, 369/38/105, 261 groups",data_splits/holdout40_records.csv,VERIFIED,reproduced independently
+3,forces differentiate the complete energy including gating,pilot/c1b/training_info.json; invariance/logs/,VERIFIED,"routing_coordinate_gradient_enabled true, plus FD agreement 3.038e-07 eV/A"
+3,manuscript settings match executed settings,n/a,REQUIRES AUTHOR INPUT,manuscript not supplied
+4,the residual carries no interface-specific signal,interface_evaluation/metrics/,VERIFIED,every train metric degrades while test RMSE improves
+5,the three-region figure shows 22 structures,routing_diagnostics/metrics/routing_nve_region_means.csv,CORRECTED,22 region-labelled; no code path yields 16
+5,figures are ordered by descriptor complexity,md/routing_from_md.py,CORRECTED,"ordering is source group, split group, record id; or numeric record id"
+5,PSO2-BKS is an unused channel,routing_diagnostics/metrics/routing_nve_region_means.csv,CORRECTED,nonzero in all 52; the claim came from rounding
+5,captions in the manuscript are correct,n/a,REQUIRES AUTHOR INPUT,manuscript not supplied
+6,all 52 configurations conserve energy over 10 ps,dynamics_pilot/metrics/md_cohort_ep13_v1_counts.csv,VERIFIED,52/52/52
+6,nine of ten conserve over 500 ps,long_dynamics/metrics/long500ps_verification_ep13.csv,VERIFIED,recomputed from raw logs; runner flag agrees
+6,own_0146's drift is a single event from a rearrangement,long_dynamics/case_own_0146/nve_500ps_log.csv,CORRECTED,61% accumulated earlier; crossing at 127.75 ps; no mechanism established
+6,no other trajectory has a resolvable slope,long_dynamics/metrics/long500ps_verification_ep13.csv,CORRECTED,six of ten exceed |slope|/SE of 4; OLS errors inappropriate anyway
+7,speedups from the archived cost figure,cost_benchmark/metrics/computational_cost_summary.json,CORRECTED,archived run used pre-repair artifacts; repaired descriptor ~14% slower
+7,a single median speedup describes the benchmark,cost_benchmark/metrics/computational_cost_raw.csv,CORRECTED,14 of 105 configurations enumerate images at median 2.912119x
+8,the repaired descriptor is rotationally invariant,invariance/stats/rotinv_ep13_v1.json,VERIFIED,"all three routes; bound about 4e-13 eV/A, not bitwise"
+8,stress covariance is verified on all routes,invariance/stats/rotinv_ep13_v1.json,CORRECTED,calculator routes only; the trainer route returns no stress
+8,the force field is curl-free,invariance/logs/rotinv_ep13_60897064.txt,CORRECTED,"three reciprocal pairs between two atoms, not the full Hessian"
+9,"references, labels and placeholders",n/a,REQUIRES AUTHOR INPUT,"manuscript, SI and bibliography not supplied"
