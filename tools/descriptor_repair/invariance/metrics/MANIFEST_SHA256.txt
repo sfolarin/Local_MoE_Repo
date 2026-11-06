@@ -1,0 +1,20 @@
+# invariance -- sha256 of every file in this package
+
+Selected-model artifacts, verified before assembly:
+
+    common      5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt
+    routing     9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt
+    c1b         c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt
+    descriptor  0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py
+
+Package files (sha256, path relative to tools/descriptor_repair/invariance):
+
+    9ad05d4d653c771b112b7472d381b8c42abff3dd42380b6323cd349f4fe773ae  logs/rotinv_ep13_60897064.txt
+    c881c1dbbba092b417bdd1be57441a4ba8c8e960d239f3b83006adfb7d670ec8  scripts/run_rotinv_ep13_gpu.slurm
+    43380d09c884057fa2fdf10983f35f042e9a339018be63d4a14db8029b31e8f6  scripts/test_rotational_invariance_local_moe.py
+    b702cff6a7664586ae7b75eb5e58521c98f3136ecb2c32b04ee98b48d361cc12  scripts/test_torchsoap_rotation.py
+    3a8a0235c1a76cbc5bb8edc49bc12ccfe91854d6629d054da17252fa717452f1  stats/A2_compare_module_copies.txt
+    cf70ce6f5c4bada045e3f6b836e614d735abb1e09fc4d2cbc0b87f8717c4e614  stats/C0_descriptor_verdicts.txt
+    60d8fc7544b256aaadecf1c778642df6c0e8958a18d4a73eb7b1e45a6cda6a2c  stats/D_frame_census.txt
+    0d41b2842095813f3a6be7e1b88a4e0321da46785aafc5d7e69948e77e03451d  stats/rotinv_ep13_v1.json
+    93ed1825ef4299d9b03cd2ab27f7651270340dab629d7e62f1d1a7689d2e9fbc  stats/rotinv_ep13_v1_positive_control.json

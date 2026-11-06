@@ -1,0 +1,28 @@
+==================================================================================================================================
+[0] (REFERENCE) <proj>/data/expanded_holdout40_v1_features/src_snapshot/torchsoap_autograd_module_periodic_regnorm.py
+     sha256 186453838f89f7e85a4f40d182359c4bef19b5b2516a116d62dd02cc1a79624c  19310 bytes  601 lines  (original dense file)
+[1] <proj>/scripts_nl/torchsoap_autograd_module_periodic_regnorm_nl.py
+     sha256 30acc0838fb689cb7274e5261baf265d26b1dc2ec1649d0341e8dbb09a114c86  31478 bytes  893 lines  (neighbour-list file, dense routine kept as compute_per_center_dense)
+
+config fields that define the descriptor (reference):
+     eps = 1e-12
+     l_max = 4
+     n_max = 6
+     normalize_power = True
+     power_norm_lambda = 0.01
+     r_cut = 5.0
+     radial_sigma = 0.5
+     species = ('Si', 'O')
+
+element                          [0]                     [1]
+config                    d42170c28c         d42170c28c same
+cutoff                    d98bebecc0         d98bebecc0 same
+radial                    57ddbe81a6         57ddbe81a6 same
+angular                   2f9c36fc5d         2f9c36fc5d same
+contract                  84d6e07e5f         84d6e07e5f same
+forward                   b20030a2e2         b20030a2e2 same
+dense_path                bd5836082d    d01f711505 DIFFERENT
+nl_path                         None              404c7aa19a   (neighbour-list compute_per_center; informational)
+
+value-defining elements (config, cutoff, radial, angular basis, contraction) identical to reference in every file: True
+dense routine identical to reference in every file: False

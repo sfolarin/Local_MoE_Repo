@@ -1,0 +1,985 @@
+job     : 60897064 on nid008201
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+
+artifact verification (selected model):
+  ok  common        5b17849752a535739b16cfc8
+  ok  routing       9e8e0ca6af4976ef8c74c34e
+  ok  c1b           c7ad2a89c570549309ad8906
+  ok  descriptor    0afd9a1ba7b9a24f8bf8151a
+  ok  calculator    787eb6fc6a98b678a9162ed6
+  ok  calculator matches <repo>/src/local_moe/local_moe_ase.py
+  ok  support       43380d09c884057fa2fdf109  test_rotational_invariance_local_moe.py
+  ok  support       b702cff6a7664586ae7b75eb  test_torchsoap_rotation.py
+  ok  support       333dd835069596d81d43b264  train_c1b_holdout40.py
+
+reference predictions: moe/raw_predictions/test
+  npz files: 105
+
+=============== 1. the repaired descriptor, as shipped ===============
+==============================================================================================================
+LOCAL-MoE ROTATIONAL-INVARIANCE / CONSERVATIVITY TEST
+==============================================================================================================
+common          5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  <proj>/descriptor_repair/pilot/common/best_checkpoint.pt
+routing         9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  <proj>/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt
+c1b             c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  <proj>/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt
+soap            0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  <proj>/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+trainer_script  333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  <repo>/training/train_c1b_holdout40.py
+this script     43380d09c884057fa2fdf10983f35f042e9a339018be63d4a14db8029b31e8f6
+descriptor test b702cff6a7664586ae7b75eb5e58521c98f3136ecb2c32b04ee98b48d361cc12
+local_moe_ase   787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04
+torch 2.8.0+cu128 | numpy 1.26.4 | device cuda:0 | gpu NVIDIA A100-SXM4-80GB | host nid008201
+routes ['trainer32', 'calc32', 'calc64'] | seed 12345 | random rotations 8
+tolerances: float64 route dE<1e-06 meV/atom, dF<1e-06 eV/A ; float32 routes dE<0.01 meV/atom, dF<0.0001 eV/A
+
+9 structures
+
+##############################################################################################################
+# ROUTE trainer32   (tolerances: dE < 0.01 meV/atom, dF < 0.0001 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 1.068e-15 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.99e-16 eV/A;  rms|F| = 0.096 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.3870e-14     6.900e-14     5.558e-16         nan
+    Rz(90)       +0.0000e+00     2.5160e-14     6.409e-14     9.782e-17         nan
+    Rx(90)       +0.0000e+00     1.3892e-14     4.455e-14     2.082e-16         nan
+    Ry(90)       +0.0000e+00     2.2214e-14     4.295e-14     5.092e-16         nan
+    Rz(180)      +0.0000e+00     1.3378e-14     2.964e-14     1.831e-16         nan
+    Rx(180)      +0.0000e+00     2.7306e-14     6.046e-14     4.252e-16         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.0498e-13 eV/A, max rms dF/rms F = 2.226e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.59e-14 eV/A, |sum F| = 2.87e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.772e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 6.11e-16 eV/A;  rms|F| = 0.105 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.9338e-13     2.543e-13     1.527e-15         nan
+    Rz(90)       +0.0000e+00     7.7049e-14     8.070e-14     1.006e-15         nan
+    Rx(90)       +0.0000e+00     7.8357e-14     8.719e-14     1.367e-15         nan
+    Ry(90)       +0.0000e+00     7.4069e-14     8.149e-14     7.355e-16         nan
+    Rz(180)      +0.0000e+00     1.2694e-13     1.270e-13     1.908e-15         nan
+    Rx(180)      +0.0000e+00     7.7448e-14     1.073e-13     1.180e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.3399e-13 eV/A, max rms dF/rms F = 3.194e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 5.13e-14 eV/A, |sum F| = 1.27e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 6.969e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.60e-16 eV/A;  rms|F| = 0.102 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.1479e-13     1.669e-13     1.256e-15         nan
+    Rz(90)       +0.0000e+00     4.8577e-14     6.405e-14     2.991e-15         nan
+    Rx(90)       +0.0000e+00     6.4750e-14     7.737e-14     1.076e-15         nan
+    Ry(90)       +0.0000e+00     4.8298e-14     4.884e-14     9.021e-16         nan
+    Rz(180)      +0.0000e+00     5.1223e-14     7.213e-14     2.040e-15         nan
+    Rx(180)      +0.0000e+00     1.4222e-13     1.083e-13     1.679e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.6767e-13 eV/A, max rms dF/rms F = 3.283e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.08e-13 eV/A, |sum F| = 1.07e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 9.992e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 8.79e-16 eV/A;  rms|F| = 0.087 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.3487e-13     2.407e-13     1.264e-15         nan
+    Rz(90)       +0.0000e+00     9.3773e-14     1.288e-13     3.945e-15         nan
+    Rx(90)       +0.0000e+00     1.4004e-13     1.458e-13     2.184e-15         nan
+    Ry(90)       +0.0000e+00     9.6811e-14     1.045e-13     5.730e-15         nan
+    Rz(180)      +0.0000e+00     1.3170e-13     1.956e-13     1.973e-15         nan
+    Rx(180)      +0.0000e+00     1.4666e-13     1.954e-13     2.804e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.5345e-13 eV/A, max rms dF/rms F = 4.514e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.13e-13 eV/A, |sum F| = 2.53e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.425e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 8.08e-16 eV/A;  rms|F| = 0.099 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.2947e-13     1.871e-13     8.327e-16         nan
+    Rz(90)       +0.0000e+00     6.8605e-14     6.906e-14     6.245e-16         nan
+    Rx(90)       +0.0000e+00     9.1541e-14     8.442e-14     4.476e-15         nan
+    Ry(90)       +0.0000e+00     5.3755e-14     5.338e-14     1.853e-15         nan
+    Rz(180)      +0.0000e+00     8.3177e-14     8.358e-14     1.374e-15         nan
+    Rx(180)      +0.0000e+00     9.1260e-14     1.133e-13     2.401e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.5016e-13 eV/A, max rms dF/rms F = 4.469e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.51e-13 eV/A, |sum F| = 8.60e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.270e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.01e-15 eV/A;  rms|F| = 0.131 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.2062e-13     1.724e-13     3.969e-15         nan
+    Rz(90)       +0.0000e+00     8.3981e-14     7.309e-14     4.998e-15         nan
+    Rx(90)       +0.0000e+00     1.2655e-13     9.249e-14     2.567e-15         nan
+    Ry(90)       +0.0000e+00     7.7577e-14     5.649e-14     5.855e-15         nan
+    Rz(180)      +0.0000e+00     1.1149e-13     8.253e-14     3.024e-15         nan
+    Rx(180)      +0.0000e+00     1.2587e-13     1.032e-13     3.038e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.1414e-13 eV/A, max rms dF/rms F = 3.668e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.18e-13 eV/A, |sum F| = 2.98e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.55e-15 eV/A;  rms|F| = 1.468 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     4.8850e-15     1.423e-15     2.137e-15         nan
+    Rz(90)       +0.0000e+00     5.7732e-15     1.567e-15     1.110e-15         nan
+    Rx(90)       +0.0000e+00     5.1070e-15     1.272e-15     1.776e-15         nan
+    Ry(90)       +0.0000e+00     3.5527e-15     1.028e-15     2.109e-15         nan
+    Rz(180)      +0.0000e+00     6.4393e-15     1.786e-15     2.054e-15         nan
+    Rx(180)      +0.0000e+00     6.8834e-15     1.217e-15     1.332e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.3989e-14 eV/A, max rms dF/rms F = 2.888e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.16e-15 eV/A, |sum F| = 1.61e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.11e-15 eV/A;  rms|F| = 7.172 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     9.0594e-14     3.864e-15     7.105e-15         nan
+    Rz(90)       +0.0000e+00     7.3497e-14     2.761e-15     3.553e-15         nan
+    Rx(90)       +0.0000e+00     2.4869e-14     1.128e-15     7.105e-15         nan
+    Ry(90)       +0.0000e+00     4.2633e-14     1.403e-15     9.770e-15         nan
+    Rz(180)      +0.0000e+00     4.1300e-14     1.559e-15     1.776e-15         nan
+    Rx(180)      +0.0000e+00     2.4869e-14     1.014e-15     7.105e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.5580e-13 eV/A, max rms dF/rms F = 7.274e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.84e-14 eV/A, |sum F| = 3.55e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.22e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     8.0824e-14     5.609e-15     7.938e-15         nan
+    Rz(90)       +0.0000e+00     2.8153e-14     1.900e-15     2.609e-15         nan
+    Rx(90)       +0.0000e+00     1.9984e-14     1.687e-15     4.274e-15         nan
+    Ry(90)       +0.0000e+00     8.7041e-14     6.549e-15     3.997e-15         nan
+    Rz(180)      +0.0000e+00     2.2204e-14     2.902e-15     2.082e-15         nan
+    Rx(180)      +0.0000e+00     1.9651e-14     2.101e-15     2.720e-15         nan
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.1013e-13 eV/A, max rms dF/rms F = 8.743e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 3.11e-14 eV/A, |sum F| = 8.88e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+  ACCURACY vs ORIENTATION [trainer32] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)              1.7539          1.1373         0.01291        0.00721    6
+    random SO(3) (pooled)                      1.7539          1.1373         0.01291        0.00721   48
+    Rz(30)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rx(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Ry(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(180)                                    1.7539          1.1373         0.01291        0.00721    6
+    Rx(180)                                    1.7539          1.1373         0.01291        0.00721    6
+
+##############################################################################################################
+# ROUTE calc32   (tolerances: dE < 0.01 meV/atom, dF < 0.0001 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 9.992e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.44e-16 eV/A;  rms|F| = 0.096 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.4078e-14     6.866e-14     2.476e-16   1.445e-14
+    Rz(90)       +0.0000e+00     2.5091e-14     6.438e-14     3.788e-16   4.725e-15
+    Rx(90)       +0.0000e+00     1.3767e-14     4.490e-14     3.906e-16   7.226e-15
+    Ry(90)       +0.0000e+00     2.2761e-14     4.336e-14     2.483e-16   7.782e-15
+    Rz(180)      +0.0000e+00     1.3323e-14     2.917e-14     3.331e-16   3.127e-15
+    Rx(180)      +0.0000e+00     2.7430e-14     6.067e-14     1.901e-16   9.450e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.0487e-13 eV/A, max rms dF/rms F = 2.226e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.61e-14 eV/A, |sum F| = 3.54e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.633e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 6.94e-16 eV/A;  rms|F| = 0.105 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.9331e-13     2.543e-13     1.367e-15   1.094e-14
+    Rz(90)       +0.0000e+00     7.7299e-14     8.090e-14     3.123e-16   5.003e-15
+    Rx(90)       +0.0000e+00     7.8191e-14     8.706e-14     1.901e-15   5.003e-15
+    Ry(90)       +0.0000e+00     7.3708e-14     8.167e-14     1.860e-15   6.948e-15
+    Rz(180)      +0.0000e+00     1.2722e-13     1.270e-13     8.535e-16   5.689e-15
+    Rx(180)      +0.0000e+00     7.7601e-14     1.075e-13     1.533e-15   5.559e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.3398e-13 eV/A, max rms dF/rms F = 3.194e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 5.11e-14 eV/A, |sum F| = 5.76e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.216e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.77e-16 eV/A;  rms|F| = 0.102 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.1483e-13     1.669e-13     1.769e-15   8.616e-15
+    Rz(90)       +0.0000e+00     4.8546e-14     6.406e-14     3.025e-15   6.115e-15
+    Rx(90)       +0.0000e+00     6.5149e-14     7.729e-14     2.262e-15   1.946e-15
+    Ry(90)       +0.0000e+00     4.8945e-14     4.900e-14     2.512e-15   3.057e-15
+    Rz(180)      +0.0000e+00     5.1320e-14     7.206e-14     2.331e-15   3.916e-15
+    Rx(180)      +0.0000e+00     1.4248e-13     1.083e-13     1.790e-15   2.779e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.6761e-13 eV/A, max rms dF/rms F = 3.283e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.08e-13 eV/A, |sum F| = 1.33e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 8.049e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 9.16e-16 eV/A;  rms|F| = 0.087 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.3540e-13     2.408e-13     1.439e-15   7.782e-15
+    Rz(90)       +0.0000e+00     9.3543e-14     1.288e-13     2.082e-15   3.335e-15
+    Rx(90)       +0.0000e+00     1.4015e-13     1.457e-13     3.639e-15   3.891e-15
+    Ry(90)       +0.0000e+00     9.6756e-14     1.046e-13     2.030e-15   4.725e-15
+    Rz(180)      +0.0000e+00     1.3184e-13     1.956e-13     4.916e-15   7.782e-15
+    Rx(180)      +0.0000e+00     1.4624e-13     1.952e-13     6.661e-16   6.115e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.5404e-13 eV/A, max rms dF/rms F = 4.513e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.13e-13 eV/A, |sum F| = 5.47e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 7.910e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 9.39e-16 eV/A;  rms|F| = 0.099 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.2927e-13     1.870e-13     2.956e-15   1.445e-14
+    Rz(90)       +0.0000e+00     6.8383e-14     6.909e-14     6.294e-15   6.115e-15
+    Rx(90)       +0.0000e+00     9.1375e-14     8.446e-14     2.255e-15   3.057e-15
+    Ry(90)       +0.0000e+00     5.4260e-14     5.338e-14     2.692e-15   3.891e-15
+    Rz(180)      +0.0000e+00     8.3024e-14     8.367e-14     3.657e-15   5.837e-15
+    Rx(180)      +0.0000e+00     9.1177e-14     1.135e-13     6.453e-16   6.115e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.5022e-13 eV/A, max rms dF/rms F = 4.469e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.52e-13 eV/A, |sum F| = 4.89e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +0.000e+00 meV/atom, max|dF| = 8.969e-16 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 8.88e-16 eV/A;  rms|F| = 0.131 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.2110e-13     1.725e-13     1.651e-15   6.392e-15
+    Rz(90)       +0.0000e+00     8.3743e-14     7.311e-14     3.019e-15   3.335e-15
+    Rx(90)       +0.0000e+00     1.2632e-13     9.255e-14     1.908e-15   6.670e-15
+    Ry(90)       +0.0000e+00     7.7098e-14     5.648e-14     1.645e-15   1.984e-15
+    Rz(180)      +0.0000e+00     1.1161e-13     8.255e-14     1.842e-15   5.617e-15
+    Rx(180)      +0.0000e+00     1.2610e-13     1.033e-13     3.675e-15   4.725e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.1397e-13 eV/A, max rms dF/rms F = 3.668e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.19e-13 eV/A, |sum F| = 2.38e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.78e-15 eV/A;  rms|F| = 1.468 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     4.4409e-15     1.359e-15     2.082e-15   3.168e-14
+    Rz(90)       +0.0000e+00     5.7732e-15     1.691e-15     1.332e-15   1.007e-14
+    Rx(90)       +0.0000e+00     4.8850e-15     1.188e-15     1.998e-15   8.986e-15
+    Ry(90)       +0.0000e+00     3.9968e-15     1.180e-15     2.109e-15   2.001e-14
+    Rz(180)      +0.0000e+00     7.9936e-15     1.771e-15     2.137e-15   2.446e-14
+    Rx(180)      +0.0000e+00     5.7176e-15     1.172e-15     1.388e-15   1.112e-14
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.2934e-14 eV/A, max rms dF/rms F = 2.749e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.44e-15 eV/A, |sum F| = 2.72e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 7.172 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     9.7700e-14     4.009e-15     7.105e-15   4.002e-14
+    Rz(90)       +0.0000e+00     7.2831e-14     2.760e-15     7.105e-15   3.335e-14
+    Rx(90)       +0.0000e+00     2.4869e-14     1.106e-15     7.105e-15   2.223e-14
+    Ry(90)       +0.0000e+00     4.0856e-14     1.458e-15     1.510e-14   2.223e-14
+    Rz(180)      +0.0000e+00     4.2633e-14     1.631e-15     3.553e-15   2.223e-14
+    Rx(180)      +0.0000e+00     2.1316e-14     9.610e-16     7.105e-15   1.334e-14
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.5668e-13 eV/A, max rms dF/rms F = 7.268e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.88e-14 eV/A, |sum F| = 2.66e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.22e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     8.3489e-14     5.835e-15     6.939e-15   2.112e-14
+    Rz(90)       +0.0000e+00     2.9818e-14     1.972e-15     2.998e-15   8.894e-15
+    Rx(90)       +0.0000e+00     1.6431e-14     1.562e-15     7.105e-15   6.670e-15
+    Ry(90)       +0.0000e+00     8.8818e-14     6.559e-15     2.887e-15   1.112e-14
+    Rz(180)      +0.0000e+00     2.2204e-14     2.831e-15     2.220e-15   5.559e-15
+    Rx(180)      +0.0000e+00     1.9207e-14     2.122e-15     7.383e-15   5.559e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.1280e-13 eV/A, max rms dF/rms F = 8.979e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.73e-14 eV/A, |sum F| = 7.11e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+  ACCURACY vs ORIENTATION [calc32] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)              1.7539          1.1373         0.01291        0.00721    6
+    random SO(3) (pooled)                      1.7539          1.1373         0.01291        0.00721   48
+    Rz(30)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rx(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Ry(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(180)                                    1.7539          1.1373         0.01291        0.00721    6
+    Rx(180)                                    1.7539          1.1373         0.01291        0.00721    6
+
+##############################################################################################################
+# ROUTE calc64   (tolerances: dE < 1e-06 meV/atom, dF < 1e-06 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = -6.805e-06 meV/atom, max|dF| = 1.528e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.32e-15 eV/A;  rms|F| = 0.096 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     3.4417e-14     8.729e-14     3.504e-16   1.862e-14
+    Rz(90)       +0.0000e+00     3.1947e-14     7.712e-14     2.813e-16   4.725e-15
+    Rx(90)       +0.0000e+00     1.6320e-14     5.654e-14     5.385e-16   7.782e-15
+    Ry(90)       +0.0000e+00     2.2741e-14     4.901e-14     1.410e-16   9.450e-15
+    Rz(180)      +0.0000e+00     1.6986e-14     3.751e-14     3.678e-16   4.725e-15
+    Rx(180)      +0.0000e+00     3.1494e-14     7.459e-14     2.429e-16   7.226e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.1529e-13 eV/A, max rms dF/rms F = 2.594e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.94e-14 eV/A, |sum F| = 4.21e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = -5.985e-06 meV/atom, max|dF| = 2.618e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.22e-15 eV/A;  rms|F| = 0.105 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     3.2461e-13     3.079e-13     5.343e-16   1.471e-14
+    Rz(90)       +0.0000e+00     1.0514e-13     1.031e-13     4.580e-16   8.894e-15
+    Rx(90)       +0.0000e+00     8.9265e-14     1.048e-13     9.784e-16   4.654e-15
+    Ry(90)       +0.0000e+00     7.9759e-14     9.976e-14     6.245e-16   8.894e-15
+    Rz(180)      +0.0000e+00     1.3744e-13     1.551e-13     1.006e-15   7.871e-15
+    Rx(180)      +0.0000e+00     8.8606e-14     1.266e-13     2.130e-15   8.894e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.6192e-13 eV/A, max rms dF/rms F = 3.860e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 6.08e-14 eV/A, |sum F| = 1.42e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +4.900e-06 meV/atom, max|dF| = 2.632e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.14e-15 eV/A;  rms|F| = 0.102 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.2474e-13     2.002e-13     1.971e-15   1.306e-14
+    Rz(90)       +0.0000e+00     5.3233e-14     7.871e-14     1.020e-15   1.140e-14
+    Rx(90)       +0.0000e+00     7.8271e-14     9.642e-14     8.535e-16   2.501e-15
+    Ry(90)       +0.0000e+00     5.3985e-14     5.965e-14     8.188e-16   5.003e-15
+    Rz(180)      +0.0000e+00     7.3025e-14     8.864e-14     2.165e-15   5.013e-15
+    Rx(180)      +0.0000e+00     1.6037e-13     1.297e-13     1.277e-15   4.447e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 2.9919e-13 eV/A, max rms dF/rms F = 3.999e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.48e-13 eV/A, |sum F| = 6.80e-16
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +2.447e-06 meV/atom, max|dF| = 2.252e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.64e-15 eV/A;  rms|F| = 0.087 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.8374e-13     2.932e-13     1.422e-15   6.670e-15
+    Rz(90)       +0.0000e+00     1.2389e-13     1.567e-13     1.597e-15   4.230e-15
+    Rx(90)       +0.0000e+00     1.5486e-13     1.728e-13     1.388e-15   4.086e-15
+    Ry(90)       +0.0000e+00     1.2151e-13     1.245e-13     2.477e-15   3.891e-15
+    Rz(180)      +0.0000e+00     1.6887e-13     2.315e-13     5.653e-15   8.338e-15
+    Rx(180)      +0.0000e+00     1.9214e-13     2.374e-13     5.890e-15   1.084e-14
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.0989e-13 eV/A, max rms dF/rms F = 5.359e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.32e-13 eV/A, |sum F| = 4.36e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +9.519e-06 meV/atom, max|dF| = 2.309e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.62e-15 eV/A;  rms|F| = 0.099 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     1.4880e-13     2.272e-13     3.275e-15   1.946e-14
+    Rz(90)       +0.0000e+00     7.7063e-14     8.444e-14     3.109e-15   8.616e-15
+    Rx(90)       +0.0000e+00     1.0070e-13     1.006e-13     2.456e-15   5.003e-15
+    Ry(90)       +0.0000e+00     5.8926e-14     6.553e-14     1.520e-15   5.003e-15
+    Rz(180)      +0.0000e+00     9.4605e-14     1.033e-13     5.829e-16   5.837e-15
+    Rx(180)      +0.0000e+00     1.1982e-13     1.372e-13     2.151e-15   1.028e-14
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 3.7920e-13 eV/A, max rms dF/rms F = 5.389e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.76e-13 eV/A, |sum F| = 1.78e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +6.206e-06 meV/atom, max|dF| = 2.979e-07 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 1.61e-15 eV/A;  rms|F| = 0.131 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     2.4436e-13     2.130e-13     5.829e-16   9.172e-15
+    Rz(90)       +0.0000e+00     9.5638e-14     8.941e-14     1.055e-15   3.891e-15
+    Rx(90)       +0.0000e+00     1.4436e-13     1.168e-13     2.182e-15   5.281e-15
+    Ry(90)       +0.0000e+00     8.6736e-14     6.858e-14     1.485e-15   4.169e-15
+    Rz(180)      +0.0000e+00     1.3767e-13     1.006e-13     1.263e-15   7.732e-15
+    Rx(180)      +0.0000e+00     1.6182e-13     1.274e-13     2.261e-15   4.169e-15
+    random SO(3) (n=8): max|dE| = 1.2956e-12 meV/atom, rms dE = 6.4779e-13, max|dF| = 4.0212e-13 eV/A, max rms dF/rms F = 4.380e-13
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 3.03e-13 eV/A, |sum F| = 1.78e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.11e-15 eV/A;  rms|F| = 1.468 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     5.9952e-15     2.073e-15     1.998e-15   3.947e-14
+    Rz(90)       +0.0000e+00     8.8818e-15     2.597e-15     1.582e-15   1.779e-14
+    Rx(90)       +0.0000e+00     5.1070e-15     1.455e-15     1.332e-15   2.223e-14
+    Ry(90)       +0.0000e+00     4.4409e-15     1.199e-15     6.661e-16   2.057e-14
+    Rz(180)      -1.1842e-12     9.1038e-15     2.038e-15     1.776e-15   3.780e-14
+    Rx(180)      +0.0000e+00     8.6042e-15     1.530e-15     1.388e-15   1.556e-14
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 1.3101e-14 eV/A, max rms dF/rms F = 2.905e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 5.27e-15 eV/A, |sum F| = 3.58e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 7.172 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     7.8160e-14     2.915e-15     5.773e-15   1.779e-14
+    Rz(90)       +0.0000e+00     5.9286e-14     2.344e-15     4.441e-15   4.447e-14
+    Rx(90)       +0.0000e+00     1.9318e-14     1.000e-15     3.553e-15   2.223e-14
+    Ry(90)       +0.0000e+00     2.4425e-14     1.066e-15     8.882e-15   2.668e-14
+    Rz(180)      +0.0000e+00     2.8866e-14     1.288e-15     7.994e-15   2.223e-14
+    Rx(180)      +0.0000e+00     1.5987e-14     7.914e-16     7.994e-15   2.223e-14
+    random SO(3) (n=8): max|dE| = 2.3685e-12 meV/atom, rms dE = 9.3622e-13, max|dF| = 1.5987e-13 eV/A, max rms dF/rms F = 4.879e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 5.06e-14 eV/A, |sum F| = 2.66e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     3.9968e-14     3.449e-15     4.885e-15   8.616e-15
+    Rz(90)       +0.0000e+00     2.6821e-14     2.228e-15     5.329e-15   5.559e-15
+    Rx(90)       +0.0000e+00     2.2204e-14     1.982e-15     4.385e-15   1.140e-14
+    Ry(90)       +0.0000e+00     5.0626e-14     4.496e-15     6.217e-15   9.311e-15
+    Rz(180)      +0.0000e+00     1.3323e-14     2.341e-15     9.770e-15   1.209e-14
+    Rx(180)      +0.0000e+00     1.5987e-14     2.280e-15     6.661e-15   8.894e-15
+    random SO(3) (n=8): max|dE| = 0.0000e+00 meV/atom, rms dE = 0.0000e+00, max|dF| = 6.7946e-14 eV/A, max rms dF/rms F = 7.815e-15
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.82e-14 eV/A, |sum F| = 3.11e-15
+    -> rotation invariance within tolerance: PASS;  translation: PASS
+
+  ACCURACY vs ORIENTATION [calc64] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)              1.7539          1.1373         0.01291        0.00721    6
+    random SO(3) (pooled)                      1.7539          1.1373         0.01291        0.00721   48
+    Rz(30)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rx(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Ry(90)                                     1.7539          1.1373         0.01291        0.00721    6
+    Rz(180)                                    1.7539          1.1373         0.01291        0.00721    6
+    Rx(180)                                    1.7539          1.1373         0.01291        0.00721    6
+
+  Conservativity (calc64): F = -dE/dx by central differences, and Hessian symmetry (curl-free test)
+    unrotated            on 'BUILT-IN alpha-quartz (9 atoms, hexagonal cell)': max|F_autograd - F_fd| = 8.661e-08 eV/A (h=0.0001 A; 2.159e-08 at h/2; 6 components); Hessian asymmetry max|H_ab-H_ba| = 1.610e-07 (scale 2.324e+00 eV/A^2)
+    rotated (random R)   on 'BUILT-IN alpha-quartz (9 atoms, hexagonal cell)': max|F_autograd - F_fd| = 1.628e-07 eV/A (h=0.0001 A; 4.064e-08 at h/2; 6 components); Hessian asymmetry max|H_ab-H_ba| = 4.641e-08 (scale 2.771e+00 eV/A^2)
+
+==============================================================================================================
+SUMMARY (worst case over the structures listed above)
+==============================================================================================================
+route       max noise dE  max noise dF |   max|dE| rot   max|dF| rot  max rel dF  max dS GPa |   trans dE   trans dF | rot-inv
+trainer32       0.00e+00      7.11e-15 |    0.0000e+00    3.5016e-13   4.514e-13   0.000e+00 |   0.00e+00   2.18e-13 | PASS
+calc32          0.00e+00      5.33e-15 |    0.0000e+00    3.5022e-13   4.513e-13   7.782e-14 |   0.00e+00   2.19e-13 | PASS
+calc64          0.00e+00      5.33e-15 |    2.3685e-12    4.0212e-13   5.389e-13   6.893e-14 |   0.00e+00   3.03e-13 | PASS
+
+wrote <proj>/rotation_audit_ep13_v1/rotinv_ep13_v1.json
+
+=============== 2. positive control (harness exactness) ==============
+==============================================================================================================
+LOCAL-MoE ROTATIONAL-INVARIANCE / CONSERVATIVITY TEST
+==============================================================================================================
+common          5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  <proj>/descriptor_repair/pilot/common/best_checkpoint.pt
+routing         9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  <proj>/descriptor_repair/pilot/router/best_torchsoap_routing_gate.pt
+c1b             c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  <proj>/descriptor_repair/pilot/c1b/best_c1b_residual_model.pt
+soap            0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  <proj>/descriptor_repair/torchsoap_corrected_rotinv_v1.py
+trainer_script  333dd835069596d81d43b264a9c95b46152b44cc8a8897de1b9d2af427ac477f  <repo>/training/train_c1b_holdout40.py
+this script     43380d09c884057fa2fdf10983f35f042e9a339018be63d4a14db8029b31e8f6
+descriptor test b702cff6a7664586ae7b75eb5e58521c98f3136ecb2c32b04ee98b48d361cc12
+local_moe_ase   787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04
+torch 2.8.0+cu128 | numpy 1.26.4 | device cuda:0 | gpu NVIDIA A100-SXM4-80GB | host nid008201
+routes ['trainer32', 'calc32', 'calc64'] | seed 12345 | random rotations 8
+tolerances: float64 route dE<1e-06 meV/atom, dF<1e-06 eV/A ; float32 routes dE<0.01 meV/atom, dF<0.0001 eV/A
+
+*** POSITIVE CONTROL: descriptor replaced by a correctly-weighted DIAGNOSTIC subclass. NOT the trained inputs. ***
+
+9 structures
+
+##############################################################################################################
+# ROUTE trainer32   (tolerances: dE < 0.01 meV/atom, dF < 0.0001 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = +1.552e+03 meV/atom, max|dF| = 3.972e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.66e-15 eV/A;  rms|F| = 1.690 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.4166e+01     3.4544e+00     7.667e-01     1.377e-14         nan
+    Rz(90)       +0.0000e+00     5.8695e-14     9.514e-15     4.496e-15         nan
+    Rx(90)       -1.1098e+02     4.5635e+00     1.018e+00     4.867e-15         nan
+    Ry(90)       -3.0418e+00     6.1472e+00     1.475e+00     5.010e-15         nan
+    Rz(180)      +0.0000e+00     3.1974e-14     5.840e-15     4.829e-15         nan
+    Rx(180)      +0.0000e+00     6.8894e-14     9.998e-15     5.884e-15         nan
+    random SO(3) (n=8): max|dE| = 4.4110e+02 meV/atom, rms dE = 3.7546e+02, max|dF| = 7.7145e+00 eV/A, max rms dF/rms F = 1.841e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 8.54e-14 eV/A, |sum F| = 8.55e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.173e+03 meV/atom, max|dF| = 5.946e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.44e-15 eV/A;  rms|F| = 1.738 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -3.0906e-04     5.7058e+00     1.004e+00     9.326e-15         nan
+    Rz(90)       +0.0000e+00     3.1619e-13     1.284e-14     1.510e-14         nan
+    Rx(90)       -2.5476e+01     7.7721e+00     7.819e-01     1.588e-14         nan
+    Ry(90)       +1.1803e+01     4.5232e+00     1.054e+00     4.197e-14         nan
+    Rz(180)      +0.0000e+00     3.3795e-13     1.740e-14     3.531e-14         nan
+    Rx(180)      +0.0000e+00     1.9273e-13     1.321e-14     3.153e-14         nan
+    random SO(3) (n=8): max|dE| = 1.8517e+02 meV/atom, rms dE = 1.0984e+02, max|dF| = 1.0639e+01 eV/A, max rms dF/rms F = 1.774e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.25e-13 eV/A, |sum F| = 1.04e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.178e+03 meV/atom, max|dF| = 5.449e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.00e-15 eV/A;  rms|F| = 1.648 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.7250e-04     4.5732e+00     1.007e+00     1.721e-14         nan
+    Rz(90)       +0.0000e+00     1.1242e-13     8.958e-15     7.017e-14         nan
+    Rx(90)       -1.4363e+01     4.0529e+00     7.057e-01     2.254e-14         nan
+    Ry(90)       +2.5706e+01     5.7601e+00     1.031e+00     4.396e-14         nan
+    Rz(180)      +0.0000e+00     1.2235e-13     9.704e-15     1.843e-14         nan
+    Rx(180)      +0.0000e+00     2.5654e-13     1.268e-14     2.109e-14         nan
+    random SO(3) (n=8): max|dE| = 1.7965e+02 meV/atom, rms dE = 1.1324e+02, max|dF| = 1.0198e+01 eV/A, max rms dF/rms F = 1.815e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.27e-13 eV/A, |sum F| = 1.62e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.190e+03 meV/atom, max|dF| = 6.236e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.00e-15 eV/A;  rms|F| = 1.956 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +1.1568e-03     8.6552e+00     1.067e+00     1.654e-14         nan
+    Rz(90)       +0.0000e+00     2.4426e-13     1.332e-14     3.597e-14         nan
+    Rx(90)       +1.5667e+01     6.4381e+00     8.494e-01     7.327e-14         nan
+    Ry(90)       +5.9957e+01     4.6208e+00     8.982e-01     1.266e-14         nan
+    Rz(180)      +0.0000e+00     3.2374e-13     1.846e-14     1.776e-14         nan
+    Rx(180)      +0.0000e+00     4.0679e-13     1.736e-14     1.066e-14         nan
+    random SO(3) (n=8): max|dE| = 1.0110e+02 meV/atom, rms dE = 7.2876e+01, max|dF| = 1.0786e+01 eV/A, max rms dF/rms F = 1.629e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.15e-13 eV/A, |sum F| = 3.73e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.183e+03 meV/atom, max|dF| = 5.676e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.64e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +2.9429e-03     4.9172e+00     1.007e+00     1.785e-14         nan
+    Rz(90)       +0.0000e+00     1.2523e-13     9.076e-15     5.640e-14         nan
+    Rx(90)       -1.4804e+01     3.9995e+00     7.076e-01     3.419e-14         nan
+    Ry(90)       +2.1109e+01     5.5327e+00     1.047e+00     2.043e-14         nan
+    Rz(180)      +0.0000e+00     1.2745e-13     1.007e-14     3.553e-14         nan
+    Rx(180)      +0.0000e+00     2.4518e-13     1.436e-14     5.596e-14         nan
+    random SO(3) (n=8): max|dE| = 1.9965e+02 meV/atom, rms dE = 1.1978e+02, max|dF| = 9.4822e+00 eV/A, max rms dF/rms F = 1.839e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.03e-13 eV/A, |sum F| = 3.73e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.141e+03 meV/atom, max|dF| = 3.995e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.27e-15 eV/A;  rms|F| = 1.493 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +5.1352e-04     3.2673e+00     9.124e-01     4.441e-14         nan
+    Rz(90)       +0.0000e+00     1.9172e-13     1.295e-14     5.995e-14         nan
+    Rx(90)       -1.8283e+01     4.4533e+00     7.687e-01     7.144e-14         nan
+    Ry(90)       +4.3854e+01     4.9560e+00     1.059e+00     2.365e-14         nan
+    Rz(180)      +0.0000e+00     1.6676e-13     1.327e-14     4.063e-14         nan
+    Rx(180)      +0.0000e+00     2.4092e-13     1.563e-14     3.819e-14         nan
+    random SO(3) (n=8): max|dE| = 2.3197e+02 meV/atom, rms dE = 1.5311e+02, max|dF| = 8.3980e+00 eV/A, max rms dF/rms F = 1.908e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.02e-13 eV/A, |sum F| = 7.17e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.66e-15 eV/A;  rms|F| = 2.575 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +1.5895e-04     5.1617e+00     1.087e+00     5.995e-15         nan
+    Rz(90)       +0.0000e+00     1.7764e-14     1.983e-15     2.220e-15         nan
+    Rx(90)       +1.0886e+02     1.6907e+00     4.041e-01     1.332e-15         nan
+    Ry(90)       -6.2059e-01     3.4601e+00     5.813e-01     2.220e-15         nan
+    Rz(180)      +0.0000e+00     1.2990e-14     1.828e-15     1.776e-15         nan
+    Rx(180)      +0.0000e+00     5.7732e-15     1.067e-15     2.665e-15         nan
+    random SO(3) (n=8): max|dE| = 3.8756e+02 meV/atom, rms dE = 2.5416e+02, max|dF| = 1.9365e+01 eV/A, max rms dF/rms F = 2.365e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 8.44e-15 eV/A, |sum F| = 2.66e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 2.66e-15 eV/A;  rms|F| = 3.933 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -1.3059e+02     4.3605e+00     3.735e-01     1.776e-15         nan
+    Rz(90)       +0.0000e+00     4.6435e-14     3.029e-15     3.553e-15         nan
+    Rx(90)       +3.0328e+01     1.8532e+00     1.753e-01     4.441e-15         nan
+    Ry(90)       +4.8873e+00     1.5380e+00     1.805e-01     5.329e-15         nan
+    Rz(180)      +0.0000e+00     2.1316e-14     1.799e-15     4.441e-15         nan
+    Rx(180)      +0.0000e+00     2.0262e-14     1.808e-15     1.776e-15         nan
+    random SO(3) (n=8): max|dE| = 2.0406e+02 meV/atom, rms dE = 1.1283e+02, max|dF| = 1.2542e+01 eV/A, max rms dF/rms F = 1.020e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.62e-14 eV/A, |sum F| = 3.55e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.55e-15 eV/A;  rms|F| = 2.688 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +6.1396e+01     1.1543e+01     1.045e+00     8.882e-16         nan
+    Rz(90)       +0.0000e+00     1.9540e-14     1.685e-15     6.217e-15         nan
+    Rx(90)       -8.5811e+01     1.4102e+01     9.725e-01     2.665e-15         nan
+    Ry(90)       -4.8301e+01     1.2270e+01     9.726e-01     1.066e-14         nan
+    Rz(180)      +0.0000e+00     1.7542e-14     1.956e-15     1.243e-14         nan
+    Rx(180)      +0.0000e+00     1.7764e-14     1.832e-15     4.441e-15         nan
+    random SO(3) (n=8): max|dE| = 1.2026e+02 meV/atom, rms dE = 8.2673e+01, max|dF| = 1.9123e+01 eV/A, max rms dF/rms F = 1.310e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 3.15e-14 eV/A, |sum F| = 1.15e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+  ACCURACY vs ORIENTATION [trainer32] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)           1245.4642       1237.2019         1.73091        1.71395    6
+    random SO(3) (pooled)                   1258.2161       1255.8563         2.23819        2.20946   48
+    Rz(30)                                  1234.3354       1228.1749         1.85245        1.72462    6
+    Rz(90)                                  1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(90)                                  1213.9899       1209.1627         1.73232        1.63486    6
+    Ry(90)                                  1270.5337       1263.7665         2.06862        2.11241    6
+    Rz(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+
+##############################################################################################################
+# ROUTE calc32   (tolerances: dE < 0.01 meV/atom, dF < 0.0001 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = +1.552e+03 meV/atom, max|dF| = 3.972e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.11e-15 eV/A;  rms|F| = 1.690 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.4166e+01     3.4544e+00     7.667e-01     2.776e-15   4.543e+00
+    Rz(90)       +0.0000e+00     5.8030e-14     9.443e-15     5.829e-15   1.501e-14
+    Rx(90)       -1.1098e+02     4.5635e+00     1.018e+00     4.111e-15   4.720e+00
+    Ry(90)       -3.0418e+00     6.1472e+00     1.475e+00     4.260e-15   2.880e+00
+    Rz(180)      +0.0000e+00     3.0642e-14     5.635e-15     4.385e-15   5.868e-15
+    Rx(180)      +0.0000e+00     7.1381e-14     1.004e-14     6.606e-15   3.038e-14
+    random SO(3) (n=8): max|dE| = 4.4110e+02 meV/atom, rms dE = 3.7546e+02, max|dF| = 7.7145e+00 eV/A, max rms dF/rms F = 1.841e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 8.50e-14 eV/A, |sum F| = 3.42e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.173e+03 meV/atom, max|dF| = 5.946e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 1.738 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -3.0906e-04     5.7058e+00     1.004e+00     1.887e-14   6.211e+00
+    Rz(90)       +0.0000e+00     3.1886e-13     1.283e-14     3.375e-14   8.894e-15
+    Rx(90)       -2.5476e+01     7.7721e+00     7.819e-01     5.018e-14   7.830e+00
+    Ry(90)       +1.1803e+01     4.5232e+00     1.054e+00     3.353e-14   9.120e+00
+    Rz(180)      +0.0000e+00     3.3529e-13     1.740e-14     2.176e-14   1.626e-14
+    Rx(180)      +0.0000e+00     1.9229e-13     1.322e-14     1.066e-14   8.755e-15
+    random SO(3) (n=8): max|dE| = 1.8517e+02 meV/atom, rms dE = 1.0984e+02, max|dF| = 1.0639e+01 eV/A, max rms dF/rms F = 1.774e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.26e-13 eV/A, |sum F| = 2.26e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.178e+03 meV/atom, max|dF| = 5.449e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.79e-15 eV/A;  rms|F| = 1.648 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.7250e-04     4.5732e+00     1.007e+00     2.753e-14   5.781e+00
+    Rz(90)       +0.0000e+00     1.1408e-13     8.966e-15     1.177e-14   1.334e-14
+    Rx(90)       -1.4363e+01     4.0529e+00     7.057e-01     2.931e-14   9.096e+00
+    Ry(90)       +2.5706e+01     5.7601e+00     1.031e+00     2.254e-14   8.748e+00
+    Rz(180)      +0.0000e+00     1.2257e-13     9.671e-15     7.661e-15   6.670e-15
+    Rx(180)      +0.0000e+00     2.5779e-13     1.266e-14     1.110e-14   6.670e-15
+    random SO(3) (n=8): max|dE| = 1.7965e+02 meV/atom, rms dE = 1.1324e+02, max|dF| = 1.0198e+01 eV/A, max rms dF/rms F = 1.815e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.25e-13 eV/A, |sum F| = 5.24e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.190e+03 meV/atom, max|dF| = 6.236e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.44e-15 eV/A;  rms|F| = 1.956 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +1.1568e-03     8.6552e+00     1.067e+00     3.391e-14   5.559e+00
+    Rz(90)       +0.0000e+00     2.4460e-13     1.335e-14     4.929e-14   1.028e-14
+    Rx(90)       +1.5667e+01     6.4381e+00     8.494e-01     2.309e-14   5.532e+00
+    Ry(90)       +5.9957e+01     4.6208e+00     8.982e-01     2.554e-14   8.249e+00
+    Rz(180)      +0.0000e+00     3.2330e-13     1.847e-14     2.487e-14   2.029e-14
+    Rx(180)      +0.0000e+00     4.0590e-13     1.734e-14     2.487e-14   8.060e-15
+    random SO(3) (n=8): max|dE| = 1.0110e+02 meV/atom, rms dE = 7.2876e+01, max|dF| = 1.0786e+01 eV/A, max rms dF/rms F = 1.629e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.12e-13 eV/A, |sum F| = 1.07e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.183e+03 meV/atom, max|dF| = 5.676e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.44e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +2.9429e-03     4.9172e+00     1.007e+00     3.525e-14   5.338e+00
+    Rz(90)       +0.0000e+00     1.2612e-13     9.105e-15     3.308e-14   1.223e-14
+    Rx(90)       -1.4804e+01     3.9995e+00     7.076e-01     3.020e-14   8.957e+00
+    Ry(90)       +2.1109e+01     5.5327e+00     1.047e+00     4.619e-14   8.729e+00
+    Rz(180)      +0.0000e+00     1.2701e-13     1.009e-14     3.242e-14   1.723e-14
+    Rx(180)      +0.0000e+00     2.4445e-13     1.434e-14     7.727e-14   2.029e-14
+    random SO(3) (n=8): max|dE| = 1.9965e+02 meV/atom, rms dE = 1.1978e+02, max|dF| = 9.4822e+00 eV/A, max rms dF/rms F = 1.839e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.03e-13 eV/A, |sum F| = 7.59e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.141e+03 meV/atom, max|dF| = 3.995e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.55e-15 eV/A;  rms|F| = 1.493 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +5.1352e-04     3.2673e+00     9.124e-01     2.731e-14   6.903e+00
+    Rz(90)       +0.0000e+00     1.8993e-13     1.297e-14     1.554e-14   6.670e-15
+    Rx(90)       -1.8283e+01     4.4533e+00     7.687e-01     2.343e-14   9.654e+00
+    Ry(90)       +4.3854e+01     4.9560e+00     1.059e+00     3.775e-14   8.453e+00
+    Rz(180)      +0.0000e+00     1.6565e-13     1.329e-14     4.641e-14   1.112e-14
+    Rx(180)      +0.0000e+00     2.4380e-13     1.565e-14     7.638e-14   8.894e-15
+    random SO(3) (n=8): max|dE| = 2.3197e+02 meV/atom, rms dE = 1.5311e+02, max|dF| = 8.3980e+00 eV/A, max rms dF/rms F = 1.908e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.01e-13 eV/A, |sum F| = 9.70e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 3.11e-15 eV/A;  rms|F| = 2.575 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +1.5895e-04     5.1617e+00     1.087e+00     9.992e-15   2.412e+01
+    Rz(90)       +0.0000e+00     1.7764e-14     1.737e-15     1.776e-15   2.558e-14
+    Rx(90)       +1.0886e+02     1.6907e+00     4.041e-01     2.665e-15   8.854e+00
+    Ry(90)       -6.2059e-01     3.4601e+00     5.813e-01     1.110e-15   1.405e+01
+    Rz(180)      +0.0000e+00     1.4211e-14     1.713e-15     1.776e-15   2.223e-14
+    Rx(180)      +0.0000e+00     5.7732e-15     9.148e-16     3.553e-15   2.518e-14
+    random SO(3) (n=8): max|dE| = 3.8756e+02 meV/atom, rms dE = 2.5416e+02, max|dF| = 1.9365e+01 eV/A, max rms dF/rms F = 2.365e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 8.88e-15 eV/A, |sum F| = 1.33e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 3.933 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -1.3059e+02     4.3605e+00     3.735e-01     4.441e-15   5.194e+00
+    Rz(90)       +0.0000e+00     4.6657e-14     3.122e-15     6.217e-15   3.002e-14
+    Rx(90)       +3.0328e+01     1.8532e+00     1.753e-01     1.776e-15   6.542e+00
+    Ry(90)       +4.8873e+00     1.5380e+00     1.805e-01     5.329e-15   5.437e+00
+    Rz(180)      +0.0000e+00     1.9540e-14     1.747e-15     5.329e-15   7.226e-15
+    Rx(180)      +0.0000e+00     1.9040e-14     1.769e-15     6.217e-15   1.445e-14
+    random SO(3) (n=8): max|dE| = 2.0406e+02 meV/atom, rms dE = 1.1283e+02, max|dF| = 1.2542e+01 eV/A, max rms dF/rms F = 1.020e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.26e-14 eV/A, |sum F| = 4.44e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.44e-15 eV/A;  rms|F| = 2.688 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +6.1396e+01     1.1543e+01     1.045e+00     1.776e-14   5.884e+00
+    Rz(90)       +0.0000e+00     1.8652e-14     1.755e-15     7.105e-15   3.002e-14
+    Rx(90)       -8.5811e+01     1.4102e+01     9.725e-01     2.220e-15   4.729e+00
+    Ry(90)       -4.8301e+01     1.2270e+01     9.726e-01     6.772e-15   3.883e+00
+    Rz(180)      +0.0000e+00     1.9762e-14     2.052e-15     5.329e-15   4.169e-14
+    Rx(180)      +0.0000e+00     1.8652e-14     1.786e-15     9.326e-15   3.697e-14
+    random SO(3) (n=8): max|dE| = 1.2026e+02 meV/atom, rms dE = 8.2673e+01, max|dF| = 1.9123e+01 eV/A, max rms dF/rms F = 1.310e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.75e-14 eV/A, |sum F| = 5.77e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+  ACCURACY vs ORIENTATION [calc32] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)           1245.4642       1237.2019         1.73091        1.71395    6
+    random SO(3) (pooled)                   1258.2161       1255.8563         2.23819        2.20946   48
+    Rz(30)                                  1234.3354       1228.1749         1.85245        1.72462    6
+    Rz(90)                                  1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(90)                                  1213.9899       1209.1627         1.73232        1.63486    6
+    Ry(90)                                  1270.5337       1263.7665         2.06862        2.11241    6
+    Rz(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+
+##############################################################################################################
+# ROUTE calc64   (tolerances: dE < 1e-06 meV/atom, dF < 1e-06 eV/A)
+##############################################################################################################
+
+- TEST external_0090 [EDI__THO] N=60
+    a,b,c=(6.88,6.36,27.50) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=60 | edges(search)=1540
+    identity vs stored parity-export prediction: dE = +1.552e+03 meV/atom, max|dF| = 3.972e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.00e-15 eV/A;  rms|F| = 1.690 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.4166e+01     3.4544e+00     7.667e-01     7.522e-15   4.543e+00
+    Rz(90)       +0.0000e+00     5.6354e-14     9.863e-15     2.510e-15   2.279e-14
+    Rx(90)       -1.1098e+02     4.5635e+00     1.018e+00     2.227e-15   4.720e+00
+    Ry(90)       -3.0418e+00     6.1472e+00     1.475e+00     4.649e-15   2.880e+00
+    Rz(180)      +0.0000e+00     3.4639e-14     6.239e-15     5.329e-15   1.071e-14
+    Rx(180)      -9.4739e-13     6.4011e-14     1.021e-14     4.504e-15   3.373e-14
+    random SO(3) (n=8): max|dE| = 4.4110e+02 meV/atom, rms dE = 3.7546e+02, max|dF| = 7.7145e+00 eV/A, max rms dF/rms F = 1.841e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 7.23e-14 eV/A, |sum F| = 6.11e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0122 [GME__OFF] N=378
+    a,b,c=(13.17,34.83,17.50) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.173e+03 meV/atom, max|dF| = 5.946e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 6.44e-15 eV/A;  rms|F| = 1.738 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -2.6862e-04     5.7058e+00     1.004e+00     2.254e-14   6.211e+00
+    Rz(90)       +0.0000e+00     3.3840e-13     1.432e-14     1.710e-14   7.782e-15
+    Rx(90)       -2.5475e+01     7.7721e+00     7.819e-01     4.319e-14   7.830e+00
+    Ry(90)       +1.1803e+01     4.5232e+00     1.054e+00     2.132e-14   9.120e+00
+    Rz(180)      +0.0000e+00     3.2330e-13     1.852e-14     1.021e-14   1.445e-14
+    Rx(180)      +0.0000e+00     1.6942e-13     1.313e-14     3.375e-14   1.681e-14
+    random SO(3) (n=8): max|dE| = 1.8517e+02 meV/atom, rms dE = 1.0984e+02, max|dF| = 1.0639e+01 eV/A, max rms dF/rms F = 1.774e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.26e-13 eV/A, |sum F| = 1.58e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0015 [AFT__EAB] N=648
+    a,b,c=(13.29,23.02,44.42) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.178e+03 meV/atom, max|dF| = 5.449e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 6.44e-15 eV/A;  rms|F| = 1.648 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -5.0084e-04     4.5732e+00     1.007e+00     1.377e-14   5.781e+00
+    Rz(90)       +0.0000e+00     1.1459e-13     9.394e-15     1.910e-14   1.556e-14
+    Rx(90)       -1.4363e+01     4.0529e+00     7.057e-01     1.288e-14   9.096e+00
+    Ry(90)       +2.5706e+01     5.7601e+00     1.031e+00     3.286e-14   8.748e+00
+    Rz(180)      +0.0000e+00     1.3567e-13     1.065e-14     1.932e-14   1.001e-14
+    Rx(180)      +0.0000e+00     2.5308e-13     1.306e-14     2.931e-14   4.447e-15
+    random SO(3) (n=8): max|dE| = 1.7965e+02 meV/atom, rms dE = 1.1324e+02, max|dF| = 1.0198e+01 eV/A, max rms dF/rms F = 1.815e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.36e-13 eV/A, |sum F| = 1.14e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0152 [OFF__SAT] N=810
+    a,b,c=(12.76,33.76,37.94) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.190e+03 meV/atom, max|dF| = 6.236e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.77e-15 eV/A;  rms|F| = 1.956 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +1.1524e-03     8.6552e+00     1.067e+00     1.998e-14   5.559e+00
+    Rz(90)       +0.0000e+00     2.6201e-13     1.393e-14     1.510e-14   8.060e-15
+    Rx(90)       +1.5667e+01     6.4381e+00     8.494e-01     6.262e-14   5.532e+00
+    Ry(90)       +5.9957e+01     4.6208e+00     8.982e-01     2.087e-14   8.249e+00
+    Rz(180)      +0.0000e+00     3.4928e-13     1.906e-14     1.998e-14   1.056e-14
+    Rx(180)      +0.0000e+00     3.7570e-13     1.745e-14     1.599e-14   1.390e-14
+    random SO(3) (n=8): max|dE| = 1.0110e+02 meV/atom, rms dE = 7.2876e+01, max|dF| = 1.0786e+01 eV/A, max rms dF/rms F = 1.629e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.19e-13 eV/A, |sum F| = 9.77e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0134 [LEV__SFW] N=972
+    a,b,c=(13.29,23.01,66.69) A  alpha,beta,gamma=(90.0,90.0,90.0)  axis-aligned-orthorhombic=True
+    identity vs stored parity-export prediction: dE = +1.183e+03 meV/atom, max|dF| = 5.676e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 7.99e-15 eV/A;  rms|F| = 1.631 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +2.9575e-03     4.9172e+00     1.007e+00     6.919e-14   5.338e+00
+    Rz(90)       +0.0000e+00     1.3189e-13     9.528e-15     3.331e-14   7.673e-15
+    Rx(90)       -1.4804e+01     3.9995e+00     7.076e-01     9.770e-15   8.957e+00
+    Ry(90)       +2.1109e+01     5.5327e+00     1.047e+00     6.128e-14   8.729e+00
+    Rz(180)      +0.0000e+00     1.3567e-13     1.061e-14     4.041e-14   1.056e-14
+    Rx(180)      +0.0000e+00     2.3343e-13     1.486e-14     1.155e-14   6.115e-15
+    random SO(3) (n=8): max|dE| = 1.9965e+02 meV/atom, rms dE = 1.1978e+02, max|dF| = 9.4822e+00 eV/A, max rms dF/rms F = 1.839e+00
+    translation: dE = -1.87e-12 meV/atom, max|dF| = 3.70e-13 eV/A, |sum F| = 1.38e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- TEST external_0036 [AFX__SFW] N=1404
+    a,b,c=(13.55,35.85,62.86) A  alpha,beta,gamma=(90.0,90.0,79.1)  axis-aligned-orthorhombic=False
+    identity vs stored parity-export prediction: dE = +1.141e+03 meV/atom, max|dF| = 3.995e+00 eV/A
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.77e-15 eV/A;  rms|F| = 1.493 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +4.4900e-04     3.2673e+00     9.124e-01     4.963e-14   6.903e+00
+    Rz(90)       +0.0000e+00     1.7905e-13     1.372e-14     5.174e-14   2.501e-14
+    Rx(90)       -1.8283e+01     4.4533e+00     7.687e-01     3.647e-14   9.654e+00
+    Ry(90)       +4.3855e+01     4.9560e+00     1.059e+00     7.683e-14   8.453e+00
+    Rz(180)      +0.0000e+00     1.7741e-13     1.435e-14     6.795e-14   1.890e-14
+    Rx(180)      +0.0000e+00     2.4114e-13     1.542e-14     5.063e-14   5.837e-15
+    random SO(3) (n=8): max|dE| = 2.3197e+02 meV/atom, rms dE = 1.5311e+02, max|dF| = 8.3980e+00 eV/A, max rms dF/rms F = 1.908e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 4.23e-13 eV/A, |sum F| = 2.24e-13
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN alpha-quartz (9 atoms, hexagonal cell)
+    a,b,c=(4.91,4.91,5.41) A  alpha,beta,gamma=(90.0,90.0,120.0)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 4.00e-15 eV/A;  rms|F| = 2.575 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +0.0000e+00     5.1617e+00     1.087e+00     1.776e-15   2.412e+01
+    Rz(90)       +0.0000e+00     2.1316e-14     2.710e-15     5.329e-15   4.463e-14
+    Rx(90)       +1.0886e+02     1.6907e+00     4.041e-01     2.220e-15   8.854e+00
+    Ry(90)       -6.2068e-01     3.4601e+00     5.813e-01     1.110e-15   1.405e+01
+    Rz(180)      +0.0000e+00     2.1316e-14     2.564e-15     1.776e-15   4.669e-14
+    Rx(180)      +0.0000e+00     1.1768e-14     1.949e-15     1.776e-15   6.003e-14
+    random SO(3) (n=8): max|dE| = 3.8756e+02 meV/atom, rms dE = 2.5416e+02, max|dF| = 1.9365e+01 eV/A, max rms dF/rms F = 2.365e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 1.20e-14 eV/A, |sum F| = 2.66e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN beta-cristobalite rattled+sheared (24 atoms, triclinic)
+    a,b,c=(7.31,7.02,7.23) A  alpha,beta,gamma=(87.7,89.4,88.3)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 5.33e-15 eV/A;  rms|F| = 3.933 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       -1.3059e+02     4.3605e+00     3.735e-01     2.665e-15   5.194e+00
+    Rz(90)       +0.0000e+00     3.5777e-14     2.002e-15     8.882e-15   2.557e-14
+    Rx(90)       +3.0328e+01     1.8532e+00     1.753e-01     4.441e-15   6.542e+00
+    Ry(90)       +4.8873e+00     1.5380e+00     1.805e-01     5.329e-15   5.437e+00
+    Rz(180)      +0.0000e+00     1.5099e-14     1.257e-15     4.441e-15   1.779e-14
+    Rx(180)      +0.0000e+00     1.7153e-14     1.301e-15     3.553e-15   2.223e-14
+    random SO(3) (n=8): max|dE| = 2.0406e+02 meV/atom, rms dE = 1.1283e+02, max|dF| = 1.2542e+01 eV/A, max rms dF/rms F = 1.020e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 2.85e-14 eV/A, |sum F| = 5.33e-15
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+- BUILT-IN random SiO2-like (72 atoms, triclinic)
+    a,b,c=(10.20,9.96,10.46) A  alpha,beta,gamma=(85.5,93.8,83.7)  axis-aligned-orthorhombic=False
+    noise floor (same input twice): dE = +0.00e+00 meV/atom, max|dF| = 9.77e-15 eV/A;  rms|F| = 2.688 eV/A
+    rotation     dE meV/atom   max|dF| eV/A  rms dF/rms F  |sum F| eV/A  dSigma GPa
+    Rz(30)       +6.1396e+01     1.1543e+01     1.045e+00     1.421e-14   5.884e+00
+    Rz(90)       +0.0000e+00     3.6415e-14     2.957e-15     3.997e-15   2.835e-14
+    Rx(90)       -8.5811e+01     1.4102e+01     9.725e-01     3.997e-15   4.729e+00
+    Ry(90)       -4.8301e+01     1.2270e+01     9.726e-01     1.021e-14   3.883e+00
+    Rz(180)      +0.0000e+00     5.1514e-14     3.406e-15     8.882e-15   1.723e-14
+    Rx(180)      +0.0000e+00     2.0428e-14     2.195e-15     4.219e-15   1.001e-14
+    random SO(3) (n=8): max|dE| = 1.2026e+02 meV/atom, rms dE = 8.2673e+01, max|dF| = 1.9123e+01 eV/A, max rms dF/rms F = 1.310e+00
+    translation: dE = +0.00e+00 meV/atom, max|dF| = 5.15e-14 eV/A, |sum F| = 1.24e-14
+    -> rotation invariance within tolerance: FAIL;  translation: PASS
+
+  ACCURACY vs ORIENTATION [calc64] on 6 real holdout-40 TEST records (labels = stored MatPES r2SCAN energies/forces, forces rotated consistently: F_ref' = F_ref R^T)
+    orientation                       E RMSE meV/atom  E MAE meV/atom  F SB-RMSE eV/A  F pooled RMSE    n
+    identity (native orientation)           1245.4642       1237.2019         1.73091        1.71395    6
+    random SO(3) (pooled)                   1258.2160       1255.8562         2.23819        2.20946   48
+    Rz(30)                                  1234.3354       1228.1749         1.85245        1.72462    6
+    Rz(90)                                  1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(90)                                  1213.9899       1209.1627         1.73232        1.63486    6
+    Ry(90)                                  1270.5337       1263.7665         2.06862        2.11241    6
+    Rz(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+    Rx(180)                                 1245.4642       1237.2019         1.73091        1.71395    6
+
+  Conservativity (calc64): F = -dE/dx by central differences, and Hessian symmetry (curl-free test)
+    unrotated            on 'BUILT-IN alpha-quartz (9 atoms, hexagonal cell)': max|F_autograd - F_fd| = 1.664e-07 eV/A (h=0.0001 A; 4.166e-08 at h/2; 6 components); Hessian asymmetry max|H_ab-H_ba| = 5.697e-07 (scale 6.653e+00 eV/A^2)
+    rotated (random R)   on 'BUILT-IN alpha-quartz (9 atoms, hexagonal cell)': max|F_autograd - F_fd| = 5.329e-07 eV/A (h=0.0001 A; 1.333e-07 at h/2; 6 components); Hessian asymmetry max|H_ab-H_ba| = 5.489e-06 (scale 1.795e+01 eV/A^2)
+
+==============================================================================================================
+SUMMARY (worst case over the structures listed above)
+==============================================================================================================
+route       max noise dE  max noise dF |   max|dE| rot   max|dF| rot  max rel dF  max dS GPa |   trans dE   trans dF | rot-inv
+trainer32       0.00e+00      5.00e-15 |    4.4110e+02    1.9365e+01   2.365e+00   0.000e+00 |   0.00e+00   4.03e-13 | FAIL
+calc32          0.00e+00      5.33e-15 |    4.4110e+02    1.9365e+01   2.365e+00   3.191e+01 |   0.00e+00   4.03e-13 | FAIL
+calc64          0.00e+00      9.77e-15 |    4.4110e+02    1.9365e+01   2.365e+00   3.191e+01 |   1.87e-12   4.23e-13 | FAIL
+
+wrote <proj>/rotation_audit_ep13_v1/rotinv_ep13_v1_positive_control.json
+
+=== outputs ===
+  rotinv_ep13_v1.json                                  f5bd8509f496b9a7
+  rotinv_ep13_v1_positive_control.json                 17e9ab29d0148aed
+
+October results in <proj>/rotation_audit are untouched:
+  C_186453838f89_float32.json
+  C_186453838f89_float64.json
+  C_30acc0838fb6_float32.json
+  C_30acc0838fb6_float64.json
+
+NOTE: measurements only. Nothing staged, committed or pushed.

@@ -1,0 +1,20 @@
+== 186453838f89 float64
+  VERDICT [AS IMPLEMENTED (production module)] (tolerance 1e-09 relative, random SO(3) rotations, worst case over structures)
+     per-centre 390-vector rel-L2: 1.250e+00  -> FAIL
+     global 780-vector rel-L2    : 9.770e-01  -> FAIL
+     raw power spectrum by l      : l=0: 3.476e-12 PASS  l=1: 6.131e-11 PASS  l=2: 1.933e+00 FAIL  l=3: 3.319e+01 FAIL  l=4: 3.347e+01 FAIL
+== 186453838f89 float32
+  VERDICT [AS IMPLEMENTED (production module)] (tolerance 0.0001 relative, random SO(3) rotations, worst case over structures)
+     per-centre 390-vector rel-L2: 1.250e+00  -> FAIL
+     global 780-vector rel-L2    : 9.770e-01  -> FAIL
+     raw power spectrum by l      : l=0: 1.876e-06 PASS  l=1: 2.731e-05 PASS  l=2: 1.933e+00 FAIL  l=3: 3.319e+01 FAIL  l=4: 3.347e+01 FAIL
+== 30acc0838fb6 float64
+  VERDICT [AS IMPLEMENTED (production module)] (tolerance 1e-09 relative, random SO(3) rotations, worst case over structures)
+     per-centre 390-vector rel-L2: 1.250e+00  -> FAIL
+     global 780-vector rel-L2    : 9.770e-01  -> FAIL
+     raw power spectrum by l      : l=0: 3.476e-12 PASS  l=1: 6.131e-11 PASS  l=2: 1.933e+00 FAIL  l=3: 3.319e+01 FAIL  l=4: 3.347e+01 FAIL
+== 30acc0838fb6 float32
+  VERDICT [AS IMPLEMENTED (production module)] (tolerance 0.0001 relative, random SO(3) rotations, worst case over structures)
+     per-centre 390-vector rel-L2: 1.250e+00  -> FAIL
+     global 780-vector rel-L2    : 9.770e-01  -> FAIL
+     raw power spectrum by l      : l=0: 1.435e-06 PASS  l=1: 1.258e-05 PASS  l=2: 1.933e+00 FAIL  l=3: 3.319e+01 FAIL  l=4: 3.347e+01 FAIL

@@ -1,0 +1,9 @@
+split      n  lower-tri  axis-orth  |a_y|,|a_z| max  mean |c_z|/|c|  mean |a_x|/|a|        N range
+train    369      1.000      0.434        0.000e+00          0.9939          1.0000     72-4608  
+val       38      1.000      0.474        0.000e+00          0.9966          1.0000    180-2976  
+test     105      1.000      0.343        0.000e+00          0.9972          1.0000     60-4608  
+
+records whose cell is NOT lower-triangular (first 20 per split):
+  train: 0
+  val: 0
+  test: 0
