@@ -1,0 +1,52 @@
+# long_dynamics -- sha256 of every file in this package
+
+Selected-model artifacts, verified before assembly:
+
+    common      5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt
+    routing     9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt
+    c1b         c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt
+    descriptor  0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py
+
+Package files (sha256, path relative to tools/descriptor_repair/long_dynamics):
+
+    cb113caae01c285d4baa706abe9512314e569f908a6d791cf66e956797864500  case_external_0022/long_nve_summary.json
+    b76e1f6879ec900ee017a5ac2341e27c838b98a5175f4d2c608017405b7a210a  case_external_0022/nve_500ps_log.csv
+    e87e8f414b7074e97eddd7ef0f78506ab9aed8623e71954e35e9215f08b92c25  case_external_0022/provenance_hashes.json
+    28133ff23e75de9b16fa480033c23ad85debd65105bc1c68f9ec99aca2cb4a8b  case_external_0110/long_nve_summary.json
+    553435e962a86d542d6afc28a11b91950e13410cc979d20f152eb38a34d461f9  case_external_0110/nve_500ps_log.csv
+    9c9b37ec568f58812c0ad310b558aa57f0103b94f9a1e3b945972b0830c7fd9d  case_external_0110/provenance_hashes.json
+    25e0cb2112016378eb5b19e27d7459e7725a76af5883d783d9f634a26b05def8  case_external_0148/long_nve_summary.json
+    4475e4a17ed3b46a12c36a53ed74351c6a3a2a460e67f9da451c4b09524e00de  case_external_0148/nve_500ps_log.csv
+    ab0e24edcb095ccfc1d6e6b7e4df0756a8660a875c7ee3a4820ca18ae919cd00  case_external_0148/provenance_hashes.json
+    d755a3fe3dccb022ddcaf5cd9d233a89689c877711b790b80cbeef4a48d7912f  case_external_0172/long_nve_summary.json
+    b58508b33713458265a94a81c7f0dc38df340d70c5d10beece0ba9097b8568fe  case_external_0172/nve_500ps_log.csv
+    1a38c4877fd6483d9b330310c3c1908664dc959b7e8d3b7eea66cd00bfbffa97  case_external_0172/provenance_hashes.json
+    8c6dd76335578c4fa16c10941d95fb8651357bb7741793a02a3280fde46404ab  case_external_0230/long_nve_summary.json
+    7b58419c342802950fbc47da017bcac90d313c5d37faef51b54e4c1d2fd3a8c1  case_external_0230/nve_500ps_log.csv
+    1e54e42bb9632d4e2838912b124b8255852acc2406627a95ec7dde1574fff264  case_external_0230/provenance_hashes.json
+    7bda861f2a7d51a1a2774036c0999295b010bba1be875dfdf49e908dce3350b1  case_own_0010/long_nve_summary.json
+    ed88a597e5ca92e2c9627d8e0c28f05708e44bea334c53c9133ea1eededbde20  case_own_0010/nve_500ps_log.csv
+    8d36f59754c3492b7a5d5ad9eaa14cc4ff98389a69dd8ef966a24d34bf5d8c20  case_own_0010/provenance_hashes.json
+    d541e3f7a21b7f728e8a4acf931a560896117932d82c915feae36ca2920edfe4  case_own_0098/long_nve_summary.json
+    ad8fee73202706055e1d36eaae2d0524a58b3388a9ec5e362404916c767587a8  case_own_0098/nve_500ps_log.csv
+    232f042dfee2b7d5a3a9a373b59a0218a1afe4f5f3510f5ee777f23087bec26d  case_own_0098/provenance_hashes.json
+    575b837cb61f4235c6131c1a61e295b114a69488fb13c888f5dbde4e185ae6e0  case_own_0110/long_nve_summary.json
+    8c519d970621a9f7041b6d8385d53ac0362b15cd53d0741a26cbbdc7a7c36c8b  case_own_0110/nve_500ps_log.csv
+    68e772326e6909985a6dde78d5ec6c89995ae813bc6832c9f5c9d9ed501f5ed5  case_own_0110/provenance_hashes.json
+    e0faa86451ae87dcc92568f63d0091c77097727085e6bfb938cb3a303ad90cff  case_own_0136/long_nve_summary.json
+    d52d855d4cd161b1760edbacca78d04848cb0038a2db465547ec08591df94bb0  case_own_0136/nve_500ps_log.csv
+    1ee5340b435054b73286104273c56b6a65a9acf575fa7a0fb3b4d18749d1de58  case_own_0136/provenance_hashes.json
+    f03c65c2ec4f6b85ad249d7df26d8238c075133548bf475b696a2c5cca7e9a30  case_own_0146/long_nve_summary.json
+    ae86b717bab05e821098a9013c372f578993730af07c2d42e9d24012e07b4ca4  case_own_0146/nve_500ps_log.csv
+    48325cf39ade91256a42dd1f5e5be0f13e79528d9ee9650d0394a89c5fac4324  case_own_0146/provenance_hashes.json
+    b126bfdd523807ed9660af2f31ec95f46ca91547cafe8626be1deec009611476  figures/LocalMoE_ep13_long500ps_binned_envelope.csv
+    eb68b40d604d2fe724ed49caf43ed3f86d187d37afce25309f7f14d8a2fd74ad  figures/LocalMoE_ep13_long500ps_caption.txt
+    46f56ee3bb184646edf42fecaa07a58e4f53b113b696b477178c8483684c03cc  figures/LocalMoE_ep13_long500ps_energy_drift_summary.csv
+    8ff0f50596c5860d7c66a69b6adba8f24be236ef0cd357e7fdddf9399dde0866  figures/LocalMoE_ep13_long500ps_paper.pdf
+    f81648cb8e8209c75b2e60406b17300890738f52c7858561b089f1f10d18738e  figures/LocalMoE_ep13_long500ps_paper.png
+    b5c3721830e2520352bcb2138d11d6bff6497808ba11d2afafa2511c8bd50907  figures/LocalMoE_ep13_long500ps_paper.svg
+    da2859e559e720c978a3adf4a4460a591ce34b25efafd21e7f20856959f518cd  figures/LocalMoE_ep13_long500ps_validation.json
+    14ef53500c8c6d2472edc940094140a8ffc6c05383ffa815ff893c2bda43394e  metrics/long500ps_verification_ep13.csv
+    05e6aebd0b77749c20e0156de2f689578d444a3b1ff78a3f04733fa7998bf0c8  metrics/long_manifest.csv
+    5c6037faf9259173fe90ac62683eccbb5cd866a90884028bb593cc4364e37511  metrics/long_manifest_plot.csv
+    33ab592eb64993cb162be917c211fe60fb3019dc0bd67818ab9af5d6a53cd605  scripts/run_md_long_ep13.slurm

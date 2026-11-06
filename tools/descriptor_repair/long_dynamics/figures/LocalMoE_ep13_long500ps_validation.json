@@ -1,0 +1,47 @@
+{
+  "manifest_records": 10,
+  "complete_records": 10,
+  "omitted": [],
+  "analysis_start_ps": 0.0,
+  "analysis_end_ps": 500.0,
+  "n_atoms_min": 216,
+  "n_atoms_max": 4608,
+  "raw_source_counts": {
+    "Own_augmented": 5,
+    "Oishi_all179": 4,
+    "Oishi_relaxed52": 1
+  },
+  "display_source_counts": {
+    "Oishi": 5,
+    "Own": 5
+  },
+  "distinct_manifest_family_labels": 10,
+  "recorded_split_counts": {
+    "unknown": 10
+  },
+  "recorded_dtype_counts": {
+    "float64": 10
+  },
+  "shared_protocol": {},
+  "criterion_meV_per_atom": 0.1,
+  "passing_records": 9,
+  "largest_excursion_meV_per_atom": 0.5194455883064109,
+  "worst_record_id": "own_0146",
+  "median_max_excursion_meV_per_atom": 0.005680023812182355,
+  "largest_absolute_slope_microeV_per_atom_per_ps": 1.348764076365749,
+  "median_slope_microeV_per_atom_per_ps": 2.5236652501465105e-05,
+  "binned_envelope": {
+    "bins": 250,
+    "width_ps": 2.0,
+    "range": "extrema over structures and all logged samples in each time bin",
+    "mean": "equal-weight mean of per-structure bin means"
+  },
+  "max_energy_sum_error_eV": 1.7479351299698465e-11,
+  "max_energy_per_atom_error_eV": 5.329070518200751e-15,
+  "max_volume_relative_range": 0.0,
+  "notes": [
+    "Run names such as holdout40 do not establish the number of families in the supplied manifest.",
+    "Training-family disjointness cannot be checked without the training split assignments.",
+    "All metrics use the same analysis window and the first NVE sample as the energy reference."
+  ]
+}

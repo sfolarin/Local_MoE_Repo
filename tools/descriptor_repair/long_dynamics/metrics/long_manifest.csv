@@ -1,0 +1,11 @@
+record_id,label,source,n_atoms,slot,order,why
+external_0110,FAU__SBT (Oishi),Oishi_all179,4608,0,0,largest cell (large-N case)
+own_0136,BEA__ISV (Own),Own_augmented,384,0,1,region-labelled; small Own cell
+external_0022,AFV__AFX (Oishi),Oishi_all179,234,0,2,largest 10 ps drift (rank 1 of 52)
+own_0098,ISV__MEL (Own),Own_augmented,2976,1,0,region-labelled; largest Own cell
+own_0010,AFI__CRISTOBALITE (Own),Own_augmented,912,1,1,region-labelled; strongest phase-1 Tersoff routing
+external_0148,MTT__TON (Oishi),Oishi_all179,216,1,2,largest 10 ps drift (rank 2 of 52)
+own_0146,CHA__EMT (Own),Own_augmented,2592,2,0,region-labelled; strongest interface shift toward ML-BKS; -9.7% NPT volume change
+external_0172,SSZ31E__SSZ31G (Oishi),Oishi_all179,336,2,1,largest 10 ps drift (rank 3 of 52)
+own_0110,EMT__MTW (Own),Own_augmented,1872,3,0,region-labelled; mid-size Own cell
+external_0230,RSN__VSV (Oishi),Oishi_relaxed52,216,3,1,routing outlier (Vashishta weight 0.61)

@@ -1,0 +1,33 @@
+{
+  "record_id": "own_0110",
+  "duration_ps": 500.0,
+  "note": "written post hoc; run_local_moe_long_nve.py records artifact paths but not hashes",
+  "artifacts": {
+    "common": {
+      "path": "pilot/common/best_checkpoint.pt",
+      "sha256": "5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1"
+    },
+    "routing": {
+      "path": "pilot/router/best_torchsoap_routing_gate.pt",
+      "sha256": "9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66"
+    },
+    "c1b": {
+      "path": "pilot/c1b/best_c1b_residual_model.pt",
+      "sha256": "c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451"
+    },
+    "descriptor": {
+      "path": "torchsoap_corrected_rotinv_v1.py",
+      "sha256": "0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21"
+    }
+  },
+  "code": {
+    "runner": {
+      "path": "md/run_local_moe_long_nve.py",
+      "sha256": "2548a66b02fbcd5c4c6ba3fb8d5618a204148c105903610f9614907bffb0c3af"
+    },
+    "calculator": {
+      "path": "src/local_moe/local_moe_ase.py",
+      "sha256": "787eb6fc6a98b678a9162ed6428024d62e095fce58f5257ee8b0b870fde80c04"
+    }
+  }
+}
