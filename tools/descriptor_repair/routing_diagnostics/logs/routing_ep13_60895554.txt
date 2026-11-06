@@ -1,0 +1,97 @@
+job     : 60895554 on nid008321
+md-root : <proj>/md_ep13_v1
+out-dir : <proj>/md_ep13_v1/figures_routing_ep13_v1
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+NVIDIA A100-SXM4-80GB, 81920 MiB
+
+artifact verification (selected model):
+  ok  common      5b17849752a535739b16cfc8
+  ok  routing     9e8e0ca6af4976ef8c74c34e
+  ok  c1b         c7ad2a89c570549309ad8906
+  ok  descriptor  0afd9a1ba7b9a24f8bf8151a
+  executed script b0d585f16e154bbef13e743d
+
+case directories under md-root: 52
+finished 52 | already in cache 0 | to evaluate 52
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=432 | edges(search)=12224
+  external_0002  N=  432  frames=101  regions=no 
+  external_0185  N= 1296  frames=101  regions=no 
+  external_0022  N=  234  frames=101  regions=no 
+  external_0189  N=  648  frames=101  regions=no 
+  external_0034  N=  612  frames=101  regions=no 
+  external_0036  N= 1404  frames=101  regions=no 
+  external_0191  N=  900  frames=101  regions=no 
+  external_0192  N=  720  frames=101  regions=no 
+  external_0051  N=  168  frames=101  regions=no 
+  external_0060  N=  540  frames=101  regions=no 
+  external_0200  N= 1008  frames=101  regions=no 
+  external_0203  N=  810  frames=101  regions=no 
+  external_0206  N=  972  frames=101  regions=no 
+  external_0210  N=  810  frames=101  regions=no 
+  external_0213  N=  648  frames=101  regions=no 
+  external_0110  N= 4608  frames=101  regions=no 
+  external_0122  N=  378  frames=101  regions=no 
+  external_0128  N= 1512  frames=101  regions=no 
+  external_0216  N=  648  frames=101  regions=no 
+  external_0217  N= 1134  frames=101  regions=no 
+  external_0219  N=  162  frames=101  regions=no 
+  external_0148  N=  216  frames=101  regions=no 
+  external_0223  N=  480  frames=101  regions=no 
+  external_0152  N=  810  frames=101  regions=no 
+  external_0226  N= 1152  frames=101  regions=no 
+  external_0156  N= 2112  frames=101  regions=no 
+  external_0228  N=  576  frames=101  regions=no 
+  external_0230  N=  216  frames=101  regions=no 
+  external_0167  N= 2160  frames=101  regions=no 
+  external_0172  N=  336  frames=101  regions=no 
+  own_0010       N=  912  frames=101  regions=yes
+  own_0011       N=  912  frames=101  regions=yes
+  own_0036       N= 1296  frames=101  regions=yes
+  own_0037       N= 1296  frames=101  regions=yes
+  own_0059       N= 2808  frames=101  regions=yes
+  own_0060       N= 2808  frames=101  regions=yes
+  own_0136       N=  384  frames=101  regions=yes
+  own_0137       N=  384  frames=101  regions=yes
+  own_0122       N= 2832  frames=101  regions=yes
+  own_0123       N= 2832  frames=101  regions=yes
+  own_0146       N= 2592  frames=101  regions=yes
+  own_0147       N= 2592  frames=101  regions=yes
+  own_0062       N= 2736  frames=101  regions=yes
+  own_0063       N= 2736  frames=101  regions=yes
+  own_0110       N= 1872  frames=101  regions=yes
+  own_0111       N= 1872  frames=101  regions=yes
+  own_0114       N= 2664  frames=101  regions=yes
+  own_0115       N= 2664  frames=101  regions=yes
+  own_0098       N= 2976  frames=101  regions=yes
+  own_0099       N= 2976  frames=101  regions=yes
+  own_0022       N= 2880  frames=101  regions=yes
+  own_0023       N= 2880  frames=101  regions=yes
+wrote <proj>/md_ep13_v1/figures_routing_ep13_v1/routing_nve_region_means.csv (52 structures)
+
+Mean routing weight (mean over structures; the spread is the standard deviation across structures)
+region             structures         ML-BKS   Original-BKS       Chik-BKS       PSO1-BKS       PSO2-BKS        Tersoff      Vashishta
+All atoms                  52   0.016+-0.031   0.001+-0.001   0.079+-0.030   0.018+-0.011   0.000+-0.000   0.112+-0.035   0.774+-0.059
+Phase 1 bulk               22   0.003+-0.004   0.001+-0.000   0.056+-0.018   0.020+-0.011   0.000+-0.000   0.168+-0.094   0.751+-0.093
+Interface center           22   0.036+-0.022   0.003+-0.001   0.077+-0.011   0.013+-0.006   0.000+-0.000   0.116+-0.024   0.755+-0.029
+Phase 2 bulk               22   0.007+-0.008   0.001+-0.000   0.057+-0.018   0.018+-0.014   0.000+-0.000   0.101+-0.027   0.815+-0.035
+
+dominant channel (all-atom mean), number of structures: Vashishta 52
+
+Saved:
+  <proj>/md_ep13_v1/figures_routing_ep13_v1/LocalMoE_ep13_routing_all_atoms.png
+  <proj>/md_ep13_v1/figures_routing_ep13_v1/LocalMoE_ep13_routing_all_atoms.pdf
+  <proj>/md_ep13_v1/figures_routing_ep13_v1/LocalMoE_ep13_routing_three_regions.png
+  <proj>/md_ep13_v1/figures_routing_ep13_v1/LocalMoE_ep13_routing_three_regions.pdf
+  <proj>/md_ep13_v1/figures_routing_ep13_v1/routing_nve_region_means.csv
+
+=== outputs ===
+  LocalMoE_ep13_routing_all_atoms.pdf                            65ae23c33a1a392a
+  LocalMoE_ep13_routing_all_atoms.png                            b436740b3596279c
+  LocalMoE_ep13_routing_three_regions.pdf                        3a4fbfde82df8ee2
+  LocalMoE_ep13_routing_three_regions.png                        4e8df947d68f2824
+  routing_nve_per_frame.csv                                      421e2863889699e0
+  routing_nve_region_means.csv                                   5c3749d6c0cfde3e
+
+NOTE: figures and CSVs only.  Nothing is staged, committed or pushed.

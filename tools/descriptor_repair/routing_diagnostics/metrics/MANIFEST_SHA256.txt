@@ -1,0 +1,19 @@
+# routing_diagnostics -- sha256 of every file in this package
+
+Selected-model artifacts, verified before assembly:
+
+    common      5b17849752a535739b16cfc8e390e9dd53bbe27c8e50b975235142cf16e346e1  pilot/common/best_checkpoint.pt
+    routing     9e8e0ca6af4976ef8c74c34e1ded97b2aebeabb51c278037ab3ecab1145e1c66  pilot/router/best_torchsoap_routing_gate.pt
+    c1b         c7ad2a89c570549309ad8906e477a42adad298b51251da5aa33a09c878ade451  pilot/c1b/best_c1b_residual_model.pt
+    descriptor  0afd9a1ba7b9a24f8bf8151a7a3bdfc409544ed0920355de0598ffae79d51d21  torchsoap_corrected_rotinv_v1.py
+
+Package files (sha256, path relative to tools/descriptor_repair/routing_diagnostics):
+
+    65ae23c33a1a392abdabd83776ff1117eac98002ddf44aada80ef52e9b3c6380  figures/LocalMoE_ep13_routing_all_atoms.pdf
+    b436740b3596279c57cb456cb611b7975f5b6025353a4aeeb212c25263317013  figures/LocalMoE_ep13_routing_all_atoms.png
+    3a4fbfde82df8ee2d3628ca4f2c65c27c598a0ab8b0bf406c75ccb8c5432f4c7  figures/LocalMoE_ep13_routing_three_regions.pdf
+    4e8df947d68f28245cd16e24e5773b31990b0ef3e15f2174239114787561037a  figures/LocalMoE_ep13_routing_three_regions.png
+    12b28ccc48e0cdb8e32873708403f77e644760a535a9999ab5fd29782ee8b86f  logs/routing_ep13_60895554.txt
+    421e2863889699e0d079d2f6a8f135e54f3e5432157d34b0305bad31408b053b  metrics/routing_nve_per_frame.csv
+    5c3749d6c0cfde3e6d7d63c6659b5ce09850fd4e83eb16cdfc6001cdb92b81b1  metrics/routing_nve_region_means.csv
+    57be4be7e75c700dd9b14c5889200f2d1a80f30bdb9a8c04236c671972df58e8  scripts/run_routing_ep13_gpu.slurm
