@@ -53,6 +53,13 @@ def parse_args():
     p.add_argument("--md-root", type=Path,
                    default=Path(HET) / "Local_MoE_MATPES_R2SCAN_Expanded_v1/md_holdout40_v1")
     p.add_argument("--manifest", type=Path, help="default: <md-root>/md_manifest.csv")
+    # The 10 ps protocol cohort and the 500 ps long runs write different per-case file
+    # names (nve_10ps_log.csv / final_protocol_summary.json versus nve_500ps_log.csv /
+    # long_nve_summary.json). These defaults leave the 10 ps behaviour unchanged.
+    p.add_argument("--log-name", default="nve_10ps_log.csv",
+                   help="per-case NVE log file name (default: nve_10ps_log.csv)")
+    p.add_argument("--summary-name", default="final_protocol_summary.json",
+                   help="per-case summary file name (default: final_protocol_summary.json)")
     p.add_argument("--out-dir", type=Path, help="default: <md-root>/figures")
     p.add_argument("--prefix", default="LocalMoE_holdout40_nve")
     p.add_argument("--limit", type=float, default=0.1,
@@ -80,14 +87,19 @@ class IncompleteRun(ValueError):
     """Missing files or a trajectory that does not reach its expected endpoint."""
 
 
-def load_case(root, r, index, duration):
+def load_case(root, r, index, duration, log_name="nve_10ps_log.csv",
+              summary_name="final_protocol_summary.json"):
     path = root / f"case_{r.record_id}"
-    logfile = path / "nve_10ps_log.csv"
+    logfile = path / log_name
     if not logfile.is_file():
         raise IncompleteRun("NVE log missing")
-    metadata_file = path / "final_protocol_summary.json"
+    metadata_file = path / summary_name
     meta = json.loads(metadata_file.read_text()) if metadata_file.is_file() else {}
-    protocol = meta.get("protocol", {})
+    # run_local_moe_md.py nests run settings under "protocol"; run_local_moe_long_nve.py
+    # writes dt_fs, n_steps and nve_ps at the top level. Falling back to meta keeps the
+    # timestep and endpoint checks ACTIVE for the long runs instead of silently skipping
+    # them, which is what an empty protocol dict would do.
+    protocol = meta.get("protocol") or meta
     if meta.get("record_id", r.record_id) != r.record_id:
         raise ValueError("protocol record_id disagrees with the manifest")
     n_atoms = int(r.n_atoms)
@@ -371,7 +383,8 @@ def main():
     rows, curves, metadata, omitted = [], [], [], []
     for index, r in manifest.iterrows():
         try:
-            row, curve, meta = load_case(a.md_root, r, index, a.duration_ps)
+            row, curve, meta = load_case(a.md_root, r, index, a.duration_ps,
+                                         a.log_name, a.summary_name)
         except (IncompleteRun, FileNotFoundError) as error:
             omitted.append({"record_id": r.record_id, "reason": str(error)})
             continue
