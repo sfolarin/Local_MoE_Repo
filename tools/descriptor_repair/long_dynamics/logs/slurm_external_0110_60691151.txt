@@ -1,0 +1,26 @@
+record external_0110   long-root <proj>/md_ep13_long500ps_v1   10ps source <proj>/md_ep13_v1
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  2548a66b02fbcd5c4c6ba3fb  run_local_moe_long_nve.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+records for this process (1): ['external_0110']
+==============================================================================================================
+external_0110  N=4608  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  rescale 298.843 K -> 300.000 K (factor 1.001933)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=4608 | edges(search)=121864
+  [external_0110] step    20000/1000000  t=  10.00 ps  T= 301.67 K  drift=-0.00095 meV/atom    3.5 steps/s  ETA 77.38 h
+  [external_0110] step    40000/1000000  t=  20.00 ps  T= 302.36 K  drift=-0.00066 meV/atom    3.6 steps/s  ETA 74.64 h
+  [external_0110] step    60000/1000000  t=  30.00 ps  T= 301.35 K  drift=-0.00073 meV/atom    3.5 steps/s  ETA 74.53 h
+  [external_0110] step    80000/1000000  t=  40.00 ps  T= 300.70 K  drift=-0.00025 meV/atom    3.5 steps/s  ETA 73.81 h
+  [external_0110] step   100000/1000000  t=  50.00 ps  T= 303.87 K  drift=-0.00077 meV/atom    3.4 steps/s  ETA 72.76 h
+  [external_0110] step   120000/1000000  t=  60.00 ps  T= 300.58 K  drift=-0.00100 meV/atom    3.4 steps/s  ETA 71.48 h
+  [external_0110] step   140000/1000000  t=  70.00 ps  T= 301.51 K  drift=-0.00051 meV/atom    3.4 steps/s  ETA 70.12 h
+  [external_0110] step   160000/1000000  t=  80.00 ps  T= 303.09 K  drift=-0.00036 meV/atom    3.4 steps/s  ETA 68.67 h
+  [external_0110] step   180000/1000000  t=  90.00 ps  T= 299.68 K  drift=-0.00102 meV/atom    3.4 steps/s  ETA 67.17 h
+  [external_0110] step   200000/1000000  t= 100.00 ps  T= 301.62 K  drift=-0.00062 meV/atom    3.4 steps/s  ETA 65.62 h
+  [external_0110] step   220000/1000000  t= 110.00 ps  T= 303.60 K  drift=-0.00081 meV/atom    3.4 steps/s  ETA 64.05 h
+  [external_0110] step   240000/1000000  t= 120.00 ps  T= 296.73 K  drift=-0.00028 meV/atom    3.4 steps/s  ETA 62.45 h
+  [external_0110] step   260000/1000000  t= 130.00 ps  T= 302.58 K  drift=-0.00117 meV/atom    3.4 steps/s  ETA 61.31 h
+  [external_0110] step   280000/1000000  t= 140.00 ps  T= 300.68 K  drift=-0.00071 meV/atom    3.3 steps/s  ETA 59.92 h
+[2026-11-03T13:54:00.253] error: *** JOB 60691151 ON nid004107 CANCELLED AT 2026-11-03T13:54:00 DUE TO TIME LIMIT ***

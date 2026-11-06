@@ -1,0 +1,66 @@
+record own_0136   long-root <proj>/md_ep13_long500ps_v1   10ps source <proj>/md_ep13_v1
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  2548a66b02fbcd5c4c6ba3fb  run_local_moe_long_nve.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+records for this process (1): ['own_0136']
+==============================================================================================================
+own_0136  N=384  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  rescale 295.370 K -> 300.000 K (factor 1.007808)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=384 | edges(search)=11566
+  [own_0136] step    20000/1000000  t=  10.00 ps  T= 317.32 K  drift=-0.00172 meV/atom   23.8 steps/s  ETA 11.42 h
+  [own_0136] step    40000/1000000  t=  20.00 ps  T= 313.74 K  drift=+0.00034 meV/atom   23.8 steps/s  ETA 11.19 h
+  [own_0136] step    60000/1000000  t=  30.00 ps  T= 303.49 K  drift=-0.00113 meV/atom   23.9 steps/s  ETA 10.95 h
+  [own_0136] step    80000/1000000  t=  40.00 ps  T= 300.60 K  drift=-0.00183 meV/atom   23.9 steps/s  ETA 10.71 h
+  [own_0136] step   100000/1000000  t=  50.00 ps  T= 305.60 K  drift=-0.00235 meV/atom   23.9 steps/s  ETA 10.46 h
+  [own_0136] step   120000/1000000  t=  60.00 ps  T= 322.33 K  drift=-0.00235 meV/atom   23.9 steps/s  ETA 10.22 h
+  [own_0136] step   140000/1000000  t=  70.00 ps  T= 312.69 K  drift=-0.00179 meV/atom   23.9 steps/s  ETA  9.98 h
+  [own_0136] step   160000/1000000  t=  80.00 ps  T= 309.61 K  drift=-0.00002 meV/atom   23.9 steps/s  ETA  9.75 h
+  [own_0136] step   180000/1000000  t=  90.00 ps  T= 308.69 K  drift=-0.00052 meV/atom   23.9 steps/s  ETA  9.52 h
+  [own_0136] step   200000/1000000  t= 100.00 ps  T= 296.71 K  drift=+0.00224 meV/atom   23.9 steps/s  ETA  9.30 h
+  [own_0136] step   220000/1000000  t= 110.00 ps  T= 306.29 K  drift=-0.00049 meV/atom   23.9 steps/s  ETA  9.07 h
+  [own_0136] step   240000/1000000  t= 120.00 ps  T= 290.96 K  drift=-0.00072 meV/atom   23.8 steps/s  ETA  8.86 h
+  [own_0136] step   260000/1000000  t= 130.00 ps  T= 321.76 K  drift=-0.00151 meV/atom   23.8 steps/s  ETA  8.64 h
+  [own_0136] step   280000/1000000  t= 140.00 ps  T= 287.71 K  drift=+0.00237 meV/atom   23.8 steps/s  ETA  8.41 h
+  [own_0136] step   300000/1000000  t= 150.00 ps  T= 316.96 K  drift=+0.00054 meV/atom   23.8 steps/s  ETA  8.18 h
+  [own_0136] step   320000/1000000  t= 160.00 ps  T= 314.40 K  drift=-0.00104 meV/atom   23.8 steps/s  ETA  7.95 h
+  [own_0136] step   340000/1000000  t= 170.00 ps  T= 310.62 K  drift=-0.00265 meV/atom   23.7 steps/s  ETA  7.72 h
+  [own_0136] step   360000/1000000  t= 180.00 ps  T= 311.26 K  drift=-0.00042 meV/atom   23.7 steps/s  ETA  7.50 h
+  [own_0136] step   380000/1000000  t= 190.00 ps  T= 326.48 K  drift=-0.00182 meV/atom   23.7 steps/s  ETA  7.27 h
+  [own_0136] step   400000/1000000  t= 200.00 ps  T= 322.23 K  drift=-0.00246 meV/atom   23.7 steps/s  ETA  7.05 h
+  [own_0136] step   420000/1000000  t= 210.00 ps  T= 304.62 K  drift=+0.00025 meV/atom   23.6 steps/s  ETA  6.82 h
+  [own_0136] step   440000/1000000  t= 220.00 ps  T= 322.84 K  drift=-0.00260 meV/atom   23.6 steps/s  ETA  6.59 h
+  [own_0136] step   460000/1000000  t= 230.00 ps  T= 300.33 K  drift=-0.00158 meV/atom   23.6 steps/s  ETA  6.35 h
+  [own_0136] step   480000/1000000  t= 240.00 ps  T= 314.30 K  drift=-0.00144 meV/atom   23.6 steps/s  ETA  6.12 h
+  [own_0136] step   500000/1000000  t= 250.00 ps  T= 320.21 K  drift=-0.00149 meV/atom   23.6 steps/s  ETA  5.89 h
+  [own_0136] step   520000/1000000  t= 260.00 ps  T= 325.94 K  drift=-0.00128 meV/atom   23.6 steps/s  ETA  5.65 h
+  [own_0136] step   540000/1000000  t= 270.00 ps  T= 320.85 K  drift=-0.00086 meV/atom   23.6 steps/s  ETA  5.42 h
+  [own_0136] step   560000/1000000  t= 280.00 ps  T= 316.36 K  drift=-0.00052 meV/atom   23.6 steps/s  ETA  5.18 h
+  [own_0136] step   580000/1000000  t= 290.00 ps  T= 300.13 K  drift=-0.00082 meV/atom   23.6 steps/s  ETA  4.95 h
+  [own_0136] step   600000/1000000  t= 300.00 ps  T= 301.63 K  drift=-0.00042 meV/atom   23.6 steps/s  ETA  4.71 h
+  [own_0136] step   620000/1000000  t= 310.00 ps  T= 313.67 K  drift=+0.00010 meV/atom   23.6 steps/s  ETA  4.48 h
+  [own_0136] step   640000/1000000  t= 320.00 ps  T= 311.91 K  drift=-0.00191 meV/atom   23.6 steps/s  ETA  4.24 h
+  [own_0136] step   660000/1000000  t= 330.00 ps  T= 329.29 K  drift=-0.00097 meV/atom   23.6 steps/s  ETA  4.01 h
+  [own_0136] step   680000/1000000  t= 340.00 ps  T= 312.07 K  drift=+0.00092 meV/atom   23.6 steps/s  ETA  3.77 h
+  [own_0136] step   700000/1000000  t= 350.00 ps  T= 310.44 K  drift=-0.00107 meV/atom   23.6 steps/s  ETA  3.54 h
+  [own_0136] step   720000/1000000  t= 360.00 ps  T= 312.41 K  drift=-0.00158 meV/atom   23.5 steps/s  ETA  3.30 h
+  [own_0136] step   740000/1000000  t= 370.00 ps  T= 302.49 K  drift=+0.00055 meV/atom   23.5 steps/s  ETA  3.07 h
+  [own_0136] step   760000/1000000  t= 380.00 ps  T= 306.55 K  drift=+0.00113 meV/atom   23.5 steps/s  ETA  2.83 h
+  [own_0136] step   780000/1000000  t= 390.00 ps  T= 317.23 K  drift=-0.00164 meV/atom   23.5 steps/s  ETA  2.60 h
+  [own_0136] step   800000/1000000  t= 400.00 ps  T= 298.16 K  drift=+0.00198 meV/atom   23.5 steps/s  ETA  2.36 h
+  [own_0136] step   820000/1000000  t= 410.00 ps  T= 314.01 K  drift=-0.00112 meV/atom   23.5 steps/s  ETA  2.13 h
+  [own_0136] step   840000/1000000  t= 420.00 ps  T= 295.51 K  drift=-0.00139 meV/atom   23.5 steps/s  ETA  1.89 h
+  [own_0136] step   860000/1000000  t= 430.00 ps  T= 318.12 K  drift=-0.00137 meV/atom   23.5 steps/s  ETA  1.66 h
+  [own_0136] step   880000/1000000  t= 440.00 ps  T= 316.45 K  drift=-0.00127 meV/atom   23.5 steps/s  ETA  1.42 h
+  [own_0136] step   900000/1000000  t= 450.00 ps  T= 312.87 K  drift=-0.00068 meV/atom   23.5 steps/s  ETA  1.18 h
+  [own_0136] step   920000/1000000  t= 460.00 ps  T= 297.82 K  drift=+0.00035 meV/atom   23.5 steps/s  ETA  0.95 h
+  [own_0136] step   940000/1000000  t= 470.00 ps  T= 313.31 K  drift=-0.00114 meV/atom   23.5 steps/s  ETA  0.71 h
+  [own_0136] step   960000/1000000  t= 480.00 ps  T= 335.17 K  drift=-0.00245 meV/atom   23.5 steps/s  ETA  0.47 h
+  [own_0136] step   980000/1000000  t= 490.00 ps  T= 351.29 K  drift=-0.00426 meV/atom   23.4 steps/s  ETA  0.24 h
+  [own_0136] step  1000000/1000000  t= 500.00 ps  T= 310.03 K  drift=+0.00132 meV/atom   23.4 steps/s  ETA  0.00 h
+  DONE own_0136: max |drift| 0.00590 meV/atom over 500 ps (first 10 ps 0.00393), slope +0.0002 +- 0.0002 meV/atom/ns, 23.4 steps/s, conserving
+
+STATUS {
+ "own_0136": "done"
+}

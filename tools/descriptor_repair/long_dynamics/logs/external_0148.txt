@@ -1,0 +1,59 @@
+records for this process (1): ['external_0148']
+==============================================================================================================
+external_0148  N=216  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  rescale 295.319 K -> 300.000 K (factor 1.007894)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=216 | edges(search)=6432
+  [external_0148] step    20000/1000000  t=  10.00 ps  T= 276.32 K  drift=+0.00230 meV/atom   27.1 steps/s  ETA 10.04 h
+  [external_0148] step    40000/1000000  t=  20.00 ps  T= 312.42 K  drift=-0.00117 meV/atom   27.3 steps/s  ETA  9.78 h
+  [external_0148] step    60000/1000000  t=  30.00 ps  T= 310.25 K  drift=-0.00236 meV/atom   27.4 steps/s  ETA  9.53 h
+  [external_0148] step    80000/1000000  t=  40.00 ps  T= 287.33 K  drift=+0.00069 meV/atom   27.4 steps/s  ETA  9.32 h
+  [external_0148] step   100000/1000000  t=  50.00 ps  T= 311.09 K  drift=-0.00069 meV/atom   27.5 steps/s  ETA  9.10 h
+  [external_0148] step   120000/1000000  t=  60.00 ps  T= 309.28 K  drift=-0.00068 meV/atom   27.6 steps/s  ETA  8.87 h
+  [external_0148] step   140000/1000000  t=  70.00 ps  T= 304.29 K  drift=-0.00025 meV/atom   27.6 steps/s  ETA  8.65 h
+  [external_0148] step   160000/1000000  t=  80.00 ps  T= 313.97 K  drift=-0.00369 meV/atom   27.7 steps/s  ETA  8.42 h
+  [external_0148] step   180000/1000000  t=  90.00 ps  T= 331.69 K  drift=-0.00345 meV/atom   27.7 steps/s  ETA  8.22 h
+  [external_0148] step   200000/1000000  t= 100.00 ps  T= 334.47 K  drift=-0.00465 meV/atom   27.7 steps/s  ETA  8.01 h
+  [external_0148] step   220000/1000000  t= 110.00 ps  T= 312.29 K  drift=-0.00189 meV/atom   27.8 steps/s  ETA  7.81 h
+  [external_0148] step   240000/1000000  t= 120.00 ps  T= 297.13 K  drift=-0.00401 meV/atom   27.8 steps/s  ETA  7.60 h
+  [external_0148] step   260000/1000000  t= 130.00 ps  T= 306.77 K  drift=-0.00200 meV/atom   27.8 steps/s  ETA  7.40 h
+  [external_0148] step   280000/1000000  t= 140.00 ps  T= 322.53 K  drift=-0.00220 meV/atom   27.8 steps/s  ETA  7.19 h
+  [external_0148] step   300000/1000000  t= 150.00 ps  T= 293.99 K  drift=-0.00204 meV/atom   27.9 steps/s  ETA  6.98 h
+  [external_0148] step   320000/1000000  t= 160.00 ps  T= 325.59 K  drift=-0.00552 meV/atom   27.9 steps/s  ETA  6.77 h
+  [external_0148] step   340000/1000000  t= 170.00 ps  T= 307.77 K  drift=-0.00263 meV/atom   27.9 steps/s  ETA  6.56 h
+  [external_0148] step   360000/1000000  t= 180.00 ps  T= 299.60 K  drift=-0.00042 meV/atom   28.0 steps/s  ETA  6.36 h
+  [external_0148] step   380000/1000000  t= 190.00 ps  T= 303.51 K  drift=-0.00147 meV/atom   28.0 steps/s  ETA  6.15 h
+  [external_0148] step   400000/1000000  t= 200.00 ps  T= 297.64 K  drift=-0.00000 meV/atom   28.0 steps/s  ETA  5.96 h
+  [external_0148] step   420000/1000000  t= 210.00 ps  T= 301.99 K  drift=-0.00154 meV/atom   27.9 steps/s  ETA  5.77 h
+  [external_0148] step   440000/1000000  t= 220.00 ps  T= 324.86 K  drift=-0.00192 meV/atom   27.9 steps/s  ETA  5.57 h
+  [external_0148] step   460000/1000000  t= 230.00 ps  T= 302.51 K  drift=-0.00068 meV/atom   27.9 steps/s  ETA  5.37 h
+  [external_0148] step   480000/1000000  t= 240.00 ps  T= 292.88 K  drift=-0.00111 meV/atom   27.9 steps/s  ETA  5.17 h
+  [external_0148] step   500000/1000000  t= 250.00 ps  T= 302.94 K  drift=-0.00193 meV/atom   27.9 steps/s  ETA  4.98 h
+  [external_0148] step   520000/1000000  t= 260.00 ps  T= 306.41 K  drift=-0.00078 meV/atom   27.9 steps/s  ETA  4.78 h
+  [external_0148] step   540000/1000000  t= 270.00 ps  T= 310.28 K  drift=-0.00291 meV/atom   27.9 steps/s  ETA  4.58 h
+  [external_0148] step   560000/1000000  t= 280.00 ps  T= 299.94 K  drift=-0.00273 meV/atom   27.9 steps/s  ETA  4.39 h
+  [external_0148] step   580000/1000000  t= 290.00 ps  T= 306.31 K  drift=-0.00075 meV/atom   27.8 steps/s  ETA  4.19 h
+  [external_0148] step   600000/1000000  t= 300.00 ps  T= 275.92 K  drift=-0.00078 meV/atom   27.8 steps/s  ETA  3.99 h
+  [external_0148] step   620000/1000000  t= 310.00 ps  T= 313.77 K  drift=-0.00230 meV/atom   27.8 steps/s  ETA  3.79 h
+  [external_0148] step   640000/1000000  t= 320.00 ps  T= 287.29 K  drift=-0.00075 meV/atom   27.8 steps/s  ETA  3.59 h
+  [external_0148] step   660000/1000000  t= 330.00 ps  T= 310.92 K  drift=-0.00389 meV/atom   27.8 steps/s  ETA  3.40 h
+  [external_0148] step   680000/1000000  t= 340.00 ps  T= 323.21 K  drift=-0.00439 meV/atom   27.8 steps/s  ETA  3.20 h
+  [external_0148] step   700000/1000000  t= 350.00 ps  T= 299.45 K  drift=-0.00103 meV/atom   27.8 steps/s  ETA  3.00 h
+  [external_0148] step   720000/1000000  t= 360.00 ps  T= 314.51 K  drift=-0.00262 meV/atom   27.8 steps/s  ETA  2.80 h
+  [external_0148] step   740000/1000000  t= 370.00 ps  T= 301.27 K  drift=-0.00167 meV/atom   27.8 steps/s  ETA  2.60 h
+  [external_0148] step   760000/1000000  t= 380.00 ps  T= 296.00 K  drift=-0.00021 meV/atom   27.8 steps/s  ETA  2.40 h
+  [external_0148] step   780000/1000000  t= 390.00 ps  T= 312.15 K  drift=-0.00160 meV/atom   27.8 steps/s  ETA  2.20 h
+  [external_0148] step   800000/1000000  t= 400.00 ps  T= 312.97 K  drift=-0.00174 meV/atom   27.8 steps/s  ETA  2.00 h
+  [external_0148] step   820000/1000000  t= 410.00 ps  T= 291.11 K  drift=+0.00219 meV/atom   27.8 steps/s  ETA  1.80 h
+  [external_0148] step   840000/1000000  t= 420.00 ps  T= 300.76 K  drift=-0.00114 meV/atom   27.8 steps/s  ETA  1.60 h
+  [external_0148] step   860000/1000000  t= 430.00 ps  T= 291.65 K  drift=-0.00186 meV/atom   27.8 steps/s  ETA  1.40 h
+  [external_0148] step   880000/1000000  t= 440.00 ps  T= 312.14 K  drift=-0.00231 meV/atom   27.8 steps/s  ETA  1.20 h
+  [external_0148] step   900000/1000000  t= 450.00 ps  T= 288.39 K  drift=+0.00033 meV/atom   27.8 steps/s  ETA  1.00 h
+  [external_0148] step   920000/1000000  t= 460.00 ps  T= 305.81 K  drift=-0.00110 meV/atom   27.8 steps/s  ETA  0.80 h
+  [external_0148] step   940000/1000000  t= 470.00 ps  T= 321.67 K  drift=-0.00300 meV/atom   27.8 steps/s  ETA  0.60 h
+  [external_0148] step   960000/1000000  t= 480.00 ps  T= 282.96 K  drift=-0.00106 meV/atom   27.8 steps/s  ETA  0.40 h
+  [external_0148] step   980000/1000000  t= 490.00 ps  T= 286.74 K  drift=-0.00136 meV/atom   27.8 steps/s  ETA  0.20 h
+  [external_0148] step  1000000/1000000  t= 500.00 ps  T= 272.56 K  drift=+0.00208 meV/atom   27.8 steps/s  ETA  0.00 h
+  DONE external_0148: max |drift| 0.00819 meV/atom over 500 ps (first 10 ps 0.00526), slope +0.0003 +- 0.0003 meV/atom/ns, 27.8 steps/s, conserving
+
+STATUS {
+ "external_0148": "done"
+}

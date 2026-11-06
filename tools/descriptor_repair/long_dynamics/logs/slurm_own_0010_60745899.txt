@@ -1,0 +1,21 @@
+record own_0010   long-root <proj>/md_ep13_long500ps_v1   10ps source <proj>/md_ep13_v1
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  2548a66b02fbcd5c4c6ba3fb  run_local_moe_long_nve.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+records for this process (1): ['own_0010']
+==============================================================================================================
+own_0010  N=912  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  RESUMING at step 900000
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=912 | edges(search)=29808
+  [own_0010] step   920000/1000000  t= 460.00 ps  T= 314.85 K  drift=-0.00168 meV/atom   10.2 steps/s  ETA  2.17 h
+  [own_0010] step   940000/1000000  t= 470.00 ps  T= 321.84 K  drift=-0.00204 meV/atom   10.2 steps/s  ETA  1.63 h
+  [own_0010] step   960000/1000000  t= 480.00 ps  T= 331.86 K  drift=-0.00302 meV/atom   10.2 steps/s  ETA  1.09 h
+  [own_0010] step   980000/1000000  t= 490.00 ps  T= 332.61 K  drift=-0.00363 meV/atom   10.2 steps/s  ETA  0.54 h
+  [own_0010] step  1000000/1000000  t= 500.00 ps  T= 334.55 K  drift=-0.00342 meV/atom   10.4 steps/s  ETA  0.00 h
+  DONE own_0010: max |drift| 0.00706 meV/atom over 500 ps (first 10 ps 0.00267), slope -0.0009 +- 0.0002 meV/atom/ns, 10.7 steps/s, conserving
+
+STATUS {
+ "own_0010": "done"
+}

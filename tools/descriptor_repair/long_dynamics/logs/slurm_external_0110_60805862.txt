@@ -1,0 +1,47 @@
+========================================
+Record: external_0110
+Long MD root: <proj>/md_ep13_long500ps_v1
+Source: <proj>/md_ep13_v1
+Wall time: 48 hours
+CPU threads: 16
+========================================
+5b17849752a535739b16cfc8 best_checkpoint.pt
+9e8e0ca6af4976ef8c74c34e best_torchsoap_routing_gate.pt
+c7ad2a89c570549309ad8906 best_c1b_residual_model.pt
+0afd9a1ba7b9a24f8bf8151a torchsoap_corrected_rotinv_v1.py
+2548a66b02fbcd5c4c6ba3fb run_local_moe_long_nve.py
+333dd835069596d81d43b264 train_c1b_holdout40.py
+records for this process (1): ['external_0110']
+==============================================================================================================
+external_0110  N=4608  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  RESUMING at step 500000
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=4608 | edges(search)=121874
+  [external_0110] step   520000/1000000  t= 260.00 ps  T= 299.81 K  drift=-0.00068 meV/atom    3.6 steps/s  ETA 36.64 h
+  [external_0110] step   540000/1000000  t= 270.00 ps  T= 300.81 K  drift=-0.00067 meV/atom    3.7 steps/s  ETA 34.89 h
+  [external_0110] step   560000/1000000  t= 280.00 ps  T= 294.45 K  drift=-0.00011 meV/atom    3.6 steps/s  ETA 33.75 h
+  [external_0110] step   580000/1000000  t= 290.00 ps  T= 302.37 K  drift=-0.00036 meV/atom    3.6 steps/s  ETA 32.54 h
+  [external_0110] step   600000/1000000  t= 300.00 ps  T= 302.77 K  drift=-0.00122 meV/atom    3.6 steps/s  ETA 31.10 h
+  [external_0110] step   620000/1000000  t= 310.00 ps  T= 301.72 K  drift=-0.00120 meV/atom    3.6 steps/s  ETA 29.60 h
+  [external_0110] step   640000/1000000  t= 320.00 ps  T= 302.68 K  drift=-0.00090 meV/atom    3.6 steps/s  ETA 28.12 h
+  [external_0110] step   660000/1000000  t= 330.00 ps  T= 303.08 K  drift=-0.00097 meV/atom    3.6 steps/s  ETA 26.51 h
+  [external_0110] step   680000/1000000  t= 340.00 ps  T= 306.25 K  drift=-0.00083 meV/atom    3.6 steps/s  ETA 24.91 h
+  [external_0110] step   700000/1000000  t= 350.00 ps  T= 299.24 K  drift=-0.00056 meV/atom    3.6 steps/s  ETA 23.29 h
+  [external_0110] step   720000/1000000  t= 360.00 ps  T= 296.48 K  drift=-0.00006 meV/atom    3.6 steps/s  ETA 21.68 h
+  [external_0110] step   740000/1000000  t= 370.00 ps  T= 295.84 K  drift=-0.00017 meV/atom    3.6 steps/s  ETA 20.10 h
+  [external_0110] step   760000/1000000  t= 380.00 ps  T= 306.97 K  drift=-0.00134 meV/atom    3.6 steps/s  ETA 18.52 h
+  [external_0110] step   780000/1000000  t= 390.00 ps  T= 303.67 K  drift=-0.00119 meV/atom    3.6 steps/s  ETA 16.95 h
+  [external_0110] step   800000/1000000  t= 400.00 ps  T= 295.35 K  drift=-0.00056 meV/atom    3.6 steps/s  ETA 15.39 h
+  [external_0110] step   820000/1000000  t= 410.00 ps  T= 296.88 K  drift=-0.00062 meV/atom    3.6 steps/s  ETA 13.86 h
+  [external_0110] step   840000/1000000  t= 420.00 ps  T= 302.76 K  drift=-0.00100 meV/atom    3.6 steps/s  ETA 12.36 h
+  [external_0110] step   860000/1000000  t= 430.00 ps  T= 301.32 K  drift=-0.00051 meV/atom    3.6 steps/s  ETA 10.81 h
+  [external_0110] step   880000/1000000  t= 440.00 ps  T= 303.15 K  drift=-0.00073 meV/atom    3.6 steps/s  ETA  9.27 h
+  [external_0110] step   900000/1000000  t= 450.00 ps  T= 298.93 K  drift=-0.00079 meV/atom    3.6 steps/s  ETA  7.72 h
+  [external_0110] step   920000/1000000  t= 460.00 ps  T= 295.69 K  drift=+0.00021 meV/atom    3.6 steps/s  ETA  6.17 h
+  [external_0110] step   940000/1000000  t= 470.00 ps  T= 309.54 K  drift=-0.00118 meV/atom    3.6 steps/s  ETA  4.62 h
+  [external_0110] step   960000/1000000  t= 480.00 ps  T= 299.71 K  drift=-0.00068 meV/atom    3.6 steps/s  ETA  3.08 h
+  [external_0110] step   980000/1000000  t= 490.00 ps  T= 300.90 K  drift=-0.00068 meV/atom    3.6 steps/s  ETA  1.54 h
+  [external_0110] step  1000000/1000000  t= 500.00 ps  T= 303.84 K  drift=-0.00121 meV/atom    3.6 steps/s  ETA  0.00 h
+  DONE external_0110: max |drift| 0.00196 meV/atom over 500 ps (first 10 ps 0.00139), slope -0.0004 +- 0.0001 meV/atom/ns, 3.4 steps/s, conserving
+
+STATUS {
+ "external_0110": "done"
+}

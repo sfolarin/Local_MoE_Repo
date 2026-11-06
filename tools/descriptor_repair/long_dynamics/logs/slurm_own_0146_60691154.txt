@@ -1,0 +1,34 @@
+record own_0146   long-root <proj>/md_ep13_long500ps_v1   10ps source <proj>/md_ep13_v1
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  2548a66b02fbcd5c4c6ba3fb  run_local_moe_long_nve.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+records for this process (1): ['own_0146']
+==============================================================================================================
+own_0146  N=2592  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  rescale 295.871 K -> 300.000 K (factor 1.006953)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=2592 | edges(search)=69134
+  [own_0146] step    20000/1000000  t=  10.00 ps  T= 314.15 K  drift=+0.00134 meV/atom    5.3 steps/s  ETA 51.84 h
+  [own_0146] step    40000/1000000  t=  20.00 ps  T= 320.00 K  drift=+0.01712 meV/atom    5.4 steps/s  ETA 49.74 h
+  [own_0146] step    60000/1000000  t=  30.00 ps  T= 318.96 K  drift=+0.01685 meV/atom    5.4 steps/s  ETA 48.26 h
+  [own_0146] step    80000/1000000  t=  40.00 ps  T= 325.62 K  drift=+0.02133 meV/atom    5.4 steps/s  ETA 47.02 h
+  [own_0146] step   100000/1000000  t=  50.00 ps  T= 326.81 K  drift=+0.02155 meV/atom    5.5 steps/s  ETA 45.84 h
+  [own_0146] step   120000/1000000  t=  60.00 ps  T= 338.46 K  drift=+0.02031 meV/atom    5.4 steps/s  ETA 44.96 h
+  [own_0146] step   140000/1000000  t=  70.00 ps  T= 326.45 K  drift=+0.05063 meV/atom    5.4 steps/s  ETA 44.09 h
+  [own_0146] step   160000/1000000  t=  80.00 ps  T= 328.92 K  drift=+0.04990 meV/atom    5.4 steps/s  ETA 43.16 h
+  [own_0146] step   180000/1000000  t=  90.00 ps  T= 333.46 K  drift=+0.04990 meV/atom    5.4 steps/s  ETA 42.19 h
+  [own_0146] step   200000/1000000  t= 100.00 ps  T= 329.44 K  drift=+0.05154 meV/atom    5.4 steps/s  ETA 41.22 h
+  [own_0146] step   220000/1000000  t= 110.00 ps  T= 328.25 K  drift=+0.05127 meV/atom    5.4 steps/s  ETA 40.23 h
+  [own_0146] step   240000/1000000  t= 120.00 ps  T= 327.82 K  drift=+0.05092 meV/atom    5.4 steps/s  ETA 39.24 h
+  [own_0146] step   260000/1000000  t= 130.00 ps  T= 332.91 K  drift=+0.12469 meV/atom    5.4 steps/s  ETA 38.25 h
+  [own_0146] step   280000/1000000  t= 140.00 ps  T= 340.39 K  drift=+0.12420 meV/atom    5.4 steps/s  ETA 37.27 h
+  [own_0146] step   300000/1000000  t= 150.00 ps  T= 335.01 K  drift=+0.12470 meV/atom    5.4 steps/s  ETA 36.28 h
+  [own_0146] step   320000/1000000  t= 160.00 ps  T= 326.98 K  drift=+0.12255 meV/atom    5.4 steps/s  ETA 35.28 h
+  [own_0146] step   340000/1000000  t= 170.00 ps  T= 328.15 K  drift=+0.12583 meV/atom    5.4 steps/s  ETA 34.25 h
+  [own_0146] step   360000/1000000  t= 180.00 ps  T= 330.49 K  drift=+0.18159 meV/atom    5.3 steps/s  ETA 33.26 h
+  [own_0146] step   380000/1000000  t= 190.00 ps  T= 328.99 K  drift=+0.18234 meV/atom    5.3 steps/s  ETA 32.24 h
+  [own_0146] step   400000/1000000  t= 200.00 ps  T= 342.91 K  drift=+0.18261 meV/atom    5.3 steps/s  ETA 31.24 h
+  [own_0146] step   420000/1000000  t= 210.00 ps  T= 334.89 K  drift=+0.18665 meV/atom    5.3 steps/s  ETA 30.24 h
+  [own_0146] step   440000/1000000  t= 220.00 ps  T= 333.63 K  drift=+0.18578 meV/atom    5.3 steps/s  ETA 29.23 h
+[2026-11-03T13:58:43.017] error: *** JOB 60691154 ON nid004115 CANCELLED AT 2026-11-03T13:58:43 DUE TO TIME LIMIT ***

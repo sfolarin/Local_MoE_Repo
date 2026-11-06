@@ -1,0 +1,26 @@
+record own_0110   long-root <proj>/md_ep13_long500ps_v1   10ps source <proj>/md_ep13_v1
+  5b17849752a535739b16cfc8  best_checkpoint.pt
+  9e8e0ca6af4976ef8c74c34e  best_torchsoap_routing_gate.pt
+  c7ad2a89c570549309ad8906  best_c1b_residual_model.pt
+  0afd9a1ba7b9a24f8bf8151a  torchsoap_corrected_rotinv_v1.py
+  2548a66b02fbcd5c4c6ba3fb  run_local_moe_long_nve.py
+  333dd835069596d81d43b264  train_c1b_holdout40.py
+records for this process (1): ['own_0110']
+==============================================================================================================
+own_0110  N=1872  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  rescale 297.914 K -> 300.000 K (factor 1.003495)
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=1872 | edges(search)=55484
+  [own_0110] step    20000/1000000  t=  10.00 ps  T= 311.10 K  drift=+0.00010 meV/atom    4.1 steps/s  ETA 67.07 h
+  [own_0110] step    40000/1000000  t=  20.00 ps  T= 314.59 K  drift=-0.00036 meV/atom    4.0 steps/s  ETA 66.13 h
+  [own_0110] step    60000/1000000  t=  30.00 ps  T= 315.96 K  drift=-0.00038 meV/atom    4.0 steps/s  ETA 65.65 h
+  [own_0110] step    80000/1000000  t=  40.00 ps  T= 314.44 K  drift=-0.00004 meV/atom    3.9 steps/s  ETA 65.38 h
+  [own_0110] step   100000/1000000  t=  50.00 ps  T= 318.38 K  drift=-0.00114 meV/atom    3.9 steps/s  ETA 64.49 h
+  [own_0110] step   120000/1000000  t=  60.00 ps  T= 314.66 K  drift=-0.00061 meV/atom    3.9 steps/s  ETA 63.25 h
+  [own_0110] step   140000/1000000  t=  70.00 ps  T= 326.70 K  drift=-0.00214 meV/atom    3.7 steps/s  ETA 64.52 h
+  [own_0110] step   160000/1000000  t=  80.00 ps  T= 308.54 K  drift=+0.00022 meV/atom    3.5 steps/s  ETA 67.37 h
+  [own_0110] step   180000/1000000  t=  90.00 ps  T= 319.42 K  drift=-0.00200 meV/atom    3.3 steps/s  ETA 69.08 h
+  [own_0110] step   200000/1000000  t= 100.00 ps  T= 316.46 K  drift=-0.00042 meV/atom    3.2 steps/s  ETA 70.07 h
+  [own_0110] step   220000/1000000  t= 110.00 ps  T= 321.47 K  drift=-0.00170 meV/atom    3.1 steps/s  ETA 70.31 h
+  [own_0110] step   240000/1000000  t= 120.00 ps  T= 318.51 K  drift=-0.00080 meV/atom    3.2 steps/s  ETA 67.00 h
+  [own_0110] step   260000/1000000  t= 130.00 ps  T= 324.47 K  drift=-0.00117 meV/atom    3.3 steps/s  ETA 63.07 h
+  [own_0110] step   280000/1000000  t= 140.00 ps  T= 313.23 K  drift=+0.00038 meV/atom    3.4 steps/s  ETA 59.57 h
+[2026-11-03T13:58:43.010] error: *** JOB 60691156 ON nid004127 CANCELLED AT 2026-11-03T13:58:43 DUE TO TIME LIMIT ***

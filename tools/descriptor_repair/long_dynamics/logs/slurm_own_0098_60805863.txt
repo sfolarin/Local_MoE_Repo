@@ -1,0 +1,34 @@
+========================================
+Record: own_0098
+Long MD root: <proj>/md_ep13_long500ps_v1
+Source: <proj>/md_ep13_v1
+Wall time: 48 hours
+CPU threads: 16
+========================================
+5b17849752a535739b16cfc8 best_checkpoint.pt
+9e8e0ca6af4976ef8c74c34e best_torchsoap_routing_gate.pt
+c7ad2a89c570549309ad8906 best_c1b_residual_model.pt
+0afd9a1ba7b9a24f8bf8151a torchsoap_corrected_rotinv_v1.py
+2548a66b02fbcd5c4c6ba3fb run_local_moe_long_nve.py
+333dd835069596d81d43b264 train_c1b_holdout40.py
+records for this process (1): ['own_0098']
+==============================================================================================================
+own_0098  N=2976  NVE 500.0 ps = 1000000 steps (dt 0.5 fs, float64)  RESUMING at step 750000
+[TorchSOAP NEIGHBOUR-LIST] backend=torch | r_cut=5.000000 A | N=2976 | edges(search)=90246
+  [own_0098] step   770000/1000000  t= 385.00 ps  T= 314.33 K  drift=-0.00147 meV/atom    4.1 steps/s  ETA 15.60 h
+  [own_0098] step   790000/1000000  t= 395.00 ps  T= 317.59 K  drift=-0.00137 meV/atom    4.5 steps/s  ETA 13.03 h
+  [own_0098] step   810000/1000000  t= 405.00 ps  T= 313.84 K  drift=-0.00172 meV/atom    4.6 steps/s  ETA 11.45 h
+  [own_0098] step   830000/1000000  t= 415.00 ps  T= 318.02 K  drift=-0.00199 meV/atom    4.7 steps/s  ETA 10.02 h
+  [own_0098] step   850000/1000000  t= 425.00 ps  T= 323.60 K  drift=-0.00233 meV/atom    4.8 steps/s  ETA  8.77 h
+  [own_0098] step   870000/1000000  t= 435.00 ps  T= 315.93 K  drift=-0.00161 meV/atom    4.8 steps/s  ETA  7.55 h
+  [own_0098] step   890000/1000000  t= 445.00 ps  T= 318.25 K  drift=-0.00126 meV/atom    4.8 steps/s  ETA  6.40 h
+  [own_0098] step   910000/1000000  t= 455.00 ps  T= 313.26 K  drift=-0.00142 meV/atom    4.8 steps/s  ETA  5.26 h
+  [own_0098] step   930000/1000000  t= 465.00 ps  T= 315.18 K  drift=-0.00199 meV/atom    4.7 steps/s  ETA  4.11 h
+  [own_0098] step   950000/1000000  t= 475.00 ps  T= 309.97 K  drift=-0.00037 meV/atom    4.7 steps/s  ETA  2.94 h
+  [own_0098] step   970000/1000000  t= 485.00 ps  T= 311.49 K  drift=-0.00144 meV/atom    4.7 steps/s  ETA  1.77 h
+  [own_0098] step   990000/1000000  t= 495.00 ps  T= 304.51 K  drift=-0.00054 meV/atom    4.7 steps/s  ETA  0.59 h
+  DONE own_0098: max |drift| 0.00298 meV/atom over 500 ps (first 10 ps 0.00200), slope -0.0016 +- 0.0001 meV/atom/ns, 4.7 steps/s, conserving
+
+STATUS {
+ "own_0098": "done"
+}
